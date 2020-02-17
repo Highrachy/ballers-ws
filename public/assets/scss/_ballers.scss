@@ -1,0 +1,330 @@
+.container {
+  @include media-breakpoint-down(sm) {
+    padding: 0 2rem;
+  }
+}
+
+label {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+}
+/*
+ * Header
+ */
+.header {
+  border-bottom: 1px solid #e5e5e5;
+  background: white;
+
+  nav {
+    padding: 0.8rem 0;
+  }
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+  padding-right: 0;
+  padding-left: 2.5rem;
+  font-size: 1rem;
+
+  &.icon {
+    font-size: 1.5rem;
+  }
+}
+
+/*
+ * Spacer
+ */
+
+.spacer {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  @include media-breakpoint-up(md) {
+    padding-top: 12rem;
+    padding-bottom: 12rem;
+  }
+}
+
+.spacer-top {
+  padding-top: 8rem;
+  @include media-breakpoint-up(md) {
+    padding-top: 12rem;
+  }
+}
+
+.spacer-bottom {
+  padding-bottom: 8rem;
+  @include media-breakpoint-up(md) {
+    padding-bottom: 12rem;
+  }
+}
+
+/*
+ * Hero
+ */
+
+.form-holder {
+  padding: 2rem;
+  background: rgba(#282568, 0.15);
+}
+
+.rounded-form {
+  @include media-breakpoint-up(lg) {
+    background: white;
+    border: 1px solid $input-border-color;
+    border-radius: 10rem;
+    margin: 0 0.5rem;
+  }
+
+  .form-group,
+  .input-group {
+    background: white;
+    @include media-breakpoint-up(lg) {
+      border-radius: 10rem;
+    }
+  }
+
+  .col-lg,
+  .col-lg-auto {
+    padding: 0;
+    align-self: center;
+  }
+
+  .search-holder {
+    padding: 0.5rem;
+    .btn {
+      display: block;
+      width: auto;
+      line-height: 2;
+      padding-right: 2rem;
+      padding-left: 2rem;
+    }
+  }
+
+  .form-control,
+  .input-group-text {
+    border-color: transparent !important;
+  }
+
+  .input-group .form-control {
+    &:not(:first-child) {
+      border-left: 0;
+      padding-left: 0.4rem;
+    }
+  }
+}
+
+/*
+ * Becoming a Baller
+ */
+
+.bg-gray-1 {
+  background: $gray-100;
+}
+
+.bg-gray-2 {
+  background: $gray-200;
+}
+
+.opacity-1 {
+  opacity: 1 !important;
+}
+
+.subtitle {
+  color: #282568;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.circled-number {
+  background-color: #c6d3e6;
+  color: #fff;
+  padding: 0.5625rem 0.5625rem;
+  font-size: 1.0625rem;
+  line-height: 1.3;
+  border-radius: 50%;
+  & > * {
+    display: block;
+    line-height: 1;
+    width: 1em;
+  }
+}
+
+.step-header {
+  font-size: 1.25rem;
+  @include media-breakpoint-down(sm) {
+    margin-left: 1.5rem;
+    padding-top: 0.5rem;
+  }
+}
+
+.hr--2 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  margin-right: -2rem;
+  border-top: 1px solid #e5e5e5;
+}
+
+/*
+ * Why Invest in Ballers
+ */
+.icon-image {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 0.6rem;
+}
+
+.text-2 {
+  color: #828282;
+  font-weight: 300;
+}
+
+/*
+ * Why Ballers is Special
+ */
+@media (min-width: 992px) {
+  .ml--100 {
+    margin-left: -100px !important;
+    position: relative;
+    z-index: 5;
+  }
+}
+
+.shadow-sm {
+  box-shadow: 0 1.5rem 4rem rgba(42, 53, 79, 0.05) !important;
+}
+
+.bg-soft {
+  background-color: #f3f7fa !important;
+  border: 0.0625rem solid $input-border-color;
+  margin-bottom: 1rem !important;
+  @include media-breakpoint-up(lg) {
+    border: 0.0625rem solid rgba(243, 247, 250, 0.05);
+    margin-bottom: 0 !important;
+  }
+  border-radius: 0.125rem;
+  .icon {
+    text-align: center;
+    display: inline-flex;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    -ms-flex-pack: center;
+  }
+
+  .icon i {
+    font-size: 2rem;
+  }
+}
+
+.border-left {
+  @include media-breakpoint-up(lg) {
+    border-left: 0.0625rem solid $input-border-color !important;
+  }
+}
+
+.border-top {
+  @include media-breakpoint-up(lg) {
+    border-top: 0.0625rem solid $input-border-color !important;
+  }
+}
+
+/*
+ * Join Now
+ */
+.btn-xl {
+  padding: 1.5rem 4rem;
+  font-size: 1.4rem;
+}
+
+.join-now {
+  background-image: url('../img/home-real-estate.jpg');
+  background-color: $black;
+  color: $white;
+  padding: 10rem 0;
+
+  // parallax effect
+  background-attachment: fixed;
+  background-position: 0% 0%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  h3 {
+    color: $white;
+    font-size: 3rem;
+    letter-spacing: 2px;
+  }
+
+  &:before {
+    bottom: 0;
+    content: '';
+    display: block;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: rgba($black, 0.85);
+  }
+}
+
+.accordion {
+  .card {
+    background: transparent;
+  }
+
+  &-panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &-panel-header .title {
+    font-size: 1rem;
+    font-weight: 300;
+    color: $text-color;
+    margin-right: 1rem;
+  }
+
+  &-panel-header .icon {
+    font-size: 0.875rem;
+    color: $text-color;
+  }
+}
+
+.google-map {
+  width: 100%;
+  height: 960px;
+  filter: saturate(0);
+  @include media-breakpoint-up(lg) {
+    clip-path: polygon(0 0, 93% 0, 100% 100%, 0% 100%);
+  }
+  overflow: hidden;
+  background: #f2f2f2;
+
+  iframe {
+    width: 100%;
+    height: 960px;
+  }
+}
+
+.side-image {
+  background-image: url('../img/why-invest-in-ballers.jpg');
+  background-size: cover;
+  position: relative;
+  height: 20rem;
+  width: 100%;
+  margin-top: 2rem;
+
+  @include media-breakpoint-up(lg) {
+    height: 40rem;
+    width: 40rem;
+    position: absolute;
+    margin-top: 20rem;
+    top: 0;
+    right: 0;
+    border-radius: 2rem 0 0 2rem;
+  }
+}

@@ -1,0 +1,179 @@
+// Variables
+//
+// Variables should follow the `$component-state-property-size` formula for
+// consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
+
+// Color system
+
+$white: #fff !default;
+$gray-100: #fafafa;
+$gray-200: #f2f2f2;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black: #000 !default;
+
+$blue: #2a8dcc;
+$indigo: #150073;
+$purple: #6f42c1 !default;
+$pink: #e83e8c !default;
+$red: #ba0000;
+$orange: #fd7e14 !default;
+$yellow: #dcb91d;
+$green: #74ae00;
+$teal: #005b5b;
+$cyan: #17a2b8 !default;
+
+$primary: $red;
+$secondary: $teal;
+$tertiary: $green;
+$success: $green;
+$info: $cyan !default;
+$warning: $yellow;
+$danger: $red;
+$light: $white;
+$dark: $black;
+
+// Body
+//
+// Settings for the `<body>` element.
+$text-color: #4f4f4f; // 828282
+$text-color-secondary: lighten($text-color, 10%);
+
+$body-bg: $white;
+$body-color: $text-color;
+$headings-color: $black;
+
+$red-100: #f44242;
+$red-200: #e70d0d;
+$red-300: #970000;
+$red-400: #6c0000;
+
+$yellow-100: #ffe87f;
+$yellow-200: #ffe468;
+$yellow-300: #856c00;
+$yellow-400: #645200;
+
+$teal-100: #289292;
+$teal-200: #088a8a;
+$teal-300: #005b5b;
+$teal-400: #004141;
+
+$green-100: #ace43e;
+$green-200: #93d70c;
+$green-300: #5e8d00;
+$green-400: #436500;
+
+$theme-colors: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$theme-colors: map-merge(
+  (
+    'primary': $primary,
+    'secondary': $secondary,
+    'success': $success,
+    'info': $info,
+    'warning': $warning,
+    'danger': $danger,
+    'light': $light,
+    'dark': $dark
+  ),
+  $theme-colors
+);
+
+// Components
+//
+// Define common padding and border radius sizes and more.
+
+$line-height-lg: 2;
+$line-height-sm: 1.8;
+
+$border-radius: 0.125rem;
+$border-radius-lg: 0.125rem;
+$border-radius-sm: 0.125rem;
+
+$transition-base: all 0.4s ease-in-out;
+
+// Typography
+//
+// Font, line-height, and color for body text, headings, and more.
+
+// stylelint-disable value-keyword-case
+$font-family-sans-serif: $text-font;
+$font-family-base: $font-family-sans-serif;
+$headings-font-family: $headings-font;
+// stylelint-enable value-keyword-case
+
+$font-weight-light: 300;
+$font-weight-normal: 500;
+$font-weight-bold: 700;
+$font-weight-bold: 900;
+$headings-font-weight-light: 300;
+$headings-font-weight: 700;
+
+$font-size-base: 1rem; // Assumes the browser default, typically `16px`
+$line-height-base: 1.6;
+
+// Links
+//
+// Style anchor elements.
+
+$link-color: theme-color('primary') !default;
+
+//
+// Spacers
+//
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: (
+    $spacer * 0.25
+  ),
+  2: (
+    $spacer * 0.5
+  ),
+  3: $spacer,
+  4: (
+    $spacer * 1.5
+  ),
+  5: (
+    $spacer * 3
+  ),
+  6: (
+    $spacer * 5
+  ),
+  7: (
+    $spacer * 8
+  ),
+  8: (
+    $spacer * 10
+  ),
+  9: (
+    $spacer * 15
+  )
+);
+// Forms
+$label-margin-bottom: 0.25rem;
+
+$input-padding-y: 0.8rem;
+$input-padding-x: 1rem;
+$input-font-family: $text-font;
+$input-font-size: 1rem;
+$input-font-weight: 300;
+$input-color: $gray-700;
+$input-border-color: $gray-400;
+$input-box-shadow: none;
+
+$input-line-height: 1.8;
+
+$input-focus-color: $input-color;
+
+$input-placeholder-color: $gray-600 !default;
+$input-focus-border-color: $input-border-color;
+$input-plaintext-color: $body-color !default;
+$input-btn-focus-box-shadow: none;
+
+$input-group-addon-bg: transparent;

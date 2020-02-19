@@ -1,7 +1,65 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .container {
   @include media-breakpoint-down(sm) {
     padding: 0 2rem;
   }
+}
+
+.home-bg {
+  /* The image used */
+  background-image: url('../img/home-bg.jpg');
+
+  /* Half height */
+  height: calc(100vh - 80px);
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  &:before {
+    bottom: 0;
+    content: '';
+    display: block;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: rgba($black, 0.65);
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    .typed {
+      font-size: 1.2rem;
+    }
+    @include media-breakpoint-up(md) {
+      font-size: 2.2rem;
+      .typed {
+        font-size: 2rem;
+      }
+    }
+    @include media-breakpoint-up(lg) {
+      font-size: 3.5rem;
+      .typed {
+        font-size: 3rem;
+      }
+    }
+  }
+}
+
+.title {
+  font-size: 1.2rem;
+  @include media-breakpoint-up(md) {
+    font-size: 2.2rem;
+  }
+}
+
+.btn-light {
+  color: $input-color;
+  border: 1px solid $input-border-color;
 }
 
 label {
@@ -35,80 +93,35 @@ label {
  */
 
 .spacer {
-  padding-top: 8rem;
-  padding-bottom: 8rem;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
   @include media-breakpoint-up(md) {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+  @include media-breakpoint-up(lg) {
     padding-top: 12rem;
     padding-bottom: 12rem;
   }
 }
 
 .spacer-top {
-  padding-top: 8rem;
+  padding-top: 6rem;
   @include media-breakpoint-up(md) {
+    padding-top: 8rem;
+  }
+  @include media-breakpoint-up(lg) {
     padding-top: 12rem;
   }
 }
 
 .spacer-bottom {
-  padding-bottom: 8rem;
+  padding-bottom: 6rem;
   @include media-breakpoint-up(md) {
-    padding-bottom: 12rem;
+    padding-bottom: 8rem;
   }
-}
-
-/*
- * Hero
- */
-
-.form-holder {
-  padding: 2rem;
-  background: rgba(#282568, 0.15);
-}
-
-.rounded-form {
   @include media-breakpoint-up(lg) {
-    background: white;
-    border: 1px solid $input-border-color;
-    border-radius: 10rem;
-    margin: 0 0.5rem;
-  }
-
-  .form-group,
-  .input-group {
-    background: white;
-    @include media-breakpoint-up(lg) {
-      border-radius: 10rem;
-    }
-  }
-
-  .col-lg,
-  .col-lg-auto {
-    padding: 0;
-    align-self: center;
-  }
-
-  .search-holder {
-    padding: 0.5rem;
-    .btn {
-      display: block;
-      width: auto;
-      line-height: 2;
-      padding-right: 2rem;
-      padding-left: 2rem;
-    }
-  }
-
-  .form-control,
-  .input-group-text {
-    border-color: transparent !important;
-  }
-
-  .input-group .form-control {
-    &:not(:first-child) {
-      border-left: 0;
-      padding-left: 0.4rem;
-    }
+    padding-bottom: 12rem;
   }
 }
 
@@ -116,6 +129,7 @@ label {
  * Becoming a Baller
  */
 
+.bg-gray,
 .bg-gray-1 {
   background: $gray-100;
 }
@@ -124,18 +138,30 @@ label {
   background: $gray-200;
 }
 
+.bg-gray-3 {
+  background: $gray-300;
+}
+
 .opacity-1 {
   opacity: 1 !important;
 }
 
 .subtitle {
-  color: #282568;
-  font-size: 1.5rem;
+  color: $text-color;
+  font-size: 1.2rem;
+  line-height: 1.5;
   font-weight: 300;
+  @include media-breakpoint-up(md) {
+    font-size: 1.5rem;
+  }
+}
+
+.text-blue {
+  color: $blue;
 }
 
 .circled-number {
-  background-color: #c6d3e6;
+  background-color: $blue;
   color: #fff;
   padding: 0.5625rem 0.5625rem;
   font-size: 1.0625rem;
@@ -151,8 +177,15 @@ label {
 .step-header {
   font-size: 1.25rem;
   @include media-breakpoint-down(sm) {
-    margin-left: 1.5rem;
+    font-size: 1rem;
+    margin-left: 1.6rem;
     padding-top: 0.5rem;
+  }
+
+  &__content {
+    @include media-breakpoint-down(sm) {
+      margin-left: 1.5rem;
+    }
   }
 }
 
@@ -161,7 +194,7 @@ label {
   margin-bottom: 1rem;
   border: 0;
   margin-right: -2rem;
-  border-top: 1px solid #e5e5e5;
+  border-top: 1px solid $gray-300;
 }
 
 /*
@@ -171,11 +204,6 @@ label {
   width: 2rem;
   height: 2rem;
   margin-right: 0.6rem;
-}
-
-.text-2 {
-  color: #828282;
-  font-weight: 300;
 }
 
 /*
@@ -194,7 +222,7 @@ label {
 }
 
 .bg-soft {
-  background-color: #f3f7fa !important;
+  background-color: #fefefe !important;
   border: 0.0625rem solid $input-border-color;
   margin-bottom: 1rem !important;
   @include media-breakpoint-up(lg) {
@@ -214,6 +242,39 @@ label {
     -ms-flex-pack: center;
   }
 
+  .icon i {
+    font-size: 2rem;
+    color: $blue;
+  }
+}
+
+.bg-special-card {
+  background-color: #eee !important;
+  border: 0.0625rem solid $input-border-color;
+  padding: 1rem 2rem 5rem 0.5rem;
+  margin-left: 0.5rem !important;
+
+  &:first-child {
+    @include media-breakpoint-up(sm) {
+      margin-left: 0 !important;
+    }
+  }
+
+  h5 {
+    color: $red-300;
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+
+  .icon {
+    font-size: 2rem;
+    color: $blue;
+  }
+  @include media-breakpoint-up(lg) {
+    border: 0.0625rem solid rgba(243, 247, 250, 0.05);
+    margin-bottom: 0 !important;
+  }
+  border-radius: 0.125rem;
   .icon i {
     font-size: 2rem;
   }
@@ -254,8 +315,13 @@ label {
 
   h3 {
     color: $white;
-    font-size: 3rem;
+    font-size: 2rem;
     letter-spacing: 2px;
+    font-weight: normal;
+    small {
+      font-size: 1.25rem;
+      letter-spacing: 1px;
+    }
   }
 
   &:before {
@@ -322,9 +388,49 @@ label {
     height: 40rem;
     width: 40rem;
     position: absolute;
-    margin-top: 20rem;
+    margin-top: 5rem;
     top: 0;
     right: 0;
     border-radius: 2rem 0 0 2rem;
   }
+}
+
+.carousel-indicators {
+  margin-bottom: 0;
+  bottom: -3rem;
+  li {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: $blue;
+  }
+}
+
+.btn-normal {
+  padding: 0.75rem 2rem;
+}
+
+h3.special {
+  font-size: 1.25rem;
+  font-weight: 700;
+
+  @include media-breakpoint-up(md) {
+    font-size: 1.5rem;
+  }
+}
+
+.list-social {
+  i {
+    font-size: 2rem;
+    color: $text-muted;
+
+    &:hover {
+      color: $blue;
+    }
+  }
+}
+
+.with-errors {
+  color: $red;
+  font-size: 0.8rem;
 }

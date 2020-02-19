@@ -8,24 +8,24 @@
 $white: #fff !default;
 $gray-100: #fafafa;
 $gray-200: #f2f2f2;
-$gray-300: #dee2e6 !default;
+$gray-300: #e0e0e0;
 $gray-400: #ced4da !default;
 $gray-500: #adb5bd !default;
-$gray-600: #6c757d !default;
+$gray-600: #888; //text-muted
 $gray-700: #495057 !default;
 $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
 $black: #000 !default;
 
-$blue: #2a8dcc;
+$blue: #282568;
 $indigo: #150073;
 $purple: #6f42c1 !default;
 $pink: #e83e8c !default;
-$red: #ba0000;
-$orange: #fd7e14 !default;
+$red: #e60100;
+$orange: #e66800;
 $yellow: #dcb91d;
-$green: #74ae00;
-$teal: #005b5b;
+$green: #00b800;
+$teal: #008a8a;
 $cyan: #17a2b8 !default;
 
 $primary: $red;
@@ -41,32 +41,32 @@ $dark: $black;
 // Body
 //
 // Settings for the `<body>` element.
-$text-color: #4f4f4f; // 828282
+$text-color: #8492a6; // 828282
 $text-color-secondary: lighten($text-color, 10%);
 
 $body-bg: $white;
 $body-color: $text-color;
-$headings-color: $black;
+$headings-color: $blue;
 
-$red-100: #f44242;
-$red-200: #e70d0d;
-$red-300: #970000;
-$red-400: #6c0000;
+$red-100: #ff5959;
+$red-200: #ff2c2c;
+$red-300: #b90000;
+$red-400: #8f0000;
 
-$yellow-100: #ffe87f;
-$yellow-200: #ffe468;
-$yellow-300: #856c00;
-$yellow-400: #645200;
+$orange-100: #ffa459;
+$orange-200: #ff8c2c;
+$orange-300: #b95400;
+$orange-400: #8f4100;
 
-$teal-100: #289292;
-$teal-200: #088a8a;
-$teal-300: #005b5b;
-$teal-400: #004141;
+$teal-100: #3ba9a9;
+$teal-200: #1b9999;
+$teal-300: #006f6f;
+$teal-400: #005656;
 
-$green-100: #ace43e;
-$green-200: #93d70c;
-$green-300: #5e8d00;
-$green-400: #436500;
+$green-100: #4ad44a;
+$green-200: #23cc23;
+$green-300: #009400;
+$green-400: #007300;
 
 $theme-colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
@@ -88,8 +88,8 @@ $theme-colors: map-merge(
 //
 // Define common padding and border radius sizes and more.
 
-$line-height-lg: 2;
-$line-height-sm: 1.8;
+$line-height-lg: 2.2;
+$line-height-sm: 2;
 
 $border-radius: 0.125rem;
 $border-radius-lg: 0.125rem;
@@ -108,14 +108,12 @@ $headings-font-family: $headings-font;
 // stylelint-enable value-keyword-case
 
 $font-weight-light: 300;
-$font-weight-normal: 500;
-$font-weight-bold: 700;
-$font-weight-bold: 900;
-$headings-font-weight-light: 300;
+$font-weight-normal: 300;
+$font-weight-bold: 500;
 $headings-font-weight: 700;
 
 $font-size-base: 1rem; // Assumes the browser default, typically `16px`
-$line-height-base: 1.6;
+$line-height-base: 1.8;
 
 // Links
 //

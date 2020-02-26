@@ -6,7 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon -e scss --exec npm run scss",
-    "scss": "node-sass public/assets/scss/app.scss public/assets/css/app.css --output-style=compressed"
+    "scss": "node-sass public/assets/scss/app.scss public/assets/css/app.css --output-style=compressed",
+    "checkout-pb": "git checkout ft-form-for-email-171431848",
+    "push-pb": "git push --set-upstream origin ft-form-for-email-171431848",
+    "commit-pb": "git commit -m 'feature: add ballers form UI [Start #171431848]'"
   },
   "author": "",
   "license": "ISC",

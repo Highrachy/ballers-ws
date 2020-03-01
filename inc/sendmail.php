@@ -4,8 +4,9 @@ require_once "Mail.php"; // PEAR Mail package
 require_once ('Mail/mime.php'); // PEAR Mail_Mime packge
 
 require_once('config.php');
+require_once('db.php');
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $full_name = $_POST['full_name']; // form field
     $email = $_POST['email']; // form field
@@ -21,6 +22,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
     $text = "Fullname: $full_name \nEmail: $email \nPhone: $phone";; // text versions of email.
     $html = "<html><body>Full Name: $full_name <br> Email: $email <br>Phone: $phone <br></body></html>"; // html versions of email.
 
+    // save contacts in db
+    save_contacts_in_db($full_name, $email, $phone);
 
     if ($is_local_environment) {
         // show the sent email on local

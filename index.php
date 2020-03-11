@@ -8,49 +8,98 @@
     <title>Ballers: Become A Landlord [COMING SOON]</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
   </head>
   <body>
     <div class="container">
-        <div class="form-container col-md-8 col-sm-12">
-          <header class="text-center">
-            <img src="assets/img/logo.png" alt="Ballers Logo" class="logo">
-          </header>
+      <!-- start container here -->
 
-          <section>
-            <h1 class="title text-center">Become a Landlord</h1>
-            <p class="text-center text-muted">Join a community of insightful minds where you can own a home with ease.</p>
-          </section>
+        <nav class="navbar">
+            <a class="navbar-brand" href="#">
+              <img src="./assets/img/logo.png" class="logo" alt="ballers_logo">
+            </a>
+            <h5 class="float-right nav-text">Strategically build your wealth today.</h5>
+        </nav>
 
-          <form data-toggle="validator" method="post" action="#" class="mt-5 pt-3">
-            <p class="text-left">Pls fill out your details below to be notified when we launch.</p>
-
-            <?php require_once('inc/sendmail.php'); ?>
-
-            <div class="form-group mb-4">
-              <label for="full_name" class="small mb-0">Full Name <span class="text-danger">*</span></label>
-              <input type="text" class="form-control col-md-9" name="full_name" placeholder="Enter your Full Name" required>
-              <small class="help-block with-errors text-danger"></small>
-            </div>
-
-            <div class="form-group mb-4">
-            <label for="email" class="small mb-0">Email Address <span class="text-danger">*</span></label>
-              <input type="email" class="form-control col-md-9" name="email" placeholder="Enter you Email Addresss" required>
-              <small class="help-block with-errors text-danger"></small>
-            </div>
-
-            <div class="form-group mb-4">
-              <label for="phone"  class="small mb-0">Phone Number <span class="text-muted">(optional)</span> </label>
-              <input type="text" class="form-control col-md-9" placeholder="Phone Number" name="phone">
-              <small class="help-block with-errors text-danger"></small>
-            </div>
-
-            <button type="submit" class="btn submit-btn mt-2">Submit</button>
-          </form>
-
-          <footer class="col-sm-12 mt-5 pt-4 text-center">
-            <small class="text-muted">Strategically build your wealth today.</small>
-          </footer>
+        <div class="holding">
+            <h1 class="ball float-right">BECOME A <br> LANDLORD</h1>
         </div>
+
+        <div class="contact-form col-md-10 row text-left">
+            <div class="col-md-9">
+                <h3 class="coming-soon">COMING SOON</h3>
+                <p class="drop-text">Drop your details below to be contacted once the Ballers platform is live</p>
+                <br>
+                <form class="form-inline" method="POST" action="#">
+                    <input type="text" class="form-control" placeholder="Fullname" name="full_name" required> &nbsp;
+                
+                    <input type="email" class="form-control" placeholder="Email" name="email" required> &nbsp;
+
+                    <input type="text" class="form-control" placeholder="Phone number" name="phone">
+                </form>
+            </div>
+            <div class="col-md-3 text-center">
+                <button type="submit" class="btn btn-lg contact-btn">Submit</button>
+            </div>
+        </div>
+
+        <div class="col-md-12 text-center what-is">
+          <img src="./assets/img/arrow-down.png" alt="arrow-down" class="arrow-down">
+          <br><br>
+          <h5>WHAT IS BALL?</h5>
+          <br>
+          <h1>Game-changing service <br> that makes owning <br> your home easier</h1>
+        </div>
+
+        <div class="col-md-12 row">
+          <div class="col-md-6 text-center">
+            <img src="./assets/img/home-love.png" alt="home-love" class="home-love">
+          </div>
+          <div class="col-md-6 text-left easy">
+            <h3 class="easy-head">The easiest way to own a home</h3>
+            <br>
+            <p class="easy-body">We make owning a home simpler and <br> achievable. With BALL unique saving plan <br> tailored to you and your financial position, <br> owning a home has never been easier.</p>
+            <br>
+            <button class="btn btn-lg get-notified">Get Notified!</button>
+          </div>
+        </div>
+
+        <br><br>
+
+        <div class="col-md-12 row">
+          <div class="col-md-6 text-right easy">
+            <h3 class="easy-head">Be part of a prestigious community</h3>
+            <br>
+            <p class="easy-body">What’s a home without family. <br> Our community provides the love of a family,<br> from sharing of advice to mentorship and <br> many more.</p>
+            <br>
+            <button class="btn btn-lg get-notified">Get Notified!</button>
+          </div>
+          <div class="col-md-6 text-center">
+            <img src="./assets/img/room-like.png" alt="room-like" class="home-love">
+          </div>
+        </div>
+      
+      <!-- container ends here -->
+    </div>
+
+    <br><br><br>
+
+    <div class="landlord row col-md-10">
+      <div class="col-md-6 be-landlord">
+        <h1 class="landlord-head">Become a landlord</h1>
+        <br>
+        <p class="landlord-text">Join a community of insightful minds <br> where you can own a home with ease.</p>
+        <br>
+        <button class="btn btn-lg landlord-btn">Get Notified!</button>
+      </div>
+      
+      <div class="col-md-6 text-center key-div">
+        <img src="./assets/img/hand-key.png" alt="hand-key" class="hand-key">
+      </div>
+    </div>
+    <div class="col-md-12 footer">
+      <img src="./assets/img/logo.png" alt="ballers_logo" class="logo-footer">
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

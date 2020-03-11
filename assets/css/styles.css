@@ -1,134 +1,225 @@
-@import url('https://fonts.googleapis.com/css?family=Rubik:400,500&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Barlow:300,500,700&display=swap');
 
 * {
-  font-family: 'Rubik', sans-serif !important;
+  font-family: 'Barlow', sans-serif !important;
 }
-html, body{ 
-  width: 100%; 
-  height: 100%; 
+html,
+body {
+  width: 100%;
+  height: 100%;
 }
-.logo{
+.logo {
   width: 7rem;
   height: 4rem;
 }
-.nav-text{
+.nav-text {
   color: #22213d;
 }
-.holding{
+.holding {
   background-image: url('../img/holding.png');
   background-size: contain;
   height: 28rem;
   border-radius: 0.5rem;
-  margin: auto !important;
   width: 100%;
+  padding-left: 7rem;
 }
-.drop-text{
-  font-weight: 400;
+.drop-text {
+  font-weight: 600;
 }
-.comig-soon{
-  color: #ffffff;
+
+.coming-soon {
+ font-weight: 800;
+ font-size: 3rem;
+ letter-spacing: 0.1rem;
+ color: #ffffff;
+ text-shadow: 4px 4px #161d3f;
+
 }
-.ball{
+
+.ball-full-text {
   color: #161d3f;
-  font-weight: 900;
+  font-size: 1.8rem;
+  font-weight: bold;
   padding-top: 3rem;
   padding-right: 3rem;
+  letter-spacing: 0.05rem;
 }
+
 .form-control {
   border: none;
-  border-bottom: solid #5775fa;
+  border-bottom: 2px solid #5775fa;
+  height: 3rem;
   border-radius: 0;
   color: #c0ccda;
   background-color: #161d3f;
 }
+
 .form-control:focus {
   outline: none;
   color: #c0ccda;
   background-color: #161d3f;
   border-bottom: solid #5775fa;
 }
-.contact-form{
+
+.contact-form {
   background: #161d3f;
   border-radius: 0.5rem;
   color: #ffffff;
-  top: -7rem;
-  left: 5rem;
-  padding: 1rem;
+  top: -3.2rem;
+  padding: 2rem 1rem 1rem;
+  margin: auto;
 }
-.contact-btn{
+.contact-btn {
   background-color: #5775fa;
   color: #ffffff;
   font-weight: 400;
-  padding: 1.3rem 4rem;
-  margin-top: 2rem;
+  padding: 1.2rem 4rem;
 }
-.what-is{
+.contact-btn:hover{
+  color: #161d3f;
+  background-color: #dde3fe;
+}
+.what-is {
   top: -4rem;
   color: #161d3f;
 }
-.arrow-down{
+.arrow-down {
   width: 2.8rem;
   height: 2.8rem;
 }
-.home-love{
+.home-love {
   width: 26rem;
   height: 22rem;
 }
-.easy{
+.easy {
   padding-top: 3rem;
 }
-.easy-head{
+.easy-head {
   color: #161d3f;
+  font-weight: 700;
 }
-.easy-body{
+.easy-body {
   color: #5a6679;
-  font-weight: 400;
+  font-weight: 300;
+  font-size: 1.25rem;
 }
-.get-notified{
+.btn-get-notified {
   color: #5775fa;
   background-color: #dde3fe;
   font-weight: 400;
   padding: 1rem 2rem;
 }
-.landlord{
+.landlord {
   background-image: url('../img/purple-bg.png');
   border-radius: 0rem 0.5rem 0.5rem 0rem;
   color: #ffffff;
   max-height: 25rem;
   padding-left: 3rem;
 }
-.be-landlord{
+@media screen and (min-width: 960px) {
+  .landlord {
+    margin-right: 14rem;
+  }
+}
+
+.be-landlord {
   padding: 4rem;
 }
-.landlord-text{
+.landlord-text {
   font-weight: 400;
 }
-.landlord-btn{
+.landlord-btn {
   color: #5775fa;
   background-color: #ffffff;
   font-weight: 400;
   padding: 1rem 2rem;
 }
-.hand-key{
+.hand-key {
   width: 24rem;
   height: 33rem;
   z-index: 10;
 }
-.key-div{
+.key-div {
   padding-top: 4rem;
 }
-.footer{
+.footer {
   background-color: #dde3fe;
   padding-left: 6rem;
-  padding-bottom: 4rem;
+  padding-bottom: 3.5rem;
   padding-top: 17rem;
+  margin-top: -13rem;
+  position: absolute;
+  left: 0;
+  right: 0;
   z-index: -10;
-  top: -13rem;
-  bottom: 0;
-  margin-bottom: 0;
-  /* max-height: 25rem; */
 }
-.logo-footer{
-  width: 6rem;
-  height: 3.8rem;
+.footer-text {
+  color: #161d3f;
+  font-weight: 200;
+}
+.baller-logo-footer {
+  width: 5rem;
+  height: 2.9rem;
+  float: right;
+  margin-right: 7rem;
+}
+.highrachy-logo-footer {
+  width: 8.2rem;
+  height: 2.6em;
+}
+
+.form-group {
+  margin-bottom: 0 !important;
+}
+
+.header_small {
+  font-size: 1.25rem;
+  margin: 1rem 0 3rem;
+  text-transform: uppercase;
+}
+
+.header_bold {
+  font-size: 2.8rem;
+  font-weight: 700;
+}
+
+form {
+  position: relative;
+}
+
+label {
+  position: absolute;
+  color: #c0ccda;
+  top: 0.6rem;
+  left: 1rem;
+  font-size: 0.8rem;
+  cursor: text;
+  transition: top 0.2s ease-in-out, font-size 0.2s ease-in-out;
+}
+
+input:focus {
+  outline: none;
+}
+
+input:focus + label,
+input:valid + label,
+.has-error input:invalid + label {
+  top: -0.9rem;
+  font-size: 0.8rem;
+}
+
+.has-error input:invalid {
+  border-color: #d93025;
+}
+
+.has-error input:invalid + label {
+  color: #d93025;
+}
+
+.has-error label {
+  color: #d93025;
+}
+
+.with-errors ul {
+  margin-top: 0.5rem;
 }

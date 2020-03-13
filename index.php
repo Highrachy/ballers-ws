@@ -32,11 +32,12 @@
             <br><br>
             <h1 class="coming-soon">COMING SOON</h1>
             <p class="drop-text">Drop your details below to be contacted <br> once the Ballers platform is live</p>
+            <span  id="notification-form"></span>
         </section>
         <!-- /.Holding Page -->
 
         <!-- Notification Form -->
-        <aside class="contact-form col-md-10 ">
+        <aside class="contact-form col-md-10">
           <form data-toggle="validator" method="post" action="">
             <div class="row">
               <div class="col-md-9">
@@ -46,18 +47,18 @@
 
                   <div class="form-group col-md-4">
                     <input type="text" class="form-control" name="full_name" required>
-                    <label for="full_name">Full name</label>
+                    <label for="full_name">Full name *</label>
                     <small class="help-block with-errors text-danger"></small>
                   </div>
 
                   <div class="form-group col-md-4">
                     <input type="email" class="form-control" name="email" required>
-                    <label for="email">Email</label>
+                    <label for="email">Email *</label>
                     <small class="help-block with-errors text-danger"></small>
                   </div>
 
                   <div class="form-group col-md-4">
-                    <input type="text" class="form-control" name="phone" required>
+                    <input type="text" class="form-control" name="phone">
                     <label for="phone">Phone</label>
                     <small class="help-block with-errors text-danger"></small>
                   </div>
@@ -93,7 +94,7 @@
                 owning a home has never been easier.
               </p>
             </div>
-            <button class="btn btn-lg btn-get-notified">Get Notified!</button>
+            <a href="#notification-form" class="btn btn-lg btn-get-notified">Get Notified!</a>
           </div>
         </section>
         <!-- /.Easiest way to own a home -->
@@ -107,7 +108,7 @@
                 What’s a home without family. <br> Our community provides the love of a family, from sharing of advice to mentorship and many more.
               </p>
             </div>
-            <button class="btn btn-lg btn-get-notified">Get Notified!</button>
+            <a href="#notification-form" class="btn btn-lg btn-get-notified">Get Notified!</a>
           </div>
           <div class="col-md-6 text-center">
             <img src="./assets/img/room-like.png" alt="room-like" class="home-love">
@@ -121,7 +122,7 @@
         <div class="col-md-6 be-landlord">
           <h3 class="landlord-head">Become a landlord</h3>
           <p class="landlord-text">Join a community of insightful minds <br> where you can own a home with ease.</p>
-          <button class="btn btn-lg landlord-btn">Get Notified!</button>
+          <a href="#notification-form" class="btn btn-lg landlord-btn">Get Notified!</a>
         </div>
 
         <div class="col-md-6 text-center key-div">
@@ -133,7 +134,7 @@
     <footer class="row footer">
       <div class="col-md-12">
         <h5 class="footer-text">An initiative of </h5><img src="./assets/img/highrachy_logo.png" alt="highrachy_logo" class="highrachy-logo-footer">
-      
+
         <img src="./assets/img/logo.png" alt="ballers_logo" class="baller-logo-footer">
       </div>
     </footer>

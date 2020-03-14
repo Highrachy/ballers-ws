@@ -22,6 +22,7 @@
                 <img src="./assets/img/logo.png" class="logo" alt="ballers_logo">
               </a>
               <h5 class="text-right nav-text">Strategically build your wealth today.</h5>
+              <h5 class="text-right nav-text-mobile">Become a Landlord</h5>
           </nav>
         </header>
         <!-- /.Header -->
@@ -38,6 +39,7 @@
 
         <!-- Notification Form -->
         <aside class="contact-form col-md-10">
+          <p class="drop-text-2">Pls fill out your details below to be <br> notified when we launch.</p>
           <form data-toggle="validator" method="post" action="">
             <div class="row">
               <div class="col-md-9">
@@ -74,15 +76,17 @@
 
         <!-- What is Ballers -->
         <section class="text-center what-is">
-          <img src="./assets/img/arrow-down.png" alt="arrow-down" class="arrow-down">
-          <h2 class="header_small">WHAT IS BALL?</h2>
+          <a href="#down">
+            <img src="./assets/img/arrow-down.png" alt="arrow-down" class="arrow-down">
+          </a>        
+          <h2 class="header_small" id="down">WHAT IS BALL?</h2>
           <h3 class="header_bold mb-5">Game-changing service <br> that makes owning <br> your home easier</h3>
         </section>
         <!-- What is Ballers -->
 
         <!-- Easiest way to own a home -->
-        <section class="row pb-5">
-          <div class="col-md-6 text-center">
+        <section class="row pb-5 own-home">
+          <div class="col-md-6 col-sm-12 text-center">
             <img src="./assets/img/home-love.png" alt="home-love" class="home-love">
           </div>
           <div class="col-md-6 text-left easy">
@@ -100,17 +104,23 @@
         <!-- /.Easiest way to own a home -->
 
         <!-- Part of a Prestigious Community -->
-        <section class="row mt-5">
+        <section class="row mt-5 community">
+          <div class="col-md-6 text-center like-small">
+            <img src="./assets/img/room-like.png" alt="room-like" class="home-love">
+          </div>
           <div class="col-md-6 text-right easy">
             <h3 class="easy-head">Be part of a prestigious community</h3>
             <div class="easy-body mt-4 mb-3 row">
-              <p class="col-md-9 pl-4 offset-md-3 text-right">
-                What’s a home without family. <br> Our community provides the love of a family, from sharing of advice to mentorship and many more.
+              <p class="col-md-9 pl-4 offset-md-3 text-right easy-text-mobile">
+                What’s a home without family.
+                Our community provides the love of a family,
+                from sharing of advice to 
+                mentorship and many more.
               </p>
             </div>
             <a href="#notification-form" class="btn btn-lg btn-get-notified">Get Notified!</a>
           </div>
-          <div class="col-md-6 text-center">
+          <div class="col-md-6 text-center like-big">
             <img src="./assets/img/room-like.png" alt="room-like" class="home-love">
           </div>
         </section>

@@ -21,10 +21,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
     $text = "Fullname: $full_name \nEmail: $email \nPhone: $phone";; // text versions of email.
     $html = "<html><body>Full Name: $full_name <br> Email: $email <br>Phone: $phone <br></body></html>"; // html versions of email.
 
+    $success_alert = "<script type='text/javascript'>
+                        Swal.fire(
+                            'Congratulations ".$full_name."!',
+                            'You will be notified once we\'re live.',
+                            'success'
+                        );
+                    </script>";
+
 
     if ($is_local_environment) {
-        // show the sent email on local
-        echo $html;
+        echo($success_alert);
     } else {
         $crlf = "\n";
 
@@ -44,10 +51,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
         'username' => $username,'password' => $password));
         $mail = $smtp->send($to, $headers, $body);
         if (PEAR::isError($mail)) {
-            echo('<div class="alert alert-danger" role="alert">'. $mail->getMessage() .'</div>');
+            echo("<script type='text/javascript'>
+                    Swal.fire(
+                        'Something went wrong',
+                        '". $mail->getMessage() ."',
+                        'error'
+                    );
+                </script>");
         }
         else {
-        echo('<div class="alert alert-success" role="alert">Message has been successfully sent.</div>');
+            echo($success_alert);
         }
     }
 

@@ -27,7 +27,9 @@ body {
 .drop-text {
   font-weight: 600;
 }
-.drop-text-2, .like-small, .nav-text-mobile {
+.drop-text-2,
+.like-small,
+.nav-text-mobile {
   display: none;
 }
 .coming-soon {
@@ -82,7 +84,6 @@ body {
   background-color: #dde3fe;
 }
 .what-is {
-  top: -4rem;
   color: #161d3f;
 }
 .arrow-down {
@@ -196,7 +197,7 @@ label {
   left: 1rem;
   font-size: 0.8rem;
   cursor: text;
-  transition: top 0.2s ease-in-out, font-size 0.2s ease-in-out;
+  transition: top 0.2s ease-in-out;
 }
 
 input:focus {
@@ -207,7 +208,6 @@ input:focus + label,
 input:valid + label,
 .has-error input:invalid + label {
   top: -0.9rem;
-  font-size: 0.8rem;
 }
 
 .has-error input:invalid {
@@ -224,18 +224,83 @@ input:valid + label,
 
 .with-errors ul {
   margin-top: 0.5rem;
+  margin-bottom: 0;
 }
 
-@media only screen and (max-width: 600px) {
+label {
+  opacity: 0;
+  top: 0.6rem !important;
+  transition: top 0.2s ease-in-out;
+}
+
+input:focus + label {
+  top: -0.9rem !important;
+  font-size: 0.8rem;
+  opacity: 1;
+}
+
+input::placeholder {
+  color: #c0ccda;
+  font-size: 0.8rem;
+}
+
+input:focus::placeholder {
+  color: #888;
+}
+
+input::placeholder {
+  color: #888;
+  font-size: 0.8rem;
+  opacity: 1;
+  transition: all 0.2s;
+}
+
+.bounce-image {
+  position: absolute;
+  -webkit-animation: bounce 2s infinite 2s;
+  animation: bounce 2s infinite 2s;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+@keyframes bounce {
+  0%,
+  100%,
+  20%,
+  50%,
+  80% {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-0.8rem);
+    -ms-transform: translateY(-0.8rem);
+    transform: translateY(-0.8rem);
+  }
+  60% {
+    -webkit-transform: translateY(-0.4rem);
+    -ms-transform: translateY(-0.4rem);
+    transform: translateY(-0.4rem);
+  }
+}
+
+@media only screen and (max-width: 768px) {
   body {
     overflow-x: hidden !important;
   }
   .container {
-      max-width: 100% !important;
-      overflow-x: hidden !important;
-      padding: 0;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+    padding: 0;
   }
-  .ball-full-text, .drop-text, .btn-get-notified, .like-big, .highrachy-logo-footer, .footer-text, .nav-text {
+  .ball-full-text,
+  .drop-text,
+  .btn-get-notified,
+  .like-big,
+  .highrachy-logo-footer,
+  .footer-text,
+  .nav-text {
     display: none;
   }
   .nav-text-mobile {
@@ -270,7 +335,7 @@ input:valid + label,
   }
   form {
     padding: 1rem 1.5rem;
-    margin: auto ;
+    margin: auto;
   }
   .form-group {
     padding-bottom: 2rem;
@@ -284,7 +349,7 @@ input:valid + label,
   .header_bold {
     font-size: 1.5rem;
   }
-  .home-love{
+  .home-love {
     width: 14rem;
     height: 11rem;
     border-radius: 0.7rem;
@@ -313,7 +378,6 @@ input:valid + label,
   .easy-text-mobile {
     text-align: center !important;
     padding-left: 0 !important;
-    /* padding-bottom: 15rem !important; */
   }
   .like-small {
     display: block;
@@ -331,5 +395,4 @@ input:valid + label,
     float: left;
     padding-left: 1rem;
   }
-
 }

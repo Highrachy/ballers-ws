@@ -29,7 +29,7 @@
 
         <!-- Holding Page -->
         <section class="holding">
-            <h4 class="ball-full-text">BECOME A LANDLORD</h4>
+            <h4 class="ball-full-text d-none d-md-block">BECOME A LANDLORD</h4>
             <br><br>
             <h1 class="coming-soon">COMING SOON</h1>
             <p class="drop-text">Drop your details below to be contacted <br> once the Ballers platform is live</p>
@@ -48,25 +48,24 @@
                   <?php require_once('inc/sendmail.php'); ?>
 
                   <div class="form-group col-md-4">
-                    <input type="text" class="form-control" name="full_name" required>
+                    <input type="text" class="form-control" name="full_name" placeholder="Full Name" required>
                     <label for="full_name">Full name *</label>
                     <small class="help-block with-errors text-danger"></small>
                   </div>
 
                   <div class="form-group col-md-4">
-                    <input type="email" class="form-control" name="email" required>
+                    <input type="email" class="form-control" name="email" placeholder="Email" required>
                     <label for="email">Email *</label>
                     <small class="help-block with-errors text-danger"></small>
                   </div>
 
-                  <div class="form-group col-md-4">
-                    <input type="text" class="form-control" name="phone">
+                  <div class="form-group col-md-4 optional">
+                    <input type="text" class="form-control" placeholder="Phone" name="phone">
                     <label for="phone">Phone</label>
-                    <small class="help-block with-errors text-danger"></small>
                   </div>
                 </div>
               </div>
-              <div class="col-md-3 text-center">
+              <div class="col-md-3 text-center btn-holder">
                 <button type="submit" class="btn btn-lg contact-btn">Submit</button>
               </div>
             </div>
@@ -75,11 +74,13 @@
         <!-- /.Notification Form -->
 
         <!-- What is Ballers -->
-        <section class="text-center what-is">
-          <a href="#down">
-            <img src="./assets/img/arrow-down.png" alt="arrow-down" class="arrow-down">
-          </a>        
-          <h2 class="header_small" id="down">WHAT IS BALL?</h2>
+        <section class="text-center what-is pt-5">
+          <div class="position-relative">
+            <a class="bounce-image mt-n5 ml-n3" href="#down">
+              <img src="./assets/img/arrow-down.png" alt="arrow-down" class="arrow-down">
+            </a>
+          </div>
+          <h2 class="header_small" id="down" >WHAT IS BALL?</h2>
           <h3 class="header_bold mb-5">Game-changing service <br> that makes owning <br> your home easier</h3>
         </section>
         <!-- What is Ballers -->
@@ -114,7 +115,7 @@
               <p class="col-md-9 pl-4 offset-md-3 text-right easy-text-mobile">
                 What’s a home without family.
                 Our community provides the love of a family,
-                from sharing of advice to 
+                from sharing of advice to
                 mentorship and many more.
               </p>
             </div>

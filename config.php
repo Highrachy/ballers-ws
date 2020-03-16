@@ -9,7 +9,17 @@ if (stristr($_SERVER['HTTP_HOST'], 'local') || (substr($_SERVER['HTTP_HOST'], 0,
 	$configs = require('env.php');
 }
 
-// Define all constants from env here:
-define('SITE_NAME','Ballers');
+// CONSTANTS
+define('SITE_NAME','Ballers');	define('SITE_NAME','Ballers');
+
+// DATABASE
+define('DB_HOST',$configs['db_host']);
+define('DB_NAME',$configs['db_name']);
+define('DB_USER',$configs['db_user']);
+define('DB_PASS',$configs['db_pass']);
+
+// SMTP FOR SENDING EMAILS
+define('SEND_EMAIL_TO',  $configs['send_email_to']);
+define('SEND_EMAIL_CC',  $configs['send_email_cc']);
 define('SMTP_EMAIL',  $configs['smtp_email']);
 define('SMTP_PASSWORD',$configs['smtp_password']);

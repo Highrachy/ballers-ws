@@ -4,6 +4,7 @@ require_once "Mail.php"; // PEAR Mail package
 require_once ('Mail/mime.php'); // PEAR Mail_Mime packge
 
 require_once('config.php');
+require_once('db.php');
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 
@@ -12,14 +13,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
     $phone = $_POST['phone']; // form field
 
     $from = "no-reply@ballers.ng"; //enter your email address
-    $to = "haruna@highrachy.com"; //enter the email address of the contact your sending to
-    $cc = "harunpopson@gmail.com";
+    $to = SEND_EMAIL_TO; //enter the email address of the contact your sending to
+    $cc = SEND_EMAIL_CC;
     $subject = "[Ballers Landing Page] Interested in joining Ballers"; // subject of your email
 
     $headers = array ('From' => $from,'To' => $to, 'Subject' => $subject);
 
-    $text = "Fullname: $full_name \nEmail: $email \nPhone: $phone";; // text versions of email.
+    $text = "Fullname: $full_name \nEmail: $email \nPhone: $phone"; // text versions of email.
     $html = "<html><body>Full Name: $full_name <br> Email: $email <br>Phone: $phone <br></body></html>"; // html versions of email.
+
+    // save contacts in db
+    save_contacts_in_db($full_name, $email, $phone);
 
     $success_alert = "<script type='text/javascript'>
                         Swal.fire(

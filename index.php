@@ -80,7 +80,7 @@
         <!-- What is Ballers -->
         <section class="text-center what-is pt-5">
           <div class="position-relative">
-            <a class="bounce-image mt-n5 ml-n3" href="#down">
+            <a class="bounce-image mt-n5 ml-n4" href="#down">
               <img src="./assets/img/arrow-down.png" alt="arrow-down" class="arrow-down">
             </a>
           </div>

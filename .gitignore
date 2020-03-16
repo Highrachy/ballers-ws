@@ -85,3 +85,4 @@ Icon
 public/Archive.zip
 env.php
 *.zip
+env-staging.php

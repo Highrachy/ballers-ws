@@ -69,7 +69,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-3 text-center btn-holder">
+              <div class="col-md-3 text-center">
                 <button type="submit" class="btn btn-lg contact-btn">Submit</button>
               </div>
             </div>

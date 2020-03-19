@@ -289,6 +289,13 @@ input::placeholder {
   .contact-btn {
     padding: 1rem 3rem;
   }
+  .landlord-text {
+    font-size: 1.25rem;
+  }
+  .landlord-head {
+    font-weight: 700;
+    font-size: 1.75rem;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -300,28 +307,22 @@ input::placeholder {
     overflow-x: hidden !important;
     padding: 0;
   }
-  .ball-full-text,
-  .drop-text,
+  .landlord,
   .btn-get-notified,
-  .like-big,
   .highrachy-logo-footer,
-  .footer-text,
-  .nav-text {
-    display: none;
+  .footer-text {
+    display: none !important;
   }
-  .nav-text-mobile {
-    display: block;
-    color: #22213d;
-    font-size: 1rem;
-  }
-  .drop-text-2 {
-    display: block;
-    font-weight: 200;
-    padding-left: 1.5rem;
+  .ball-full-text  {
+    padding-top: 1rem;
+    font-size: 2rem;
   }
   .coming-soon {
-    padding-top: 6rem;
-    font-size: 2.5rem;
+    font-weight: 800;
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+    color: #ffffff;
+    text-shadow: 4px 4px #161d3f;
   }
   .logo {
     width: 4rem;
@@ -331,16 +332,22 @@ input::placeholder {
     font-size: 1rem;
   }
   .holding {
-    background-image: url('../img/holding-mobile.png');
     border-radius: 0;
     background-size: cover;
     height: 17rem;
-    text-align: center;
     padding: 1rem 3rem;
     margin: 0;
   }
+  .contact-form {
+    background: #161d3f;
+    border-radius: 0.5rem;
+    color: #ffffff;
+    top: -2.2rem;
+    padding: 0.5rem 1rem;
+    margin: auto;
+  }
   form {
-    padding: 1rem 1.5rem;
+    padding: 0.5rem 1.5rem;
     margin: auto;
   }
   .form-group {
@@ -385,12 +392,6 @@ input::placeholder {
     text-align: center !important;
     padding-left: 0 !important;
   }
-  .like-small {
-    display: block;
-    padding-left: 0 !important;
-    width: 14rem;
-    height: 11rem;
-  }
   .footer {
     padding-top: 2rem;
     padding-left: 1rem;
@@ -402,8 +403,50 @@ input::placeholder {
     padding-left: 1rem;
   }
 }
+
 @media only screen and (max-width: 414px) {
+  .ball-full-text,
+  .drop-text,
+  .btn-get-notified,
+  .like-big,
+  .nav-text {
+    display: none;
+  }
+  .nav-text-mobile {
+    display: block;
+    color: #22213d;
+    font-size: 1rem;
+  }
+  .drop-text-2 {
+    display: block;
+    font-weight: 200;
+    padding-left: 1.5rem;
+  }
+  .coming-soon {
+    padding-top: 4rem;
+    font-size: 2.5rem;
+  }
+  .holding {
+    background-image: url('../img/holding-mobile.png');
+    border-radius: 0;
+    background-size: cover;
+    height: 17rem;
+    text-align: center;
+    padding: 1rem 3rem;
+    margin: 0;
+  }
+  form {
+    padding: 1rem 1.5rem;
+    margin: auto;
+  }
   .contact-btn {
-    padding: 0.5rem 5rem;
+    padding: 0.5rem 4rem;
+    margin: auto;
+  }
+  .like-small {
+    display: block;
+    padding-left: 0 !important;
+    width: 14rem;
+    height: 11rem;
   }
 }

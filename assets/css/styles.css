@@ -119,6 +119,7 @@ body {
   max-height: 25rem;
   padding-left: 3rem;
 }
+
 @media screen and (min-width: 960px) {
   .landlord {
     margin-right: 14rem;
@@ -298,20 +299,14 @@ input::placeholder {
   }
 }
 
-@media only screen and (max-width: 768px) {
+/* medium sized devices ie. tablets */
+@media only screen and (max-width: 991.98px) {
   body {
     overflow-x: hidden !important;
   }
   .container {
     max-width: 100% !important;
     overflow-x: hidden !important;
-    padding: 0;
-  }
-  .landlord,
-  .btn-get-notified,
-  .highrachy-logo-footer,
-  .footer-text {
-    display: none !important;
   }
   .ball-full-text  {
     padding-top: 1rem;
@@ -332,19 +327,20 @@ input::placeholder {
     font-size: 1rem;
   }
   .holding {
-    border-radius: 0;
     background-size: cover;
-    height: 17rem;
+    height: 19rem;
     padding: 1rem 3rem;
-    margin: 0;
   }
   .contact-form {
     background: #161d3f;
     border-radius: 0.5rem;
     color: #ffffff;
-    top: -2.2rem;
-    padding: 0.5rem 1rem;
+    top: -2.9rem;
+    padding: 0rem 1.3rem;
     margin: auto;
+  }
+  .cbd {
+    padding-top: 0.9rem;
   }
   form {
     padding: 0.5rem 1.5rem;
@@ -357,10 +353,113 @@ input::placeholder {
     width: 85%;
   }
   .contact-btn {
-    padding: 0.8rem 2.5rem;
+    padding: 0.5rem 2rem;
+  }
+  .header_bold {
+    font-size: 2rem;
+  }
+  .home-love {
+    width: 22rem;
+    height: 19rem;
+    border-radius: 0.7rem;
+    margin: auto;
+  }
+  .easy {
+    padding: 1rem;
+  }
+  .easy-head {
+    font-size: 1.5rem;
+  }
+  .easy-body {
+    font-size: 1rem;
+  }
+  .own-home {
+    padding-bottom: 0 !important;
+  }
+  .community {
+    padding-right: 2.7rem;
+  }
+  .landlord {
+    width: 85%;
+    padding-left: 1rem;
+    height: 22rem;
+  }
+  .landlord-head {
+    font-size: 1.5rem;
+  }
+  .landlord-text {
+    font-size: 1rem;
+  }
+  .hand-key {
+    width: 21rem;
+    height: 26rem;
+  }
+  .key-div {
+    padding-top: 2rem;
+  }
+  .footer {
+    padding-left: 2rem;
+    padding-bottom: 1rem;
+  }
+  
+}
+
+ /* small mobile devices */
+@media only screen and (max-width: 575.98px) {
+  .container {
+    padding: 0 !important;
+  }
+  .ball-full-text,
+  .drop-text,
+  .btn-get-notified,
+  .like-big,
+  .nav-text,
+  .highrachy-logo-footer,
+  .footer-text {
+    display: none;
+  }
+  .nav-text-mobile {
+    display: block;
+    color: #22213d;
+    font-size: 1rem;
+  }
+  .drop-text-2 {
+    display: block;
+    font-weight: 200;
+    padding-left: 1.5rem;
+  }
+  .coming-soon {
+    padding-top: 4rem;
+    font-size: 2.5rem;
+  }
+  .holding {
+    background-image: url('../img/holding-mobile.png');
+    border-radius: 0;
+    background-size: cover;
+    height: 17rem;
+    text-align: center;
+    padding: 1rem 3rem;
+    margin: 0;
   }
   .header_bold {
     font-size: 1.5rem;
+  }
+  form {
+    padding: 1rem 1.5rem;
+    margin: auto;
+  }
+  .contact-form {
+    padding-top: 1rem;
+  }
+  .contact-btn {
+    padding: 0.5rem 4rem;
+    margin: auto;
+  }
+  .like-small {
+    display: block;
+    padding-left: 0 !important;
+    width: 14rem;
+    height: 11rem;
   }
   .home-love {
     width: 14rem;
@@ -387,6 +486,7 @@ input::placeholder {
     margin: auto;
     display: flex;
     justify-content: center;
+    padding-right: unset;
   }
   .easy-text-mobile {
     text-align: center !important;
@@ -401,52 +501,5 @@ input::placeholder {
   .baller-logo-footer {
     float: left;
     padding-left: 1rem;
-  }
-}
-
-@media only screen and (max-width: 414px) {
-  .ball-full-text,
-  .drop-text,
-  .btn-get-notified,
-  .like-big,
-  .nav-text {
-    display: none;
-  }
-  .nav-text-mobile {
-    display: block;
-    color: #22213d;
-    font-size: 1rem;
-  }
-  .drop-text-2 {
-    display: block;
-    font-weight: 200;
-    padding-left: 1.5rem;
-  }
-  .coming-soon {
-    padding-top: 4rem;
-    font-size: 2.5rem;
-  }
-  .holding {
-    background-image: url('../img/holding-mobile.png');
-    border-radius: 0;
-    background-size: cover;
-    height: 17rem;
-    text-align: center;
-    padding: 1rem 3rem;
-    margin: 0;
-  }
-  form {
-    padding: 1rem 1.5rem;
-    margin: auto;
-  }
-  .contact-btn {
-    padding: 0.5rem 4rem;
-    margin: auto;
-  }
-  .like-small {
-    display: block;
-    padding-left: 0 !important;
-    width: 14rem;
-    height: 11rem;
   }
 }

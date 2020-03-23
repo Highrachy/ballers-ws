@@ -43,7 +43,7 @@
 
         <!-- Notification Form -->
         <aside class="contact-form col-md-10">
-          <p class="drop-text-2">Pls fill out your details below to be <br> notified when we launch.</p>
+          <p class="drop-text-2">Pls fill out your details below to be notified when we launch.</p>
           <form data-toggle="validator" method="post" action="">
             <div class="row">
               <div class="col-md-9">
@@ -69,7 +69,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-3 text-center btn-holder">
+              <div class="col-md-3 text-center cbd">
                 <button type="submit" class="btn btn-lg contact-btn">Submit</button>
               </div>
             </div>

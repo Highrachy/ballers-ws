@@ -70,7 +70,7 @@ body {
   border-radius: 0.5rem;
   color: #ffffff;
   top: -3.2rem;
-  padding: 2rem 1rem 1rem;
+  padding: 1.7rem 1rem;
   margin: auto;
 }
 .contact-btn {
@@ -119,6 +119,7 @@ body {
   max-height: 25rem;
   padding-left: 3rem;
 }
+
 @media screen and (min-width: 960px) {
   .landlord {
     margin-right: 14rem;
@@ -285,22 +286,136 @@ input::placeholder {
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
+  .contact-btn {
+    padding: 1rem 3rem;
+  }
+  .landlord-text {
+    font-size: 1.25rem;
+  }
+  .landlord-head {
+    font-weight: 700;
+    font-size: 1.75rem;
+  }
+}
+
+/* medium sized devices ie. tablets */
+@media only screen and (max-width: 991.98px) {
   body {
     overflow-x: hidden !important;
   }
   .container {
     max-width: 100% !important;
     overflow-x: hidden !important;
-    padding: 0;
+  }
+  .ball-full-text  {
+    padding-top: 1rem;
+    font-size: 2rem;
+  }
+  .coming-soon {
+    font-weight: 800;
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+    color: #ffffff;
+    text-shadow: 4px 4px #161d3f;
+  }
+  .logo {
+    width: 4rem;
+    height: 2.5rem;
+  }
+  .nav-text {
+    font-size: 1rem;
+  }
+  .holding {
+    background-size: cover;
+    height: 19rem;
+    padding: 1rem 3rem;
+  }
+  .contact-form {
+    background: #161d3f;
+    border-radius: 0.5rem;
+    color: #ffffff;
+    top: -2.9rem;
+    padding: 0rem 1.3rem;
+    margin: auto;
+  }
+  .cbd {
+    padding-top: 0.9rem;
+  }
+  form {
+    padding: 0.5rem 1.5rem;
+    margin: auto;
+  }
+  .form-group {
+    padding-bottom: 2rem;
+  }
+  .contact-form {
+    width: 85%;
+  }
+  .contact-btn {
+    padding: 0.5rem 2rem;
+  }
+  .header_bold {
+    font-size: 2rem;
+  }
+  .home-love {
+    width: 22rem;
+    height: 19rem;
+    border-radius: 0.7rem;
+    margin: auto;
+  }
+  .easy {
+    padding: 1rem;
+  }
+  .easy-head {
+    font-size: 1.5rem;
+  }
+  .easy-body {
+    font-size: 1rem;
+  }
+  .own-home {
+    padding-bottom: 0 !important;
+  }
+  .community {
+    padding-right: 2.7rem;
+  }
+  .landlord {
+    width: 85%;
+    padding-left: 1rem;
+    height: 22rem;
+  }
+  .landlord-head {
+    font-size: 1.5rem;
+  }
+  .landlord-text {
+    font-size: 1rem;
+  }
+  .hand-key {
+    width: 21rem;
+    height: 26rem;
+  }
+  .key-div {
+    padding-top: 2rem;
+  }
+  .footer {
+    padding-left: 2rem;
+    padding-bottom: 1rem;
+  }
+  
+}
+
+ /* small mobile devices */
+@media only screen and (max-width: 575.98px) {
+  .container {
+    padding: 0 !important;
   }
   .ball-full-text,
   .drop-text,
   .btn-get-notified,
   .like-big,
+  .nav-text,
   .highrachy-logo-footer,
-  .footer-text,
-  .nav-text {
+  .footer-text {
     display: none;
   }
   .nav-text-mobile {
@@ -314,15 +429,8 @@ input::placeholder {
     padding-left: 1.5rem;
   }
   .coming-soon {
-    padding-top: 6rem;
+    padding-top: 4rem;
     font-size: 2.5rem;
-  }
-  .logo {
-    width: 4rem;
-    height: 2.5rem;
-  }
-  .nav-text {
-    font-size: 1rem;
   }
   .holding {
     background-image: url('../img/holding-mobile.png');
@@ -333,21 +441,25 @@ input::placeholder {
     padding: 1rem 3rem;
     margin: 0;
   }
+  .header_bold {
+    font-size: 1.5rem;
+  }
   form {
     padding: 1rem 1.5rem;
     margin: auto;
   }
-  .form-group {
-    padding-bottom: 2rem;
-  }
   .contact-form {
-    width: 85%;
+    padding-top: 1rem;
   }
   .contact-btn {
-    padding: 0.5rem 5rem;
+    padding: 0.5rem 4rem;
+    margin: auto;
   }
-  .header_bold {
-    font-size: 1.5rem;
+  .like-small {
+    display: block;
+    padding-left: 0 !important;
+    width: 14rem;
+    height: 11rem;
   }
   .home-love {
     width: 14rem;
@@ -374,16 +486,11 @@ input::placeholder {
     margin: auto;
     display: flex;
     justify-content: center;
+    padding-right: unset;
   }
   .easy-text-mobile {
     text-align: center !important;
     padding-left: 0 !important;
-  }
-  .like-small {
-    display: block;
-    padding-left: 0 !important;
-    width: 14rem;
-    height: 11rem;
   }
   .footer {
     padding-top: 2rem;

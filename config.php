@@ -10,7 +10,7 @@ if (stristr($_SERVER['HTTP_HOST'], 'local') || (substr($_SERVER['HTTP_HOST'], 0,
 }
 
 // CONSTANTS
-define('SITE_NAME','Ballers');	define('SITE_NAME','Ballers');
+define('SITE_NAME','Ballers');
 
 // DATABASE
 define('DB_HOST',$configs['db_host']);

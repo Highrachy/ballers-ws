@@ -5,16 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon -e scss --exec npm run scss",
-    "scss": "node-sass public/assets/scss/app.scss public/assets/css/app.css --output-style=compressed"
+    "start": "npm run scss",
+    "scss": "node-sass public/assets/scss/ballers.scss --output=public/assets/css/ --output-style=compressed --watch"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bootstrap": "^4.3.1",
-    "node-sass": "^4.13.0"
-  },
-  "devDependencies": {
-    "nodemon": "^1.19.4"
+    "bootstrap": "^4.4.1",
+    "node-sass": "^4.13.1"
   }
 }

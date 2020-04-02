@@ -33,9 +33,9 @@ $green: #00b800;
 $teal: #008a8a;
 $cyan: #17a2b8 !default;
 
-$primary: $red;
-$secondary: $teal;
-$tertiary: $green;
+$primary: #161d3f;
+$secondary: #5775fa;
+$tertiary: #eff2ff;
 $success: $green;
 $info: $cyan !default;
 $warning: $yellow;
@@ -46,7 +46,7 @@ $dark: $black;
 // Body
 //
 // Settings for the `<body>` element.
-$text-color: #8492a6; // 828282
+$text-color: #5a6679; // 828282
 $text-color-secondary: lighten($text-color, 10%);
 
 $body-bg: $white;

@@ -1,0 +1,303 @@
+* {
+    font-family: 'Barlow', sans-serif !important;
+}
+html,
+body {
+    width: 100%;
+    height: 100%;
+    scroll-behavior: smooth;
+    padding: 0rem;
+}
+body {
+    overflow-x: hidden !important;
+}
+.ballers-logo {
+    width: 6rem;
+    height:  4rem;
+}
+.holding {
+    background-image: url('../img/holding.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 40rem;
+    width: 100%;
+    padding-left: 7rem;
+    padding-right: 5rem;
+}
+.nav-link {
+    padding: 0.5rem 1rem !important;
+}
+.holding-heading {
+    padding: 3rem 0 1rem;
+    font-size: 4rem;
+    color: #161d3f;
+}
+.holding-mid {
+    font-size: 1.3rem;
+    font-weight: 400;
+    padding: 1rem 0 1.7rem;
+    color: #5a6679;
+}
+.holding-small {
+    font-size: 1rem;
+    font-weight: 300;
+    padding: 5rem 0 1rem;
+    color: #161d3f;
+}
+.sign-in {
+    color: #ffffff;
+    padding: 0.5rem 2.5rem !important;
+}
+.register {
+    color: #161d3f;
+    background-color: #ffffff;
+    padding: 0.5rem 2.5rem !important;
+}
+.form-inline {
+    background-color: #ffffff;
+    padding: 1rem 0.5rem 0.5rem;
+    align-content: center;
+    border-radius: 0.5rem;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.input-group, .input-group-prepend, .input-group-text, .form-control, .custom-select {
+    border: 0 !important;
+}
+.input-icon {
+    width: 1.8rem;
+    height: 1.8rem;
+}
+.form-search {
+    padding: 1.2rem 3.7rem ;
+    border-radius: 0.3rem;
+}
+.about-ball {
+    background-color: #eff2ff;
+    padding: 2rem;
+}
+.about {
+    padding-left: 5rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+.about-ball-title,
+.benefits-title,
+.how-title,
+.faq-title,
+.gallery-title {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #5a6679;
+}
+.about-ball-heading {
+    color: #161d3f;
+    font-size: 2.5rem;
+    padding: 2rem 0rem;
+}
+.about-ball-text {
+    color: #5a6679;
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 1.8rem;
+    padding-bottom: 2rem;
+}
+.learn-more {
+    background-color: #5775fa;
+    color: #ffffff;
+    padding: 0.5rem 2rem;
+    border-radius: 0.2rem;
+    font-size: 1rem;
+}
+.home {
+    width: 31rem;
+    height:37rem;
+}
+.benefits {
+    background-color: #eff2ff;
+    padding: 5rem 7rem;
+    text-align: center;
+}
+.benefits-heading {
+    color: #161d3f;
+    font-size: 2.5rem;
+    padding-top: 1.5rem;
+}
+.benefits-slider {
+    width:100%;
+    text-align:center;
+}
+.arrow {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+.slide {
+    background-color: #ffffff;
+    border-radius: 0.3rem;
+    margin: 1rem 3rem;
+    padding: 4rem 1rem 2rem 1rem;
+    height: 22rem;
+    width: 4rem;
+}
+.slide-image {
+    width: 5.5rem;
+    height: 5rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+.slide-header {
+    color: #5775fa;
+    font-size: 1.2rem;
+    font-weight: 400;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.slide-body {
+    color: #5a6679;
+    font-weight: 300;
+    font-size: 0.9rem;
+}
+.works {
+    padding: 2rem;
+}
+.phone-div {
+    text-align: center;
+    padding-top: 4.5rem;
+}
+.phone {
+    height: 33rem;
+    width: 26rem;
+}
+.how-heading {
+    font-size: 2.5rem;
+    color: #161d3f;
+}
+.circle-line {
+    padding-top: 1.3rem;
+}
+.circle-line-img {
+    height: 8rem;
+}
+.circle-img {
+    height: 1.25rem;
+}
+.stage-div {
+    padding-right: 1.8rem;
+    padding-bottom: 2rem;
+}
+.how-head {
+    color: #5775fa;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+.bold-letter {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+.how-text {
+    font-weight: 300;
+    font-size: 1rem;
+    color: #5a6679;
+}
+.sign-up {
+    color: #ffffff;
+    background-color: #5775fa;
+    border-radius: 0.2rem;
+    padding: 0.5rem 2rem;
+}
+.faq {
+    padding-top: 3rem;
+    padding-left: 7rem;
+    padding-bottom: 4rem;
+}
+.faq-heading {
+    font-size: 3rem;
+    font-weight: 500;
+    color: #161d3f;
+}
+.questions {
+    float: right;
+    padding-right: 7rem;
+    padding-top: 3rem;
+    padding-bottom: 2rem;  
+}
+.icon-toggle {
+    float: right;
+}
+.q-icon-plus {
+    width: 1rem;
+    height: 1rem;
+}
+.q-icon-minus {
+    width: 1rem;
+}
+.card-header,
+.card {
+    border: 0;
+}
+.card-header {
+    background-color: #ffffff;
+}
+.card {
+    border-bottom: 1px solid #161d3f;
+}
+h5 .btn-link {
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: #161d3f;
+}
+.gallery {
+    background-image: url('../img/deep-dive.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 5rem;
+}
+.gallery-heading {
+    font-size: 2.5rem;
+    color: #161d3f;
+    padding-top: 2.5rem;
+    padding-bottom: 3rem;
+}
+.logo-div {
+    background-color: #eff2ff;
+    padding: 3rem 1rem 2rem 5rem;
+}
+.logo-div-text {
+    padding-top: 2rem;
+    color: #5a6679;
+    font-weight: 300;
+    font-size: 0.8rem;
+}
+.ballers-logo-footer {
+    width: 6rem;
+    height:  4rem;
+}
+.highrachy-logo-footer {
+    width: 6rem;
+    height: 2rem;
+}
+.footer-info {
+    background-color: #161d3f;
+    color: #ffffff;
+    padding: 4rem 5rem 2rem;
+}
+.footer-info-heading {
+    color: #ffffff;
+    font-weight: 400;
+    padding-bottom: 1rem;
+}
+.footer-list {
+    list-style-type: none;
+    list-style: none;
+    padding-left: 0;
+}
+.footer-list-item,
+.footer-list-item a {
+    color: #ffffff;
+    font-size: 0.8rem;
+}
+.sm-icon {
+    width: 1.8rem;
+    height: 1.8rem;
+}

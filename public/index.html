@@ -12,10 +12,9 @@
   <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
   <link rel="manifest" href="./site.webmanifest">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link rel="stylesheet" href="assets/css/ballers.css" type="text/css">
   <link rel="stylesheet" type="text/css" href="./assets/slick/slick.css"/>
   <link rel="stylesheet" type="text/css" href="./assets/slick/slick-theme.css"/>
-  <link rel="stylesheet" href="assets/css/styles.css" type="text/css">
+  <link rel="stylesheet" type="text/css" href="assets/css/ballers.css">
 
 </head>
 
@@ -71,17 +70,17 @@
           <div class="input-group-prepend">
             <div class="input-group-text"><img src="./assets/img/location.png" class="input-icon" alt="location-icon"></div>
           </div>
-          <input type="text" class="form-control" id="location" placeholder="Location">
+          <input type="text" class="form-control hold-input" id="location" placeholder="Location">
         </div>
       
         <label class="sr-only" for="housetype">House type</label>
-        <div class="input-group mb-2 mr-sm-2">
+        <div class="input-group mb-2 mr-sm-2 select-grp">
           <div class="input-group-prepend">
             <div class="input-group-text">
               <img src="./assets/img/house.png" class="input-icon" alt="house-icon">
             </div>
           </div>
-          <select class="form-control custom-select mb-3" id="housetype">
+          <select class="form-control custom-select mb-3 hold-input" id="housetype">
             <option selected>House type</option>
             <option value="1">One</option>
             <option value="2">Two</option>
@@ -105,7 +104,7 @@
       <h6 class="about-ball-title">ABOUT BALL</h6>
       <h1 class="about-ball-heading">Game-changing service <br> that makes owning <br> your home easier</h1>
       <h5 class="about-ball-text">We make owning a home simpler and achievable. <br> With BALL unique saving plan tailored to you and your <br> financial position,owning a home has never been easier.</h5>
-      <button class="btn btn-lg learn-more">LEARN MORE</button>
+      <button class="btn btn-lg big-button">LEARN MORE</button>
     </div>
     <div class="col-sm-6 text-center">
       <img src="./assets/img/home.png" class="home" alt="home-image">
@@ -189,7 +188,7 @@
 
         <div class="col-md-2"></div>
         <div class="col-sm-10">
-          <button class="btn btn-lg sign-up">SIGN UP NOW</button>
+          <button class="btn btn-lg big-button">SIGN UP NOW</button>
         </div>
       </div>
 
@@ -208,17 +207,16 @@
 
           <div class="card">
             <div class="card-header" id="headingOne">
-              <h5 class="mb-0">
-                <button class="btn btn-link" id="one" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              <a class="" data-toggle="collapse" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                <h5 class="mb-0 faq-card-heading">
                   What is BALL?
-                </button>
-                <span class="icon-toggle">
-                  <img src="./assets/img/minus.png" class="q-icon-minus minusone" alt="">
-                  <img src="./assets/img/plus.png" class="q-icon-plus plusone" alt="">
-                </span>
-              </h5>
+                  <span class="icon-toggle">
+                    <img src="./assets/img/minus.png" class="q-icon-minus minusone" alt="">
+                    <img src="./assets/img/plus.png" class="q-icon-plus plusone" alt="">
+                  </span>
+                </h5>
+              </a>
             </div>
-        
             <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
               <div class="card-body">
                 Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
@@ -228,15 +226,15 @@
 
           <div class="card">
             <div class="card-header" id="headingTwo">
-              <h5 class="mb-0">
-                <button class="btn btn-link collapsed" id="two" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" id="two">
+              <a class="" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                <h5 class="mb-0 faq-card-heading">
                   What is special about BALL?
-                </button>
-                <span class="icon-toggle">
-                  <img src="./assets/img/minus.png" class="q-icon-minus minustwo" alt="">
-                  <img src="./assets/img/plus.png" class="q-icon-plus plustwo" alt="">
-                </span>
-              </h5>
+                  <span class="icon-toggle">
+                    <img src="./assets/img/minus.png" class="q-icon-minus minusone" alt="">
+                    <img src="./assets/img/plus.png" class="q-icon-plus plusone" alt="">
+                  </span>
+                </h5>
+              </a>
             </div>
             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
               <div class="card-body">
@@ -247,15 +245,15 @@
 
           <div class="card">
             <div class="card-header" id="headingThree">
-              <h5 class="mb-0">
-                <button class="btn btn-link collapsed" id="three" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" id="three">
+              <a class="" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                <h5 class="mb-0 faq-card-heading">
                   What is the minimum amount to invest?
-                </button>
-                <span class="icon-toggle">
-                  <img src="./assets/img/minus.png" class="q-icon-minus minusthree" alt="">
-                  <img src="./assets/img/plus.png" class="q-icon-plus plusthree" alt="">
-                </span>
-              </h5>
+                  <span class="icon-toggle">
+                    <img src="./assets/img/minus.png" class="q-icon-minus minusone" alt="">
+                    <img src="./assets/img/plus.png" class="q-icon-plus plusone" alt="">
+                  </span>
+                </h5>
+              </a>
             </div>
             <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
               <div class="card-body">
@@ -266,11 +264,15 @@
 
           <div class="card">
             <div class="card-header" id="headingFour">
-              <h5 class="mb-0">
-                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour" id="four">
+              <a class="" data-toggle="collapse" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                <h5 class="mb-0 faq-card-heading">
                   How secured are my savings?
-                </button>
-              </h5>
+                  <span class="icon-toggle">
+                    <img src="./assets/img/minus.png" class="q-icon-minus minusone" alt="">
+                    <img src="./assets/img/plus.png" class="q-icon-plus plusone" alt="">
+                  </span>
+                </h5>
+              </a>
             </div>
             <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
               <div class="card-body">
@@ -281,11 +283,15 @@
 
           <div class="card">
             <div class="card-header" id="headingFive">
-              <h5 class="mb-0">
-                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive" id="five">
+              <a class="" data-toggle="collapse" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                <h5 class="mb-0 faq-card-heading">
                   Can I upgrade my saving plan in the future?
-                </button>
-              </h5>
+                  <span class="icon-toggle">
+                    <img src="./assets/img/minus.png" class="q-icon-minus minusone" alt="">
+                    <img src="./assets/img/plus.png" class="q-icon-plus plusone" alt="">
+                  </span>
+                </h5>
+              </a>
             </div>
             <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
               <div class="card-body">
@@ -305,7 +311,7 @@
   <section class="gallery">
     <h6 class="gallery-title">COMMUNITY GALLERY</h6>
     <h1 class="gallery-heading">Take a deep dive into <br> what your home looks like</h1>
-    <button class="btn btn-lg sign-up">SIGN UP NOW</button>
+    <button class="btn btn-lg big-button">SIGN UP NOW</button>
   </section>
   <!-- /.Community gallery -->
 
@@ -348,6 +354,7 @@
             <a href="#"><img src="./assets/img/facebook.png" alt="facebook" class="sm-icon"></a> &nbsp;
             <a href="#"><img src="./assets/img/twitter.png" alt="twitter" class="sm-icon"></a>
           </li>
+          <li class="footer-list-item">&nbsp;</li>
           <li class="footer-list-item">support@ballers.ng</li>
           <li class="footer-list-item">+2348076545543</li>
           <li class="footer-list-item">+2348094432231</li>

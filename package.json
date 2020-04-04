@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm run scss",
-    "scss": "node-sass public/assets/scss/ballers.scss --output=public/assets/css/ --output-style=expanded --watch"
+    "scss": "node-sass public/assets/scss/ballers.scss --output=public/assets/css/ --output-style=compressed --watch"
   },
   "author": "",
   "license": "ISC",

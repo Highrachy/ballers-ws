@@ -1,7 +1,7 @@
 $(document).ready(function(){
-    $('img.plusone').hide();
-    $('img.minustwo').hide();
-    $('img.minusthree').hide();
+    // $('img.plusone').hide();
+    // $('img.minustwo').hide();
+    // $('img.minusthree').hide();
     
 
     $('.benefits-slider').slick({
@@ -21,10 +21,14 @@ $(document).ready(function(){
         $("img.plusone").toggle();
     });
     
-    $(".btn-link").click(function(event) {
-        var id = event.target.id;
-        console.log(id);
-        $("img.plus"+id).toggle();
-        $("img.minus"+id).toggle();
+    // $(".btn-link").click(function(event) {
+    //     var id = event.target.id;
+    //     console.log(id);
+    //     $("img.plus"+id).toggle();
+    //     $("img.minus"+id).toggle();
+    // });
+
+    $('.accordion').on('hidden.bs.collapse', function () {
+        console.log('closed');    
     });
 });

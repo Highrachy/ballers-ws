@@ -1,24 +1,15 @@
-$light-gray: #5a6679;
-$deep-blue: #161d3f;
-$white: #ffffff;
-$off-white: #eff2ff;
-$light-purple: #5775fa;
-$input-text-color : #c0ccda;
-
-$border-radius: 0.3rem;
-
 %heading-font-stack {
-    color: $deep-blue;
+    color: $blue;
     font-size: 2.5rem;
 }
 %title-font-stack {
-    color: $light-gray;
+    color: $gray-700;
     font-size: 1.2rem;
     font-weight: 400;
 }
 %button-stack {
     color: $white;
-    background-color: $light-purple;
+    background-color: $purple;
     border-radius: 0.2rem;
     padding: 0.5rem 2rem;
 }
@@ -58,19 +49,19 @@ body {
     &-heading {
         padding: 5rem 0 1rem;
         font-size: 4rem;
-        color: $deep-blue;
+        color: $blue;
     }
     &-mid {
         font-size: 1.3rem;
         font-weight: 400;
         padding: 1rem 0 1.7rem;
-        color: $light-gray;
+        color: $gray-700;
     }
     &-small {
         font-size: 1rem;
         font-weight: 300;
         padding: 5rem 0 1rem;
-        color: $deep-blue;
+        color: $blue;
     }
 }
 .sign-in {
@@ -78,7 +69,7 @@ body {
     padding: 0.5rem 2.5rem !important;
 }
 .register {
-    color: $deep-blue;
+    color: $blue;
     background-color: $white;
     padding: 0.5rem 2.5rem !important;
 }
@@ -99,10 +90,10 @@ body {
 .hold-input {
     width: 12.75rem !important;
     height: 4rem !important;
-    color: $input-text-color;
+    color: $input-color;
 
     &::placeholder {
-        color: $input-text-color;
+        color: $input-color;
     }
 }
 .select-grp {
@@ -121,7 +112,7 @@ body {
     padding-top: 4rem;
 
     &-ball {
-        background-color: $off-white;
+        background-color: $gray-300;
         padding: 2rem;
     }
     &-ball-heading {
@@ -129,7 +120,7 @@ body {
         padding: 2rem 0rem;
     }
     &-ball-text {
-        color: $light-gray;
+        color: $gray-700;
         font-size: 1.2rem;
         font-weight: 300;
         line-height: 1.8rem;
@@ -151,7 +142,7 @@ body {
     height:39rem;
 }
 .benefits {
-    background-color: $off-white;
+    background-color: $gray-300;
     padding: 5rem 7rem;
     text-align: center;
 
@@ -173,7 +164,7 @@ body {
     border-radius: 0.3rem;
     margin: 1rem 3rem;
     padding: 4rem 1rem 2rem 1rem;
-    height: 22rem;
+    height: 23rem;
     width: 4rem;
 
     &-image {
@@ -184,16 +175,16 @@ body {
         display: block;
     }
     &-header {
-        color: $light-purple;
+        color: $purple;
         font-size: 1.2rem;
         font-weight: 400;
         padding-top: 1rem;
         padding-bottom: 1rem;
     }
     &-body {
-        color: $light-gray;
+        color: $gray-700;
         font-weight: 300;
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
 }
 .works {
@@ -213,14 +204,14 @@ body {
         @extend %heading-font-stack;
     }
     &-head {
-        color: $light-purple;
+        color: $purple;
         font-size: 1.4rem;
         font-weight: 400;
     }
     &-text {
         font-weight: 300;
         font-size: 1rem;
-        color: $light-gray;
+        color: $gray-700;
     }
 }
 .stage-div {
@@ -250,10 +241,10 @@ body {
     &-heading {
         font-size: 3rem;
         font-weight: 500;
-        color: $deep-blue;
+        color: $blue;
     }
     &-card-heading {
-        color: $deep-blue;
+        color: $blue;
         font-size: 1.2rem;
         font-weight: 400;
     }
@@ -267,16 +258,14 @@ body {
 .icon-toggle {
     float: right;
 }
-.q-icon-plus {
-    width: 1rem;
-    height: 1rem;
-}
-.q-icon-minus {
-    width: 1rem;
+.faq-icon {
+    font-size: 2rem;
+    color: $purple;
 }
 .card {
     border: 0;
-    border-bottom: 1px solid $deep-blue;
+    border-radius: 0;
+    border-bottom: 1px solid $blue;
     padding: 1.5rem 0;
     margin-left: -3rem !important;
 
@@ -288,7 +277,7 @@ body {
 h5 .btn-link {
     font-size: 1.3rem;
     font-weight: 400;
-    color: $deep-blue;
+    color: $blue;
 }
 .gallery {
     background-image: url('../img/deep-dive.png');
@@ -304,12 +293,12 @@ h5 .btn-link {
     }
 }
 .logo-div {
-    background-color: $off-white;
+    background-color: $gray-300;
     padding: 3rem 1rem 2rem 5rem;
 
     &-text {
         padding-top: 2rem;
-        color: $light-gray;
+        color: $gray-700;
         font-weight: 300;
         font-size: 0.8rem;
     }
@@ -324,7 +313,7 @@ h5 .btn-link {
 }
 .footer {
     &-info {
-        background-color: $deep-blue;
+        background-color: $blue;
         color: $white;
         padding: 4rem 5rem 2rem;
     }

@@ -13,18 +13,18 @@ $headings-font: 'Barlow', sans-serif;
 $white: #fff !default;
 $gray-100: #fafafa;
 $gray-200: #f2f2f2;
-$gray-300: #e0e0e0;
-$gray-400: #ced4da !default;
+$gray-300: #eff2ff;
+$gray-400: #c0ccda !default;
 $gray-500: #adb5bd !default;
 $gray-600: #888; //text-muted
-$gray-700: #495057 !default;
+$gray-700: #5a6679 !default;
 $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
 $black: #000 !default;
 
-$blue: #282568;
+$blue: #161d3f;
 $indigo: #150073;
-$purple: #6f42c1 !default;
+$purple: #5775fa;
 $pink: #e83e8c !default;
 $red: #e60100;
 $orange: #e66800;
@@ -32,6 +32,7 @@ $yellow: #dcb91d;
 $green: #00b800;
 $teal: #008a8a;
 $cyan: #17a2b8 !default;
+
 
 $primary: #161d3f;
 $secondary: #5775fa;
@@ -96,9 +97,9 @@ $theme-colors: map-merge(
 $line-height-lg: 2.2;
 $line-height-sm: 2;
 
-$border-radius: 0.125rem;
-$border-radius-lg: 0.125rem;
-$border-radius-sm: 0.125rem;
+$border-radius: 0.3rem;
+$border-radius-lg: 0.3rem;
+$border-radius-sm: 0.3rem;
 
 $transition-base: all 0.4s ease-in-out;
 
@@ -166,7 +167,7 @@ $input-padding-x: 1rem;
 $input-font-family: $text-font;
 $input-font-size: 1rem;
 $input-font-weight: 300;
-$input-color: $gray-700;
+$input-color: $gray-400;
 $input-border-color: $gray-400;
 $input-box-shadow: none;
 

@@ -38,5 +38,7 @@
 @import '../../../node_modules/bootstrap/scss/utilities';
 @import '../../../node_modules/bootstrap/scss/print';
 
-@import 'index';
+@import './plugins/slick/slick';
+@import './plugins/slick/slick-theme';
+
 @import 'styles';

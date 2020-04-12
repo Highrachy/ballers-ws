@@ -8,8 +8,8 @@ $(document).ready(function(){
         autoplay: true,
         autoplaySpeed: 2000,
         centerPadding: '3rem',
-        prevArrow: '<img src="./assets/img/btn-prev.png" alt="previous-arrow" class="slider-prev arrow">',
-        nextArrow: '<img src="./assets/img/btn-next.png" alt="next-arrow" class="slider-next arrow">',
+        prevArrow: '<span class="prev"><img src="./assets/img/btn-prev.png" alt="previous-arrow" class="slider-prev arrow"></span>',
+        nextArrow: '<span class="next"><img src="./assets/img/btn-next.png" alt="next-arrow" class="slider-next arrow"></span>'
     });
 
     $('.card').on('shown.bs.collapse', function(){

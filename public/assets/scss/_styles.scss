@@ -32,7 +32,7 @@ body {
     height:  4rem;
 }
 .navbar-collapse {
-    padding-left: 1.4rem;
+    padding-left: 2rem;
 }
 .nav-link {
     padding: 0.5rem 1rem !important;
@@ -87,6 +87,9 @@ body {
 .custom-select {
     border: 0 !important;
 }
+.input-group {
+    width: 35% !important;
+}
 .hold-input {
     width: 12.75rem !important;
     height: 4rem !important;
@@ -104,8 +107,9 @@ body {
     height: 1.8rem;
 }
 .form-search {
-    padding: 1.2rem 3.7rem ;
+    padding: 1.2rem 0;
     border-radius: $border-radius;
+    width: 25%;
 }
 .about {
     padding-left: 5rem;
@@ -158,6 +162,21 @@ body {
 .arrow {
     width: 1.5rem;
     height: 1.5rem;
+}
+.prev {
+    display: block;
+    position: absolute;
+    z-index: 1000;
+    top:50%;
+    transform: translateY(-50%);
+}  
+.next {
+    display: block;
+    position: absolute;
+    right: 0;
+    top:50%;
+    transform: translateY(-50%);
+    z-index: 1000;
 }
 .slide {
     background-color: $white;

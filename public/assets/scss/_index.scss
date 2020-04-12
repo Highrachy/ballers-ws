@@ -281,3 +281,30 @@ h5 .btn-link {
 .break {
     display: inline-block;
 }
+
+@media only screen and (max-width: 1024px) {
+    .holding,
+    .about,
+    .phone-div,
+    .faq {
+        padding-left: 3rem;
+    }
+    .benefits {
+        padding: 3rem;
+        height: 40rem;
+    }
+    .slide {
+        // margin: 1rem 3rem;
+        // padding: 4rem 1rem 2rem 1rem;
+        // height: 23rem;
+        width: 13.5rem !important;
+    }
+    .prev,
+    .next {
+        top: 25%;
+    }
+}
+/* medium sized devices ie. tablets */
+@media only screen and (max-width: 991.98px) {}
+ /* small mobile devices */
+ @media only screen and (max-width: 575.98px) {}

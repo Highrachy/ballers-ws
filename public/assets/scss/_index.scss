@@ -282,6 +282,8 @@ h5 .btn-link {
     display: inline-block;
 }
 
+
+/* big tablets */
 @media only screen and (max-width: 1024px) {
     .holding,
     .about,
@@ -294,9 +296,6 @@ h5 .btn-link {
         height: 40rem;
     }
     .slide {
-        // margin: 1rem 3rem;
-        // padding: 4rem 1rem 2rem 1rem;
-        // height: 23rem;
         width: 13.5rem !important;
     }
     .prev,
@@ -305,6 +304,160 @@ h5 .btn-link {
     }
 }
 /* medium sized devices ie. tablets */
-@media only screen and (max-width: 991.98px) {}
+@media only screen and (max-width: 991.98px) {
+    %heading-font-stack-mobile {
+        font-size: 2rem;
+    }
+    %title-font-stack-mobile {
+        font-size: 1rem;
+    }
+    %button-stack-mobile {
+        border-radius: 0.2rem;
+        padding: 0 4rem;
+    }
+    .about,
+    .phone-div,
+    .faq {
+        padding-left: 1rem;
+    }
+    .about-ball-title,
+    .benefits-title,
+    .how-title,
+    .faq-title,
+    .gallery-title {
+        @extend %title-font-stack-mobile;
+    }
+    .navbar {
+        &-brand {
+            padding-left: 1rem;
+        }
+        &-toggler {
+            padding-right: 1rem;
+        }
+    }
+    .navigation-wrap,
+    .navbar {
+        background-color: $white;
+        padding: 0;
+    }
+    .nav-link {
+        color: $gray-700;
+    }
+    .collapse {
+        z-index: 100;
+    }
+    #navbarSupportedContent {
+        background-color: $gray-300;
+        justify-content: center;
+        text-align: center !important;
+        padding: 1rem 3rem 3rem;
+        margin-bottom: 0;
+    }
+    .register {
+        color: $white !important;
+        background-color: $purple;
+        padding: 0.5rem 1.5rem !important;
+    }
+    .holding {
+        padding-left: 0;
+        padding-right: 0;
+        background-image: none;
+        margin: auto;
+        height: 60rem;
+        background-image: url('../img/holding-tab.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+
+        &-heading,
+        &-mid {
+            text-align: center;
+        }
+        &-heading br,
+        &-small {
+            display: none;
+        }
+        &-form {
+            margin: auto !important;
+        }
+    }
+    .form-inline {
+        text-align: center !important;
+        margin: auto !important;
+        padding: 1rem 5rem;
+    }
+    .big-button {
+        @extend %button-stack-mobile;
+    }
+    .about {
+        padding-top: 1rem;
+
+        &-ball {
+            padding: 3.5rem 1rem 0;
+        }
+        &-ball-text {
+            font-size: 1rem;
+            font-weight: 300;
+            line-height: 1.2rem;
+            padding: 1rem 0;
+        }
+        &-ball-heading {
+            @extend %heading-font-stack-mobile;
+            padding: 1rem 0 0;
+        }
+        // &-ball-text {
+        //     color: $gray-700;
+        //     font-size: 1.2rem;
+        //     font-weight: 300;
+        //     line-height: 1.8rem;
+        //     padding-bottom: 2rem;
+        // }
+        &-ball-title {
+            text-align: center;
+        }
+    }
+    .home {
+        display: none;
+
+        &-tab {
+            display: block;
+            width: 22rem;
+            height: 26rem;
+        }
+    }
+    .prev,
+    .next {
+        top: 50%;
+    }
+    .how {
+        &-heading {
+            @extend %heading-font-stack-mobile;
+            padding: 1rem 0 0;
+        }
+        &-title {
+            text-align: center;
+        }
+    }
+    .phone {
+        height: 25rem;
+        width: 18rem;
+    
+        &-div {
+            padding-left: 3rem;
+            padding-top: 8rem;
+        }
+    }
+    .stage-div {
+        padding-bottom: 0.3rem;
+    }
+    .faq {
+        &-title {
+            text-align: center;
+        }
+    }
+    .questions {
+        padding-right: 2rem;
+    }
+    
+}
  /* small mobile devices */
  @media only screen and (max-width: 575.98px) {}

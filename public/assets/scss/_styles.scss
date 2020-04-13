@@ -27,15 +27,71 @@ body {
 body {
     overflow-x: hidden !important;
 }
+.navigation-wrap{
+	position: absolute;
+	width: 100%;
+    top: 0;
+    padding-right: 7rem;
+	z-index: 1000;
+	-webkit-transition : all 0.3s ease-out;
+	transition : all 0.3s ease-out;
+}
 .ballers-logo {
     width: 6rem;
     height:  4rem;
 }
-.navbar-collapse {
-    padding-left: 2rem;
-}
 .nav-link {
     padding: 0.5rem 1rem !important;
+}
+.navbar {
+    &-collapse {
+        padding-left: 2rem;
+    }
+    &-nav .mr-auto {
+        width: 30%;
+    }
+    &-toggler {
+        float: right;
+        border: none;
+        padding-right: 0;
+    }
+    &-toggler:active,
+    &-toggler:focus {
+        outline: none;
+    }
+    &-toggler-icon {
+        width: 2rem;
+        height: 1rem;
+        background-image: none;
+        position: relative;
+        padding-top: 1rem;
+        border-bottom: 0.2rem solid $purple;
+        transition: all 300ms linear;
+    }
+    &-toggler-icon:after, 
+    &-toggler-icon:before{
+        width: 2rem;
+        position: absolute;
+        height: 0.2rem;
+        background-color: $purple;
+        top: 0;
+        left: 0;
+        content: '';
+        z-index: 2;
+        transition: all 300ms linear;
+    }
+    &-toggler-icon:after{
+        top: 8px;
+    }
+    &-toggler[aria-expanded="true"] &-toggler-icon:after {
+        transform: rotate(45deg);
+    }
+    &-toggler[aria-expanded="true"] &-toggler-icon:before {
+        transform: translateY(8px) rotate(-45deg);
+    }
+    &-toggler[aria-expanded="true"] &-toggler-icon {
+        border-color: transparent;
+    }
 }
 .holding {
     background-image: url('../img/holding.png');
@@ -46,6 +102,9 @@ body {
     padding-left: 6rem;
     padding-right: 5rem;
 
+    &-inner {
+        padding-top: 6rem;
+    }
     &-heading {
         padding: 5rem 0 1rem;
         font-size: 4rem;
@@ -75,7 +134,7 @@ body {
 }
 .form-inline {
     background-color: $white;
-    padding: 0.5rem 0 0 0.3rem;
+    padding: 1rem 1rem 0.5rem 0.8rem;
     align-content: center;
     border-radius: 0.5rem;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -144,6 +203,10 @@ body {
 .home {
     width: 33rem;
     height:39rem;
+
+    &-tab {
+        display: none;
+    }
 }
 .benefits {
     background-color: $gray-300;
@@ -310,16 +373,8 @@ h5 .btn-link {
         padding-bottom: 3rem;
     }
 }
-.logo-div {
-    background-color: $gray-300;
-    padding: 3rem 1rem 2rem 5rem;
-
-    &-text {
-        padding-top: 2rem;
-        color: $gray-700;
-        font-weight: 300;
-        font-size: 0.8rem;
-    }
+.break {
+    display: inline-block;
 }
 .ballers-logo-footer {
     width: 6rem;
@@ -330,10 +385,11 @@ h5 .btn-link {
     height: 2rem;
 }
 .footer {
+    background-color: $gray-300;
     &-info {
         background-color: $blue;
         color: $white;
-        padding: 4rem 5rem 2rem;
+        padding: 4rem 2rem 2rem 5rem;
     }
     &-info-heading {
         color:$white;
@@ -351,11 +407,24 @@ h5 .btn-link {
         font-size: 0.8rem;
     }
 }
+.logo-div {
+    background-color: $gray-300;
+    padding: 3rem 1rem 2rem 5rem;
+
+    &-text {
+        padding-top: 2rem;
+        color: $gray-700;
+        font-weight: 300;
+        font-size: 0.8rem;
+    }
+}
 .sm-icon {
     width: 1.8rem;
     height: 1.8rem;
 }
 
+
+/* big tablets */
 @media only screen and (max-width: 1024px) {
     .holding,
     .about,
@@ -368,9 +437,6 @@ h5 .btn-link {
         height: 40rem;
     }
     .slide {
-        // margin: 1rem 3rem;
-        // padding: 4rem 1rem 2rem 1rem;
-        // height: 23rem;
         width: 13.5rem !important;
     }
     .prev,
@@ -379,6 +445,160 @@ h5 .btn-link {
     }
 }
 /* medium sized devices ie. tablets */
-@media only screen and (max-width: 991.98px) {}
+@media only screen and (max-width: 991.98px) {
+    %heading-font-stack-mobile {
+        font-size: 2rem;
+    }
+    %title-font-stack-mobile {
+        font-size: 1rem;
+    }
+    %button-stack-mobile {
+        border-radius: 0.2rem;
+        padding: 0 4rem;
+    }
+    .about,
+    .phone-div,
+    .faq {
+        padding-left: 1rem;
+    }
+    .about-ball-title,
+    .benefits-title,
+    .how-title,
+    .faq-title,
+    .gallery-title {
+        @extend %title-font-stack-mobile;
+    }
+    .navbar {
+        &-brand {
+            padding-left: 1rem;
+        }
+        &-toggler {
+            padding-right: 1rem;
+        }
+    }
+    .navigation-wrap,
+    .navbar {
+        background-color: $white;
+        padding: 0;
+    }
+    .nav-link {
+        color: $gray-700;
+    }
+    .collapse {
+        z-index: 100;
+    }
+    #navbarSupportedContent {
+        background-color: $gray-300;
+        justify-content: center;
+        text-align: center !important;
+        padding: 1rem 3rem 3rem;
+        margin-bottom: 0;
+    }
+    .register {
+        color: $white !important;
+        background-color: $purple;
+        padding: 0.5rem 1.5rem !important;
+    }
+    .holding {
+        padding-left: 0;
+        padding-right: 0;
+        background-image: none;
+        margin: auto;
+        height: 60rem;
+        background-image: url('../img/holding-tab.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+
+        &-heading,
+        &-mid {
+            text-align: center;
+        }
+        &-heading br,
+        &-small {
+            display: none;
+        }
+        &-form {
+            margin: auto !important;
+        }
+    }
+    .form-inline {
+        text-align: center !important;
+        margin: auto !important;
+        padding: 1rem 5rem;
+    }
+    .big-button {
+        @extend %button-stack-mobile;
+    }
+    .about {
+        padding-top: 1rem;
+
+        &-ball {
+            padding: 3.5rem 1rem 0;
+        }
+        &-ball-text {
+            font-size: 1rem;
+            font-weight: 300;
+            line-height: 1.2rem;
+            padding: 1rem 0;
+        }
+        &-ball-heading {
+            @extend %heading-font-stack-mobile;
+            padding: 1rem 0 0;
+        }
+        // &-ball-text {
+        //     color: $gray-700;
+        //     font-size: 1.2rem;
+        //     font-weight: 300;
+        //     line-height: 1.8rem;
+        //     padding-bottom: 2rem;
+        // }
+        &-ball-title {
+            text-align: center;
+        }
+    }
+    .home {
+        display: none;
+
+        &-tab {
+            display: block;
+            width: 22rem;
+            height: 26rem;
+        }
+    }
+    .prev,
+    .next {
+        top: 50%;
+    }
+    .how {
+        &-heading {
+            @extend %heading-font-stack-mobile;
+            padding: 1rem 0 0;
+        }
+        &-title {
+            text-align: center;
+        }
+    }
+    .phone {
+        height: 25rem;
+        width: 18rem;
+    
+        &-div {
+            padding-left: 3rem;
+            padding-top: 8rem;
+        }
+    }
+    .stage-div {
+        padding-bottom: 0.3rem;
+    }
+    .faq {
+        &-title {
+            text-align: center;
+        }
+    }
+    .questions {
+        padding-right: 2rem;
+    }
+    
+}
  /* small mobile devices */
  @media only screen and (max-width: 575.98px) {}

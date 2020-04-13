@@ -31,6 +31,7 @@ $(document).ready(function(){
         nextArrow: '<span class="next"><img src="./assets/img/icons/btn-next.png" alt="next-arrow" class="slider-next arrow"></span>'
     });
 
+<<<<<<< HEAD
     $('.faq-category-slider').slick({
       speed: 500,
       infinite: true,
@@ -60,6 +61,8 @@ $(document).ready(function(){
       ]
     });
 
+=======
+>>>>>>> ft: small tablets design
     //faq icon toggle
     $('.card').on('shown.bs.collapse', function(){
         $(this).find('.faq-icon').text((i, t) => t == '-' ? '+' : '-');

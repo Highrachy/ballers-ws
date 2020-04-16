@@ -5,7 +5,7 @@
         <h4 class="footer-info-heading">Community</h4>
         <ul class="footer-list">
           <li class="footer-list-item"><a href="#">Search Properties</a></li>
-          <li class="footer-list-item"><a href="#">FAQs</a></li>
+          <li class="footer-list-item"><a href="faq.php">FAQs</a></li>
         </ul>
       </div>
       <div class="col-lg-3 col-sm-6">

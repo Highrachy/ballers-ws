@@ -285,6 +285,7 @@ h5 .btn-link {
 
 /* big tablets */
 @media only screen and (max-width: 1024px) {
+    header,
     .holding,
     .about,
     .phone-div,
@@ -296,7 +297,7 @@ h5 .btn-link {
         height: 40rem;
     }
     .slide {
-        width: 13.5rem !important;
+        width: 13.5rem;
     }
     .prev,
     .next {
@@ -304,7 +305,7 @@ h5 .btn-link {
     }
 }
 /* medium sized devices ie. tablets */
-@media only screen and (max-width: 991.98px) {
+@media only screen and (max-width: 991.99px) {
     %heading-font-stack-mobile {
         font-size: 2rem;
     }
@@ -313,7 +314,11 @@ h5 .btn-link {
     }
     %button-stack-mobile {
         border-radius: 0.2rem;
-        padding: 0 4rem;
+        padding: 0 3.8rem;
+    }
+    header {
+        padding-left: 0;
+        padding-right: 0;
     }
     .about,
     .phone-div,
@@ -327,31 +332,8 @@ h5 .btn-link {
     .gallery-title {
         @extend %title-font-stack-mobile;
     }
-    .navbar {
-        &-brand {
-            padding-left: 1rem;
-        }
-        &-toggler {
-            padding-right: 1rem;
-        }
-    }
-    .navigation-wrap,
-    .navbar {
-        background-color: $white;
-        padding: 0;
-    }
-    .nav-link {
-        color: $gray-700;
-    }
     .collapse {
         z-index: 100;
-    }
-    #navbarSupportedContent {
-        background-color: $gray-300;
-        justify-content: center;
-        text-align: center !important;
-        padding: 1rem 3rem 3rem;
-        margin-bottom: 0;
     }
     .register {
         color: $white !important;
@@ -404,13 +386,6 @@ h5 .btn-link {
             @extend %heading-font-stack-mobile;
             padding: 1rem 0 0;
         }
-        // &-ball-text {
-        //     color: $gray-700;
-        //     font-size: 1.2rem;
-        //     font-weight: 300;
-        //     line-height: 1.8rem;
-        //     padding-bottom: 2rem;
-        // }
         &-ball-title {
             text-align: center;
         }
@@ -460,4 +435,69 @@ h5 .btn-link {
     
 }
  /* small mobile devices */
- @media only screen and (max-width: 575.98px) {}
+ @media only screen and (max-width: 575.99px) {
+     .holding {
+        height: 50rem;
+
+        &-form {
+            padding: 0 1rem;
+        }
+    }
+    .form-inline {
+        padding: 1rem;
+        margin: auto;
+        justify-content: center;
+    }
+    .input-group {
+        width: 100%;
+    }
+    .form-search {
+        padding: 0.4rem;
+        width: 90%;
+    }
+    .about-ball,
+    .home-tab {
+        justify-content: center;
+        text-align: center;
+    }
+    .prev,
+    .next {
+        top: 50%;
+    }
+    .slide {
+        margin: 1.2rem;
+    }
+    .phone-div {
+        padding-left: 1rem;
+        padding-top: 4rem;
+        justify-content: center;
+    }
+    .faq {
+        &-card-heading {
+            font-size: 1.1rem;
+        }
+        &-icon {
+            font-size: 1.5rem;
+        }
+    }
+    .how-heading,
+    .faq-heading {
+        text-align: center;
+    }
+    .card {
+        margin-left: unset;
+    }
+    .gallery {
+        padding: 4rem 1rem;
+    }
+    .footer {
+        justify-content: center;
+        text-align: center;
+        margin: auto;
+    }
+    .footer-info,
+    .logo-div {
+        padding-left: unset;
+        padding-right: unset;
+    }
+ }

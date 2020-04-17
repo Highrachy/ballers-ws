@@ -16,11 +16,8 @@
 </head>
 
 <body>
-  <!-- Holding -->
-  <section class="holding">
-
-    <!-- Header -->
-    <header>
+  <!-- Header -->
+  <header>
       <nav class="navbar navbar-expand-lg">
         <a class="navbar-brand" href="index.html"><img class="ballers-logo" src="./assets/img/ballers-logo.png" alt="ballers logo"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -54,6 +51,8 @@
       </nav>
     </header>
     <!-- /.Header -->
+  <!-- Holding -->
+  <section class="holding">
 
     <section class="holding-inner">
       <h1 class="holding-heading">Become <br> a landlord</h1>

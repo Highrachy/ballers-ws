@@ -31,8 +31,14 @@ body {
     width: 6rem;
     height:  4rem;
 }
-.navbar-collapse {
-    padding-left: 2rem;
+.navbar{
+    background-color: $white;
+    width: 100%;
+    padding-left: 7rem;
+
+    &-collapse {
+        padding-left: 2rem;
+    }
 }
 .nav-link {
     padding: 0.5rem 1rem !important;
@@ -47,7 +53,7 @@ body {
     padding-right: 5rem;
 
     &-heading {
-        padding: 5rem 0 1rem;
+        padding: 10rem 0 1rem;
         font-size: 4rem;
         color: $blue;
     }
@@ -65,12 +71,12 @@ body {
     }
 }
 .sign-in {
-    color: $white;
+    color: $blue;
     padding: 0.5rem 2.5rem !important;
 }
 .register {
-    color: $blue;
-    background-color: $white;
+    color: $white;
+    background-color: $purple;
     padding: 0.5rem 2.5rem !important;
 }
 .form-inline {

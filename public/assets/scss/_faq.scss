@@ -1,3 +1,140 @@
 .faq-holding {
+    background-image: url('../img/backgrounds/faq-holding.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    justify-content: center;
+    height: 35rem;
+    width: 100%;
+
+    &-heading {
+        color: $blue;
+        text-align: center;
+        padding-top: 10rem;
+        padding-bottom: 2rem;
+    }
+    &-text {
+        text-align: center;
+        @extend %heading-text-font-stack;
+        padding-bottom: 3rem;
+    }
+    &-form {
+        text-align: center;
+        align-content: center;
+        margin: auto;
+        background-color: $white;
+        padding: 1rem 0.5rem;
+        border-radius: 0.5rem;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+    &-search-btn {
+        padding: 1.2rem 0;
+        border-radius: $border-radius;
+        width: 100%;
+        background-color: $purple;
+        border-color: $purple;
+    }
+}
+.faq-category {
+    padding: 3rem;
+    background-color: $gray-300;
+
+    &-text {
+        text-align: center;
+        @extend %heading-text-font-stack;
+        color: $gray-750;
+        padding-bottom: 3rem;
+    }
+    &-slide {
+        background-color: $white;
+        border-radius: 0.3rem;
+        box-shadow: 0px 4px 10px rgba(196, 196, 196, 0.3);
+        text-align: center;
+        align-content: center;
+        margin: auto;
+        margin: 1rem 3rem;
+        padding: 2rem;
+        height: 9rem;
+        
+        img {
+            height: 3rem;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+    }
+    &-slide-text {
+        font-weight: 300;
+        padding-top: 0.5rem;
+    }
+}
+.faq-getting-started {
+    padding: 3rem;
+
+    &-heading {
+        text-align: center;
+        @extend %heading-font-stack;
+        font-weight: 400;
+        padding-bottom: 1.5rem;
+    }
+    &-text {
+        text-align: center;
+        color: $gray-750;
+        font-weight: 400;
+        font-size: 1.5rem;
+    }
+    &-accordion {
+        margin: auto;
+    }
+    &-card {
+        border: 0;
+        border-radius: 0;
+        border-bottom: 1px solid $blue;
+        padding: 1.5rem 0;
+        margin-left: -3rem;
     
+        &-header {
+            background-color: $white;
+            border: 0;
+        }
+    }
+    &-icon {
+        color: $gray-400;
+        font-size: 2rem;
+    }
+}
+.faq-question {
+    padding: 3rem 0 5rem;
+
+    &-heading {
+        text-align: center;
+        @extend %heading-font-stack;
+        font-weight: 400;
+        padding-bottom: 1.5rem;
+    }
+    &-text {
+        text-align: center;
+        color: $gray-750;
+        font-weight: 400;
+        font-size: 1.3rem;
+        padding-bottom: 3rem;
+    }
+    &-contact {
+        text-align: center;
+    }
+    &-info-div {
+        border: 3px solid $purple;
+        box-shadow: 0px 4px 10px rgba(196, 196, 196, 0.3);
+        display: inline-block;
+        padding: 1.5rem 2rem;
+        border-radius: 0.25rem;
+        text-align: center;
+
+        img {
+            width: 3rem;
+        }
+    }
+    &-info {
+        padding-top: 1.5rem;
+        font-weight: 400;
+    }
 }

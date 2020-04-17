@@ -4,17 +4,17 @@
     <h1 class="faq-holding-heading">Frequently Asked Questions</h1>
     <h6 class="faq-holding-text">Are you looking for an answer to your questions about BALL? <br> Here we have compiled an overview of frequently asked questions we receive from our BALLers</h6>
 
-    <section class="faq-holding-form col-lg-6 col-md-11 col-12">
-        <form class="form-inline">
+    <section class="faq-holding-form col-lg-6 col-md-11 col-11">
+        <form class="form-inline faq-form">
             <label class="sr-only" for="search">Search</label>
-            <div class="input-group col-lg-8 col-12">
+            <div class="input-group col-lg-8 col-md-8 col-12">
               <div class="input-group-prepend">
                 <div class="input-group-text"><img src="./assets/img/icons/search-icon.png" class="input-icon" alt="location icon"></div>
               </div>
               <input type="text" class="form-control hold-input" id="search" placeholder="Search for a question...">
             </div>
           
-            <div class="input-group col-lg-4 col-12">
+            <div class="input-group col-lg-4 col-md-4 col-12">
                 <button type="submit" class="btn btn-primary btn-large faq-holding-search-btn">Search</button>
             </div>
         </form>
@@ -46,7 +46,7 @@
 
 <section class="faq-getting-started">
     <h2 class="faq-getting-started-heading">Getting Started</h2>
-    <h5 class="faq-getting-started-text">This are questions on the general topic on about BALL. Please go <br> through this section if you need your questions answered.</h5>
+    <h5 class="faq-getting-started-text">This are questions on the general topic on about BALL. Please go through this section if you need your questions answered.</h5>
 
     <div class="col-lg-9 col-12 faq-getting-started-accordion">
         <div id="accordion">

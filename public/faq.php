@@ -15,7 +15,7 @@
             </div>
           
             <div class="input-group col-lg-4 col-md-4 col-12">
-                <button type="submit" class="btn btn-primary btn-large faq-holding-search-btn">Search</button>
+                <button type="submit" class="btn btn-large faq-holding-search-btn">Search</button>
             </div>
         </form>
     </section>

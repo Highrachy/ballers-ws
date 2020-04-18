@@ -1,0 +1,149 @@
+%heading-font-stack {
+    color: $blue;
+    font-size: 3rem;
+}
+%heading-text-font-stack {
+    color: $gray-700;
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+%title-font-stack {
+    color: $gray-700;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+%button-stack {
+    color: $white;
+    background-color: $purple;
+    border-radius: 0.2rem;
+    padding: 0.5rem 2rem;
+    font-size: 1rem;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+* {
+    font-family: 'Barlow', sans-serif !important;
+}
+html,
+body {
+    width: 100%;
+    height: 100%;
+    scroll-behavior: smooth;
+    padding: 0;
+}
+body {
+    overflow-x: hidden !important;
+    margin: 0;
+}
+header {
+    width: 100%;
+    padding-left: 6rem;
+    padding-right: 5rem;
+}
+.ballers-logo {
+    width: 6rem;
+    height:  4rem;
+}
+.navigation-wrap{
+	position: absolute;
+	width: 100%;
+    top: 0;
+    left: 0;
+    padding-left: 5rem;
+    padding-right: 5rem;
+	z-index: 1000;
+	-webkit-transition : all 0.3s ease-out;
+    transition : all 0.3s ease-out;
+    background-color: $white;
+}
+.nav-link {
+    padding: 0.5rem 1rem !important;
+    font-weight: 400;
+}
+.navbar {
+    &-collapse {
+        padding-left: 2rem;
+    }
+    &-nav .mr-auto {
+        width: 30%;
+    }
+    &-toggler {
+        float: right;
+        border: none;
+        padding-right: 0;
+    }
+    &-toggler:active,
+    &-toggler:focus {
+        outline: none;
+    }
+    &-toggler-icon {
+        width: 2rem;
+        height: 1rem;
+        background-image: none;
+        position: relative;
+        padding-top: 1rem;
+        border-bottom: 0.2rem solid $purple;
+        transition: all 300ms linear;
+    }
+    &-toggler-icon:after, 
+    &-toggler-icon:before{
+        width: 2rem;
+        position: absolute;
+        height: 0.2rem;
+        background-color: $purple;
+        top: 0;
+        left: 0;
+        content: '';
+        z-index: 2;
+        transition: all 300ms linear;
+    }
+    &-toggler-icon:after{
+        top: 8px;
+    }
+    &-toggler[aria-expanded="true"] &-toggler-icon:after {
+        transform: rotate(45deg);
+    }
+    &-toggler[aria-expanded="true"] &-toggler-icon:before {
+        transform: translateY(8px) rotate(-45deg);
+    }
+    &-toggler[aria-expanded="true"] &-toggler-icon {
+        border-color: transparent;
+    }
+}
+.register {
+    color: $white;
+    background-color: $purple;
+    padding: 0.5rem 2.5rem !important;
+}
+
+@media only screen and (max-width: 991.99px) {
+    .navbar {
+        &-brand {
+            padding-left: 1rem;
+        }
+        &-toggler {
+            padding-right: 1rem;
+        }
+    }
+    .navigation-wrap,
+    .navbar {
+        background-color: $white;
+        padding: 0;
+
+        &-collapse {
+            background-color: $gray-300;
+            justify-content: center;
+            text-align: center !important;
+            padding: 1rem 3rem 3rem;
+            margin-bottom: 0;
+        }
+    }
+    .nav-link {
+        color: $gray-700;
+    }
+    .register {
+        color: $white !important;
+        background-color: $purple;
+        padding: 0.5rem 1.5rem !important;
+    }
+}

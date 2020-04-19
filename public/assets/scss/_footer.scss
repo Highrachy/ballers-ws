@@ -1,0 +1,60 @@
+.ballers-logo-footer {
+    width: 6rem;
+    height:  4rem;
+}
+.highrachy-logo-footer {
+    width: 6rem;
+    height: 2rem;
+}
+.footer {
+    background-color: $gray-300;
+    bottom: 0;
+    &-info {
+        background-color: $blue;
+        color: $white;
+        padding: 4rem 2rem 2rem 5rem;
+    }
+    &-info-heading {
+        color:$white;
+        font-weight: 400;
+        padding-bottom: 1rem;
+    }
+    &-list {
+        list-style-type: none;
+        list-style: none;
+        padding-left: 0;
+    }
+    &-list-item,
+    &-list-item a {
+        color: $white;
+        font-size: 0.8rem;
+    }
+}
+.sm-icon {
+    width: 1.8rem;
+    height: 1.8rem;
+}
+.logo-div {
+    background-color: $gray-300;
+    padding: 3rem 1rem 2rem 5rem;
+
+    &-text {
+        padding-top: 2rem;
+        color: $gray-700;
+        font-weight: 300;
+        font-size: 0.8rem;
+    }
+}
+
+@media only screen and (max-width: 575.99px) {
+    .footer {
+        justify-content: center;
+        text-align: center;
+        margin: auto;
+    }
+    .footer-info,
+    .logo-div {
+        padding-left: unset;
+        padding-right: unset;
+    }
+}

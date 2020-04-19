@@ -1,5 +1,5 @@
 // Ballers Variables
-@import url('https://fonts.googleapis.com/css?family=Barlow:300,500,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Barlow:300,400,500,700&display=swap');
 $text-font: 'Barlow', sans-serif;
 $headings-font: 'Barlow', sans-serif;
 
@@ -13,18 +13,20 @@ $headings-font: 'Barlow', sans-serif;
 $white: #fff !default;
 $gray-100: #fafafa;
 $gray-200: #f2f2f2;
-$gray-300: #e0e0e0;
-$gray-400: #ced4da !default;
+$gray-300: #eff2ff;
+$gray-350: #e5e5e5;
+$gray-400: #c4c4c4 !default;
 $gray-500: #adb5bd !default;
 $gray-600: #888; //text-muted
-$gray-700: #495057 !default;
+$gray-700: #5a6679 !default;
+$gray-750: #51596c;
 $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
 $black: #000 !default;
 
-$blue: #282568;
+$blue: #161d3f;
 $indigo: #150073;
-$purple: #6f42c1 !default;
+$purple: #5775fa;
 $pink: #e83e8c !default;
 $red: #e60100;
 $orange: #e66800;
@@ -33,9 +35,10 @@ $green: #00b800;
 $teal: #008a8a;
 $cyan: #17a2b8 !default;
 
-$primary: $red;
-$secondary: $teal;
-$tertiary: $green;
+
+$primary: #161d3f;
+$secondary: #5775fa;
+$tertiary: #eff2ff;
 $success: $green;
 $info: $cyan !default;
 $warning: $yellow;
@@ -46,7 +49,7 @@ $dark: $black;
 // Body
 //
 // Settings for the `<body>` element.
-$text-color: #8492a6; // 828282
+$text-color: #5a6679; // 828282
 $text-color-secondary: lighten($text-color, 10%);
 
 $body-bg: $white;
@@ -96,9 +99,9 @@ $theme-colors: map-merge(
 $line-height-lg: 2.2;
 $line-height-sm: 2;
 
-$border-radius: 0.125rem;
-$border-radius-lg: 0.125rem;
-$border-radius-sm: 0.125rem;
+$border-radius: 0.3rem;
+$border-radius-lg: 0.3rem;
+$border-radius-sm: 0.3rem;
 
 $transition-base: all 0.4s ease-in-out;
 
@@ -166,7 +169,7 @@ $input-padding-x: 1rem;
 $input-font-family: $text-font;
 $input-font-size: 1rem;
 $input-font-weight: 300;
-$input-color: $gray-700;
+$input-color: $gray-400;
 $input-border-color: $gray-400;
 $input-box-shadow: none;
 

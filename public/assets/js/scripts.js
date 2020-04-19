@@ -57,9 +57,7 @@ $(document).ready(function(){
               slidesToShow: 1
             }
           }
-      ],
-      // prevArrow: '<span class="prev"><img src="./assets/img/icons/btn-prev.png" alt="previous-arrow" class="slider-prev arrow"></span>',
-      // nextArrow: '<span class="next"><img src="./assets/img/icons/btn-next.png" alt="next-arrow" class="slider-next arrow"></span>'
+      ]
     });
 
     //faq icon toggle

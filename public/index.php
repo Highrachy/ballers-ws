@@ -53,7 +53,6 @@
       <img src="./assets/img/home-tab.png" class="home-tab" alt="home image">
     </div>
     <div class="col-sm-6 col-12 about">
-      <h6 class="about-ball-title">ABOUT BALL</>
       <h2 class="about-ball-heading">Game-changing service <br> that makes owning <br> your home easier</h2>
       <h5 class="about-ball-text">We make owning a home simpler and achievable. <br> With BALL unique saving plan tailored to you and your <br> financial position,owning a home has never been easier.</h5>
       <button class="btn btn-lg big-button">LEARN MORE</button>

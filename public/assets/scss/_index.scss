@@ -282,7 +282,6 @@ h5 .btn-link {
     display: inline-block;
 }
 
-
 /* big tablets */
 @media only screen and (max-width: 1024px) {
     header,
@@ -304,6 +303,7 @@ h5 .btn-link {
         top: 25%;
     }
 }
+
 /* medium sized devices ie. tablets */
 @media only screen and (max-width: 991.99px) {
     %heading-font-stack-mobile {
@@ -314,7 +314,7 @@ h5 .btn-link {
     }
     %button-stack-mobile {
         border-radius: 0.2rem;
-        padding: 0 3.8rem;
+        padding: 0.3rem 3.8rem;
     }
     header {
         padding-left: 0;
@@ -335,18 +335,13 @@ h5 .btn-link {
     .collapse {
         z-index: 100;
     }
-    .register {
-        color: $white !important;
-        background-color: $purple;
-        padding: 0.5rem 1.5rem !important;
-    }
     .holding {
         padding-left: 0;
         padding-right: 0;
         background-image: none;
         margin: auto;
         height: 60rem;
-        background-image: url('../img/holding-tab.png');
+        background-image: url('../img/backgrounds/holding-tab.png');
         background-size: 100% 100%;
         background-repeat: no-repeat;
 
@@ -362,7 +357,7 @@ h5 .btn-link {
             margin: auto !important;
         }
     }
-    .form-inline {
+    .index-form {
         text-align: center !important;
         margin: auto !important;
         padding: 1rem 5rem;
@@ -371,10 +366,10 @@ h5 .btn-link {
         @extend %button-stack-mobile;
     }
     .about {
-        padding-top: 1rem;
+        padding: 1rem 1.5rem 0;
 
         &-ball {
-            padding: 3.5rem 1rem 0;
+            padding: 3.5rem 0 0;
         }
         &-ball-text {
             font-size: 1rem;
@@ -432,19 +427,30 @@ h5 .btn-link {
     .questions {
         padding-right: 2rem;
     }
-    
 }
- /* small mobile devices */
- @media only screen and (max-width: 575.99px) {
-     .holding {
+
+/* small mobile devices */
+@media only screen and (max-width: 575.99px) {
+    .about-ball-heading,
+    .benefits-heading,
+    .how-heading,
+    .faq-heading,
+    .gallery-heading {
+        font-size: 1.8rem;
+        font-weight: 700;
+    }
+    .big-button {
+        width: 97%;
+    }
+    .holding {
         height: 50rem;
 
         &-form {
             padding: 0 1rem;
         }
     }
-    .form-inline {
-        padding: 1rem;
+    .index-form {
+        padding: 1rem 0;
         margin: auto;
         justify-content: center;
     }
@@ -455,10 +461,19 @@ h5 .btn-link {
         padding: 0.4rem;
         width: 90%;
     }
+    .about br {
+        display: none;
+    }
     .about-ball,
-    .home-tab {
+    .home-img {
         justify-content: center;
         text-align: center;
+    }
+    .home-tab {
+        display: block;
+        width: 22rem;
+        height: 18rem;
+        margin: auto;
     }
     .prev,
     .next {
@@ -474,10 +489,10 @@ h5 .btn-link {
     }
     .faq {
         &-card-heading {
-            font-size: 1.1rem;
+            font-size: 1.6rem;
         }
         &-icon {
-            font-size: 1.5rem;
+            font-size: 2.5rem;
         }
     }
     .how-heading,
@@ -488,16 +503,6 @@ h5 .btn-link {
         margin-left: unset;
     }
     .gallery {
-        padding: 4rem 1rem;
+        padding: 4rem 2rem;
     }
-    .footer {
-        justify-content: center;
-        text-align: center;
-        margin: auto;
-    }
-    .footer-info,
-    .logo-div {
-        padding-left: unset;
-        padding-right: unset;
-    }
- }
+}

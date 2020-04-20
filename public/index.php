@@ -7,7 +7,7 @@
       <h6 class="holding-mid">We make owning a home simpler and achievable.</h6>
     </section>
 
-    <section class="col-lg-8 col-md-11 col-12 holding-form">
+    <section class="col-lg-8 col-11 holding-form">
       <form class="form-inline index-form">
         <label class="sr-only" for="location">Location</label>
         <div class="input-group col-lg-4 col-sm-12">
@@ -44,6 +44,10 @@
 
   <!-- About Ball -->
   <section class="about-ball row">
+    <div class="col-lg-6 col-12"></div>
+    <div class="col-lg-6 col-12 about">
+      <h6 class="about-ball-title">ABOUT BALL</h6>
+    </div>
     <div class="col-sm-6 col-12 text-center home-img">
       <img src="./assets/img/home.png" class="home" alt="home image">
       <img src="./assets/img/home-tab.png" class="home-tab" alt="home image">
@@ -134,8 +138,8 @@
           <p class="how-text">Convert structure to extended mortgage plan at affordable rates from 6% per annum.</p>
         </div>
 
-        <div class="col-sm-2 col-12"></div>
-        <div class="col-sm-10 col-12">
+        <div class="col-2"></div>
+        <div class="col-10">
           <button class="btn btn-lg big-button">SIGN UP NOW</button>
         </div>
       </div>

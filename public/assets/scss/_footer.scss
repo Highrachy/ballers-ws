@@ -27,7 +27,7 @@
     &-list-item,
     &-list-item a {
         color: $white;
-        font-size: 0.8rem;
+        // font-size: 0.8rem;
     }
 }
 .sm-icon {
@@ -51,6 +51,12 @@
         justify-content: center;
         text-align: center;
         margin: auto;
+
+        &-info-heading {
+            font-size: 1.8rem;
+            padding-top: 2rem;
+            padding-bottom: 1rem;
+        }
     }
     .footer-info,
     .logo-div {

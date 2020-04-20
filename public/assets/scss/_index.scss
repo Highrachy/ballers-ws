@@ -291,6 +291,11 @@ h5 .btn-link {
     .faq {
         padding-left: 3rem;
     }
+    .about-ball-heading {
+        br {
+            display: none;
+        }
+    }
     .benefits {
         padding: 3rem;
         height: 40rem;
@@ -314,7 +319,8 @@ h5 .btn-link {
     }
     %button-stack-mobile {
         border-radius: 0.2rem;
-        padding: 0.3rem 3.8rem;
+        padding-top: 0.3rem;
+        padding-bottom: 0.3rem;
     }
     header {
         padding-left: 0;
@@ -444,7 +450,11 @@ h5 .btn-link {
     }
     .holding {
         height: 50rem;
-
+        background-image: url('../img/backgrounds/holding-mobile.png');
+        
+        &-heading {
+            padding-top: 0;
+        }
         &-form {
             padding: 0 1rem;
         }
@@ -461,8 +471,18 @@ h5 .btn-link {
         padding: 0.4rem;
         width: 90%;
     }
-    .about br {
-        display: none;
+    .about {
+        padding: 0 3rem;
+        &-ball {
+            padding-top: 0;
+        }
+        br {
+            display: none;
+        }
+    }
+    .benefits {
+        padding: 3rem 1rem;
+        height: 35rem;
     }
     .about-ball,
     .home-img {
@@ -479,9 +499,6 @@ h5 .btn-link {
     .next {
         top: 50%;
     }
-    .slide {
-        margin: 1.2rem;
-    }
     .phone-div {
         padding-left: 1rem;
         padding-top: 4rem;
@@ -490,6 +507,10 @@ h5 .btn-link {
     .faq {
         &-card-heading {
             font-size: 1.6rem;
+
+            .first {
+                padding-top: 1rem;
+            }
         }
         &-icon {
             font-size: 2.5rem;

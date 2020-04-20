@@ -161,7 +161,7 @@
               <a class="" data-toggle="collapse" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                 <h5 class="mb-0 faq-card-heading">
                   What is BALL?
-                  <span class="faq-icon one">-</span>
+                  <span class="faq-icon one first">-</span>
                 </h5>
               </a>
             </div>

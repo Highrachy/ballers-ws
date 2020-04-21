@@ -36,6 +36,8 @@ $(document).ready(function(){
     infinite: true,
     centerMode: true,
     autoplay: true,
+    dots: true,
+    arrows: false,
     autoplaySpeed: 4000,
     slidesToScroll: 1,
     centerPadding: '0',

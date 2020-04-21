@@ -2,7 +2,7 @@
 
 <section class="faq-holding">
     <h1 class="faq-holding-heading">Frequently Asked Questions</h1>
-    <h6 class="faq-holding-text">Are you looking for an answer to your questions about BALL? <br> Here we have compiled an overview of frequently asked questions we receive from our BALLers</h6>
+    <h5 class="faq-holding-text">Are you looking for an answer to your questions about BALL? <br> Here we have compiled an overview of frequently asked questions we receive from our BALLers</h5>
 
     <section class="faq-holding-form col-lg-6 col-md-11 col-11">
         <form class="form-inline faq-form">
@@ -55,9 +55,7 @@
                 <a class="" data-toggle="collapse" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                   <h5 class="mb-0 faq-card-heading">
                     What is BALL?
-                    <span class="icon-toggle">
-                      <span class="faq-getting-started-icon one">-</span>
-                    </span>
+                    <span class="faq-getting-started-icon first">-</span>
                   </h5>
                 </a>
               </div>
@@ -73,9 +71,7 @@
                 <a class="" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                   <h5 class="mb-0 faq-card-heading">
                     What is special about BALL?
-                    <span class="icon-toggle">
-                      <span class="faq-getting-started-icon">+</span>
-                    </span>
+                    <span class="faq-getting-started-icon">+</span>
                   </h5>
                 </a>
               </div>
@@ -91,9 +87,7 @@
                 <a class="" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                   <h5 class="mb-0 faq-card-heading">
                     What is the minimum amount to invest?
-                    <span class="icon-toggle">
-                      <span class="faq-getting-started-icon">+</span>
-                    </span>
+                    <span class="faq-getting-started-icon">+</span>
                   </h5>
                 </a>
               </div>
@@ -109,9 +103,7 @@
                 <a class="" data-toggle="collapse" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                   <h5 class="mb-0 faq-card-heading">
                     How secured are my savings?
-                    <span class="icon-toggle">
-                      <span class="faq-getting-started-icon">+</span>
-                    </span>
+                    <span class="faq-getting-started-icon">+</span>
                   </h5>
                 </a>
               </div>
@@ -127,9 +119,7 @@
                 <a class="" data-toggle="collapse" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
                   <h5 class="mb-0 faq-card-heading">
                     Can I upgrade my saving plan in the future?
-                    <span class="icon-toggle">
-                      <span class="faq-getting-started-icon">+</span>
-                    </span>
+                    <span class="faq-getting-started-icon">+</span>
                   </h5>
                 </a>
               </div>

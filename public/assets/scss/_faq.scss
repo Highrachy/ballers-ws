@@ -11,6 +11,7 @@
         text-align: center;
         padding-top: 10rem;
         padding-bottom: 2rem;
+        font-size: 3.5rem;
     }
     &-text {
         text-align: center;
@@ -22,9 +23,9 @@
         align-content: center;
         margin: auto;
         background-color: $white;
-        padding: 1rem 0.5rem;
+        padding: 0.8rem 0;
         border-radius: 0.5rem;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        box-shadow: 0px 15px 30px rgba(196, 196, 196, 0.3);
     }
     &-search-btn {
         padding: 1.2rem 0;
@@ -54,9 +55,10 @@
         margin: 1rem 3rem;
         padding: 2rem;
         height: 9rem;
+        cursor: pointer;
         
         img {
-            height: 3rem;
+            height: 2rem;
             margin-left: auto;
             margin-right: auto;
             display: block;
@@ -86,6 +88,10 @@
     }
     &-accordion {
         margin: auto;
+
+        .card {
+            border-bottom: 1px solid  $gray-400;
+        }
     }
     &-card {
         border: 0;
@@ -130,7 +136,7 @@
         border: 3px solid $purple;
         box-shadow: 0px 4px 10px rgba(196, 196, 196, 0.3);
         display: inline-block;
-        padding: 1.5rem 2rem;
+        padding: 1.5rem 0 0.5rem;
         border-radius: 0.25rem;
         text-align: center;
 
@@ -144,9 +150,18 @@
     }
 }
 
-@media only screen and (max-width: 1024px) {}
+@media only screen and (max-width: 1024px) {
+    .faq-getting-started-text br {
+        display: none;
+    }
+}
 @media only screen and (max-width: 991.99px) {
     .faq-holding {
+        &-heading,
+        &-text {
+            padding-left: 5rem;
+            padding-right: 5rem;
+        }
         &-form {
             padding: 0;
         }
@@ -164,11 +179,6 @@
         &-slide {
             margin: 1rem;
             padding: 2rem;
-            width: 12rem !important;
-            
-            img {
-                height: 2rem;
-            }
         }
     }
     .faq-question {
@@ -191,6 +201,12 @@
     }
     .faq-holding {
         height: 41rem;
+
+        &-heading {
+            font-size: 2.5rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
         &-text {
             padding: 1rem;
         }
@@ -208,11 +224,6 @@
         &-slide {
             margin: 1.2rem 1.2rem 0 1.2rem;
             padding: 2rem 1.7rem 0 1.7rem;
-            width: 15rem !important;
-            
-            img {
-                height: 2rem;
-            }
         }
     }
     .faq-getting-started {
@@ -228,5 +239,23 @@
     }
     .faq-question {
         padding: 3rem 1.5rem 5rem;
+
+        &-info {
+            font-size: 1.2rem;
+            padding-top: 1rem;
+        }
+
+        &-info-div {
+            padding: 1.5rem 0 0;
+            img {
+                width: 2rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .faq-category-slide {
+        margin: 0.2rem;
     }
 }

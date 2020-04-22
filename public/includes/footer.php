@@ -32,7 +32,9 @@
             <a href="#"><img src="./assets/img/icons/twitter.png" alt="twitter" class="sm-icon"></a>
           </li>
           <li class="footer-list-item">&nbsp;</li>
-          <li class="footer-list-item">support@ballers.ng</li>
+          <li class="footer-list-item">
+            <a href="mailto:support@ballers.ng?Subject=Hello%20Ballers%20Support" target="_blank">support@ballers.ng</a>
+          </li>
           <li class="footer-list-item">+2348076545543</li>
           <li class="footer-list-item">+2348094432231</li>
         </ul>

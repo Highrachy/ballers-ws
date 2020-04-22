@@ -64,8 +64,8 @@ $(document).ready(function(){
 
   //faq icon toggle
   $('.card').on('shown.bs.collapse', function(){
-      $(this).find('.faq-icon').text((i, t) => t == '-' ? '+' : '-');
+      $(this).find('span').text((text) => text === '-' ? '+' : '-');
       }).on('hidden.bs.collapse', function(){
-      $(this).find('.faq-icon').text((i, t) => t == '+' ? '-' : '+');     
+      $(this).find('span').text((text) => text === '+' ? '-' : '+');     
   });
 });

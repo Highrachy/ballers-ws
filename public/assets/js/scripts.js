@@ -80,8 +80,8 @@ $(document).ready(function(){
 
   //faq icon toggle
   $('.card').on('shown.bs.collapse', function(){
-      $(this).find('.faq-icon, .faq-getting-started-icon').text((text) => text === '-' ? '+' : '-');
+      $(this).find('.faq-icon, .faq-option-category-icon').text((text) => text === '-' ? '+' : '-');
       }).on('hidden.bs.collapse', function(){
-      $(this).find('.faq-icon, .faq-getting-started-icon').text((text) => text === '+' ? '-' : '+');     
+      $(this).find('.faq-icon, .faq-option-category-icon').text((text) => text === '+' ? '-' : '+');     
   });
 });

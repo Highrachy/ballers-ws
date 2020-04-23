@@ -86,7 +86,7 @@
         padding-top: 0.5rem;
     }
 }
-.faq-getting-started {
+.faq-option-category {
     padding: 3rem;
 
     &-heading {
@@ -171,7 +171,7 @@
 }
 
 @media only screen and (max-width: 1024px) {
-    .faq-getting-started-text br {
+    .faq-option-category-text br {
         display: none;
     }
 }
@@ -186,7 +186,7 @@
             padding: 0;
         }
     }
-    .faq-getting-started-text {
+    .faq-option-category-text {
         padding-right: 5rem;
         padding-left: 5rem;
     }
@@ -216,14 +216,14 @@
     }
 }
 @media only screen and (max-width: 575.99px) {
-    .faq-getting-started-heading,
+    .faq-option-category-heading,
     .faq-question-heading {
         font-size: 1.8rem;
         font-weight: 500;
         padding-top: 1.5rem;
     }
     .faq-holding-text,
-    .faq-getting-started-text,
+    .faq-option-category-text,
     .faq-question-text {
         font-size: 1.2rem;
     }
@@ -254,7 +254,7 @@
             padding: 2rem 1.7rem 0 1.7rem;
         }
     }
-    .faq-getting-started {
+    .faq-option-category {
         padding: 0.8rem;
 
         &-text {

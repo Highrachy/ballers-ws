@@ -45,11 +45,11 @@
 </section>
 
 <!-- Getting started accordion -->
-<section class="faq-getting-started" id="getting-started">
-    <h2 class="faq-getting-started-heading">Getting Started</h2>
-    <h5 class="faq-getting-started-text">This are questions on the general topic on about BALL. Please go <br> through this section if you need your questions answered.</h5>
+<section class="faq-option-category" id="getting-started">
+    <h2 class="faq-option-category-heading">Getting Started</h2>
+    <h5 class="faq-option-category-text">This are questions on the general topic on about BALL. Please go <br> through this section if you need your questions answered.</h5>
 
-    <div class="col-lg-9 col-12 faq-getting-started-accordion">
+    <div class="col-lg-9 col-12 faq-option-category-accordion">
       <div id="accordion">
 
         <div class="card">
@@ -57,7 +57,7 @@
             <a class="" data-toggle="collapse" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
               <h5 class="mb-0 faq-card-heading">
                 <span class="faq-black-dot">&#9679; &nbsp;&nbsp;</span> What is BALL?
-                <span class="faq-getting-started-icon first">-</span>
+                <span class="faq-option-category-icon first">-</span>
               </h5>
             </a>
           </div>
@@ -73,7 +73,7 @@
             <a class="" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
               <h5 class="mb-0 faq-card-heading">
                 <span class="faq-black-dot">&#9679; &nbsp;&nbsp;</span> What is special about BALL?
-                <span class="faq-getting-started-icon">+</span>
+                <span class="faq-option-category-icon">+</span>
               </h5>
             </a>
           </div>
@@ -89,7 +89,7 @@
             <a class="" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
               <h5 class="mb-0 faq-card-heading">
                 <span class="faq-black-dot">&#9679; &nbsp;&nbsp;</span> What is the minimum amount to invest?
-                <span class="faq-getting-started-icon">+</span>
+                <span class="faq-option-category-icon">+</span>
               </h5>
             </a>
           </div>
@@ -105,7 +105,7 @@
             <a class="" data-toggle="collapse" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
               <h5 class="mb-0 faq-card-heading">
                 <span class="faq-black-dot">&#9679; &nbsp;&nbsp;</span> How secured are my savings?
-                <span class="faq-getting-started-icon">+</span>
+                <span class="faq-option-category-icon">+</span>
               </h5>
             </a>
           </div>
@@ -121,7 +121,7 @@
             <a class="" data-toggle="collapse" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
               <h5 class="mb-0 faq-card-heading">
                 <span class="faq-black-dot">&#9679; &nbsp;&nbsp;</span> Can I upgrade my saving plan in the future?
-                <span class="faq-getting-started-icon">+</span>
+                <span class="faq-option-category-icon">+</span>
               </h5>
             </a>
           </div>
@@ -138,11 +138,11 @@
 <!-- /. Getting started accordion -->
 
 <!-- Payment accordion -->
-<section class="faq-getting-started" id="payment">
-    <h2 class="faq-getting-started-heading">Payment</h2>
-    <h5 class="faq-getting-started-text">These are payment related questions about BALL. Please go <br> through this section if you need your questions answered.</h5>
+<section class="faq-option-category" id="payment">
+    <h2 class="faq-option-category-heading">Payment</h2>
+    <h5 class="faq-option-category-text">These are payment related questions about BALL. Please go <br> through this section if you need your questions answered.</h5>
 
-    <div class="col-lg-9 col-12 faq-getting-started-accordion">
+    <div class="col-lg-9 col-12 faq-option-category-accordion">
       <div id="accordion">
 
         <div class="card">
@@ -150,7 +150,7 @@
             <a class="" data-toggle="collapse" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
               <h5 class="mb-0 faq-card-heading">
                 <span class="faq-black-dot">&#9679; &nbsp;&nbsp;</span> How Do I Pay
-                <span class="faq-getting-started-icon first">-</span>
+                <span class="faq-option-category-icon first">-</span>
               </h5>
             </a>
           </div>
@@ -166,7 +166,7 @@
             <a class="" data-toggle="collapse" href="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
               <h5 class="mb-0 faq-card-heading">
                 <span class="faq-black-dot">&#9679; &nbsp;&nbsp;</span> Can I upgrade my saving plan in the future?
-                <span class="faq-getting-started-icon">+</span>
+                <span class="faq-option-category-icon">+</span>
               </h5>
             </a>
           </div>
@@ -183,11 +183,11 @@
 <!-- /. Payment accordion -->
 
 <!-- Profile accordion -->
-<section class="faq-getting-started" id="profile">
-    <h2 class="faq-getting-started-heading">Profile</h2>
-    <h5 class="faq-getting-started-text">These are profile related questions about BALL. Please go <br> through this section if you need your questions answered.</h5>
+<section class="faq-option-category" id="profile">
+    <h2 class="faq-option-category-heading">Profile</h2>
+    <h5 class="faq-option-category-text">These are profile related questions about BALL. Please go <br> through this section if you need your questions answered.</h5>
 
-    <div class="col-lg-9 col-12 faq-getting-started-accordion">
+    <div class="col-lg-9 col-12 faq-option-category-accordion">
       <div id="accordion">
 
         <div class="card">
@@ -195,7 +195,7 @@
             <a class="" data-toggle="collapse" href="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
               <h5 class="mb-0 faq-card-heading">
                 <span class="faq-black-dot">&#9679; &nbsp;&nbsp;</span> How Do I Create My Profile
-                <span class="faq-getting-started-icon first">-</span>
+                <span class="faq-option-category-icon first">-</span>
               </h5>
             </a>
           </div>
@@ -211,7 +211,7 @@
             <a class="" data-toggle="collapse" href="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
               <h5 class="mb-0 faq-card-heading">
                 <span class="faq-black-dot">&#9679; &nbsp;&nbsp;</span> What Can I Do With My Profile?
-                <span class="faq-getting-started-icon">+</span>
+                <span class="faq-option-category-icon">+</span>
               </h5>
             </a>
           </div>
@@ -228,11 +228,11 @@
 <!-- /. Profile accordion -->
 
 <!-- Security accordion -->
-<section class="faq-getting-started" id="security">
-    <h2 class="faq-getting-started-heading">Security</h2>
-    <h5 class="faq-getting-started-text">These are security related questions about BALL. Please go <br> through this section if you need your questions answered.</h5>
+<section class="faq-option-category" id="security">
+    <h2 class="faq-option-category-heading">Security</h2>
+    <h5 class="faq-option-category-text">These are security related questions about BALL. Please go <br> through this section if you need your questions answered.</h5>
 
-    <div class="col-lg-9 col-12 faq-getting-started-accordion">
+    <div class="col-lg-9 col-12 faq-option-category-accordion">
       <div id="accordion">
 
         <div class="card">
@@ -240,7 +240,7 @@
             <a class="" data-toggle="collapse" href="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
               <h5 class="mb-0 faq-card-heading">
                 <span class="faq-black-dot">&#9679; &nbsp;&nbsp;</span> How Secure Is My Money?
-                <span class="faq-getting-started-icon first">-</span>
+                <span class="faq-option-category-icon first">-</span>
               </h5>
             </a>
           </div>
@@ -256,7 +256,7 @@
             <a class="" data-toggle="collapse" href="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
               <h5 class="mb-0 faq-card-heading">
                 <span class="faq-black-dot">&#9679; &nbsp;&nbsp;</span> What Happens If I Lose My Password
-                <span class="faq-getting-started-icon">+</span>
+                <span class="faq-option-category-icon">+</span>
               </h5>
             </a>
           </div>

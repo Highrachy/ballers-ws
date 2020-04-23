@@ -64,6 +64,23 @@
             display: block;
         }
     }
+    .slick-dots {
+        display: none;
+    }
+    .faq-slider-dot {
+        background-color: $slider-dot-purple;
+        border-radius: 5px;
+        width: 0.7rem;
+        height: 4px;
+        display: block;
+    }
+    .slick-active {
+        .faq-slider-dot{
+            background-color: $purple;
+            width: 1.5rem;
+            height: 4px;
+        }
+    }
     &-slide-text {
         font-weight: 300;
         padding-top: 0.5rem;
@@ -179,6 +196,10 @@
         &-slide {
             margin: 1rem;
             padding: 2rem;
+        }
+        .slick-dots {
+            display: block;
+            position: relative;
         }
     }
     .faq-question {

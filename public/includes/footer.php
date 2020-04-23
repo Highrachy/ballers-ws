@@ -33,7 +33,7 @@
           </li>
           <li class="footer-list-item">&nbsp;</li>
           <li class="footer-list-item">
-            <a href="mailto:support@ballers.ng?Subject=Hello%20Ballers%20Support" target="_blank">support@ballers.ng</a>
+            <a href="mailto:support@ballers.ng" target="_blank">support@ballers.ng</a>
           </li>
           <li class="footer-list-item">+2348076545543</li>
           <li class="footer-list-item">+2348094432231</li>

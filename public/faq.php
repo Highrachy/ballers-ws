@@ -150,7 +150,7 @@
         <div class="col-lg-3 col-md-5 col-12 faq-question-info-div">
             <img src="./assets/img/icons/mail-icon.png" alt="Mail icon">
             <h4 class="faq-question-info">
-              <a href="mailto:support@ballers.ng?Subject=Hello%20Ballers%20Support" target="_blank">support@ballers.ng</a>
+              <a href="mailto:support@ballers.ng" target="_blank">support@ballers.ng</a>
             </h4>
             <p class="faq-question-info-small">The best way to get answer faster.</p>
         </div>

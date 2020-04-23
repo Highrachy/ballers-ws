@@ -36,15 +36,23 @@ $(document).ready(function(){
     infinite: true,
     centerMode: true,
     autoplay: true,
-    dots: true,
     arrows: false,
     autoplaySpeed: 4000,
     slidesToScroll: 1,
     centerPadding: '0',
     slidesToShow: 4,
+    dots: true,
+    customPaging: function(i) {
+      return '<span class="faq-slider-dot" id=' + i + ">&nbsp;</span>";
+    },
+    useTransform: true,
+    cssEase: "ease-in-out",
     responsive: [
         {
           breakpoint: 992,
+          dots: true,
+          useTransform: true,
+          cssEase: "ease-in-out",
           settings: {
             centerMode: true,
             centerPadding: '0',
@@ -53,6 +61,7 @@ $(document).ready(function(){
         },
         {
           breakpoint: 576,
+          dots: true,
           settings: {
             centerMode: true,
             centerPadding: '0',

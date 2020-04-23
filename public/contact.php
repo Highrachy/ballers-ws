@@ -24,19 +24,36 @@
             </form>
         </div>
     </div>
-    <div class="col-lg-6 col-12 contact-hello-info">
-        <h4 class="contact-hello-text">SAY HELLO</h4>
-        <h2 class="contact-hello-heading">hello@ballers.ng</h2>
-
-        <h4 class="contact-hello-text-2">Follow us in our everyday <br> lives</h4>
-        <ul class="contact-hello-list">
-        <li class="contact-hello-list-item">
-            <a href="#"><img src="./assets/img/icons/linkedin.png" alt="linkedin" class="icon"></a> &nbsp;
-            <a href="#"><img src="./assets/img/icons/instagram.png" alt="instagram" class="icon"></a> &nbsp;
-            <a href="#"><img src="./assets/img/icons/facebook.png" alt="facebook" class="icon"></a> &nbsp;
-            <a href="#"><img src="./assets/img/icons/twitter.png" alt="twitter" class="icon"></a>
-          </li>
-        </ul>
+    <div class="row col-lg-6 col-12 contact-hello-info">
+        <div class="col-lg-12 col-sm-6 col-12">
+            <h4 class="contact-hello-text">SAY HELLO</h4>
+            <h2 class="contact-hello-heading">hello@ballers.ng</h2>
+        </div>
+        <div class="col-lg-12 col-sm-6 col-12">
+            <h4 class="contact-hello-text-2">Follow us in our everyday <br> lives</h4>
+            <ul class="contact-hello-sm-text">
+                <li class="contact-hello-sm-text-item"><a href="#">Instagram</a></li>
+                <li class="contact-hello-sm-text-item"><a href="#">Facebook</a></li>
+                <li class="contact-hello-sm-text-item"><a href="#">Twitter</a></li>
+                <li class="contact-hello-sm-text-item"><a href="#">LinkedIn</a></li>
+            </ul>
+            <div class="contact-hello-sm-icon col-12 row">
+                <h4 class="contact-hello-text col-12">FOLLOW US</h4> <br>
+                
+                <div class="contact-hello-sm-icon-item col-sm-6 col-3">
+                    <a href="#"><img src="./assets/img/icons/instagram.png" alt="instagram" class="icon"></a> &nbsp;
+                </div>
+                <div class="contact-hello-sm-icon-item col-sm-6 col-3">
+                    <a href="#"><img src="./assets/img/icons/twitter.png" alt="twitter" class="icon"></a>
+                </div>
+                <div class="contact-hello-sm-icon-item col-sm-6 col-3">
+                    <a href="#"><img src="./assets/img/icons/facebook.png" alt="facebook" class="icon"></a> &nbsp;
+                </div>
+                <div class="contact-hello-sm-icon-item col-sm-6 col-3">
+                    <a href="#"><img src="./assets/img/icons/linkedin.png" alt="linkedin" class="icon"></a> &nbsp;
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 <section class="contact-address row">

@@ -25,26 +25,27 @@
     <h6 class="faq-category-text">or chooose a category to quickly find the help you need</h6>
 
     <div class="faq-category-slider">
-      <div class="faq-category-slide" onclick="location.href='#headingOne'">
+      <div class="faq-category-slide" onclick="toggleQuestions('profile')">
             <img src="./assets/img/icons/profile-icon.png" class="faq-category-slide-img" alt="Profile Icon">
             <h5 class="faq-category-slide-text">Profile</h5>
       </div>
-      <div class="faq-category-slide" onclick="location.href='#headingTwo'">
+      <div class="faq-category-slide" onclick="toggleQuestions('getting-started')">
           <img src="./assets/img/icons/geting-started-icon.png" class="faq-category-slide-img" alt="Getting Started Icon">
           <h5 class="faq-category-slide-text">Getting Started</h5>
       </div>
-      <div class="faq-category-slide" onclick="location.href='#headingThree'">
+      <div class="faq-category-slide" onclick="toggleQuestions('payment')">
           <img src="./assets/img/icons/payment-icon.png" class="faq-category-slide-img" alt="Payment Icon">
           <h5 class="faq-category-slide-text">Payment</h5>
       </div>
-      <div class="faq-category-slide" onclick="location.href='#headingFour'">
+      <div class="faq-category-slide" onclick="toggleQuestions('security')">
           <img src="./assets/img/icons/security-icon.png" class="faq-category-slide-img" alt="Security Icon">
           <h5 class="faq-category-slide-text">Security</h5>
       </div>
     </div>
 </section>
 
-<section class="faq-getting-started">
+<!-- Getting started accordion -->
+<section class="faq-getting-started" id="getting-started">
     <h2 class="faq-getting-started-heading">Getting Started</h2>
     <h5 class="faq-getting-started-text">This are questions on the general topic on about BALL. Please go <br> through this section if you need your questions answered.</h5>
 
@@ -55,7 +56,7 @@
           <div class="card-header" id="headingOne">
             <a class="" data-toggle="collapse" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
               <h5 class="mb-0 faq-card-heading">
-                What is BALL?
+                <span class="faq-black-dot">&#9679; &nbsp;&nbsp;</span> What is BALL?
                 <span class="faq-getting-started-icon first">-</span>
               </h5>
             </a>
@@ -71,7 +72,7 @@
           <div class="card-header" id="headingTwo">
             <a class="" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
               <h5 class="mb-0 faq-card-heading">
-                What is special about BALL?
+                <span class="faq-black-dot">&#9679; &nbsp;&nbsp;</span> What is special about BALL?
                 <span class="faq-getting-started-icon">+</span>
               </h5>
             </a>
@@ -87,7 +88,7 @@
           <div class="card-header" id="headingThree">
             <a class="" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
               <h5 class="mb-0 faq-card-heading">
-                What is the minimum amount to invest?
+                <span class="faq-black-dot">&#9679; &nbsp;&nbsp;</span> What is the minimum amount to invest?
                 <span class="faq-getting-started-icon">+</span>
               </h5>
             </a>
@@ -103,7 +104,7 @@
           <div class="card-header" id="headingFour">
             <a class="" data-toggle="collapse" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
               <h5 class="mb-0 faq-card-heading">
-                How secured are my savings?
+                <span class="faq-black-dot">&#9679; &nbsp;&nbsp;</span> How secured are my savings?
                 <span class="faq-getting-started-icon">+</span>
               </h5>
             </a>
@@ -119,7 +120,7 @@
           <div class="card-header" id="headingFive">
             <a class="" data-toggle="collapse" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
               <h5 class="mb-0 faq-card-heading">
-                Can I upgrade my saving plan in the future?
+                <span class="faq-black-dot">&#9679; &nbsp;&nbsp;</span> Can I upgrade my saving plan in the future?
                 <span class="faq-getting-started-icon">+</span>
               </h5>
             </a>
@@ -134,6 +135,142 @@
       </div>
     </div>
 </section>
+<!-- /. Getting started accordion -->
+
+<!-- Payment accordion -->
+<section class="faq-getting-started" id="payment">
+    <h2 class="faq-getting-started-heading">Payment</h2>
+    <h5 class="faq-getting-started-text">These are payment related questions about BALL. Please go <br> through this section if you need your questions answered.</h5>
+
+    <div class="col-lg-9 col-12 faq-getting-started-accordion">
+      <div id="accordion">
+
+        <div class="card">
+          <div class="card-header" id="headingSix">
+            <a class="" data-toggle="collapse" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+              <h5 class="mb-0 faq-card-heading">
+                <span class="faq-black-dot">&#9679; &nbsp;&nbsp;</span> How Do I Pay
+                <span class="faq-getting-started-icon first">-</span>
+              </h5>
+            </a>
+          </div>
+          <div id="collapseSix" class="collapse show" aria-labelledby="headingSix" data-parent="#accordion">
+            <div class="card-body">
+              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="headingSeven">
+            <a class="" data-toggle="collapse" href="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+              <h5 class="mb-0 faq-card-heading">
+                <span class="faq-black-dot">&#9679; &nbsp;&nbsp;</span> Can I upgrade my saving plan in the future?
+                <span class="faq-getting-started-icon">+</span>
+              </h5>
+            </a>
+          </div>
+          <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordion">
+            <div class="card-body">
+              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+</section>
+<!-- /. Payment accordion -->
+
+<!-- Profile accordion -->
+<section class="faq-getting-started" id="profile">
+    <h2 class="faq-getting-started-heading">Profile</h2>
+    <h5 class="faq-getting-started-text">These are profile related questions about BALL. Please go <br> through this section if you need your questions answered.</h5>
+
+    <div class="col-lg-9 col-12 faq-getting-started-accordion">
+      <div id="accordion">
+
+        <div class="card">
+          <div class="card-header" id="headingEight">
+            <a class="" data-toggle="collapse" href="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+              <h5 class="mb-0 faq-card-heading">
+                <span class="faq-black-dot">&#9679; &nbsp;&nbsp;</span> How Do I Create My Profile
+                <span class="faq-getting-started-icon first">-</span>
+              </h5>
+            </a>
+          </div>
+          <div id="collapseEight" class="collapse show" aria-labelledby="headingEight" data-parent="#accordion">
+            <div class="card-body">
+              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="headingNine">
+            <a class="" data-toggle="collapse" href="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+              <h5 class="mb-0 faq-card-heading">
+                <span class="faq-black-dot">&#9679; &nbsp;&nbsp;</span> What Can I Do With My Profile?
+                <span class="faq-getting-started-icon">+</span>
+              </h5>
+            </a>
+          </div>
+          <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordion">
+            <div class="card-body">
+              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+</section>
+<!-- /. Profile accordion -->
+
+<!-- Security accordion -->
+<section class="faq-getting-started" id="security">
+    <h2 class="faq-getting-started-heading">Security</h2>
+    <h5 class="faq-getting-started-text">These are security related questions about BALL. Please go <br> through this section if you need your questions answered.</h5>
+
+    <div class="col-lg-9 col-12 faq-getting-started-accordion">
+      <div id="accordion">
+
+        <div class="card">
+          <div class="card-header" id="headingTen">
+            <a class="" data-toggle="collapse" href="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+              <h5 class="mb-0 faq-card-heading">
+                <span class="faq-black-dot">&#9679; &nbsp;&nbsp;</span> How Secure Is My Money?
+                <span class="faq-getting-started-icon first">-</span>
+              </h5>
+            </a>
+          </div>
+          <div id="collapseTen" class="collapse show" aria-labelledby="headingTen" data-parent="#accordion">
+            <div class="card-body">
+              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="headingEleven">
+            <a class="" data-toggle="collapse" href="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
+              <h5 class="mb-0 faq-card-heading">
+                <span class="faq-black-dot">&#9679; &nbsp;&nbsp;</span> What Happens If I Lose My Password
+                <span class="faq-getting-started-icon">+</span>
+              </h5>
+            </a>
+          </div>
+          <div id="collapseEleven" class="collapse" aria-labelledby="headingEleven" data-parent="#accordion">
+            <div class="card-body">
+              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+</section>
+<!-- /. Security accordion -->
 
 <section class="faq-question">
     <h2 class="faq-question-heading">You still have a question?</h2>

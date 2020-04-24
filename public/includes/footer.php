@@ -5,7 +5,7 @@
         <h4 class="footer-info-heading">Community</h4>
         <ul class="footer-list">
           <li class="footer-list-item"><a href="#">Search Properties</a></li>
-          <li class="footer-list-item"><a href="#">FAQs</a></li>
+          <li class="footer-list-item"><a href="faq.php">FAQs</a></li>
         </ul>
       </div>
       <div class="col-lg-3 col-sm-6">
@@ -32,7 +32,9 @@
             <a href="#"><img src="./assets/img/icons/twitter.png" alt="twitter" class="sm-icon"></a>
           </li>
           <li class="footer-list-item">&nbsp;</li>
-          <li class="footer-list-item">support@ballers.ng</li>
+          <li class="footer-list-item">
+            <a href="mailto:support@ballers.ng" target="_blank">support@ballers.ng</a>
+          </li>
           <li class="footer-list-item">+2348076545543</li>
           <li class="footer-list-item">+2348094432231</li>
         </ul>

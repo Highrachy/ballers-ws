@@ -1,0 +1,297 @@
+.faq-holding {
+    background-image: url('../img/backgrounds/faq-holding.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    justify-content: center;
+    height: 35rem;
+    width: 100%;
+
+    &-heading {
+        color: $blue;
+        text-align: center;
+        padding-top: 10rem;
+        padding-bottom: 2rem;
+        font-size: 3.5rem;
+    }
+    &-text {
+        text-align: center;
+        @extend %heading-text-font-stack;
+        padding-bottom: 3rem;
+    }
+    &-form {
+        text-align: center;
+        align-content: center;
+        margin: auto;
+        background-color: $white;
+        padding: 0.8rem 0;
+        border-radius: 0.5rem;
+        box-shadow: 0px 15px 30px rgba(196, 196, 196, 0.3);
+    }
+    &-search-btn {
+        padding: 1.2rem 0;
+        border-radius: $border-radius;
+        width: 100%;
+        background-color: $purple;
+        border-color: $purple;
+    }
+}
+.faq-category {
+    padding: 3rem;
+    background-color: $gray-300;
+
+    &-text {
+        text-align: center;
+        @extend %heading-text-font-stack;
+        color: $gray-750;
+        padding-bottom: 3rem;
+    }
+    &-slide {
+        background-color: $white;
+        border-radius: 0.3rem;
+        box-shadow: 0px 4px 10px rgba(196, 196, 196, 0.3);
+        text-align: center;
+        align-content: center;
+        margin: auto;
+        margin: 1rem 3rem;
+        padding: 2rem;
+        height: 9rem;
+        cursor: pointer;
+        
+        img {
+            height: 2rem;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+    }
+    .slick-dots {
+        display: none;
+    }
+    .faq-slider-dot {
+        background-color: $slider-dot-purple;
+        border-radius: 5px;
+        width: 0.7rem;
+        height: 4px;
+        display: block;
+    }
+    .slick-active {
+        .faq-slider-dot{
+            background-color: $purple;
+            width: 1.5rem;
+            height: 4px;
+        }
+    }
+    &-slide-text {
+        font-weight: 300;
+        padding-top: 0.5rem;
+    }
+}
+.faq-option-category {
+    padding: 3rem;
+
+    &-heading {
+        text-align: center;
+        @extend %heading-font-stack;
+        font-weight: 400;
+        padding-bottom: 1.5rem;
+    }
+    &-text {
+        text-align: center;
+        color: $gray-750;
+        font-weight: 400;
+        font-size: 1.5rem;
+        padding-right: 10rem;
+        padding-left: 10rem;
+    }
+    &-accordion {
+        margin: auto;
+
+        .card {
+            border-bottom: 1px solid  $gray-400;
+            &-body {
+                padding-left: 3.5rem;
+            }
+        }
+    }
+    &-card {
+        border: 0;
+        border-radius: 0;
+        border-bottom: 1px solid $blue;
+        padding: 1.5rem 0;
+        margin-left: -3rem;
+    
+        &-header {
+            background-color: $white;
+            border: 0;
+        }
+    }
+    &-icon {
+        color: $gray-400;
+        float: right;
+        font-size: 4rem;
+        margin-top: -1.8rem;
+        font-weight: 300;
+    }
+}
+.faq-question {
+    padding: 3rem 0 5rem;
+
+    &-heading {
+        text-align: center;
+        @extend %heading-font-stack;
+        font-weight: 400;
+        padding-bottom: 1.5rem;
+    }
+    &-text {
+        text-align: center;
+        color: $gray-750;
+        font-weight: 400;
+        font-size: 1.3rem;
+        padding-bottom: 3rem;
+    }
+    &-contact {
+        text-align: center;
+    }
+    &-info-div {
+        border: 3px solid $purple;
+        box-shadow: 0px 4px 10px rgba(196, 196, 196, 0.3);
+        display: inline-block;
+        padding: 1.5rem 0 0.5rem;
+        border-radius: 0.25rem;
+        text-align: center;
+
+        img {
+            width: 3rem;
+        }
+    }
+    &-info {
+        padding-top: 1.5rem;
+        font-weight: 400;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .faq-option-category-text br {
+        display: none;
+    }
+}
+@media only screen and (max-width: 991.99px) {
+    .faq-holding {
+        &-heading,
+        &-text {
+            padding-left: 5rem;
+            padding-right: 5rem;
+        }
+        &-form {
+            padding: 0;
+        }
+    }
+    .faq-option-category-text {
+        padding-right: 5rem;
+        padding-left: 5rem;
+    }
+    .faq-form {
+        text-align: center;
+        margin: auto;
+        padding: 1rem;
+    }
+    .faq-category {
+        &-slide {
+            margin: 1rem;
+            padding: 2rem;
+        }
+        .slick-dots {
+            display: block;
+            position: relative;
+
+            .slick-active {
+                margin-right: 1rem;
+            }
+        }
+    }
+    .faq-question {
+        &-info-div {
+            padding: 0.8rem 2rem;
+        }
+    }
+}
+@media only screen and (max-width: 575.99px) {
+    .faq-option-category-heading,
+    .faq-question-heading {
+        font-size: 1.8rem;
+        font-weight: 500;
+        padding-top: 1.5rem;
+    }
+    .faq-holding-text,
+    .faq-option-category-text,
+    .faq-question-text {
+        font-size: 1.2rem;
+    }
+    .faq-holding {
+        height: 41rem;
+
+        &-heading {
+            font-size: 2.5rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+        &-text {
+            padding: 1rem;
+        }
+        &-search-btn {
+            padding: 0.5rem;
+        }
+    }
+    .faq-form {
+        padding: 1rem 0.33rem;
+    }
+    .faq-category {
+        &-text {
+            padding-bottom: 0;
+        }
+        &-slide {
+            margin: 1.2rem 1.2rem 0 1.2rem;
+            padding: 2rem 1.7rem 0 1.7rem;
+        }
+    }
+    .faq-option-category {
+        padding: 0.8rem;
+
+        &-text {
+            padding-right: 1rem;
+            padding-left: 1rem;
+        }
+        &-icon {
+            font-size: 2.5rem;
+        }
+        .faq-black-dot {
+            display: none;
+        }
+        &-accordion {
+            .card-body {
+                padding-left: 1.25rem;
+            }
+        }
+    }
+    .faq-question {
+        padding: 3rem 1.5rem 5rem;
+
+        &-info {
+            font-size: 1.2rem;
+            padding-top: 1rem;
+        }
+
+        &-info-div {
+            padding: 1.5rem 0 0;
+            img {
+                width: 2rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .faq-category-slide {
+        margin: 0.2rem;
+    }
+}

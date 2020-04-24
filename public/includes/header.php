@@ -38,7 +38,7 @@
               <a class="nav-link" href="#">Contact Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">FAQ</a>
+              <a class="nav-link" href="faq.php">FAQ</a>
             </li>
           </ul>
           <ul class="navbar-nav">

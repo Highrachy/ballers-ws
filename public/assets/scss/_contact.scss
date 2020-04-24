@@ -49,6 +49,10 @@
         background-color: $white;
         margin: auto;
         box-shadow: 0px 20px 50px rgba(196, 196, 196, 0.2);
+        
+        .form-control {
+            color: $gray-700;;
+        }
 
         form input {
             border-bottom: 1px solid $blue !important;

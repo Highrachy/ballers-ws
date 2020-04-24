@@ -31,7 +31,7 @@
     <div class="row col-lg-6 col-12 contact-hello-info">
         <div class="col-lg-12 col-sm-6 col-12">
             <h4 class="contact-hello-text">SAY HELLO</h4>
-            <h2 class="contact-hello-heading">hello@ballers.ng</h2>
+            <h2 class="contact-hello-heading"><a href="mailto:hello@ballers.ng" target="_blank">hello@ballers.ng</a></h2>
         </div>
         <div class="col-lg-12 col-sm-6 col-12">
             <h4 class="contact-hello-text-2">Follow us in our everyday <br> lives</h4>

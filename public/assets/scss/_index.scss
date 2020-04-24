@@ -281,3 +281,249 @@ h5 .btn-link {
 .break {
     display: inline-block;
 }
+
+/* big tablets */
+@media only screen and (max-width: 1024px) {
+    header,
+    .holding,
+    .about,
+    .phone-div,
+    .faq {
+        padding-left: 3rem;
+    }
+    .about-ball-heading {
+        br {
+            display: none;
+        }
+    }
+    .benefits {
+        padding: 3rem;
+        height: 40rem;
+    }
+    .slide {
+        width: 13.5rem;
+    }
+    .prev,
+    .next {
+        top: 25%;
+    }
+}
+
+/* medium sized devices ie. tablets */
+@media only screen and (max-width: 991.99px) {
+    %heading-font-stack-mobile {
+        font-size: 2rem;
+    }
+    %title-font-stack-mobile {
+        font-size: 1rem;
+    }
+    %button-stack-mobile {
+        border-radius: 0.2rem;
+        padding-top: 0.3rem;
+        padding-bottom: 0.3rem;
+    }
+    header {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .about,
+    .phone-div,
+    .faq {
+        padding-left: 1rem;
+    }
+    .about-ball-title,
+    .benefits-title,
+    .how-title,
+    .faq-title,
+    .gallery-title {
+        @extend %title-font-stack-mobile;
+    }
+    .collapse {
+        z-index: 100;
+    }
+    .holding {
+        padding-left: 0;
+        padding-right: 0;
+        background-image: none;
+        margin: auto;
+        height: 60rem;
+        background-image: url('../img/backgrounds/holding-tab.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+
+        &-heading,
+        &-mid {
+            text-align: center;
+        }
+        &-heading br,
+        &-small {
+            display: none;
+        }
+        &-form {
+            margin: auto !important;
+        }
+    }
+    .index-form {
+        text-align: center !important;
+        margin: auto !important;
+        padding: 1rem 5rem;
+    }
+    .big-button {
+        @extend %button-stack-mobile;
+    }
+    .about {
+        padding: 1rem 1.5rem 0;
+
+        &-ball {
+            padding: 3.5rem 0 0;
+        }
+        &-ball-text {
+            font-size: 1rem;
+            font-weight: 300;
+            line-height: 1.2rem;
+            padding: 1rem 0;
+        }
+        &-ball-heading {
+            @extend %heading-font-stack-mobile;
+            padding: 1rem 0 0;
+        }
+        &-ball-title {
+            text-align: center;
+        }
+    }
+    .home {
+        display: none;
+
+        &-tab {
+            display: block;
+            width: 22rem;
+            height: 26rem;
+        }
+    }
+    .prev,
+    .next {
+        top: 50%;
+    }
+    .how {
+        &-heading {
+            @extend %heading-font-stack-mobile;
+            padding: 1rem 0 0;
+        }
+        &-title {
+            text-align: center;
+        }
+    }
+    .phone {
+        height: 25rem;
+        width: 18rem;
+    
+        &-div {
+            padding-left: 3rem;
+            padding-top: 8rem;
+        }
+    }
+    .stage-div {
+        padding-bottom: 0.3rem;
+    }
+    .faq {
+        &-title {
+            text-align: center;
+        }
+    }
+    .questions {
+        padding-right: 2rem;
+    }
+}
+
+/* small mobile devices */
+@media only screen and (max-width: 575.99px) {
+    .about-ball-heading,
+    .benefits-heading,
+    .how-heading,
+    .faq-heading,
+    .gallery-heading {
+        font-size: 1.8rem;
+        font-weight: 700;
+    }
+    .big-button {
+        width: 97%;
+    }
+    .holding {
+        height: 50rem;
+        background-image: url('../img/backgrounds/holding-mobile.png');
+        
+        &-heading {
+            padding-top: 0;
+        }
+        &-form {
+            padding: 0 1rem;
+        }
+    }
+    .index-form {
+        padding: 1rem 0;
+        margin: auto;
+        justify-content: center;
+    }
+    .input-group {
+        width: 100%;
+    }
+    .form-search {
+        padding: 0.4rem;
+        width: 90%;
+    }
+    .about {
+        padding: 0 3rem;
+        &-ball {
+            padding-top: 0;
+        }
+        br {
+            display: none;
+        }
+    }
+    .benefits {
+        padding: 3rem 1rem;
+        height: 35rem;
+    }
+    .about-ball,
+    .home-img {
+        justify-content: center;
+        text-align: center;
+    }
+    .home-tab {
+        display: block;
+        width: 22rem;
+        height: 18rem;
+        margin: auto;
+    }
+    .prev,
+    .next {
+        top: 50%;
+    }
+    .phone-div {
+        padding-left: 1rem;
+        padding-top: 4rem;
+        justify-content: center;
+    }
+    .faq {
+        &-card-heading {
+            font-size: 1.6rem;
+
+            .first {
+                padding-top: 1rem;
+            }
+        }
+        &-icon {
+            font-size: 2.5rem;
+        }
+    }
+    .how-heading,
+    .faq-heading {
+        text-align: center;
+    }
+    .card {
+        margin-left: unset;
+    }
+    .gallery {
+        padding: 4rem 2rem;
+    }
+}

@@ -27,7 +27,9 @@
     &-list-item,
     &-list-item a {
         color: $white;
-        font-size: 0.8rem;
+    }
+    &-tab-view {
+        display: none;
     }
 }
 .sm-icon {
@@ -40,17 +42,46 @@
 
     &-text {
         padding-top: 2rem;
-        color: $gray-700;
+        color: $blue;
         font-weight: 300;
         font-size: 0.8rem;
     }
 }
+@media only screen and (max-width: 991.99px) {
+    .footer {
+        &-normal-view {
+            display: none;
+        }
+        &-tab-view {
+            display: block;
 
+            .logo-div-text {
+                font-size: 1rem;
+            }
+            .highrachy-logo-footer {
+                width: 10rem;
+                height: 3.5rem;
+            }
+        }
+    }
+}
 @media only screen and (max-width: 575.99px) {
     .footer {
         justify-content: center;
         text-align: center;
         margin: auto;
+
+        &-info-heading {
+            font-size: 1.8rem;
+            padding-top: 2rem;
+            padding-bottom: 1rem;
+        }
+        &-tab-view {
+            display: none;
+        }
+        &-normal-view {
+            display: block;
+        }
     }
     .footer-info,
     .logo-div {

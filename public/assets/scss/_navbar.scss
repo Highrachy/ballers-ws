@@ -147,3 +147,25 @@ header {
         padding: 0.5rem 1.5rem !important;
     }
 }
+
+/* big tablets */
+@media only screen and (max-width: 1024px) {
+    header,
+    .holding,
+    .about,
+    .phone-div,
+    .faq {
+        padding-left: 3rem;
+    }
+    .benefits {
+        padding: 3rem;
+        height: 40rem;
+    }
+    .slide {
+        width: 13.5rem;
+    }
+    .prev,
+    .next {
+        top: 25%;
+    }
+}

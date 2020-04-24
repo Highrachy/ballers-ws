@@ -7,18 +7,22 @@
     <div class="col-lg-6 col-12">
         <div class="col-10 contact-hello-form">
             <h4 class="contact-hello-heading">Send a message</h4>
-            <form>
+            <form method="post" action="">
+                <?php require_once('includes/mail.php') ?>
                 <div class="form-group">
-                    <label for="name">Your Name</label>
-                    <input type="text" class="form-control" id="name" placeholder="">
+                    <label for="name">Your Name *</label>
+                    <input type="text" class="form-control" name="name" placeholder="" required>
+                    <small class="help-block with-errors text-danger"></small>
                 </div>
                 <div class="form-group">
-                    <label for="email">Your Email</label>
-                    <input type="text" class="form-control" id="email" placeholder="">
+                    <label for="email">Your Email *</label>
+                    <input type="text" class="form-control" name="email" placeholder="" required>
+                    <small class="help-block with-errors text-danger"></small>
                 </div>
                 <div class="form-group">
-                    <label for="message">Your Message</label>
-                    <input type="text" class="form-control" id="message" placeholder="">
+                    <label for="message">Your Message *</label>
+                    <input type="text" class="form-control" name="message" placeholder="" required>
+                    <small class="help-block with-errors text-danger"></small>
                 </div>
                 <button type="submit" class="btn btn-lg contact-hello-btn">Send Message</button>
             </form>

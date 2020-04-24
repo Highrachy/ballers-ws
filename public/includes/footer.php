@@ -40,10 +40,19 @@
         </ul>
       </div>
     </div>
-    <div class="col-lg-3 col-sm-12 logo-div">
-      <img src="./assets/img/logo/ballers-logo.png" alt="ballers logo" class="ballers-logo-footer">
-      <h6 class="logo-div-text">We make owning a home simpler and achievable.</h6>
-      <span class="logo-div-text">An initiative of </span><img src="./assets/img/logo/highrachy-logo.png" alt="highrachy logo" class="highrachy-logo-footer">
+    <div class="col-lg-3 col-sm-12 logo-div row">
+      <div class="col-lg-12 col-sm-6 col-12">
+        <img src="./assets/img/logo/ballers-logo.png" alt="ballers logo" class="ballers-logo-footer">
+        <h6 class="logo-div-text">We make owning a home simpler and achievable.</h6>
+      </div>
+
+      <div class="col-lg-12 col-sm-6 col-12 footer-tab-view">
+        <h5 class="logo-div-text">An initiative of </h5><img src="./assets/img/logo/highrachy-logo.png" alt="highrachy logo" class="highrachy-logo-footer">
+      </div>
+
+      <div class="col-lg-12 col-sm-6 col-12 footer-normal-view">
+        <span class="logo-div-text">An initiative of </span><img src="./assets/img/logo/highrachy-logo.png" alt="highrachy logo" class="highrachy-logo-footer">
+      </div>
     </div>
   </footer>
   <!-- /.Footer -->

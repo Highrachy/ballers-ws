@@ -4,13 +4,19 @@
 }
 %heading-text-font-stack {
     color: $gray-700;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 300;
 }
 %title-font-stack {
     color: $gray-700;
     font-size: 1.2rem;
     font-weight: 400;
+}
+%about-text-font {
+    color: $blue-2;
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 1.8rem;
 }
 %button-stack {
     color: $white;

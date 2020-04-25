@@ -13,6 +13,8 @@
   <link rel="manifest" href="./site.webmanifest">
   <link rel="stylesheet" type="text/css" href="assets/css/ballers.css">
 
+  <script src="./assets/js/sweetalert2.all.min.js"></script>
+
 </head>
 
 <body>

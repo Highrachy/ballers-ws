@@ -2,9 +2,22 @@ function toggleQuestions(id) {
   $('#payment, #profile, #security, #getting-started').hide();
   $("#"+id).show();
 }
+function validateContactUsForm(){
+  if (
+    $('#contact-name').val().length > 0 &&
+    $('#contact-email').val().length > 0 &&
+    $('#contact-message').val().length > 0
+  ) {
+    $('.contact-hello-btn').prop('disabled', false);
+  } else {
+    $('.contact-hello-btn').prop('disabled', true);
+  }
+}
 
 $(document).ready(function(){  
   $('#payment, #profile, #security').hide();
+  validateContactUsForm();
+  $('#contact-name, #contact-email, #contact-message').change(validateContactUsForm);
 
   // slick slider
   $('.benefits-slider').slick({

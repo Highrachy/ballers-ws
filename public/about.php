@@ -131,7 +131,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-lg-3 col-12 about-team-member"></div>
+        <div class="col-lg-3 col-12"></div>
         <div class="col-lg-3 col-sm-6 col-12 about-team-member">
             <img src="./assets/img/team/5.png" alt="Oluwajohn Taiwo">
             <h5 class="about-team-member-name">Oluwajohn Taiwo</h5>
@@ -142,7 +142,7 @@
             <h5 class="about-team-member-name">Oluwajohn Taiwo</h5>
             <p class="about-team-member-role">CHAIRMAN</p>
         </div>
-        <div class="col-lg-3 col-12 about-team-member"></div>
+        <div class="col-lg-3 col-12"></div>
     </div>
 </section>
 

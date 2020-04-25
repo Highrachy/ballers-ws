@@ -87,10 +87,8 @@
         @extend %title-font-stack;
         color: $green;
     }
-    .row {
-        padding-bottom: 2rem;
-    }
     &-member {
+        padding-bottom: 2rem;
 
         img {
             width: 16rem;
@@ -98,9 +96,9 @@
         }
         &-name {
             font-size: 1.4rem;
-            font-weight: 400;
+            font-weight: 500;
             padding-top: 1rem;
-            padding-bottom: 0.3rem;
+            padding-bottom: 0;
         }
         &-role {
             color: $green;

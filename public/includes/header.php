@@ -13,6 +13,8 @@
   <link rel="manifest" href="./site.webmanifest">
   <link rel="stylesheet" type="text/css" href="assets/css/ballers.css">
 
+  <script src="./assets/js/sweetalert2.all.min.js"></script>
+
 </head>
 
 <body>
@@ -35,7 +37,7 @@
               <a class="nav-link" href="#">About Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contact Us</a>
+              <a class="nav-link" href="contact.php">Contact Us</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="faq.php">FAQ</a>

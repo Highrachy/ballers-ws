@@ -16,8 +16,11 @@ function validateContactUsForm(){
 
 $(document).ready(function(){  
   $('#payment, #profile, #security').hide();
-  validateContactUsForm();
-  $('#contact-name, #contact-email, #contact-message').change(validateContactUsForm);
+  var url = window.location.href;
+  if(url.includes("contact.php")){
+    validateContactUsForm();
+    $('#contact-name, #contact-email, #contact-message').keypress(validateContactUsForm);
+  }
 
   // slick slider
   $('.benefits-slider').slick({

@@ -11,7 +11,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
   <link rel="manifest" href="./site.webmanifest">
-  <link rel="stylesheet" type="text/css" href="assets/css/ballers.css">
+  <link rel="stylesheet" type="text/css" href="./assets/css/ballers.css">
 
   <script src="./assets/js/sweetalert2.all.min.js"></script>
 
@@ -22,12 +22,12 @@
   <header>
     <div class="navigation-wrap">
       <nav class="navbar navbar-expand-lg">
-        <a class="navbar-brand" href="index.php"><img class="ballers-logo" src="./assets/img/logo/ballers-logo.png" alt="ballers logo"></a>
-              
+        <a class="navbar-brand" href="index.php"><img class="ballers-logo" src="./assets/img/logo/ballers-logo.png" alt="Ballers logo"></a>
+
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-              
+
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
@@ -37,10 +37,10 @@
               <a class="nav-link" href="about.php">About Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact.php">Contact Us</a>
+              <a class="nav-link" href="faq.php">FAQ</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="faq.php">FAQ</a>
+              <a class="nav-link" href="contact.php">Contact Us</a>
             </li>
           </ul>
           <ul class="navbar-nav">
@@ -52,7 +52,7 @@
             </li>
           </ul>
         </div>
-      </nav>		
+      </nav>
     </div>
   </header>
   <!-- /.Header -->

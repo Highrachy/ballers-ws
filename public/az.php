@@ -21,7 +21,7 @@
 </section>
 
 <section class="az-easy">
-    <h2 class="az-easy-heading">BALLing is as easy as ABC</h2>
+    <h2 class="az-easy-heading">BALLing is as <br class="d-block d-sm-none"> easy as ABC</h2>
 
     <div class="az-easy-abc col-lg-3 col-sm-5 col-11">
         <img class="az-easy-abc-letter" src="./assets/img/icons/a.png" alt="A">
@@ -51,7 +51,7 @@
 
 
 
-    <section class="mt-5 py-4">
+    <section class="mt-sm-5 py-4">
         <div class="row">
             <div class="az-how-step col-lg-5 col-sm-5 col-12">
                 <img class="az-how-step-img" src="./assets/img/preference.png" alt="Define preference">
@@ -59,7 +59,7 @@
             <div class="az-how-step-line col-lg-2 col-sm-2 col-12"></div>
             <div class="az-how-step col-lg-5 col-sm-5 col-12">
                 <h5 class="az-how-step-title">Define your prefrence</h5>
-                <p class="az-how-step-text mt-3">Ea fugiat Lorem quis cupidatat nulla. Officia <br> voluptate anim anim laboris. Sunt nostrud ullamc</p>
+                <p class="az-how-step-text mt-3">Ea fugiat Lorem quis cupidatat nulla. Officia <br class="d-md-none d-lg-block" > voluptate anim anim laboris. Sunt nostrud ullamc</p>
             </div>
         </div>
 
@@ -85,34 +85,37 @@
                 <div class="clearfix"></div>
               </aside>
 
-              <aside class="row az-tree__node my-5 py-5">
-                <div class="col-sm-4 offset-sm-1">
+              <aside class="row az-tree__node mt-sm-5 pt-5 pb-md-5 mb-md-5">
+                <div class="col-md-5 col-lg-4 offset-md-0 offset-lg-1">
                   <img class="az-how-step-img" src="./assets/img/subscription.png" alt="Subscription">
                 </div>
-                <div class="col-sm-2">
+
+                <div class="col-md-2 d-none d-sm-block">
                   <div class="text-center pt-5 my-5">
                     <span class="circle-dot"> </span>
                   </div>
                 </div>
-                <div class="col-sm-5">
-                  <h5 class="az-how-step-title">Structure your subscription</h5>
-                  <p class="az-how-step-text">Ea fugiat Lorem quis cupidatat nulla. Officia <br> voluptate anim anim laboris. Sunt nostrud ullamc</p>
+
+                <div class="col-md-5 ml-lg-none ml-md-n4 mb-md-5 mb-lg-0">
+                  <h5 class="az-how-step-title pt-5 pt-sm-none pb-2">Structure your subscription</h5>
+                  <p class="az-how-step-text">Ea fugiat Lorem quis cupidatat nulla. Officia <br class="d-md-none d-lg-block" > voluptate anim anim laboris. Sunt nostrud ullamc</p>
                 </div>
               </aside>
 
-              <aside class="row az-tree__branch az-tree__branch--half">
+              <aside class="az-tree__branch az-tree__branch--half">
                 <div class="az-tree__node">
                   <div class="az-how-step az-tree__branch--left">
                     <img class="az-how-step-icon" src="./assets/img/icons/payment-amount.png" alt="Payment amount">
                     <h6 class="az-how-step-title-2">Input convienient <br> payment amount</h6>
                     <p class="az-how-step-text-2">Ea fugiat Lorem quis cupidatat <br> nulla. Officia voluptate <br> anim anim laboris. Sunt <br> nostrud ullamc</p>
                   </div>
-                  <div class="az-how-step az-tree__branch--center">
+                  <div class="az-how-step az-tree__branch--center az-tree__branch--center-to-right-md">
                     <img class="az-how-step-icon" src="./assets/img/icons/interval.png" alt="Interval">
                     <h6 class="az-how-step-title-2">Select preferred periodic <br> time interval</h6>
                     <p class="az-how-step-text-2">Ea fugiat Lorem quis cupidatat <br> nulla. Officia voluptate <br> anim anim laboris. Sunt <br> nostrud ullamc</p>
                   </div>
-                  <div class="az-how-step az-tree__branch--right">
+                  <!-- This section is repeated. This is shown for tablet and mobile -->
+                  <div class="az-how-step az-tree__branch--right d-md-none d-lg-block">
                     <img class="az-how-step-icon" src="./assets/img/icons/duration.png" alt="Duration">
                     <h6 class="az-how-step-title-2">Calculate the total <br> duration</h6>
                     <p class="az-how-step-text-2">Ea fugiat Lorem quis cupidatat <br> nulla. Officia voluptate <br> anim anim laboris. Sunt <br> nostrud ullamc</p>
@@ -120,12 +123,20 @@
                   <div class="clearfix"></div>
                 </div>
               </aside>
+
+              <!-- This section is repeated to be shown on tablet. -->
+              <div class="az-how-step az-tree__branch--center az-tree__branch--right-to-center-md d-lg-none d-md-block d-none">
+                <img class="az-how-step-icon" src="./assets/img/icons/duration.png" alt="Duration">
+                <h6 class="az-how-step-title-2">Calculate the total <br> duration</h6>
+                <p class="az-how-step-text-2">Ea fugiat Lorem quis cupidatat <br> nulla. Officia voluptate <br> anim anim laboris. Sunt <br> nostrud ullamc</p>
+              </div>
+              <div class="clearfix"></div>
             </section>
           </div>
         </section>
 
-        <div class="row">
-          <div class="col-sm-12">
+        <div class="row mt-md-5 pt-md-5 mt-lg-0 pt-lg-0">
+          <div class="col-sm-12 pt-md-3 pt-lg-0">
             <button class="btn btn-lg big-button">APPLY NOW</button>
           </div>
         </div>
@@ -135,17 +146,17 @@
     <h3 class="az-how-heading">BEGIN PERIODIC <br> CONTRIBUTION</h3>
 
     <div class="row">
-        <div class="az-how-step col-lg-4 col-sm-5 offset-sm-1 col-12">
-            <img class="az-how-step-img" src="./assets/img/start-contribution.png" alt="Start contribution">
+        <div class="az-how-step col-md-5 col-sm-5 offset-sm-1 offset-md-0 offset-lg-1 col-lg-4 col-12">
+            <img class="az-how-step-img smaller-md" src="./assets/img/start-contribution.png" alt="Start contribution">
         </div>
-        <div class="az-how-step-line col-lg-2 col-sm-2 col-12">
+        <div class="az-how-step-line col-sm-2 col-md-2 d-none d-sm-block">
           <div class="text-center pt-5 my-5">
             <span class="circle-dot"> </span>
           </div>
         </div>
-        <div class="az-how-step col-lg-5 col-sm-5 col-12">
+        <div class="az-how-step col-md-5 col-sm-5 col-12 mt-md-n4 mt-lg-0">
             <h5 class="az-how-step-title">Start contributing</h5>
-            <p class="az-how-step-text">Ea fugiat Lorem quis cupidatat nulla. Officia <br> voluptate anim anim laboris. Sunt nostrud ullamc</p>
+            <p class="az-how-step-text">Ea fugiat Lorem quis cupidatat nulla. Officia <br class="d-md-none d-lg-block" >  voluptate anim anim laboris. Sunt nostrud ullamc</p>
         </div>
     </div>
 
@@ -154,11 +165,11 @@
       <h3 class="az-how-heading">CONVERT TO <br> HOME OWNERSHIP</h3>
 
       <div class="row">
-        <div class="az-how-step col-lg-5 col-sm-5 col-12">
-          <img class="az-how-step-img" src="./assets/img/convert-subscription.png" alt="Convert subscription">
+        <div class="az-how-step col-md-5 col-sm-4 offset-md-0 offset-lg-1 col-lg-4 col-12">
+          <img class="az-how-step-img smaller-md" src="./assets/img/convert-subscription.png" alt="Convert subscription">
         </div>
         <div class="az-how-step-line col-lg-2 col-sm-2 col-12"></div>
-        <div class="az-how-step col-lg-5 col-sm-5 col-12">
+        <div class="az-how-step col-lg-5 col-md-5 col-sm-5 col-12">
           <h5 class="az-how-step-title">Convert subscription</h5>
           <p class="az-how-step-text">Ea fugiat Lorem quis cupidatat nulla. Officia <br> voluptate anim anim laboris. Sunt nostrud ullamc</p>
         </div>
@@ -172,7 +183,7 @@
 
           <section class="az-tree__middle-border">
 
-            <div class="mt-4 pt-5 pb-5 az-tree__content">
+            <div class="mt-n4 pt-5 pb-5 az-tree__content">
               <img class="az-how-step-img" src="./assets/img/move-in.png" alt="Move in">
               <h5 class="az-how-step-title-2">Move into your new home</h5>
               <p class="az-how-step-text-2">Ea fugiat Lorem quis cupidatat nulla. Officia <br> voluptate anim anim laboris. Sunt nostrud ullamc</p>
@@ -229,24 +240,24 @@
     <div class="row">
         <div class="col-lg-1 col-12"></div>
         <div class="col-lg-5 col-sm-6 col-12">
-            <img class="az-control-panel-img" src="./assets/img/see-available.png" alt="">
+            <img class="az-control-panel-img img-fluid" src="./assets/img/see-available.png" alt="Available Properties">
             <h5 class="az-control-panel-heading">See available properties</h5>
             <p class="az-control-panel-text">Ea fugiat Lorem quis cupidatat nulla. Officia <br> voluptate anim anim laboris. Sunt nostrud ullamc</p>
         </div>
         <div class="col-lg-5 col-sm-6 col-12">
-            <img class="az-control-panel-img" src="./assets/img/monitor.png" alt="">
+            <img class="az-control-panel-img img-fluid" src="./assets/img/monitor.png" alt="Monitor your contribution">
             <h5 class="az-control-panel-heading">Monitor your contribution</h5>
             <p class="az-control-panel-text">Ea fugiat Lorem quis cupidatat nulla. Officia <br> voluptate anim anim laboris. Sunt nostrud ullamc</p>
         </div>
         <div class="col-lg-1 col-12"></div>
         <div class="col-lg-1 col-12"></div>
         <div class="col-lg-5 col-sm-6 col-12">
-            <img class="az-control-panel-img" src="./assets/img/view-map.png" alt="">
+            <img class="az-control-panel-img img-fluid" src="./assets/img/view-map.png" alt="View Map">
             <h5 class="az-control-panel-heading">View map</h5>
             <p class="az-control-panel-text">Ea fugiat Lorem quis cupidatat nulla. Officia <br> voluptate anim anim laboris. Sunt nostrud ullamc</p>
         </div>
         <div class="col-lg-5 col-sm-6 col-12">
-            <img class="az-control-panel-img" src="./assets/img/conversation.png" alt="">
+            <img class="az-control-panel-img img-fluid" src="./assets/img/conversation.png" alt="Start a conversation">
             <h5 class="az-control-panel-heading">Start a conversation</h5>
             <p class="az-control-panel-text">Ea fugiat Lorem quis cupidatat nulla. Officia <br> voluptate anim anim laboris. Sunt nostrud ullamc</p>
         </div>

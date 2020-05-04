@@ -79,9 +79,12 @@
 
   &-heading {
     @extend %heading-font-stack;
-    font-weight: 500;
+    font-weight: 600;
     letter-spacing: 0.2rem;
-    margin-bottom: 5rem;
+
+    @include media-breakpoint-up(sm) {
+      margin-bottom: 5rem;
+    }
   }
   &-title {
     @extend %title-font-stack;
@@ -103,6 +106,11 @@
     }
     &-img {
       height: 14rem;
+      &.smaller-md {
+        @include media-breakpoint-down(md) {
+          height: 12rem;
+        }
+      }
     }
     &-title-2 {
       font-size: 1.3rem;
@@ -116,7 +124,7 @@
     }
   }
   .big-button {
-    margin-bottom: 6rem;
+    margin-bottom: 3rem;
   }
 }
 .az-benefits-title {
@@ -142,7 +150,10 @@
     padding-bottom: 5rem;
   }
   &-panel-img {
-    height: 13rem;
+    height: 11rem;
+    @include media-breakpoint-up(sm) {
+      height: 13rem;
+    }
   }
 }
 .az-creed {
@@ -216,7 +227,6 @@
     margin: 1.5rem;
   }
   .az-how-step-img {
-    width: 26rem;
     height: 14rem;
   }
   .az-creed {
@@ -321,90 +331,117 @@
   }
 }
 
-.circle-dot {
-  & {
-    border: 1px solid $purple;
-    border-radius: 100%;
-    position: relative;
-    width: 2em;
-    height: 2em;
-    display: inline-block;
-    z-index: 3;
-  }
-  &::before {
-    content: '';
-    display: inline-block;
-    position: absolute;
-    width: 0.5rem;
-    height: 0.5rem;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: #161d3f;
-    border-radius: 100%;
-  }
-}
-
-.az-tree {
-  margin-top: -6.5rem;
-
-  &__middle-border {
-    margin-top: -1.5rem;
-    padding-top: 15rem;
-    background-image: linear-gradient($purple, $purple);
-    background-size: 1px 100%;
-    background-repeat: no-repeat;
-    background-position: center center;
-    position: relative;
-  }
-
-  &__content {
-    background: white;
-  }
-
-  &__branch {
-    border: 1px solid $purple;
-    border-radius: 2rem;
-    margin-left: 15rem;
-    margin-right: 15rem;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-    position: relative;
-    height: 28rem;
-
-    &--half {
-      height: 15rem;
-      margin-bottom: 15rem;
-      border-bottom: none;
+@include media-breakpoint-up(sm) {
+  .circle-dot {
+    & {
+      border: 1px solid $purple;
+      border-radius: 100%;
+      position: relative;
+      width: 2em;
+      height: 2em;
+      display: inline-block;
+      z-index: 3;
     }
-
-    &--node {
-      min-height: 10rem;
-    }
-
-    &--left,
-    &--right,
-    &--center {
-      top: 5rem;
+    &::before {
+      content: '';
+      display: inline-block;
       position: absolute;
-      background: white;
-      width: 18rem;
-      padding-top: 2rem;
-      text-align: center;
-    }
-    &--left {
-      left: -9rem;
-    }
-    &--right {
-      right: -9rem;
-    }
-    &--center {
+      width: 0.5rem;
+      height: 0.5rem;
+      top: 50%;
       left: 50%;
-      margin-left: -9rem;
+      transform: translate(-50%, -50%);
+      background: #161d3f;
+      border-radius: 100%;
+    }
+  }
+
+  .az-tree {
+    margin-top: -6.5rem;
+
+    &__middle-border {
+      margin-top: -1.5rem;
+      padding-top: 10rem;
+      @include media-breakpoint-up(lg) {
+        padding-top: 15rem;
+      }
+      background-image: linear-gradient($purple, $purple);
+      background-size: 1px 100%;
+      background-repeat: no-repeat;
+      background-position: center center;
+      position: relative;
+    }
+
+    &__content {
+      background: white;
+    }
+
+    &__branch {
+      border: 1px solid $purple;
+      border-radius: 2rem;
+      margin-left: 10rem;
+      margin-right: 10rem;
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+      position: relative;
+      height: 28rem;
+
+      @include media-breakpoint-up(lg) {
+        margin-left: 15rem;
+        margin-right: 15rem;
+      }
+
+      &--half {
+        @include media-breakpoint-up(lg) {
+          height: 15rem;
+          margin-bottom: 15rem;
+          border-bottom: none;
+        }
+      }
+
+      &--node {
+        min-height: 10rem;
+      }
+
+      &--left,
+      &--right,
+      &--center {
+        top: 5rem;
+        position: absolute;
+        background: white;
+        width: 18rem;
+        padding-top: 2rem;
+        text-align: center;
+      }
+      &--left {
+        left: -9rem;
+      }
+      &--right {
+        right: -9rem;
+      }
+      &--center {
+        left: 50%;
+        margin-left: -9rem;
+      }
+
+      &--center-to-right-md {
+        @include media-breakpoint-down(md) {
+          left: initial;
+          margin-left: 0;
+          right: -9rem;
+        }
+      }
+      &--right-to-center-md {
+        @include media-breakpoint-down(md) {
+          position: relative;
+        }
+      }
     }
   }
 }
 
 .az-section__spacing {
-  margin-top: 8rem;
+  @include media-breakpoint-up(sm) {
+    margin-top: 8rem;
+  }
 }

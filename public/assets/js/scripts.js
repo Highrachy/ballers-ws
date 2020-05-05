@@ -1,7 +1,10 @@
+// show questions based on slider on faq page
 function toggleQuestions(id) {
   $('#payment, #profile, #security, #getting-started').hide();
   $("#"+id).show();
 }
+
+// js validation on cantact us page
 function validateContactUsForm(){
   if (
     $('#contact-name').val().length > 0 &&
@@ -12,6 +15,13 @@ function validateContactUsForm(){
   } else {
     $('.contact-hello-btn').prop('disabled', true);
   }
+}
+
+// google maps initialization on contact us page
+function initMap() {
+  var office = {lat: 6.4297284, lng: 3.4297021};
+  var map = new google.maps.Map(document.getElementById('map'), {zoom: 18, center: office});
+  var marker = new google.maps.Marker({position: office, map: map});
 }
 
 $(document).ready(function(){  

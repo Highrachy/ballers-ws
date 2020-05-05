@@ -62,6 +62,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="./assets/js/slick.min.js"></script>
 <script src="./assets/js/scripts.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAiXymfpEQXsbFSIhqAszkWedePqIyk2zg&callback=initMap"></script>
 </body>
 
 </html>

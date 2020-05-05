@@ -87,7 +87,7 @@
     padding: 3rem;
 
     &-coffee {
-        padding-top: 4rem;
+        padding-top: 8rem;
         padding-bottom: 3rem;
         text-align: right;
     }
@@ -105,15 +105,9 @@
         font-weight: 500;
     }
     &-map {
-        justify-content: center;
-        text-align: center;
         margin: auto;
-
-        img {
-            height: 90%;
-            width: 95%;
-        }
-        
+        height: 35rem;
+        width: 20rem;
     }
 }
 @media only screen and (max-width: 1024px) {

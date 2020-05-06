@@ -134,6 +134,11 @@
         font-weight: 300;
     }
 }
+.faq-card-heading {
+    br {
+        display: none;
+    }
+}
 .faq-question {
     padding: 3rem 0 5rem;
 
@@ -272,6 +277,11 @@
             .card-body {
                 padding-left: 1.25rem;
             }
+        }
+    }
+    .faq-card-heading {
+        br {
+            display: block;
         }
     }
     .faq-question {

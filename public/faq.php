@@ -57,7 +57,7 @@
             <a class="" data-toggle="collapse" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
               <h5 class="mb-0 faq-card-heading">
                 <span class="faq-black-dot">&#9679; &nbsp;&nbsp;</span> What is BALL?
-                <span class="faq-option-category-icon first">-</span>
+                <span class="faq-option-category-icon first">&nbsp; - </span>
               </h5>
             </a>
           </div>
@@ -73,7 +73,7 @@
             <a class="" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
               <h5 class="mb-0 faq-card-heading">
                 <span class="faq-black-dot">&#9679; &nbsp;&nbsp;</span> What is special about BALL?
-                <span class="faq-option-category-icon">+</span>
+                <span class="faq-option-category-icon">&nbsp; + </span>
               </h5>
             </a>
           </div>
@@ -88,8 +88,8 @@
           <div class="card-header" id="headingThree">
             <a class="" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
               <h5 class="mb-0 faq-card-heading">
-                <span class="faq-black-dot">&#9679; &nbsp;&nbsp;</span> What is the minimum amount to invest?
-                <span class="faq-option-category-icon">+</span>
+                <span class="faq-black-dot">&#9679; &nbsp;&nbsp;</span> What is the minimum <br> amount to invest?
+                <span class="faq-option-category-icon">&nbsp; + </span>
               </h5>
             </a>
           </div>
@@ -104,8 +104,8 @@
           <div class="card-header" id="headingFour">
             <a class="" data-toggle="collapse" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
               <h5 class="mb-0 faq-card-heading">
-                <span class="faq-black-dot">&#9679; &nbsp;&nbsp;</span> How secured are my savings?
-                <span class="faq-option-category-icon">+</span>
+                <span class="faq-black-dot">&#9679; &nbsp;&nbsp;</span> How secured are <br> my savings?
+                <span class="faq-option-category-icon">&nbsp; + </span>
               </h5>
             </a>
           </div>
@@ -120,8 +120,8 @@
           <div class="card-header" id="headingFive">
             <a class="" data-toggle="collapse" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
               <h5 class="mb-0 faq-card-heading">
-                <span class="faq-black-dot">&#9679; &nbsp;&nbsp;</span> Can I upgrade my saving plan in the future?
-                <span class="faq-option-category-icon">+</span>
+                <span class="faq-black-dot">&#9679; &nbsp;&nbsp;</span> Can I upgrade my saving <br> plan in the future?
+                <span class="faq-option-category-icon">&nbsp; + </span>
               </h5>
             </a>
           </div>
@@ -150,7 +150,7 @@
             <a class="" data-toggle="collapse" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
               <h5 class="mb-0 faq-card-heading">
                 <span class="faq-black-dot">&#9679; &nbsp;&nbsp;</span> How Do I Pay
-                <span class="faq-option-category-icon first">-</span>
+                <span class="faq-option-category-icon first">&nbsp; - </span>
               </h5>
             </a>
           </div>
@@ -166,7 +166,7 @@
             <a class="" data-toggle="collapse" href="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
               <h5 class="mb-0 faq-card-heading">
                 <span class="faq-black-dot">&#9679; &nbsp;&nbsp;</span> Can I upgrade my saving plan in the future?
-                <span class="faq-option-category-icon">+</span>
+                <span class="faq-option-category-icon">&nbsp; + </span>
               </h5>
             </a>
           </div>
@@ -194,8 +194,8 @@
           <div class="card-header" id="headingEight">
             <a class="" data-toggle="collapse" href="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
               <h5 class="mb-0 faq-card-heading">
-                <span class="faq-black-dot">&#9679; &nbsp;&nbsp;</span> How Do I Create My Profile
-                <span class="faq-option-category-icon first">-</span>
+                <span class="faq-black-dot">&#9679; &nbsp;&nbsp;</span> How Do I Create <br> My Profile
+                <span class="faq-option-category-icon first">&nbsp; - </span>
               </h5>
             </a>
           </div>
@@ -210,8 +210,8 @@
           <div class="card-header" id="headingNine">
             <a class="" data-toggle="collapse" href="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
               <h5 class="mb-0 faq-card-heading">
-                <span class="faq-black-dot">&#9679; &nbsp;&nbsp;</span> What Can I Do With My Profile?
-                <span class="faq-option-category-icon">+</span>
+                <span class="faq-black-dot">&#9679; &nbsp;&nbsp;</span> What Can I Do <br> With My Profile?
+                <span class="faq-option-category-icon">&nbsp; + </span>
               </h5>
             </a>
           </div>
@@ -239,8 +239,8 @@
           <div class="card-header" id="headingTen">
             <a class="" data-toggle="collapse" href="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
               <h5 class="mb-0 faq-card-heading">
-                <span class="faq-black-dot">&#9679; &nbsp;&nbsp;</span> How Secure Is My Money?
-                <span class="faq-option-category-icon first">-</span>
+                <span class="faq-black-dot">&#9679; &nbsp;&nbsp;</span> How Secure Is <br> My Money?
+                <span class="faq-option-category-icon first">&nbsp; - </span>
               </h5>
             </a>
           </div>
@@ -255,8 +255,8 @@
           <div class="card-header" id="headingEleven">
             <a class="" data-toggle="collapse" href="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
               <h5 class="mb-0 faq-card-heading">
-                <span class="faq-black-dot">&#9679; &nbsp;&nbsp;</span> What Happens If I Lose My Password
-                <span class="faq-option-category-icon">+</span>
+                <span class="faq-black-dot">&#9679; &nbsp;&nbsp;</span> What Happens If I <br> Lose My Password
+                <span class="faq-option-category-icon">&nbsp; + </span>
               </h5>
             </a>
           </div>

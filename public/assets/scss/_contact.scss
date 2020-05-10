@@ -89,6 +89,7 @@
     &-coffee {
         padding-top: 8rem;
         padding-bottom: 3rem;
+        padding-right: 4rem;
         text-align: right;
     }
     &-heading {
@@ -204,6 +205,12 @@
         }
         &-coffee {
             padding-top: 0;
+            padding-right: unset;
+            padding-left: unset;
+            padding-bottom: unset;
+        }
+        &-map {
+            height: 18rem;
         }
     }
 }

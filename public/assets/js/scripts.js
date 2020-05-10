@@ -4,7 +4,7 @@ function toggleQuestions(id) {
   $("#"+id).show();
 }
 
-// js validation on cantact us page
+// js validation on contact us page
 function validateContactUsForm(){
   if (
     $('#contact-name').val().length > 0 &&

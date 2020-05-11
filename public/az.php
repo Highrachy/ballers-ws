@@ -278,7 +278,7 @@
         <h2 class="az-message-heading">Want to know more? <br> Please. Send a message</h2>
     </div>
     <div class="col-lg-6 col-12">
-        <div class="col-10 contact-hello-form">
+        <div class="col-lg-10 col-sm-10 col-12 contact-hello-form">
             <h4 class="contact-hello-heading">Send a message</h4>
             <form method="post" action="">
                 <?php require_once 'includes/mail.php'; ?>

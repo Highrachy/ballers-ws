@@ -10,5 +10,5 @@ return array(
     'send_email_cc' => '',
     'smtp_email' => '',
     'smtp_password' => '',
-    'map_API_key' => '',
+    'map_api_key' => '',
 );

@@ -25,4 +25,4 @@ define('SMTP_EMAIL',  $configs['smtp_email']);
 define('SMTP_PASSWORD',$configs['smtp_password']);
 
 // API key
-define('MAP_API_KEY', $configs['map_API_key']);
+define('MAP_API_KEY', $configs['map_api_key']);

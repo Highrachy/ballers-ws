@@ -62,8 +62,6 @@
         <h4 class="contact-address-text">COME OVER FOR COFFEE</h4>
         <h2 class="contact-address-heading"> 5th Floor, Ibukun House, <br> No.70 Adetokunbo Ademola Street, <br> Victoria Island, Lagos.</h2>
     </div>
-    <div class="col-lg-6 col-12 contact-address-map">
-        <img src="./assets/img/map.png" alt="map image">
-    </div>
+    <div class="col-lg-6 col-12 contact-address-map" id="contact-address-map"></div>
 </section>
 <?php require_once('includes/footer.php'); ?>

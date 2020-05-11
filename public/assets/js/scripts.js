@@ -1,7 +1,10 @@
+// show questions based on slider on faq page
 function toggleQuestions(id) {
   $('#payment, #profile, #security, #getting-started').hide();
   $("#"+id).show();
 }
+
+// js validation on cantact us page
 function validateContactUsForm(){
   if (
     $('#contact-name').val().length > 0 &&
@@ -14,12 +17,27 @@ function validateContactUsForm(){
   }
 }
 
+// google maps initialization to remove errors on other pages
+var initMap = () => {}
+
 $(document).ready(function(){  
   $('#payment, #profile, #security').hide();
+
+  // code to run if on contact.php
   var url = window.location.href;
   if(url.includes("contact.php")){
     validateContactUsForm();
     $('#contact-name, #contact-email, #contact-message').keypress(validateContactUsForm);
+    
+    initMap = () => {
+      var office = {lat: 6.4297284, lng: 3.4297021};
+      var map = new google.maps.Map(document.getElementById('contact-address-map'), {zoom: 18, center: office});
+      var marker = new google.maps.Marker({
+        position: office,
+        map: map,
+        // icon: ''
+      });
+    }
   }
 
   // slick slider

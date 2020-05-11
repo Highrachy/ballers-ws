@@ -1,5 +1,7 @@
-<?php $currentPage = 'faq';
-require_once('includes/header.php'); ?>
+<?php 
+  $currentPage = 'faq';
+  require_once('includes/header.php'); 
+?>
 
 <section class="faq-holding">
     <h1 class="faq-holding-heading">Frequently Asked Questions</h1>

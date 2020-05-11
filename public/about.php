@@ -1,5 +1,7 @@
-<?php $currentPage = 'about';
-require_once('includes/header.php'); ?>
+<?php 
+    $currentPage = 'about';
+    require_once('includes/header.php'); 
+?>
 
 <section class="about-holding">
     <h1 class="about-holding-heading">About BALL</h1>

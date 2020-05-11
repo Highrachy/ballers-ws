@@ -101,15 +101,15 @@
   
   <!-- How it works -->
   <section class="works row">
-    <div class="col-lg-7 col-sm-12"></div>
-    <div class="col-lg-5 col-sm-12">
+    <div class="col-lg-6 col-sm-12"></div>
+    <div class="col-lg-6 col-sm-12">
       <h6 class="how-title">HOW IT WORKS</h6>
     </div>
-    <div class="col-lg-7 col-sm-6 phone-div">
+    <div class="col-lg-6 col-sm-6 phone-div">
       <img src="./assets/img/phone.png" alt="phone" class="phone">
     </div>
 
-    <div class="col-lg-5 col-sm-6">
+    <div class="col-lg-6 col-sm-6">
       <h2 class="how-heading">BALLing is as easy as ABC</h2>
 
       <div class="row">
@@ -152,16 +152,17 @@
     <h6 class="faq-title">FAQs</h6>
     <h2 class="faq-heading">Your questions <br> Answered</h2>
     <div class="row">
-      <div class="col-lg-3 col-sm-3"></div>
-      <div class="col-lg-9 col-sm-9 questions">
+      <div class="col-lg-3 col-sm-2 col-12"></div>
+      
+      <div class="col-lg-9 col-sm-10 col-12 faq-option-category-accordion">
         <div id="accordion">
 
           <div class="card">
             <div class="card-header" id="headingOne">
               <a class="" data-toggle="collapse" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                 <h5 class="mb-0 faq-card-heading">
-                  What is BALL?
-                  <span class="faq-icon one first">-</span>
+                  <span class="faq-black-dot">&#9679; &nbsp;&nbsp;</span> What is BALL?
+                  <span class="faq-option-category-icon first">&nbsp; - </span>
                 </h5>
               </a>
             </div>
@@ -176,8 +177,8 @@
             <div class="card-header" id="headingTwo">
               <a class="" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                 <h5 class="mb-0 faq-card-heading">
-                  What is special about BALL?
-                  <span class="faq-icon">+</span>
+                  <span class="faq-black-dot">&#9679; &nbsp;&nbsp;</span> What is special about <br> BALL?
+                  <span class="faq-option-category-icon">&nbsp; + </span>
                 </h5>
               </a>
             </div>
@@ -192,8 +193,8 @@
             <div class="card-header" id="headingThree">
               <a class="" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                 <h5 class="mb-0 faq-card-heading">
-                  What is the minimum amount to invest?
-                  <span class="faq-icon">+</span>
+                  <span class="faq-black-dot">&#9679; &nbsp;&nbsp;</span> What is the minimum <br> amount to invest?
+                  <span class="faq-option-category-icon">&nbsp; + </span>
                 </h5>
               </a>
             </div>
@@ -208,8 +209,8 @@
             <div class="card-header" id="headingFour">
               <a class="" data-toggle="collapse" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                 <h5 class="mb-0 faq-card-heading">
-                  How secured are my savings?
-                  <span class="faq-icon">+</span>
+                  <span class="faq-black-dot">&#9679; &nbsp;&nbsp;</span> How secured are <br> my savings?
+                  <span class="faq-option-category-icon">&nbsp; + </span>
                 </h5>
               </a>
             </div>
@@ -224,8 +225,8 @@
             <div class="card-header" id="headingFive">
               <a class="" data-toggle="collapse" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
                 <h5 class="mb-0 faq-card-heading">
-                  Can I upgrade my saving plan in the future?
-                  <span class="faq-icon">+</span>
+                  <span class="faq-black-dot">&#9679; &nbsp;&nbsp;</span> Can I upgrade my saving <br> plan in the future?
+                  <span class="faq-option-category-icon">&nbsp; + </span>
                 </h5>
               </a>
             </div>

@@ -172,7 +172,7 @@
     }
 }
 .works {
-    padding: 2rem;
+    padding: 2rem 5rem 2rem 2rem;
 }
 .phone {
     height: 38rem;
@@ -220,9 +220,7 @@
     }
 }
 .faq {
-    padding-top: 3rem;
-    padding-left: 6rem;
-    padding-bottom: 4rem;
+    padding: 3rem 5rem 4rem;
 
     &-heading {
         @extend %heading-font-stack;
@@ -300,6 +298,13 @@ h5 .btn-link {
         padding: 3rem;
         height: 40rem;
     }
+    .phone-div {
+        padding-top: 5rem;
+    }
+    .phone {
+        height: 33rem;
+        width: 25rem;
+    }
     .slide {
         width: 13.5rem;
     }
@@ -329,7 +334,7 @@ h5 .btn-link {
     .about,
     .phone-div,
     .faq {
-        padding-left: 1rem;
+        padding: 3rem 0.8rem;
     }
     .about-ball-title,
     .benefits-title,
@@ -479,6 +484,9 @@ h5 .btn-link {
         br {
             display: none;
         }
+    }
+    .works {
+        padding: 2rem;
     }
     .benefits {
         padding: 3rem 1rem;

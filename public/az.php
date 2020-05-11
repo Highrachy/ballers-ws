@@ -1,4 +1,5 @@
-<?php require_once 'includes/header.php'; ?>
+<?php $currentPage = 'az';
+require_once('includes/header.php'); ?>
 
 <section class="az-holding">
     <h1 class="az-holding-heading">A-Z of BALL</h1>

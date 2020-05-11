@@ -31,21 +31,24 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a class="nav-link" href="az.php">A-Z of BALL</span></a>
+              <a class="nav-link <?php if($currentPage =='index'){echo 'active';}?>" href="index.php">Home</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="about.php">About Us</a>
+              <a class="nav-link <?php if($currentPage =='az'){echo 'active';}?>" href="az.php">A-Z of BALL</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="faq.php">FAQ</a>
+              <a class="nav-link <?php if($currentPage =='about'){echo 'active';}?>" href="about.php">About Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact.php">Contact Us</a>
+              <a class="nav-link <?php if($currentPage =='faq'){echo 'active';}?>" href="faq.php">FAQ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link <?php if($currentPage =='contact'){echo 'active';}?>" href="contact.php">Contact Us</a>
             </li>
           </ul>
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="#">Sign In</a>
+              <a class="nav-link sign-in" href="#">Sign In</a>
             </li>
             <li class="nav-item">
               <a class="nav-link register btn" href="#">Register</a>

@@ -38,7 +38,7 @@
 }
 .input-group,
 .input-group-prepend,
-.input-group-text, 
+.input-group-text,
 .form-control,
 .custom-select {
     border: 0 !important;
@@ -135,7 +135,7 @@
     z-index: 1000;
     top:50%;
     transform: translateY(-50%);
-}  
+}
 .next {
     display: block;
     position: absolute;
@@ -237,7 +237,7 @@
     float: right;
     padding-right: 7rem;
     padding-top: 1rem;
-    padding-bottom: 2rem;  
+    padding-bottom: 2rem;
 }
 .faq-icon {
     float: right;
@@ -425,7 +425,7 @@ h5 .btn-link {
     .phone {
         height: 25rem;
         width: 18rem;
-    
+
         &-div {
             padding-left: 3rem;
             padding-top: 8rem;
@@ -460,7 +460,7 @@ h5 .btn-link {
     .holding {
         height: 50rem;
         background-image: url('../img/backgrounds/holding-mobile.png');
-        
+
         &-heading {
             padding-top: 0;
         }
@@ -539,5 +539,16 @@ h5 .btn-link {
     }
     .gallery {
         padding: 4rem 2rem;
+    }
+}
+
+// culled from https://stackoverflow.com/questions/22450207/select-removing-dropdown-arrow-cross-browser
+.custom-select.form-control {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+    &::-ms-expand {
+        display: none;
     }
 }

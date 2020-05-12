@@ -51,12 +51,11 @@ header {
     height:  4rem;
 }
 .navigation-wrap{
-	position: absolute;
+	position: fixed;
 	width: 100%;
     top: 0;
     left: 0;
-    padding-left: 5rem;
-    padding-right: 5rem;
+    padding: 0.5rem 5rem;
 	z-index: 1000;
 	-webkit-transition : all 0.3s ease-out;
     transition : all 0.3s ease-out;
@@ -64,7 +63,8 @@ header {
 }
 .nav-link {
     padding: 0.5rem 1rem !important;
-    font-weight: 400;
+    font-weight: 500;
+    color: $gray-550;
 }
 .navbar {
     &-collapse {
@@ -116,9 +116,15 @@ header {
         border-color: transparent;
     }
 }
+.sign-in {
+    color: $blue;
+}
+.active {
+    color: $purple !important;
+}
 .register {
     color: $white;
-    background-color: $purple;
+    background-color: $blue;
     padding: 0.5rem 2.5rem !important;
 }
 
@@ -144,8 +150,19 @@ header {
             margin-bottom: 0;
         }
     }
-    .nav-link {
+    .nav-link,
+    .sign-in {
         color: $gray-700;
+    }
+    .mr-auto .nav-item {
+        margin: auto;
+    }
+    .active {
+        color: $purple !important;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        border-bottom: 2px solid $purple;
+        text-align: center;
     }
     .register {
         color: $white !important;

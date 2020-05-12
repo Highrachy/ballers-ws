@@ -1,4 +1,7 @@
-<?php require_once('includes/header.php'); ?>
+<?php 
+  $currentPage = 'index';
+  require_once('includes/header.php'); 
+?>
   <!-- Holding -->
   <section class="holding">
 

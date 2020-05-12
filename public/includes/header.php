@@ -1,3 +1,11 @@
+<?php
+function addActive($currentPage, $page){
+  if ($currentPage == $page) {
+    echo 'active';
+  }
+}
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -31,21 +39,24 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a class="nav-link" href="az.php">A-Z of BALL</span></a>
+              <a class="nav-link <?php addActive($currentPage,'index') ?>" href="index.php">Home</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="about.php">About Us</a>
+              <a class="nav-link <?php addActive($currentPage,'az') ?>" href="az.php">A-Z of BALL</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="faq.php">FAQ</a>
+              <a class="nav-link <?php addActive($currentPage,'about') ?>" href="about.php">About Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact.php">Contact Us</a>
+              <a class="nav-link <?php addActive($currentPage,'faq') ?>" href="faq.php">FAQ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link <?php addActive($currentPage,'contact') ?>" href="contact.php">Contact Us</a>
             </li>
           </ul>
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="#">Sign In</a>
+              <a class="nav-link sign-in" href="#">Sign In</a>
             </li>
             <li class="nav-item">
               <a class="nav-link register btn" href="#">Register</a>

@@ -1,4 +1,7 @@
-<?php require_once('includes/header.php'); ?>
+<?php 
+    $currentPage = 'contact';
+    require_once('includes/header.php'); 
+?>
 <section class="contact-holding">
     <h1 class="contact-holding-heading">Contact Us</h1>
     <h6 class="contact-holding-text">Do you have questions about BALL or would you like to hear more about the platform? <br> Then feel free to contact us by mail, phone or chat. We're usually pretty quick.</h6>

@@ -10,7 +10,7 @@
 %title-font-stack {
     color: $green;
     font-size: 1.2rem;
-    font-weight: 400;
+    font-weight: 500;
 }
 %about-text-font {
     color: $blue-2;
@@ -151,27 +151,5 @@ header {
         color: $white !important;
         background-color: $purple;
         padding: 0.5rem 1.5rem !important;
-    }
-}
-
-/* big tablets */
-@media only screen and (max-width: 1024px) {
-    header,
-    .holding,
-    .about,
-    .phone-div,
-    .faq {
-        padding-left: 3rem;
-    }
-    .benefits {
-        padding: 3rem;
-        height: 40rem;
-    }
-    .slide {
-        width: 13.5rem;
-    }
-    .prev,
-    .next {
-        top: 25%;
     }
 }

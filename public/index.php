@@ -68,13 +68,13 @@
     <div class="benefits-slider">
       <div class="slide">
         <img src="./assets/img/icons/income.png" class="slide-image" alt="Recurring Income">
-        <h4 class="slide-header">Recurring income</h4>
+        <h4 class="slide-header">Recurring Income</h4>
         <p class="slide-body">You can create several income generating streams from just becoming a member; referral income (the best in the industry), bonus points, interest on your contribution.</p>
       </div>
       
       <div class="slide">
         <img src="./assets/img/icons/estates.png" class="slide-image" alt="Existing estates">
-        <h4 class="slide-header">Existing estates</h4>
+        <h4 class="slide-header">Existing Estates</h4>
         <p class="slide-body">We brought you the I-Factor and then Blissville, you can clearly see that our mantra is value driven quality real estate that enhances your overall living experience.</p>
       </div>
 
@@ -87,13 +87,13 @@
       <div class="slide">
         <img src="./assets/img/icons/investment.png" class="slide-image" alt="Investment Oriented">
         <h4 class="slide-header">Investment Oriented</h4>
-        <p class="slide-body">For every contribution you <br> make you get immediate bonus <br> points that can easily be <br> redeemed for a wide range of <br> relaxing and sumptuous social <br> activities.</p>
+        <p class="slide-body">For every contribution you make you get immediate bonus points that can easily be redeemed for a wide range of relaxing and sumptuous social activities.</p>
       </div>
 
       <div class="slide">
         <img src="./assets/img/icons/fluid.png" class="slide-image" alt="Fluidity and Flexibility">
-        <h4 class="slide-header">Fluidity and Flexibility</h4>
-        <p class="slide-body">You can choose any amount to <br> contribute once you have <br> started and you can pause or <br> exit the scheme if so desired.</p>
+        <h4 class="slide-header">Fluidity &amp; Flexibility</h4>
+        <p class="slide-body">You can choose any amount to contribute once you have started and you can pause or exit the scheme if so desired.</p>
       </div>
     </div>
   </section> 

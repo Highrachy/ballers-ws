@@ -270,14 +270,15 @@
         &-icon {
             font-size: 2.5rem;
         }
-        .faq-black-dot {
-            display: none;
-        }
+        
         &-accordion {
             .card-body {
                 padding-left: 1.25rem;
             }
         }
+    }
+    .faq-black-dot {
+        display: none;
     }
     .faq-card-heading {
         br {

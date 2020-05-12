@@ -71,13 +71,13 @@
     <div class="benefits-slider">
       <div class="slide">
         <img src="./assets/img/icons/income.png" class="slide-image" alt="Recurring Income">
-        <h4 class="slide-header">Recurring income</h4>
+        <h4 class="slide-header">Recurring Income</h4>
         <p class="slide-body">You can create several income generating streams from just becoming a member; referral income (the best in the industry), bonus points, interest on your contribution.</p>
       </div>
       
       <div class="slide">
         <img src="./assets/img/icons/estates.png" class="slide-image" alt="Existing estates">
-        <h4 class="slide-header">Existing estates</h4>
+        <h4 class="slide-header">Existing Estates</h4>
         <p class="slide-body">We brought you the I-Factor and then Blissville, you can clearly see that our mantra is value driven quality real estate that enhances your overall living experience.</p>
       </div>
 
@@ -90,13 +90,13 @@
       <div class="slide">
         <img src="./assets/img/icons/investment.png" class="slide-image" alt="Investment Oriented">
         <h4 class="slide-header">Investment Oriented</h4>
-        <p class="slide-body">For every contribution you <br> make you get immediate bonus <br> points that can easily be <br> redeemed for a wide range of <br> relaxing and sumptuous social <br> activities.</p>
+        <p class="slide-body">For every contribution you make you get immediate bonus points that can easily be redeemed for a wide range of relaxing and sumptuous social activities.</p>
       </div>
 
       <div class="slide">
         <img src="./assets/img/icons/fluid.png" class="slide-image" alt="Fluidity and Flexibility">
-        <h4 class="slide-header">Fluidity and Flexibility</h4>
-        <p class="slide-body">You can choose any amount to <br> contribute once you have <br> started and you can pause or <br> exit the scheme if so desired.</p>
+        <h4 class="slide-header">Fluidity &amp; Flexibility</h4>
+        <p class="slide-body">You can choose any amount to contribute once you have started and you can pause or exit the scheme if so desired.</p>
       </div>
     </div>
   </section> 
@@ -104,15 +104,15 @@
   
   <!-- How it works -->
   <section class="works row">
-    <div class="col-lg-7 col-sm-12"></div>
-    <div class="col-lg-5 col-sm-12">
+    <div class="col-lg-6 col-sm-12"></div>
+    <div class="col-lg-6 col-sm-12">
       <h6 class="how-title">HOW IT WORKS</h6>
     </div>
-    <div class="col-lg-7 col-sm-6 phone-div">
+    <div class="col-lg-6 col-sm-6 phone-div">
       <img src="./assets/img/phone.png" alt="phone" class="phone">
     </div>
 
-    <div class="col-lg-5 col-sm-6">
+    <div class="col-lg-6 col-sm-6">
       <h2 class="how-heading">BALLing is as easy as ABC</h2>
 
       <div class="row">
@@ -155,16 +155,17 @@
     <h6 class="faq-title">FAQs</h6>
     <h2 class="faq-heading">Your questions <br> Answered</h2>
     <div class="row">
-      <div class="col-lg-3 col-sm-3"></div>
-      <div class="col-lg-9 col-sm-9 questions">
+      <div class="col-lg-3 col-sm-2 col-12"></div>
+      
+      <div class="col-lg-9 col-sm-10 col-12 faq-option-category-accordion">
         <div id="accordion">
 
           <div class="card">
             <div class="card-header" id="headingOne">
               <a class="" data-toggle="collapse" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                 <h5 class="mb-0 faq-card-heading">
-                  What is BALL?
-                  <span class="faq-icon one first">-</span>
+                  <span class="faq-black-dot">&#9679; &nbsp;&nbsp;</span> What is BALL?
+                  <span class="faq-option-category-icon first">&nbsp; - </span>
                 </h5>
               </a>
             </div>
@@ -179,8 +180,8 @@
             <div class="card-header" id="headingTwo">
               <a class="" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                 <h5 class="mb-0 faq-card-heading">
-                  What is special about BALL?
-                  <span class="faq-icon">+</span>
+                  <span class="faq-black-dot">&#9679; &nbsp;&nbsp;</span> What is special about <br> BALL?
+                  <span class="faq-option-category-icon">&nbsp; + </span>
                 </h5>
               </a>
             </div>
@@ -195,8 +196,8 @@
             <div class="card-header" id="headingThree">
               <a class="" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                 <h5 class="mb-0 faq-card-heading">
-                  What is the minimum amount to invest?
-                  <span class="faq-icon">+</span>
+                  <span class="faq-black-dot">&#9679; &nbsp;&nbsp;</span> What is the minimum <br> amount to invest?
+                  <span class="faq-option-category-icon">&nbsp; + </span>
                 </h5>
               </a>
             </div>
@@ -211,8 +212,8 @@
             <div class="card-header" id="headingFour">
               <a class="" data-toggle="collapse" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                 <h5 class="mb-0 faq-card-heading">
-                  How secured are my savings?
-                  <span class="faq-icon">+</span>
+                  <span class="faq-black-dot">&#9679; &nbsp;&nbsp;</span> How secured are <br> my savings?
+                  <span class="faq-option-category-icon">&nbsp; + </span>
                 </h5>
               </a>
             </div>
@@ -227,8 +228,8 @@
             <div class="card-header" id="headingFive">
               <a class="" data-toggle="collapse" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
                 <h5 class="mb-0 faq-card-heading">
-                  Can I upgrade my saving plan in the future?
-                  <span class="faq-icon">+</span>
+                  <span class="faq-black-dot">&#9679; &nbsp;&nbsp;</span> Can I upgrade my saving <br> plan in the future?
+                  <span class="faq-option-category-icon">&nbsp; + </span>
                 </h5>
               </a>
             </div>

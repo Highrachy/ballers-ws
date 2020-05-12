@@ -42,11 +42,11 @@ $(document).ready(function(){
 
   // slick slider
   $('.benefits-slider').slick({
-      speed: 500,
+      speed: 1500,
       infinite: true,
       centerMode: true,
       autoplay: true,
-      autoplaySpeed: 2000,
+      autoplaySpeed: 7000,
       slidesToScroll: 1,
       centerPadding: '0',
       slidesToShow: 3,

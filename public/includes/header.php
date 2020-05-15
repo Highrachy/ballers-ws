@@ -48,7 +48,7 @@ function addActive($currentPage, $page){
               <a class="nav-link <?php addActive($currentPage,'about') ?>" href="about.php">About Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link <?php addActive($currentPage,'faq') ?>" href="faq.php">FAQ</a>
+              <a class="nav-link <?php addActive($currentPage,'faq') ?>" href="faq.php">FAQs</a>
             </li>
             <li class="nav-item">
               <a class="nav-link <?php addActive($currentPage,'contact') ?>" href="contact.php">Contact Us</a>

@@ -259,24 +259,24 @@ array of products to acquire your desired property.</p>
         <div class="col-lg-5 col-sm-6 col-12">
             <img class="az-control-panel-img img-fluid" src="./assets/img/see-available.png" alt="Available Properties">
             <h5 class="az-control-panel-heading">See available properties</h5>
-            <p class="az-control-panel-text">Ea fugiat Lorem quis cupidatat nulla. Officia <br> voluptate anim anim laboris. Sunt nostrud ullamc</p>
+            <p class="az-control-panel-text"></p>
         </div>
         <div class="col-lg-5 col-sm-6 col-12">
             <img class="az-control-panel-img img-fluid" src="./assets/img/monitor.png" alt="Monitor your contribution">
             <h5 class="az-control-panel-heading">Monitor your contribution</h5>
-            <p class="az-control-panel-text">Ea fugiat Lorem quis cupidatat nulla. Officia <br> voluptate anim anim laboris. Sunt nostrud ullamc</p>
+            <p class="az-control-panel-text"></p>
         </div>
         <div class="col-lg-1 col-12"></div>
         <div class="col-lg-1 col-12"></div>
         <div class="col-lg-5 col-sm-6 col-12">
             <img class="az-control-panel-img img-fluid" src="./assets/img/view-map.png" alt="View Map">
             <h5 class="az-control-panel-heading">View map</h5>
-            <p class="az-control-panel-text">Ea fugiat Lorem quis cupidatat nulla. Officia <br> voluptate anim anim laboris. Sunt nostrud ullamc</p>
+            <p class="az-control-panel-text"></p>
         </div>
         <div class="col-lg-5 col-sm-6 col-12">
             <img class="az-control-panel-img img-fluid" src="./assets/img/conversation.png" alt="Start a conversation">
             <h5 class="az-control-panel-heading">Start a conversation</h5>
-            <p class="az-control-panel-text">Ea fugiat Lorem quis cupidatat nulla. Officia <br> voluptate anim anim laboris. Sunt nostrud ullamc</p>
+            <p class="az-control-panel-text"></p>
         </div>
         <div class="col-lg-1 col-12"></div>
     </div>

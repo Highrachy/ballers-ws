@@ -42,10 +42,10 @@ function addActive($currentPage, $page){
               <a class="nav-link <?php addActive($currentPage,'index') ?>" href="index.php">Home</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link <?php addActive($currentPage,'az') ?>" href="az.php">A-Z of BALL</span></a>
+              <a class="nav-link <?php addActive($currentPage,'about') ?>" href="about.php">About Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link <?php addActive($currentPage,'about') ?>" href="about.php">About Us</a>
+              <a class="nav-link <?php addActive($currentPage,'az') ?>" href="az.php">A-Z of BALL</span></a>
             </li>
             <li class="nav-item">
               <a class="nav-link <?php addActive($currentPage,'faq') ?>" href="faq.php">FAQs</a>

@@ -4,45 +4,56 @@
 ?>
 
 <section class="az-holding">
-    <h1 class="az-holding-heading">A-Z of BALL</h1>
-    <h5 class="az-holding-text">Great minds BALL, while they are BALLing, they are called BALLers.. <br>Are you ready to Become A LandLord? Come BALL with Us. In life, it’s <br> not enough to just exist you have to BALL.</h5>
+    <div class="container">
+      <h1 class="az-holding-heading">A-Z of BALL</h1>
+      <h5 class="az-holding-text">
+        Great minds BALL. BALLers know what they want and they are motivated to go after the life that they
+        desire and deserve. To BALL is to be a part of a community of exclusive homeowners who are reaching
+        for the future and establishing security for themselves and their loved ones.
+      </h5>
+    </div>
 </section>
 
 <section class="az-ball row">
     <div class="col-lg-5 col-12">
         <h2 class="az-ball-heading">What is BALL?</h2>
     </div>
-    <div class="col-lg-7 col-12">
+    <div class="col-lg-7 col-12 pb-5 mb-5">
         <h6 class="az-ball-title">BALL EXPLAINED</h6>
-        <p class="az-ball-text">BALL is a platform that enables her members to seamlessly own quality homes in well planned communities in a sustainable way. <br>We guide you through the entire process which is customized specially for you.</p>
-    </div>
-    <div class="col-lg-5 col-12"></div>
-    <div class="col-lg-7 col-12">
-        <h6 class="az-ball-title">ORIGIN OF BALL</h6>
-        <p class="az-ball-text">Balling is an experience, a choice for a quality lifestyle and a legacy, generations to come will benefit from an easy decision you make today.</p>
+        <p class="az-ball-text">
+          BALL is a platform that enables her members to seamlessly own quality homes in well planned
+          communities with a sustainable plan tailored to their current realities. We will guide you through the
+          entire process which is customized specially for you.
+        </p>
+        <p class="az-ball-text">
+          Balling is an experience, a choice for a quality lifestyle and a legacy from which generations to come will benefit.
+        </p>
     </div>
 </section>
 
 <section class="az-easy">
     <h2 class="az-easy-heading">BALLing is as <br class="d-block d-sm-none"> easy as ABC</h2>
+    <div class="row row-eq-height justify-content-center">
+      <aside class="az-easy-abc col-lg-3 col-sm-5 col-11">
+          <img class="az-easy-abc-letter" src="./assets/img/icons/a.png" alt="A">
+          <h5 class="az-easy-abc-title"><span> Apply now </span>
+        </h5>
+          <p class="az-easy-abc-text">Click here to access and complete the BALLers applicant information form. Please ensure
+  that you fill in accurate and clear information to help us effectively customise your BALLing experience.</p>
+      </aside>
 
-    <div class="az-easy-abc col-lg-3 col-sm-5 col-11">
-        <img class="az-easy-abc-letter" src="./assets/img/icons/a.png" alt="A">
-        <h5 class="az-easy-abc-title"><span> Apply now </span>
-      </h5>
-        <p class="az-easy-abc-text">Take control of the future and create a timeless legacy by filling the application form below</p>
-    </div>
+      <aside class="az-easy-abc col-lg-3 col-sm-5 col-11">
+          <img class="az-easy-abc-letter" src="./assets/img/icons/b.png" alt="B">
+          <h5 class="az-easy-abc-title">Begin periodic <br> contribution</h5>
+          <p class="az-easy-abc-text">Cultivate the habit of making consistent contributions here to
+  accelerate your BALL process and begin enjoying the lifelong benefits of a BALLer.</p>
+      </aside>
 
-    <div class="az-easy-abc col-lg-3 col-sm-5 col-11">
-        <img class="az-easy-abc-letter" src="./assets/img/icons/b.png" alt="B">
-        <h5 class="az-easy-abc-title">Begin periodic <br> contribution</h5>
-        <p class="az-easy-abc-text">Cultivate the habit of making convenient contributions here and reap the rewards as a BALLer for life</p>
-    </div>
-
-    <div class="az-easy-abc col-lg-3 col-sm-5 col-11">
-        <img class="az-easy-abc-letter" src="./assets/img/icons/c.png" alt="C">
-        <h5 class="az-easy-abc-title">Convert to home <br> ownership</h5>
-        <p class="az-easy-abc-text">Get the home of your dreams using an array of financial products including single digit mortgages as low as 6%</p>
+      <aside class="az-easy-abc col-lg-3 col-sm-5 col-11">
+          <img class="az-easy-abc-letter" src="./assets/img/icons/c.png" alt="C">
+          <h5 class="az-easy-abc-title">Convert to home <br> ownership</h5>
+          <p class="az-easy-abc-text">Get the home of your dreams using an array of financial products including single digit mortgages as low as 6%</p>
+      </aside>
     </div>
 </section>
 
@@ -52,8 +63,6 @@
     <h6 class="az-how-title">STEP A</h6>
     <h3 class="az-how-heading">APPLICATION</h3>
 
-
-
     <section class="mt-sm-5 py-4">
         <div class="row">
             <div class="az-how-step col-lg-5 col-sm-5 col-12">
@@ -61,8 +70,9 @@
             </div>
             <div class="az-how-step-line col-lg-2 col-sm-2 col-12"></div>
             <div class="az-how-step col-lg-5 col-sm-5 col-12">
-                <h5 class="az-how-step-title">Define your prefrence</h5>
-                <p class="az-how-step-text mt-3">Ea fugiat Lorem quis cupidatat nulla. Officia <br class="d-md-none d-lg-block" > voluptate anim anim laboris. Sunt nostrud ullamc</p>
+                <h5 class="az-how-step-title">Define your preference.</h5>
+                <p class="az-how-step-text mt-3 pr-5">Bring your dreams to life, select from the options below to activate the process of
+customising your ideal home ownership process. </p>
             </div>
         </div>
 
@@ -77,12 +87,12 @@
                   <div class="az-how-step az-tree__branch--left">
                     <img class="az-how-step-icon" src="./assets/img/icons/location-house.png" alt="Preferred location">
                     <h6 class="az-how-step-title-2">Select preferred <br> location</h6>
-                    <p class="az-how-step-text-2">Ea fugiat Lorem quis cupidatat  nulla. Officia voluptate  anim anim laboris. Sunt  nostrud ullamc</p>
+                    <p class="az-how-step-text-2">Input your location of choice.</p>
                   </div>
                   <div class="az-how-step az-tree__branch--right">
                     <img class="az-how-step-icon" src="./assets/img/icons/house-type.png" alt="Property Type">
                     <h6 class="az-how-step-title-2">Select preferred <br> property type</h6>
-                    <p class="az-how-step-text-2">Ea fugiat Lorem quis cupidatat  nulla. Officia voluptate  anim anim laboris. Sunt nostrud ullamc</p>
+                    <p class="az-how-step-text-2">Select property of interest.</p>
                   </div>
                 </div>
                 <div class="clearfix"></div>
@@ -101,7 +111,7 @@
 
                 <div class="col-md-5 ml-lg-none ml-md-n4 mb-md-5 mb-lg-0">
                   <h5 class="az-how-step-title pt-5 pt-sm-none pb-2">Structure your subscription</h5>
-                  <p class="az-how-step-text">Ea fugiat Lorem quis cupidatat nulla. Officia <br class="d-md-none d-lg-block" > voluptate anim anim laboris. Sunt nostrud ullamc</p>
+                  <p class="az-how-step-text pr-5">One of the best things about BALLers is our goal to take out the burden of heavy one-off payments to own a home. Select the options below that are a best fit for your BALLing experience.</p>
                 </div>
               </aside>
 
@@ -109,19 +119,16 @@
                 <div class="az-tree__node">
                   <div class="az-how-step az-tree__branch--left">
                     <img class="az-how-step-icon" src="./assets/img/icons/payment-amount.png" alt="Payment amount">
-                    <h6 class="az-how-step-title-2">Input convienient <br> payment amount</h6>
-                    <p class="az-how-step-text-2">Ea fugiat Lorem quis cupidatat <br> nulla. Officia voluptate <br> anim anim laboris. Sunt <br> nostrud ullamc</p>
+                    <h6 class="az-how-step-title-2">Input amount available <br> to begin with</h6>
                   </div>
                   <div class="az-how-step az-tree__branch--center az-tree__branch--center-to-right-md">
                     <img class="az-how-step-icon" src="./assets/img/icons/interval.png" alt="Interval">
-                    <h6 class="az-how-step-title-2">Select preferred periodic <br> time interval</h6>
-                    <p class="az-how-step-text-2">Ea fugiat Lorem quis cupidatat <br> nulla. Officia voluptate <br> anim anim laboris. Sunt <br> nostrud ullamc</p>
+                    <h6 class="az-how-step-title-2">Select preferred <br>periodic time interval</h6>
                   </div>
                   <!-- This section is repeated. This is shown for tablet and mobile -->
                   <div class="az-how-step az-tree__branch--right d-md-none d-lg-block">
                     <img class="az-how-step-icon" src="./assets/img/icons/duration.png" alt="Duration">
                     <h6 class="az-how-step-title-2">Calculate the total <br> duration</h6>
-                    <p class="az-how-step-text-2">Ea fugiat Lorem quis cupidatat <br> nulla. Officia voluptate <br> anim anim laboris. Sunt <br> nostrud ullamc</p>
                   </div>
                   <div class="clearfix"></div>
                 </div>
@@ -131,7 +138,6 @@
               <div class="az-how-step az-tree__branch--center az-tree__branch--right-to-center-md d-lg-none d-md-block d-none">
                 <img class="az-how-step-icon" src="./assets/img/icons/duration.png" alt="Duration">
                 <h6 class="az-how-step-title-2">Calculate the total <br> duration</h6>
-                <p class="az-how-step-text-2">Ea fugiat Lorem quis cupidatat <br> nulla. Officia voluptate <br> anim anim laboris. Sunt <br> nostrud ullamc</p>
               </div>
               <div class="clearfix"></div>
             </section>
@@ -145,7 +151,7 @@
         </div>
     </section>
 
-    <h6 class="az-how-title">STEP B</h6>
+    <h6 class="az-how-title mt-5">STEP B</h6>
     <h3 class="az-how-heading">BEGIN PERIODIC <br> CONTRIBUTION</h3>
 
     <div class="row">
@@ -159,7 +165,10 @@
         </div>
         <div class="az-how-step col-md-5 col-sm-5 col-12 mt-md-n4 mt-lg-0">
             <h5 class="az-how-step-title">Start contributing</h5>
-            <p class="az-how-step-text">Ea fugiat Lorem quis cupidatat nulla. Officia <br class="d-md-none d-lg-block" >  voluptate anim anim laboris. Sunt nostrud ullamc</p>
+            <p class="az-how-step-text pr-5">We are excited! Now that you have the perfect plan with a clear figure and contribution times, begin your journey here  by making your first investment.</p>
+            <div class="col-sm-12 pt-md-3 text-left">
+              <button class="btn btn-lg big-button ml-n3">APPLY NOW</button>
+          </div>
         </div>
     </div>
 
@@ -174,7 +183,9 @@
         <div class="az-how-step-line col-lg-2 col-sm-2 col-12"></div>
         <div class="az-how-step col-lg-5 col-md-5 col-sm-5 col-12">
           <h5 class="az-how-step-title">Convert subscription</h5>
-          <p class="az-how-step-text">Ea fugiat Lorem quis cupidatat nulla. Officia <br> voluptate anim anim laboris. Sunt nostrud ullamc</p>
+          <p class="az-how-step-text mr-5">Once your contributions have reached the minimum required
+amount, we walk you through the process of converting to best-fit financial instruments from an
+array of products to acquire your desired property.</p>
         </div>
       </div>
 
@@ -189,7 +200,10 @@
             <div class="mt-n4 pt-5 pb-5 az-tree__content">
               <img class="az-how-step-img" src="./assets/img/move-in.png" alt="Move in">
               <h5 class="az-how-step-title-2">Move into your new home</h5>
-              <p class="az-how-step-text-2">Ea fugiat Lorem quis cupidatat nulla. Officia <br> voluptate anim anim laboris. Sunt nostrud ullamc</p>
+              <p class="az-how-step-text-2 col-md-6 offset-md-3">Congratulations! You did it. Now your future begins. Of course, you are welcome to go right back to the top and begin the process of buying your next property.</p>
+              <div class="col-sm-12 pt-md-3">
+                <button class="btn btn-lg big-button ml-n3">APPLY NOW</button>
+              </div>
             </div>
           </section>
 
@@ -245,24 +259,24 @@
         <div class="col-lg-5 col-sm-6 col-12">
             <img class="az-control-panel-img img-fluid" src="./assets/img/see-available.png" alt="Available Properties">
             <h5 class="az-control-panel-heading">See available properties</h5>
-            <p class="az-control-panel-text">Ea fugiat Lorem quis cupidatat nulla. Officia <br> voluptate anim anim laboris. Sunt nostrud ullamc</p>
+            <p class="az-control-panel-text"></p>
         </div>
         <div class="col-lg-5 col-sm-6 col-12">
             <img class="az-control-panel-img img-fluid" src="./assets/img/monitor.png" alt="Monitor your contribution">
             <h5 class="az-control-panel-heading">Monitor your contribution</h5>
-            <p class="az-control-panel-text">Ea fugiat Lorem quis cupidatat nulla. Officia <br> voluptate anim anim laboris. Sunt nostrud ullamc</p>
+            <p class="az-control-panel-text"></p>
         </div>
         <div class="col-lg-1 col-12"></div>
         <div class="col-lg-1 col-12"></div>
         <div class="col-lg-5 col-sm-6 col-12">
             <img class="az-control-panel-img img-fluid" src="./assets/img/view-map.png" alt="View Map">
             <h5 class="az-control-panel-heading">View map</h5>
-            <p class="az-control-panel-text">Ea fugiat Lorem quis cupidatat nulla. Officia <br> voluptate anim anim laboris. Sunt nostrud ullamc</p>
+            <p class="az-control-panel-text"></p>
         </div>
         <div class="col-lg-5 col-sm-6 col-12">
             <img class="az-control-panel-img img-fluid" src="./assets/img/conversation.png" alt="Start a conversation">
             <h5 class="az-control-panel-heading">Start a conversation</h5>
-            <p class="az-control-panel-text">Ea fugiat Lorem quis cupidatat nulla. Officia <br> voluptate anim anim laboris. Sunt nostrud ullamc</p>
+            <p class="az-control-panel-text"></p>
         </div>
         <div class="col-lg-1 col-12"></div>
     </div>

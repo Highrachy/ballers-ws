@@ -1,6 +1,6 @@
-<?php 
+<?php
   $currentPage = 'index';
-  require_once('includes/header.php'); 
+  require_once('includes/header.php');
 ?>
   <!-- Holding -->
   <section class="holding">
@@ -19,7 +19,7 @@
           </div>
           <input type="text" class="form-control hold-input" id="location" placeholder="Location">
         </div>
-      
+
         <label class="sr-only" for="housetype">House type</label>
         <div class="input-group col-lg-5 col-sm-12 select-grp">
           <div class="input-group-prepend">
@@ -34,8 +34,8 @@
             <option value="3">Three</option>
           </select>
         </div>
-      
-      
+
+
         <button type="submit" class="btn btn-primary btn-large mb-2 col-lg-3 col-sm-12 form-search">Search</button>
       </form>
     </section>
@@ -74,7 +74,7 @@
         <h4 class="slide-header">Recurring Income</h4>
         <p class="slide-body">You can create several income generating streams from just becoming a member; referral income (the best in the industry), bonus points, interest on your contribution.</p>
       </div>
-      
+
       <div class="slide">
         <img src="./assets/img/icons/estates.png" class="slide-image" alt="Existing estates">
         <h4 class="slide-header">Existing Estates</h4>
@@ -99,9 +99,9 @@
         <p class="slide-body">You can choose any amount to contribute once you have started and you can pause or exit the scheme if so desired.</p>
       </div>
     </div>
-  </section> 
+  </section>
   <!-- /.Benefits -->
-  
+
   <!-- How it works -->
   <section class="works row">
     <div class="col-lg-6 col-sm-12"></div>
@@ -156,7 +156,6 @@
     <h2 class="faq-heading">Your questions <br> Answered</h2>
     <div class="row">
       <div class="col-lg-3 col-sm-2 col-12"></div>
-      
       <div class="col-lg-9 col-sm-10 col-12 faq-option-category-accordion">
         <div id="accordion">
 
@@ -171,7 +170,7 @@
             </div>
             <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
               <div class="card-body">
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+                BALL is an acronym for Become A Landlord. It is an online platform that you can use to plan your income properly and define a clear step-by-step process that will take you from your current financial position to owning your dream home.
               </div>
             </div>
           </div>
@@ -187,7 +186,7 @@
             </div>
             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
               <div class="card-body">
-                Balling is an experience, a choice for a quality lifestyle and a legacy, generations to come will benefit from an easy decision you make today.
+                BALL is the only platform that gives you the flexibility to make convenient contributions towards owning your home inline with your income. BALL also avails you with a myriad of benefits including additional income via our referral program, and access to vast real estate knowledge via our community.
               </div>
             </div>
           </div>
@@ -196,14 +195,14 @@
             <div class="card-header" id="headingThree">
               <a class="" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                 <h5 class="mb-0 faq-card-heading">
-                  <span class="faq-black-dot">&#9679; &nbsp;&nbsp;</span> What is the minimum <br> amount to invest?
+                  <span class="faq-black-dot">&#9679; &nbsp;&nbsp;</span> Why should I subscribe to the BALL platform?
                   <span class="faq-option-category-icon">&nbsp; + </span>
                 </h5>
               </a>
             </div>
             <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
               <div class="card-body">
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+              BALL is not for everyone, but if you are keen on owning your home in the shortest possible time with the least amount of stress then you should sign up.
               </div>
             </div>
           </div>
@@ -212,14 +211,14 @@
             <div class="card-header" id="headingFour">
               <a class="" data-toggle="collapse" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                 <h5 class="mb-0 faq-card-heading">
-                  <span class="faq-black-dot">&#9679; &nbsp;&nbsp;</span> How secured are <br> my savings?
+                  <span class="faq-black-dot">&#9679; &nbsp;&nbsp;</span> What is the minimum amount to invest?
                   <span class="faq-option-category-icon">&nbsp; + </span>
                 </h5>
               </a>
             </div>
             <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
               <div class="card-body">
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+              You can begin your subscription with as low as N50,000.00 with additional monthly payments of N10,000.00
               </div>
             </div>
           </div>
@@ -228,14 +227,14 @@
             <div class="card-header" id="headingFive">
               <a class="" data-toggle="collapse" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
                 <h5 class="mb-0 faq-card-heading">
-                  <span class="faq-black-dot">&#9679; &nbsp;&nbsp;</span> Can I upgrade my saving <br> plan in the future?
+                  <span class="faq-black-dot">&#9679; &nbsp;&nbsp;</span> How long does it take for me to own a home?
                   <span class="faq-option-category-icon">&nbsp; + </span>
                 </h5>
               </a>
             </div>
             <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
               <div class="card-body">
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+                The duration is based on several parameters including your disposable income, availability of savings that can be contributed at the beginning of the BALLing experience, type of home and Location of the property. However, if you have a substantial amount saved and can make significant monthly contributions, you can be handed the keys to your new home in less than 2 years.
               </div>
             </div>
           </div>

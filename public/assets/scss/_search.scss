@@ -43,6 +43,7 @@
     }
     .form-inline label{
         justify-content: start;
+        color: $gray-950;
         font-weight: 500;
         padding: 0;
     }
@@ -131,50 +132,63 @@
         }
     }
     &-initial {
-        @mixin light() {
-            background: $yellow-mid;
-        }
-        @mixin base() {
+        @mixin track() {
             background: $yellow;
         }
+        @mixin thumb {
+            background: $yellow-mid;
+            border: 1px solid $yellow;
+            cursor: pointer;
+            height: 1.5rem;
+            width: 0.7rem;
+            border-radius: 3px;
+            box-shadow: 1px 1px 1px $yellow, 0px 0px 1px $yellow;
+        }
         input[type=range] {
             -webkit-appearance: none;
 
-            &::-webkit-slider-runnable-track { @include light }
-            &::-moz-range-track { @include light }
-            &::-ms-track { @include light }
+            &::-webkit-slider-runnable-track { @include track }
+            &::-moz-range-track { @include track }
+            &::-ms-track { @include track }
 
-            &::-webkit-slider-thumb { @include base }
-            &::-moz-range-thumb { @include base }
-            &::-ms-thumb { @include base }
-
-            &::-moz-range-progress { @include base }
-            &::-ms-fill-lower { @include base }
+            &::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                @include thumb;
+                margin-top: -9px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+            }
+            &::-moz-range-thumb { @include thumb; }
+            &::-ms-thumb { @include thumb; }
         }
         background-color: $yellow-light;
-        margin: 0 8rem;
+        margin: 0 5rem;
     }
     &-periodic {
-        @mixin light() {
-            background: $green-mid;
-        }
-        @mixin base() {
+        @mixin track() {
             background: $green;
+        }
+        @mixin thumb {
+            background: $green-mid;
+            border: 1px solid $green;
+            cursor: pointer;
+            height: 1.5rem;
+            width: 0.7rem;
+            border-radius: 3px;
+            box-shadow: 1px 1px 1px $green, 0px 0px 1px $green;
         }
         input[type=range] {
             -webkit-appearance: none;
 
-            &::-webkit-slider-runnable-track { @include light }
-            &::-moz-range-track { @include light }
-            &::-ms-track { @include light }
+            &::-webkit-slider-runnable-track { @include track }
+            &::-moz-range-track { @include track }
+            &::-ms-track { @include track }
 
-            &::-webkit-slider-thumb { @include base }
-            &::-moz-range-thumb { @include base }
-            &::-ms-thumb { @include base }
-
-            &::-webkit-progress-bar { @include base }
-            &::-moz-range-progress { @include base }
-            &::-ms-fill-lower { @include base }
+            &::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                @include thumb;
+                margin-top: -9px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+            }
+            &::-moz-range-thumb { @include thumb; }
+            &::-ms-thumb { @include thumb; }
         }
         background-color: $green-light;
     }
@@ -291,6 +305,7 @@
         .form-inline label{
             justify-content: start !important;
             padding: 0;
+            text-align: left;
         }
         &-input {
             font-size: 1.4rem;   

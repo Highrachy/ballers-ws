@@ -5,12 +5,12 @@
     <div class="col-lg-12 search-holding-description">
         <h1 class="search-holding-description-heading">NGN 18,000,000</h1>
         <h5 class="search-holding-description-text">
-            <img src="./assets/img/icons/location-white.png" alt="location" class="search-holding-description-icon">
+            <img src="./assets/img/icons/location-white.svg" alt="location" class="search-holding-description-icon">
             Ajah, Lagos
         </h5>
         &nbsp;&nbsp;&nbsp;
         <h5 class="search-holding-description-text">
-        <img src="./assets/img/icons/house-white.png" alt="house" class="search-holding-description-icon">
+        <img src="./assets/img/icons/house-white.svg" alt="house" class="search-holding-description-icon">
             2 Bedroom flat
         </h5>
     </div>
@@ -19,7 +19,7 @@
         <form class="form-inline">
 
             <div class="col-lg-4 col-sm-6">
-                <div class="col-sm-7 col-5 search-page-form-label">
+                <div class="col-sm-7 col-6 search-page-form-label">
                     <label class="" for="location">Average price in</label>
                 </div>
                 <div class="input-group col-12">
@@ -91,7 +91,7 @@
 
             <div class="row custom-range-div">
                 <div class="form-group col-lg-12 col-sm-6">
-                    <label for="initial-investment">NGN 10,000</label>
+                    <label for="initial-investment">NGN 500,000</label>
                     <input type="range" class="custom-range" id="initial-investment" name="" min="100000" max="10000000" value="500000">
                 </div>
                 
@@ -112,7 +112,7 @@
             
             <div class="row custom-range-div">
                 <div class="form-group col-lg-12 col-sm-6">
-                    <label for="periodic-investment">NGN 10,000</label>
+                    <label for="periodic-investment">NGN 100,000</label>
                     <input type="range" class="custom-range" id="periodic-investment" name="" min="50000" max="1000000" value="100000">
                 </div>
 

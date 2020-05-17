@@ -17,6 +17,11 @@ function validateContactUsForm(){
   }
 }
 
+//function to format slider values to currency
+function formatToCurrency(number) {
+  return number.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
+}
+
 // google maps initialization to remove errors on other pages
 var initMap = () => {}
 
@@ -119,19 +124,20 @@ $(document).ready(function(){
       $(this).find('.faq-icon, .faq-option-category-icon').text((text) => text === '+' ? '-' : '+');     
   });
 
-  //update the input value when slider is moved
-  const sliders = document.querySelectorAll('.custom-range-div');
-  Array.prototype.forEach.call(sliders,(slider)=>{ 
+  const rangeSliderDiv = document.querySelectorAll('.custom-range-div');
+  //update the input & label value when slider is moved
+  Array.prototype.forEach.call(rangeSliderDiv,(slider)=>{ 
     slider.querySelector('.custom-range').addEventListener('input', (event)=>{
       slider.querySelector('.form-control').value = event.target.value;
+      slider.querySelector('label').innerHTML = 'NGN ' + formatToCurrency(event.target.value);
     });
   });
 
-  //update the slider thumb location when input value changes
-  const inputs = document.querySelectorAll('.custom-range-div');
-  Array.prototype.forEach.call(inputs,(input)=>{ 
+  //update the slider thumb location & label when input value changes
+  Array.prototype.forEach.call(rangeSliderDiv,(input)=>{ 
     input.querySelector('.form-control').addEventListener('input', (event)=>{
       input.querySelector('.custom-range').value = event.target.value;
+      input.querySelector('label').innerHTML = 'NGN ' + formatToCurrency(event.target.value);
     });
   });
 });

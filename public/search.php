@@ -99,7 +99,7 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text">NGN</span>
                     </div>
-                    <input type="text" class="form-control investemnt-value-input" placeholder="500,000">
+                    <input type="text" class="form-control investment-value-input" placeholder="500,000" maxlength="10">
                 </div>
             </div>
         </div>
@@ -119,7 +119,7 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text">NGN</span>
                     </div>
-                    <input type="text" class="form-control investemnt-value-input" placeholder="100,000">
+                    <input type="text" class="form-control investment-value-input" placeholder="100,000" maxlength="9">
                 </div>
             </div>
         </div>

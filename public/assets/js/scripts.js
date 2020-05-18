@@ -129,7 +129,7 @@ $(document).ready(function(){
   });
 
   //function to format number input values to currency like format
-  $(".investemnt-value-input").on('keyup', function(){
+  $(".investment-value-input").on('keyup', function(){
     var n = parseInt($(this).val().replace(/\D/g,''),10);
     $(this).val(n.toLocaleString());
   });
@@ -149,6 +149,9 @@ $(document).ready(function(){
     input.querySelector('.form-control').addEventListener('input', (event)=>{
       var inputValue = removeCommasAndMakeNumber(event.target.value);
       input.querySelector('.custom-range').value = inputValue;
+      if (isNaN(inputValue)) {
+        inputValue = 0;
+      }
       input.querySelector('label').innerHTML = 'NGN ' + formatToCurrency(inputValue);
     });
   });

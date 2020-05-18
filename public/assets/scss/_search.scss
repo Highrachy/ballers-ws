@@ -117,7 +117,7 @@
             color: $gray-950;
         }
         .input-group-prepend,
-        input[type=number] {
+        .investemnt-value-input {
             background-color: inherit;
             border: 1px solid $gray-950 !important;
             color: $gray-950;
@@ -126,69 +126,69 @@
             border-right: 0 !important;
             border-radius: $border-radius 0 0 $border-radius;
         }
-        input[type=number] {
+        .investemnt-value-input {
             border-left: 0 !important;
             border-radius: 0 $border-radius $border-radius 0;
         }
     }
     &-initial {
-        @mixin track() {
+        @mixin yellow-track() {
             background: $yellow;
         }
-        @mixin thumb {
+        @mixin yellow-thumb {
             background: $yellow-mid;
             border: 1px solid $yellow;
             cursor: pointer;
             height: 1.5rem;
-            width: 0.7rem;
-            border-radius: 3px;
+            width: 1.5rem;
+            border-radius: 50%;
             box-shadow: 1px 1px 1px $yellow, 0px 0px 1px $yellow;
         }
         input[type=range] {
             -webkit-appearance: none;
 
-            &::-webkit-slider-runnable-track { @include track }
-            &::-moz-range-track { @include track }
-            &::-ms-track { @include track }
+            &::-webkit-slider-runnable-track { @include yellow-track }
+            &::-moz-range-track { @include yellow-track }
+            &::-ms-track { @include yellow-track }
 
             &::-webkit-slider-thumb {
                 -webkit-appearance: none;
-                @include thumb;
+                @include yellow-thumb;
                 margin-top: -9px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
             }
-            &::-moz-range-thumb { @include thumb; }
-            &::-ms-thumb { @include thumb; }
+            &::-moz-range-thumb { @include yellow-thumb }
+            &::-ms-thumb { @include yellow-thumb }
         }
         background-color: $yellow-light;
         margin: 0 5rem;
     }
     &-periodic {
-        @mixin track() {
+        @mixin green-track() {
             background: $green;
         }
-        @mixin thumb {
+        @mixin green-thumb {
             background: $green-mid;
             border: 1px solid $green;
             cursor: pointer;
             height: 1.5rem;
-            width: 0.7rem;
-            border-radius: 3px;
+            width: 1.5rem;
+            border-radius: 50%;
             box-shadow: 1px 1px 1px $green, 0px 0px 1px $green;
         }
         input[type=range] {
             -webkit-appearance: none;
 
-            &::-webkit-slider-runnable-track { @include track }
-            &::-moz-range-track { @include track }
-            &::-ms-track { @include track }
+            &::-webkit-slider-runnable-track { @include green-track }
+            &::-moz-range-track { @include green-track }
+            &::-ms-track { @include green-track }
 
             &::-webkit-slider-thumb {
                 -webkit-appearance: none;
-                @include thumb;
+                @include green-thumb;
                 margin-top: -9px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
             }
-            &::-moz-range-thumb { @include thumb; }
-            &::-ms-thumb { @include thumb; }
+            &::-moz-range-thumb { @include green-thumb }
+            &::-ms-thumb { @include green-thumb }
         }
         background-color: $green-light;
     }

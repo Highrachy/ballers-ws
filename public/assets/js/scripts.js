@@ -17,9 +17,13 @@ function validateContactUsForm(){
   }
 }
 
-//function to format slider values to currency
+//function to format slider values to currency like format
 function formatToCurrency(number) {
   return number.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
+}
+
+function removeCommasAndMakeNumber(string) {
+  return parseInt(string.replace(/,/g, ''));
 }
 
 // google maps initialization to remove errors on other pages
@@ -124,20 +128,29 @@ $(document).ready(function(){
       $(this).find('.faq-icon, .faq-option-category-icon').text((text) => text === '+' ? '-' : '+');     
   });
 
+  //function to format number input values to currency like format
+  $(".investemnt-value-input").on('keyup', function(){
+    var n = parseInt($(this).val().replace(/\D/g,''),10);
+    $(this).val(n.toLocaleString());
+  });
+
   const rangeSliderDiv = document.querySelectorAll('.custom-range-div');
   //update the input & label value when slider is moved
   Array.prototype.forEach.call(rangeSliderDiv,(slider)=>{ 
     slider.querySelector('.custom-range').addEventListener('input', (event)=>{
-      slider.querySelector('.form-control').value = event.target.value;
-      slider.querySelector('label').innerHTML = 'NGN ' + formatToCurrency(event.target.value);
+      var inputValue = removeCommasAndMakeNumber(event.target.value)
+      slider.querySelector('.form-control').value = formatToCurrency(inputValue);
+      slider.querySelector('label').innerHTML = 'NGN ' + formatToCurrency(inputValue);
     });
   });
 
-  //update the slider thumb location & label when input value changes
+  // update the slider thumb location & label when input value changes
   Array.prototype.forEach.call(rangeSliderDiv,(input)=>{ 
     input.querySelector('.form-control').addEventListener('input', (event)=>{
-      input.querySelector('.custom-range').value = event.target.value;
-      input.querySelector('label').innerHTML = 'NGN ' + formatToCurrency(event.target.value);
+      var inputValue = removeCommasAndMakeNumber(event.target.value);
+      input.querySelector('.custom-range').value = inputValue;
+      input.querySelector('label').innerHTML = 'NGN ' + formatToCurrency(inputValue);
     });
   });
+
 });

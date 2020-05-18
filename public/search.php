@@ -92,16 +92,15 @@
             <div class="row custom-range-div">
                 <div class="form-group col-lg-12 col-sm-6">
                     <label for="initial-investment">NGN 500,000</label>
-                    <input type="range" class="custom-range" id="initial-investment" name="" min="100000" max="10000000" value="500000">
+                    <input type="range" class="custom-range" id="initial-investment" name="" min="100000" max="30000000" step="10000" value="500000">
                 </div>
                 
                 <div class="input-group col-lg-12 col-sm-6">
                     <div class="input-group-prepend">
                         <span class="input-group-text">NGN</span>
                     </div>
-                    <input type="number" class="form-control" min="100000" max="10000000" value="500000">
+                    <input type="text" class="form-control investemnt-value-input" placeholder="500,000">
                 </div>
-
             </div>
         </div>
 
@@ -113,14 +112,14 @@
             <div class="row custom-range-div">
                 <div class="form-group col-lg-12 col-sm-6">
                     <label for="periodic-investment">NGN 100,000</label>
-                    <input type="range" class="custom-range" id="periodic-investment" name="" min="50000" max="1000000" value="100000">
+                    <input type="range" class="custom-range" id="periodic-investment" name="" min="50000" max="5000000" step="5000" value="100000">
                 </div>
 
                 <div class="input-group col-lg-12 col-sm-6">
                     <div class="input-group-prepend">
                         <span class="input-group-text">NGN</span>
                     </div>
-                    <input type="number" class="form-control" min="50000" max="1000000" value="100000">
+                    <input type="text" class="form-control investemnt-value-input" placeholder="100,000">
                 </div>
             </div>
         </div>

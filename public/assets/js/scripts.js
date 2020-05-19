@@ -130,8 +130,9 @@ $(document).ready(function(){
 
   //function to format number input values to currency like format
   $(".investment-value-input").on('keyup', function(){
-    var n = parseInt($(this).val().replace(/\D/g,''),10);
-    $(this).val(n.toLocaleString());
+    var number = parseInt($(this).val().replace(/\D/g,''),10);
+    number = (isNaN(number) ? 0 : number);
+    $(this).val(number.toLocaleString());
   });
 
   const rangeSliderDiv = document.querySelectorAll('.custom-range-div');
@@ -139,8 +140,8 @@ $(document).ready(function(){
   Array.prototype.forEach.call(rangeSliderDiv,(slider)=>{ 
     slider.querySelector('.custom-range').addEventListener('input', (event)=>{
       var inputValue = removeCommasAndMakeNumber(event.target.value)
-      slider.querySelector('.form-control').value = formatToCurrency(inputValue);
       slider.querySelector('label').innerHTML = 'NGN ' + formatToCurrency(inputValue);
+      slider.querySelector('.form-control').value = formatToCurrency(inputValue);
     });
   });
 

@@ -32,7 +32,7 @@
     color: $green;
   }
   &-text {
-    @extend %about-text-font;
+    @extend %big-text-stack;;
   }
 }
 .az-easy {

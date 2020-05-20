@@ -1,28 +1,30 @@
 %page-heading-font-stack {
     color: $blue;
     font-weight: bold;
-    font-size: 4rem;
+    font-size: 4rem; // 100px
 }
 %title-font-stack {
     color: $green;
-    font-size: 1.12rem;
+    font-size: 1.12rem; //28px
     font-weight: bold;
 }
 %heading-font-stack {
     color: $blue;
     font-weight: bold;
     font-style: normal;
-    font-size: 2.88rem;
+    font-size: 2.88rem; //72px
 }
 %big-text-stack {
+    color: $text-color;
     font-weight: normal;
     font-style: normal;
-    font-size: 1.38rem;
+    font-size: 1.38rem; //36px
 }
 %regular-text-stack {
+    color: $text-color;
     font-weight: normal;
     font-style: normal;
-    font-size: 1rem;
+    font-size: 1rem; //24px
 }
 %button-stack {
     color: $white;
@@ -38,15 +40,7 @@
     background-color: $white;
     border: 2px solid $purple;
 }
-
-// used in about.scss
-%about-text-font {
-    color: $blue-2;
-    font-size: 1.2rem;
-    font-weight: 300;
-    line-height: 1.8rem;
-}
-// used in faq.scss
+// used in about faq.scss
 %heading-text-font-stack {
     color: $gray-700;
     font-size: 1.3rem;

@@ -1,37 +1,39 @@
 .about-holding {
-    background-image: url('../img/backgrounds/about-holding.png');
+    background-image: url('../img/backgrounds/faq-holding.png');
     background-size: 100% 100%;
     background-repeat: no-repeat;
     justify-content: center;
-    height: 45rem;
+    height: 38rem;
     width: 100%;
 
     &-heading {
-        color: $white;
+        @extend %page-heading-font-stack;
         text-align: center;
-        padding-top: 18rem;
+        padding-top: 15rem;
         padding-bottom: 1rem;
-        font-size: 5rem;
     }
     &-text {
+        @extend %big-text-stack;
         text-align: center;
-        @extend %heading-text-font-stack;
-        color: $white;
-        font-size: 2rem;
     }
+}
+.about-goal-title,
+.about-core-title,
+.about-team-title,
+.about-gallery {
+    @extend %title-font-stack;
+}
+.about-goal-heading,
+.about-core-heading,
+.about-team-heading,
+.about-gallery-heading {
+    @extend %heading-font-stack;
 }
 .about-goal {
     padding: 5rem 5rem 2rem;
 
-    &-heading {
-        @extend %heading-font-stack;
-    }
-    &-title {
-        @extend %title-font-stack;
-        color: $green;
-    }
     &-text {
-        @extend %about-text-font;
+        @extend %big-text-stack;
         padding-bottom: 1rem;
     }
 }
@@ -42,16 +44,11 @@
     background-color: $gray-300;
 
     &-heading {
-        @extend %heading-font-stack;
         padding-top: 1rem;
         padding-bottom: 1rem;
     }
-    &-title {
-        @extend %title-font-stack;
-        color: $green;
-    }
     &-text {
-        @extend %about-text-font;
+        @extend %big-text-stack;
         padding-bottom: 1rem;
     }
     .row {
@@ -72,20 +69,15 @@
         font-weight: 500;
     }
     &-values-text {
-        @extend %about-text-font;
+        @extend %regular-text-stack;
     }
 }
 .about-team {
     padding: 4rem 5rem 2rem;
 
     &-heading {
-        @extend %heading-font-stack;
         padding-top: 1rem;
         padding-bottom: 1rem;
-    }
-    &-title {
-        @extend %title-font-stack;
-        color: $green;
     }
     &-member {
         padding-bottom: 2rem;
@@ -95,41 +87,19 @@
             height: 16rem;
         }
         &-name {
-            font-size: 1.4rem;
-            font-weight: 500;
+            font-weight: 600;
+            font-style: normal;
+            font-size: 1.38rem;
+            color: $blue;
             padding-top: 1rem;
             padding-bottom: 0;
         }
         &-role {
             color: $green;
+            font-size: 1.12rem;
+            font-weight: 600;
+            font-style: normal;
         } 
-    }
-}
-.about-board {
-    padding: 4rem 5rem 2rem;
-    text-align: center;
-    align-content: center;
-
-    &-heading {
-        @extend %heading-font-stack;
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-    }
-    &-title {
-        @extend %title-font-stack;
-        color: $green;
-    }
-    &-text {
-        @extend %about-text-font;
-        padding-bottom: 1rem;
-    }
-    .row {
-        text-align: left;
-        
-        :nth-child(2) {
-            display: inline-block;
-            align-items: center;
-        }
     }
 }
 .about-gallery {
@@ -140,13 +110,8 @@
     padding: 5rem;
 
     &-heading {
-        @extend %heading-font-stack;
         padding-top: 2.5rem;
         padding-bottom: 3rem;
-    }
-    &-title {
-        @extend %title-font-stack;
-        color: $green;
     }
 }
 @media only screen and (max-width: 1024px) {
@@ -163,7 +128,6 @@
         font-size: 1rem;
     }
     .about-holding {
-        background-image: url('../img/backgrounds/about-holding-tab.png');
         background-size: 100% 100%;
         background-repeat: no-repeat;
         justify-content: center;
@@ -207,7 +171,6 @@
         font-size: 1rem;
     }
     .about-holding {
-        background-image: url('../img/backgrounds/about-holding-mobile.png');
         background-size: 100% 100%;
         background-repeat: no-repeat;
         justify-content: center;

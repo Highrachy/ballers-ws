@@ -10,20 +10,20 @@ $headings-font: 'Barlow', sans-serif;
 
 // Color system
 
-$white: #fff !default;
+$white: #fff;
 $gray-100: #fafafa;
 $gray-200: #f2f2f2;
-$gray-300: #eff2ff;
+$gray-300: #eff2ff;//
 $gray-350: #e5e5e5;
-$gray-400: #c4c4c4 !default;
-$gray-500: #adb5bd !default;
+$gray-400: #c4c4c4;
+$gray-500: #adb5bd;
 $gray-550: #979797;
 $gray-600: #888; //text-muted
-$gray-700: #5a6679 !default;
-$gray-750: #51596c;
-$gray-800: #343a40 !default;
-$gray-900: #212529 !default;
-$black: #000 !default;
+$gray-700: #5a6679;
+$gray-750: #51596c;//
+$gray-800: #343a40;
+$gray-900: #212529;
+$black: #000;
 
 $blue: #161d3f;
 $blue-2: #45618D;
@@ -52,7 +52,7 @@ $dark: $black;
 // Body
 //
 // Settings for the `<body>` element.
-$text-color: #5a6679; // 828282
+$text-color: #022b69;
 $text-color-secondary: lighten($text-color, 10%);
 
 $body-bg: $white;

@@ -208,7 +208,7 @@
             <div class="card-header" id="headingFour">
               <a class="" data-toggle="collapse" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                 <h5 class="mb-0 faq-card-heading">
-                  <span class="faq-black-dot">&#9679; &nbsp;&nbsp;</span> What is the minimum amount to invest?
+                  <span class="faq-black-dot">&#9679; &nbsp;&nbsp;</span> What is the minimum <br> amount to invest?
                   <span class="faq-option-category-icon">&nbsp; + </span>
                 </h5>
               </a>
@@ -224,7 +224,7 @@
             <div class="card-header" id="headingFive">
               <a class="" data-toggle="collapse" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
                 <h5 class="mb-0 faq-card-heading">
-                  <span class="faq-black-dot">&#9679; &nbsp;&nbsp;</span> How long does it take for me to own a home?
+                  <span class="faq-black-dot">&#9679; &nbsp;&nbsp;</span> How long does it take for <br> me to own a home?
                   <span class="faq-option-category-icon">&nbsp; + </span>
                 </h5>
               </a>

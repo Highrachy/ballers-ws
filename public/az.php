@@ -199,7 +199,7 @@ array of products to acquire your desired property.</p>
 
             <div class="mt-n4 pt-5 pb-5 az-tree__content">
               <img class="az-how-step-img" src="./assets/img/move-in.png" alt="Move in">
-              <h5 class="az-how-step-title-2">Move into your new home</h5>
+              <h5 class="az-how-step-title-3">Move into your new home</h5>
               <p class="az-how-step-text-2 col-md-6 offset-md-3">Congratulations! You did it. Now your future begins. Of course, you are welcome to go right back to the top and begin the process of buying your next property.</p>
               <div class="col-sm-12 pt-md-3">
                 <button class="btn btn-lg big-button ml-n3">APPLY NOW</button>
@@ -215,7 +215,7 @@ array of products to acquire your desired property.</p>
 </section>
 
 <section class="benefits">
-    <h6 class="az-benefits-title">BENEFITS</h6>
+    <h6 class="benefits-title">BENEFITS</h6>
     <h2 class="benefits-heading">Why Ballers is Special</h2>
 
     <div class="benefits-slider">
@@ -240,13 +240,13 @@ array of products to acquire your desired property.</p>
       <div class="slide">
         <img src="./assets/img/icons/investment.png" class="slide-image" alt="Investment Oriented">
         <h4 class="slide-header">Investment Oriented</h4>
-        <p class="slide-body">For every contribution you <br> make you get immediate bonus <br> points that can easily be <br> redeemed for a wide range of <br> relaxing and sumptuous social <br> activities.</p>
+        <p class="slide-body">For every contribution you make you get immediate bonus points that can easily be redeemed for a wide range of relaxing and sumptuous social activities.</p>
       </div>
 
       <div class="slide">
         <img src="./assets/img/icons/fluid.png" class="slide-image" alt="Fluidity and Flexibility">
         <h4 class="slide-header">Fluidity and Flexibility</h4>
-        <p class="slide-body">You can choose any amount to <br> contribute once you have <br> started and you can pause or <br> exit the scheme if so desired.</p>
+        <p class="slide-body">You can choose any amount to contribute once you have started and you can pause or exit the scheme if so desired.</p>
       </div>
     </div>
 </section>

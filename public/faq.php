@@ -312,20 +312,19 @@
     <h5 class="faq-question-text">If you cannot find answer to your question in our FAQ, you can <br> always contact us . We will be with you shortly!</h5>
 
     <div class="faq-question-contact col-12">
-        <div class="col-lg-3 col-md-5 col-12 faq-question-info-div">
+        <aside class="col-lg-4 col-md-5 col-12 faq-question-info-div">
             <img src="./assets/img/icons/phone-icon.png" alt="Phone icon">
             <h4 class="faq-question-info">+234 807 654 5543</h4>
             <p class="faq-question-info-small">We are always happy to help.</p>
-        </div>
-        &nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;
-        <div class="col-lg-3 col-md-5 col-12 faq-question-info-div">
+        </aside>
+        
+        <aside class="col-lg-4 col-md-5 col-12 faq-question-info-div">
             <img src="./assets/img/icons/mail-icon.png" alt="Mail icon">
             <h4 class="faq-question-info">
               <a href="mailto:support@ballers.ng" target="_blank">support@ballers.ng</a>
             </h4>
             <p class="faq-question-info-small">The best way to get answer faster.</p>
-        </div>
+        </aside>
     </div>
 </section>
 

@@ -36,7 +36,11 @@
 
     <p class="about-core-text">We are a team of passionate and talented people</p>
 
+<<<<<<< Updated upstream
     <div class="row row-eq-height justify-content-center">
+=======
+
+>>>>>>> Stashed changes
         <div class="col-lg-5 col-sm-5 col-12 about-core-values">
             <h4 class="about-core-values-heading"> Innovation</h4>
             <p class="about-core-values-text">Our team is constantly working to push the boundaries of comfortable living with new
@@ -67,31 +71,31 @@ and healthy living available to more hardworking individuals across Nigeria.</p>
 
     <div class="row">
         <div class="col-lg-3 col-sm-6 col-12 about-team-member">
-            <img src="./assets/img/team/1.png" alt="Oluwajohn Taiwo">
-            <h5 class="about-team-member-name">Oluwajohn Taiwo</h5>
-            <p class="about-team-member-role">FOUNDER</p>
+            <img src="./assets/img/team/nnamdi.jpg" alt="Nnamdi Ijei">
+            <h5 class="about-team-member-name">Nnamdi Ijei</h5>
+            <p class="about-team-member-role">CEO</p>
         </div>
         <div class="col-lg-3 col-sm-6 col-12 about-team-member">
-            <img src="./assets/img/team/2.png" alt="Oluwajohn Taiwo">
-            <h5 class="about-team-member-name">Oluwajohn Taiwo</h5>
-            <p class="about-team-member-role">HEAD OF SALES</p>
-        </div>
-        <div class="col-lg-3 col-sm-6 col-12 about-team-member">
-            <img src="./assets/img/team/3.png" alt="Oluwajohn Taiwo">
-            <h5 class="about-team-member-name">Oluwajohn Taiwo</h5>
+            <img src="./assets/img/team/haruna.jpg" alt="Haruna Popoola">
+            <h5 class="about-team-member-name">Haruna Popoola</h5>
             <p class="about-team-member-role">LEAD DEVELOPER</p>
         </div>
         <div class="col-lg-3 col-sm-6 col-12 about-team-member">
-            <img src="./assets/img/team/4.png" alt="Oluwajohn Taiwo">
-            <h5 class="about-team-member-name">Oluwajohn Taiwo</h5>
-            <p class="about-team-member-role">FOUNDER</p>
+            <img src="./assets/img/team/samuel.jpg" alt="Samuel Sola-Eniafe">
+            <h5 class="about-team-member-name">Samuel Sola-Eniafe</h5>
+            <p class="about-team-member-role">SOFTWARE DEVELOPER</p>
+        </div>
+        <div class="col-lg-3 col-sm-6 col-12 about-team-member">
+            <img src="./assets/img/team/eronss.jpg" alt="Eronss Okoji">
+            <h5 class="about-team-member-name">Eronss Okoji</h5>
+            <p class="about-team-member-role">PRODUCT DESIGNER</p>
         </div>
     </div>
-    <div class="row">
+    <!-- <div class="row">
         <div class="col-lg-3 col-sm-6 col-12 about-team-member">
-            <img src="./assets/img/team/5.png" alt="Oluwajohn Taiwo">
-            <h5 class="about-team-member-name">Oluwajohn Taiwo</h5>
-            <p class="about-team-member-role">FOUNDER</p>
+            <img src="./assets/img/team/eronss.jpg" alt="Eronss Okoji">
+            <h5 class="about-team-member-name">Eronss Okoji</h5>
+            <p class="about-team-member-role">PRODUCT DESIGNER</p>
         </div>
         <div class="col-lg-3 col-sm-6 col-12 about-team-member">
             <img src="./assets/img/team/6.png" alt="Oluwajohn Taiwo">
@@ -108,7 +112,11 @@ and healthy living available to more hardworking individuals across Nigeria.</p>
             <h5 class="about-team-member-name">Oluwajohn Taiwo</h5>
             <p class="about-team-member-role">FOUNDER</p>
         </div>
+<<<<<<< Updated upstream
     </div>
+=======
+    </div> -->
+>>>>>>> Stashed changes
 </section>
 
 <section class="about-gallery">

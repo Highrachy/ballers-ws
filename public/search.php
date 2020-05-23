@@ -31,7 +31,7 @@
                     <input type="text" class="form-control search-page-form-input" id="location" value="Ajah, Lagos">
                 </div>
             </div>
-        
+
             <div class="col-lg-4 col-sm-6">
                 <div class="col-sm-5 col-4 search-page-form-label">
                     <label class="" for="housetype">House type</label>
@@ -69,7 +69,7 @@
         <div class="col-lg-3 search-ready-step investment-frequency">
             <h5 class="search-ready-step-heading">Investment Frequency</h5>
             <p class="search-ready-step-text">Select one of the options below</p>
-            
+
             <div class="btn-group-toggle investment-options row" data-toggle="buttons">
                 <label class="col-lg-12 col-sm-3 btn btn-secondary option-btn">
                     <input type="radio" name="investment-frequency" id="option1" autocomplete="off"> Monthly
@@ -94,12 +94,12 @@
                     <label for="initial-investment">NGN 500,000</label>
                     <input type="range" class="custom-range" id="initial-investment" name="" min="100000" max="30000000" step="10000" value="500000">
                 </div>
-                
+
                 <div class="input-group col-lg-12 col-sm-6">
                     <div class="input-group-prepend">
                         <span class="input-group-text">NGN</span>
                     </div>
-                    <input type="text" class="form-control investment-value-input" placeholder="500,000" maxlength="10">
+                    <input type="text" class="form-control investment-value-input" placeholder="500,000" data-max-amount="30,000,000">
                 </div>
             </div>
         </div>
@@ -108,7 +108,7 @@
             <h5 class="search-ready-step-heading">Periodic investment amount</h5>
             <p class="search-ready-step-text">Use the scroll bar or type in <br> your desired amount</p>
 
-            
+
             <div class="row custom-range-div">
                 <div class="form-group col-lg-12 col-sm-6">
                     <label for="periodic-investment">NGN 100,000</label>
@@ -119,7 +119,7 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text">NGN</span>
                     </div>
-                    <input type="text" class="form-control investment-value-input" placeholder="100,000" maxlength="9">
+                    <input type="text" class="form-control investment-value-input" placeholder="100,000" data-max-amount="5,000,000">
                 </div>
             </div>
         </div>

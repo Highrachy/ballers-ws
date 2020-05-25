@@ -4,19 +4,6 @@ function toggleQuestions(id) {
   $("#" + id).show();
 }
 
-// js validation on contact us page
-function validateContactUsForm() {
-  if (
-    $('#contact-name').val().length > 0 &&
-    $('#contact-email').val().length > 0 &&
-    $('#contact-message').val().length > 0
-  ) {
-    $('.contact-hello-btn').prop('disabled', false);
-  } else {
-    $('.contact-hello-btn').prop('disabled', true);
-  }
-}
-
 //function to format slider values to currency like format
 function formatToCurrency(number) {
   return number.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
@@ -34,10 +21,7 @@ $(document).ready(function () {
 
   // code to run if on contact.php
   var url = window.location.href;
-  if (url.includes("contact.php")) {
-    validateContactUsForm();
-    $('#contact-name, #contact-email, #contact-message').keypress(validateContactUsForm);
-
+  if(url.includes("contact.php")){
     initMap = () => {
       var office = { lat: 6.4297284, lng: 3.4297021 };
       var map = new google.maps.Map(document.getElementById('contact-address-map'), { zoom: 18, center: office });

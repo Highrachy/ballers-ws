@@ -33,11 +33,10 @@
   }
   &-text {
     @extend %about-text-font;
-    padding-bottom: 4rem;
   }
 }
 .az-easy {
-  padding: 4rem 5rem 2rem;
+  padding: 4rem 5rem;
   text-align: center;
   align-content: center;
   background-color: $gray-300;
@@ -328,7 +327,7 @@
 @media only screen and (max-width: 320px) {
   .az-holding {
     padding: 0 1rem;
-}
+  }
 }
 
 @include media-breakpoint-up(sm) {
@@ -394,7 +393,7 @@
       &--half {
         @include media-breakpoint-up(lg) {
           height: 15rem;
-          margin-bottom: 15rem;
+          margin-bottom: 6rem;
           border-bottom: none;
         }
       }

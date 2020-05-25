@@ -10,22 +10,7 @@
     <div class="col-lg-6 col-12">
         <div class="col-10 contact-hello-form">
             <h4 class="contact-hello-heading">Send a message</h4>
-            <form method="post" action="">
-                <?php require_once('includes/mail.php') ?>
-                <div class="form-group">
-                    <label for="name">Your Name *</label>
-                    <input type="text" class="form-control" id="contact-name" name="name" placeholder="" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Your Email *</label>
-                    <input type="email" class="form-control" id="contact-email" name="email" placeholder="" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Your Message *</label>
-                    <input type="text" class="form-control" id="contact-message" name="message" placeholder="" required>
-                </div>
-                <button type="submit" class="btn btn-lg contact-hello-btn">Send Message</button>
-            </form>
+            <?php require_once('includes/contact-form.php') ?>
         </div>
     </div>
     <div class="row col-lg-6 col-12 contact-hello-info">

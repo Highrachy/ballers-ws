@@ -18,8 +18,8 @@
       <div class="col-lg-3 col-sm-6">
         <h4 class="footer-info-heading">Legal</h4>
         <ul class="footer-list">
-          <li class="footer-list-item"><a href="#">Terms of Use</a></li>
-          <li class="footer-list-item"><a href="#">Privacy Policy</a></li>
+          <li class="footer-list-item"><a href="terms-of-use.php">Terms of Use</a></li>
+          <li class="footer-list-item"><a href="privacy-policy.php">Privacy Policy</a></li>
         </ul>
       </div>
       <div class="col-lg-3 col-sm-6">
@@ -60,6 +60,7 @@
 <script src="./assets/js/jquery-3.4.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js"></script>
 <script src="./assets/js/slick.min.js"></script>
 <script src="./assets/js/scripts.js"></script>
 

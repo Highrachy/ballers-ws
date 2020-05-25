@@ -1,6 +1,6 @@
-<?php 
+<?php
     $currentPage = 'about';
-    require_once('includes/header.php'); 
+    require_once('includes/header.php');
 ?>
 
 <section class="about-holding">
@@ -14,8 +14,8 @@
         <h2 class="about-goal-heading">Make owning a <br> home easier.</h2>
     </div>
     <div class="col-lg-7 col-12">
-        <p class="about-goal-text">Ea fugiat Lorem quis cupidatat nulla. Officia voluptate anim anim laboris. Sunt nostrud ullamco culpa Lorem veniam qui esse proident nulla proident aute Lorem fugiat. Esse consectetur est fugiat elit veniam officia anim in dolor cupidatat sit culpa.</p>
-        <p class="about-goal-text">Ea fugiat Lorem quis cupidatat nulla. Officia voluptate anim anim laboris. Sunt nostrud ullamc</p>
+        <p class="about-goal-text">Our goal is to facilitate the emergence of a million new homeowners in less than a decade.</p>
+        <p class="about-goal-text">We intend to achieve this by reducing the barriers to property investment and acquisition. Our team will guide your every step during this process to ensure your home ownership goals are achieved.</p>
     </div>
 </section>
 
@@ -25,8 +25,8 @@
         <h2 class="about-goal-heading">Beyond your expectations.</h2>
     </div>
     <div class="col-lg-7 col-12">
-        <p class="about-goal-text">Ea fugiat Lorem quis cupidatat nulla. Officia voluptate anim anim laboris. Sunt nostrud ullamco culpa Lorem veniam qui esse proident nulla proident aute Lorem fugiat. Esse consectetur est fugiat elit veniam officia anim in dolor cupidatat sit culpa.</p>
-        <p class="about-goal-text">Ea fugiat Lorem quis cupidatat nulla. Officia voluptate anim anim laboris. Sunt nostrud ullamc</p>
+        <p class="about-goal-text">We know that you can achieve home ownership if you utilize the right route.</p>
+        <p class="about-goal-text">If you will dare to Dream Big and take every step of this process with the required discipline, we promise to walk you through to your dream home.</p>
     </div>
 </section>
 
@@ -34,25 +34,31 @@
     <h6 class="about-core-title">CORE VALUES</h6>
     <h2 class="about-core-heading">What defines us.</h2>
 
-    <p class="about-core-text">We are a team of passionate and talented. Officia voluptate anim anim laboris. <br> Sunt nostrud ullamco culpa Lorem veniam qui esse proident nulla proi <br>Ea fugiat Lorem quis cupidatat nulla. Officia voluptate ani. </p>
+    <p class="about-core-text">We are a team of passionate and talented people</p>
 
-    
+    <div class="row row-eq-height justify-content-center">
         <div class="col-lg-5 col-sm-5 col-12 about-core-values">
-            <h4 class="about-core-values-heading"> <br> Collaboration</h4>
-            <p class="about-core-values-text">We are a team of passionate and talented. Officia voluptate anim anim laboris. Sunt nostrud ullamco culpa Lorem veniam qui esse proident nulla proi</p>
+            <h4 class="about-core-values-heading"> Innovation</h4>
+            <p class="about-core-values-text">Our team is constantly working to push the boundaries of comfortable living with new
+concepts and thoughtful designs that bring the future of housing to you in the present.</p>
         </div>
         <div class="col-lg-5 col-sm-5 col-12 about-core-values">
-            <h4 class="about-core-values-heading">Honest <br> Communication</h4>
-            <p class="about-core-values-text">We are a team of passionate and talented. Officia voluptate anim anim laboris. Sunt nostrud ullamco culpa Lorem veniam qui esse proident nulla proi</p>
+            <h4 class="about-core-values-heading">Quality</h4>
+            <p class="about-core-values-text">A home is not complete until it offers you security and comfort. We offer you nothing but
+the best combination of designs, workmanship and construction materials to give you the quality
+lifestyle you deserve.</p>
         </div>
         <div class="col-lg-5 col-sm-5 col-12 about-core-values">
-            <h4 class="about-core-values-heading">Innovation <br> & Leadership</h4>
-            <p class="about-core-values-text">We are a team of passionate and talented. Officia voluptate anim anim laboris. Sunt nostrud ullamco culpa Lorem veniam qui esse proident nulla proi</p>
+            <h4 class="about-core-values-heading">Accountability</h4>
+            <p class="about-core-values-text">Your contribution is not only secure but insured to ensure that your money is
+accounted for. <br><br></p>
         </div>
         <div class="col-lg-5 col-sm-5 col-12 about-core-values">
-            <h4 class="about-core-values-heading"> <br> Empathy</h4>
-            <p class="about-core-values-text">We are a team of passionate and talented. Officia voluptate anim anim laboris. Sunt nostrud ullamco culpa Lorem veniam qui esse proident nulla proi</p>
+            <h4 class="about-core-values-heading"> Solutions driven</h4>
+            <p class="about-core-values-text">Our constant target is to create and execute housing solutions that makes luxury
+and healthy living available to more hardworking individuals across Nigeria.</p>
         </div>
+    </div>
 </section>
 
 <section class="about-team">
@@ -102,50 +108,6 @@
             <h5 class="about-team-member-name">Oluwajohn Taiwo</h5>
             <p class="about-team-member-role">FOUNDER</p>
         </div>
-    </div>
-</section>
-
-<section class="about-board">
-    <h6 class="about-board-title">THE BOARD</h6>  
-    <h2 class="about-board-heading">Meet the board members</h2>
-
-    <p class="about-board-text">We are a team of passionate and talented. Officia voluptate anim anim laboris. <br> Sunt nostrud ullamco culpa Lorem veniam qui esse proident nulla proi <br> Ea fugiat Lorem quis cupidatat nulla. Officia voluptate ani. </p>
-
-    <div class="row">
-        <div class="col-lg-3 col-sm-6 col-12 about-team-member">
-            <img src="./assets/img/team/1.png" alt="Oluwajohn Taiwo">
-            <h5 class="about-team-member-name">Oluwajohn Taiwo</h5>
-            <p class="about-team-member-role">CEO</p>
-        </div>
-        <div class="col-lg-3 col-sm-6 col-12 about-team-member">
-            <img src="./assets/img/team/2.png" alt="Oluwajohn Taiwo">
-            <h5 class="about-team-member-name">Oluwajohn Taiwo</h5>
-            <p class="about-team-member-role">CHAIRMAN</p>
-        </div>
-        <div class="col-lg-3 col-sm-6 col-12 about-team-member">
-            <img src="./assets/img/team/3.png" alt="Oluwajohn Taiwo">
-            <h5 class="about-team-member-name">Oluwajohn Taiwo</h5>
-            <p class="about-team-member-role">CTO</p>
-        </div>
-        <div class="col-lg-3 col-sm-6 col-12 about-team-member">
-            <img src="./assets/img/team/4.png" alt="Oluwajohn Taiwo">
-            <h5 class="about-team-member-name">Oluwajohn Taiwo</h5>
-            <p class="about-team-member-role">MANAGING DIRECTOR</p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-lg-3 col-12"></div>
-        <div class="col-lg-3 col-sm-6 col-12 about-team-member">
-            <img src="./assets/img/team/5.png" alt="Oluwajohn Taiwo">
-            <h5 class="about-team-member-name">Oluwajohn Taiwo</h5>
-            <p class="about-team-member-role">CEO</p>
-        </div>
-        <div class="col-lg-3 col-sm-6 col-12 about-team-member">
-            <img src="./assets/img/team/6.png" alt="Oluwajohn Taiwo">
-            <h5 class="about-team-member-name">Oluwajohn Taiwo</h5>
-            <p class="about-team-member-role">CHAIRMAN</p>
-        </div>
-        <div class="col-lg-3 col-12"></div>
     </div>
 </section>
 

@@ -21,6 +21,7 @@
 %button-stack {
     color: $white;
     background-color: $purple;
+    border-color: $purple;
     border-radius: 0.2rem;
     padding: 0.5rem 2rem;
     font-size: 1rem;
@@ -60,6 +61,7 @@ header {
 	-webkit-transition : all 0.3s ease-out;
     transition : all 0.3s ease-out;
     background-color: $white;
+    box-shadow: 0px 5px 40px rgba(192, 204, 218, 0.3);
 }
 .nav-link {
     padding: 0.5rem 1rem !important;

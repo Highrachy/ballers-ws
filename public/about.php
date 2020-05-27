@@ -36,11 +36,7 @@
 
     <p class="about-core-text">We are a team of passionate and talented people</p>
 
-<<<<<<< Updated upstream
     <div class="row row-eq-height justify-content-center">
-=======
-
->>>>>>> Stashed changes
         <div class="col-lg-5 col-sm-5 col-12 about-core-values">
             <h4 class="about-core-values-heading"> Innovation</h4>
             <p class="about-core-values-text">Our team is constantly working to push the boundaries of comfortable living with new
@@ -76,6 +72,11 @@ and healthy living available to more hardworking individuals across Nigeria.</p>
             <p class="about-team-member-role">CEO</p>
         </div>
         <div class="col-lg-3 col-sm-6 col-12 about-team-member">
+            <img src="./assets/img/team/leonard.jpg" alt="Leonard Isiekwenagbu">
+            <h5 class="about-team-member-name">Leonard Isiekwenagbu</h5>
+            <p class="about-team-member-role">BUSINESS DEVELOPMENT</p>
+        </div>
+        <div class="col-lg-3 col-sm-6 col-12 about-team-member">
             <img src="./assets/img/team/haruna.jpg" alt="Haruna Popoola">
             <h5 class="about-team-member-name">Haruna Popoola</h5>
             <p class="about-team-member-role">LEAD DEVELOPER</p>
@@ -85,38 +86,14 @@ and healthy living available to more hardworking individuals across Nigeria.</p>
             <h5 class="about-team-member-name">Samuel Sola-Eniafe</h5>
             <p class="about-team-member-role">SOFTWARE DEVELOPER</p>
         </div>
+    </div>
+    <div class="row">
         <div class="col-lg-3 col-sm-6 col-12 about-team-member">
             <img src="./assets/img/team/eronss.jpg" alt="Eronss Okoji">
             <h5 class="about-team-member-name">Eronss Okoji</h5>
             <p class="about-team-member-role">PRODUCT DESIGNER</p>
         </div>
     </div>
-    <!-- <div class="row">
-        <div class="col-lg-3 col-sm-6 col-12 about-team-member">
-            <img src="./assets/img/team/eronss.jpg" alt="Eronss Okoji">
-            <h5 class="about-team-member-name">Eronss Okoji</h5>
-            <p class="about-team-member-role">PRODUCT DESIGNER</p>
-        </div>
-        <div class="col-lg-3 col-sm-6 col-12 about-team-member">
-            <img src="./assets/img/team/6.png" alt="Oluwajohn Taiwo">
-            <h5 class="about-team-member-name">Oluwajohn Taiwo</h5>
-            <p class="about-team-member-role">HEAD OF SALES</p>
-        </div>
-        <div class="col-lg-3 col-sm-6 col-12 about-team-member">
-            <img src="./assets/img/team/7.png" alt="Oluwajohn Taiwo">
-            <h5 class="about-team-member-name">Oluwajohn Taiwo</h5>
-            <p class="about-team-member-role">LEAD DEVELOPER</p>
-        </div>
-        <div class="col-lg-3 col-sm-6 col-12 about-team-member">
-            <img src="./assets/img/team/8.png" alt="Oluwajohn Taiwo">
-            <h5 class="about-team-member-name">Oluwajohn Taiwo</h5>
-            <p class="about-team-member-role">FOUNDER</p>
-        </div>
-<<<<<<< Updated upstream
-    </div>
-=======
-    </div> -->
->>>>>>> Stashed changes
 </section>
 
 <section class="about-gallery">

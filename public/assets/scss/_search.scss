@@ -1,0 +1,352 @@
+.search-holding {
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    padding: 10rem 5rem 3rem;
+
+    &-title {
+        color: $blue;
+        padding-bottom: 2rem;
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+    &-description {
+        background-color: $purple;
+        padding-top: 2rem;
+        padding-bottom: 1rem;
+        border-radius: $border-radius;
+    }
+    &-description-heading {
+        color: $white;
+        font-size: 3.5rem;
+        font-weight: 600;
+    }
+    &-description-text {
+        color: $white;
+        display: inline-block;
+        font-weight: 400;
+    }
+    hr {
+        color: $gray-400;
+    }
+    
+}
+.search-page-form {
+    padding-top: 3rem;
+    justify-content: left;
+
+    form {
+        width: 100%;
+    }
+    .input-group {
+        border-radius: $border-radius;
+    }
+    .form-inline label{
+        justify-content: start;
+        color: $gray-950;
+        font-weight: 500;
+        padding: 0;
+    }
+    &-input {
+        font-size: 2rem;
+        font-weight: 500;
+        color: $green;
+        background-color: transparent;
+    }
+    &-input:focus {
+        color: $green;
+    }
+    button {
+        @extend %button-stack;
+        padding: 0.8rem 3.5rem;
+        margin: auto;
+        margin-top: 1rem;
+    }
+}
+.search-ready {
+    padding: 3rem 5rem;
+    text-align: center;
+    justify-content: center;
+
+    &-heading {
+        color: $purple;
+        font-size: 2.5rem;
+    }
+    &-text {
+        color: $gray-700;
+    }
+    &-investments {
+        padding-left: 0;
+        padding-top: 2rem;
+        justify-content: center; 
+    }
+    &-step {
+        padding: 2rem;
+        border-radius: $border-radius;
+        text-align: left;
+    }
+}
+.investment {
+
+    &-frequency {
+        background-color: $purple-light;
+    
+        .btn-group-toggle {
+            margin-bottom: 1rem;
+        }
+        .option-btn {
+            background: $purple-mid;
+            border: 1px solid $purple-mid;
+            color: $purple;
+            margin-bottom: 1rem;
+            width: 100%;
+        }
+        .active {
+            color: $white !important;
+            background-color: $purple !important;
+            border-color: $purple !important;
+        }
+    }
+    &-initial,
+    &-periodic {
+        .input-group {
+            width: 100%;
+        }
+        .input-group-text {
+            padding-left: 1rem;
+            color: $gray-950;
+        }
+        .input-group-prepend,
+        .investment-value-input {
+            background-color: inherit;
+            border: 1px solid $gray-950 !important;
+            color: $gray-950;
+        }
+        .input-group-prepend {
+            border-right: 0 !important;
+            border-radius: $border-radius 0 0 $border-radius;
+        }
+        .investment-value-input {
+            border-left: 0 !important;
+            border-radius: 0 $border-radius $border-radius 0;
+        }
+    }
+    &-initial {
+        @mixin yellow-track() {
+            background: $yellow;
+        }
+        @mixin yellow-thumb {
+            background: $yellow-mid;
+            border: 1px solid $yellow;
+            cursor: pointer;
+            height: 1.5rem;
+            width: 1.5rem;
+            border-radius: 50%;
+            box-shadow: 1px 1px 1px $yellow, 0px 0px 1px $yellow;
+        }
+        input[type=range] {
+            -webkit-appearance: none;
+
+            &::-webkit-slider-runnable-track { @include yellow-track }
+            &::-moz-range-track { @include yellow-track }
+            &::-ms-track { @include yellow-track }
+
+            &::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                @include yellow-thumb;
+                margin-top: -9px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+            }
+            &::-moz-range-thumb { @include yellow-thumb }
+            &::-ms-thumb { @include yellow-thumb }
+        }
+        background-color: $yellow-light;
+        margin: 0 5rem;
+    }
+    &-periodic {
+        @mixin green-track() {
+            background: $green;
+        }
+        @mixin green-thumb {
+            background: $green-mid;
+            border: 1px solid $green;
+            cursor: pointer;
+            height: 1.5rem;
+            width: 1.5rem;
+            border-radius: 50%;
+            box-shadow: 1px 1px 1px $green, 0px 0px 1px $green;
+        }
+        input[type=range] {
+            -webkit-appearance: none;
+
+            &::-webkit-slider-runnable-track { @include green-track }
+            &::-moz-range-track { @include green-track }
+            &::-ms-track { @include green-track }
+
+            &::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                @include green-thumb;
+                margin-top: -9px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+            }
+            &::-moz-range-thumb { @include green-thumb }
+            &::-ms-thumb { @include green-thumb }
+        }
+        background-color: $green-light;
+    }
+}
+.search-calculate {
+    padding-top: 3rem;
+    padding-left: 0;
+
+    &-button {
+        @extend %button-stack;
+        box-shadow: 0px 4px 10px rgba(87, 117, 250, 0.25);
+        width: 75%;
+        margin-bottom: 1rem;
+    }
+    p {
+        color: $blue;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .investment-initial {
+        margin: 0 5rem;
+    }
+    .search-page-form {
+    
+        &-input {
+            font-size: 1.7rem;
+            font-weight: 500;
+        }
+    }
+    .search-ready-step {
+        padding: 1.5rem;
+
+        &-text br {
+            display: none;
+        }
+    }
+}
+
+@media only screen and (max-width: 991.99px) {
+    .search-holding {
+        padding-left: 3rem;
+        padding-right: 3rem;
+
+        &-title {
+            font-size: 1.2rem;
+        }
+    }
+    .search-page-form {
+        padding-bottom: 2rem;
+
+        .input-group-text {
+            padding-top: 1.5rem;
+        }
+        &-submit {
+            width: 50%;
+        }
+    }
+    .search-ready {
+        padding-top: 0;
+        padding-left: 4rem;
+        padding-right: 4rem;
+
+        &-heading,
+        &-step-heading {
+            font-size: 2.3rem;
+            font-weight: 500;
+        }
+    }
+    .input-group {
+        padding-top: 0.8rem;
+    }
+    .input-group-prepend {
+        height: 86%;
+    }
+    .investment {
+        &-frequency {
+            .btn-group-toggle {
+                margin-bottom: 0;
+            }
+        }
+        &-options {
+            justify-content: center;
+        }
+        &-initial {
+            margin: 2rem 0;
+        }
+    }
+    .option-btn-quaterly {
+        margin: 0 3.5rem;
+    }
+    .search-calculate-button {
+        width: 50%;
+    }
+}
+@media only screen and (max-width: 575.99px) {
+    .search-holding {
+        padding: 8rem 1rem 3rem;
+
+        &-description {
+            padding-bottom: 2rem;
+    
+            &-heading {
+                font-size: 3.2rem;
+            }
+            &-text {
+                font-size: 1rem;
+            }
+        }
+    }
+    .search-page-form {
+        padding-top: 1rem;
+
+        .form-inline label{
+            justify-content: start !important;
+            padding: 0;
+            text-align: left;
+        }
+        &-input {
+            font-size: 1.4rem;   
+        }
+        &-label {
+            padding-left: 0;
+        }
+        .input-group {
+            padding-top: 0;
+            height: 4rem;
+            background-color: $gray-250;
+        }
+        &-submit {
+            width: 80%;
+        }
+        button {
+            padding: 0.5rem 3.5rem;
+        }
+    }
+    .search-ready {
+        padding: 1rem 2rem 2rem;
+
+        &-heading {
+            font-size: 2rem;
+        }
+        &-step {
+            text-align: center;
+        }
+        &-step-heading {
+            font-size: 1.4rem;
+        }
+    }
+    .option-btn,
+    .option-btn-quaterly {
+        margin: 0;
+    }
+    .input-group-prepend {
+        height: 100%;
+    }
+    .search-calculate-button {
+        width: 100%;
+    }
+}
+

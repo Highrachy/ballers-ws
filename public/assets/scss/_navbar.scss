@@ -109,7 +109,11 @@ header {
     background-color: $white;
     border: 2px solid $purple;
 }
-
+@media only screen and (max-width: 1024px) {
+    .navigation-wrap {
+        padding: 0.5rem 1rem;
+    }
+}
 @media only screen and (max-width: 991.99px) {
     .navbar {
         &-brand {

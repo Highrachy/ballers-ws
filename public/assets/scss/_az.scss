@@ -198,6 +198,12 @@
   }
 }
 
+@media only screen and (max-width: 1024px) {
+  .az-how-step-img {
+    height: 12rem;
+  }
+}
+
 @media only screen and (max-width: 991.99px) {
   .az-ball,
   .az-easy,
@@ -227,9 +233,6 @@
   }
   .az-easy-abc {
     margin: 1.5rem;
-  }
-  .az-how-step-img {
-    height: 14rem;
   }
   .az-creed {
     &-heading {

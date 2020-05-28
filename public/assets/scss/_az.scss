@@ -1,38 +1,46 @@
 .az-holding {
-  background-image: url('../img/backgrounds/about-holding.png');
+  background-image: url('../img/backgrounds/faq-holding.png');
   background-size: 100% 100%;
   background-repeat: no-repeat;
   justify-content: center;
-  height: 45rem;
+  height: 38rem;
   width: 100%;
 
   &-heading {
-    color: $white;
+    @extend %page-heading-font-stack;
     text-align: center;
-    padding-top: 18rem;
+    padding-top: 15rem;
     padding-bottom: 1rem;
-    font-size: 5rem;
   }
   &-text {
-    text-align: center;
-    @extend %heading-text-font-stack;
-    color: $white;
-    font-size: 2rem;
+      @extend %big-text-stack;
+      text-align: center;
   }
+}
+.az-ball-heading,
+.az-easy-heading,
+.az-how-heading,
+.az-control-heading,
+.az-message-heading {
+  @extend %heading-font-stack;
+}
+.az-ball-title,
+.az-easy-title,
+.az-how-title,
+.az-benefits-title,
+.az-control-title,
+.az-message-title,
+.az-creed-title {
+  @extend %title-font-stack;
 }
 .az-ball {
   padding: 5rem 5rem 0rem;
 
-  &-heading {
-    @extend %heading-font-stack;
-  }
   &-title {
-    @extend %title-font-stack;
     padding-bottom: 1rem;
-    color: $green;
   }
   &-text {
-    @extend %about-text-font;
+    @extend %big-text-stack;;
   }
 }
 .az-easy {
@@ -42,10 +50,8 @@
   background-color: $gray-300;
 
   &-heading {
-    @extend %heading-font-stack;
     padding-top: 1rem;
     margin-bottom: 4rem;
-    font-weight: 500;
   }
   &-abc {
     background-color: $white;
@@ -53,22 +59,26 @@
     display: inline-block;
     margin: 0 1.5rem;
     text-align: center;
-    padding: 5rem 1.4rem;
+    padding: 4rem 1.4rem 2rem;
   }
   &-abc-letter {
     width: 4.5rem;
     height: 4.5rem;
   }
   &-abc-title {
-    font-size: 2rem;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 1.38rem;
     color: $blue;
     padding-top: 2rem;
-    padding-bottom: 2rem;
-    height: 8rem;
+    padding-bottom: 1rem;
     span {
       display: block;
       margin-top: 1rem;
     }
+  }
+  &-abc-text {
+    @extend %regular-text-stack;
   }
 }
 .az-how {
@@ -77,40 +87,46 @@
   align-content: center;
 
   &-heading {
-    @extend %heading-font-stack;
-    font-weight: 600;
     letter-spacing: 0.2rem;
 
     @include media-breakpoint-up(sm) {
       margin-bottom: 5rem;
     }
   }
-  &-title {
-    @extend %title-font-stack;
-    color: $green;
-  }
   &-title-2 {
-    font-size: 2rem;
-    font-weight: 500;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.92rem;
     padding-bottom: 4rem;
   }
   &-step {
     &-title {
-      font-size: 1.7rem;
-      padding-top: 5rem;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 1.92rem;
+      padding-top: 1rem;
       text-align: left;
     }
     &-text {
+      @extend %regular-text-stack;
       text-align: left;
     }
     &-img {
       height: 14rem;
     }
     &-title-2 {
-      font-size: 1.3rem;
-      font-weight: 500;
+      font-style: normal;
       margin-top: 1.1rem;
       margin-bottom: 0.8rem;
+    }
+    &-text-2 {
+      @extend %regular-text-stack;
+    }
+    &-title-3 {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 1.92rem;
+      padding-top: 5rem;
     }
     &-icon {
       width: 5rem;
@@ -121,10 +137,6 @@
     margin-bottom: 3rem;
   }
 }
-.az-benefits-title {
-  @extend %title-font-stack;
-  color: $green;
-}
 .az-control {
   background-color: $gray-300;
   padding: 4rem 5rem 2rem;
@@ -132,13 +144,12 @@
   align-content: center;
 
   &-heading {
-    @extend %heading-font-stack;
-    font-weight: 500;
     padding-bottom: 3rem;
   }
   &-panel-heading {
-    font-size: 1.5rem;
-    font-weight: 500;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.38rem;
   }
   &-panel-text {
     padding-bottom: 5rem;
@@ -155,13 +166,12 @@
   text-align: center;
 
   &-title {
-    @extend %title-font-stack;
-    color: $green;
     padding-bottom: 4rem;
   }
   &-heading {
-    @extend %heading-font-stack;
-    font-weight: 500;
+    font-size: 1.92rem;
+    font-style: normal;
+    font-weight: bold;
     padding-bottom: 3rem;
   }
   &-q-up-mobile {
@@ -184,8 +194,13 @@
   background-color: $gray-300;
   padding: 5rem 5rem 3rem;
   &-heading {
-    @extend %heading-font-stack;
     padding-top: 12rem;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .az-how-step-img {
+    height: 12rem;
   }
 }
 
@@ -200,13 +215,8 @@
     padding-right: 1.5rem;
   }
   .az-holding {
-    background-image: url('../img/backgrounds/about-holding-tab.png');
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    justify-content: center;
     padding: 0 7rem;
     height: 42rem;
-    width: 100%;
     &-heading {
       padding-top: 16rem;
     }
@@ -217,11 +227,12 @@
       }
     }
   }
+  .az-how-step-title,
+  .az-how-step-title-3 {
+    padding-top: 1rem;
+  }
   .az-easy-abc {
     margin: 1.5rem;
-  }
-  .az-how-step-img {
-    height: 14rem;
   }
   .az-creed {
     &-heading {
@@ -264,12 +275,7 @@
     font-size: 1rem;
   }
   .az-holding {
-    background-image: url('../img/backgrounds/about-holding-mobile.png');
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    justify-content: center;
     height: 42rem;
-    width: 100%;
     padding: 0 2rem;
     &-heading {
       padding-top: 15rem;

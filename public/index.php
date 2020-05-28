@@ -47,17 +47,14 @@
 
   <!-- About Ball -->
   <section class="about-ball row">
-    <div class="col-lg-6 col-12"></div>
-    <div class="col-lg-6 col-12 about">
-      <h6 class="about-ball-title">ABOUT BALL</h6>
-    </div>
     <div class="col-sm-6 col-12 text-center home-img">
       <img src="./assets/img/home.png" class="home" alt="home image">
       <img src="./assets/img/home-tab.png" class="home-tab" alt="home image">
     </div>
     <div class="col-sm-6 col-12 about">
+      <h6 class="about-ball-title">ABOUT BALL</h6>
       <h2 class="about-ball-heading">Game-changing service <br> that makes owning <br> your home easier</h2>
-      <h5 class="about-ball-text">We make owning a home simpler and achievable. <br> With BALL unique saving plan tailored to you and your <br> financial position,owning a home has never been easier.</h5>
+      <p class="about-ball-text">We make owning a home simpler and achievable. <br> With BALL unique saving plan tailored to you and your <br> financial position,owning a home has never been easier.</p>
       <button class="btn btn-lg big-button">LEARN MORE</button>
     </div>
   </section>
@@ -211,7 +208,7 @@
             <div class="card-header" id="headingFour">
               <a class="" data-toggle="collapse" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                 <h5 class="mb-0 faq-card-heading">
-                  <span class="faq-black-dot">&#9679; &nbsp;&nbsp;</span> What is the minimum amount to invest?
+                  <span class="faq-black-dot">&#9679; &nbsp;&nbsp;</span> What is the minimum <br> amount to invest?
                   <span class="faq-option-category-icon">&nbsp; + </span>
                 </h5>
               </a>
@@ -227,7 +224,7 @@
             <div class="card-header" id="headingFive">
               <a class="" data-toggle="collapse" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
                 <h5 class="mb-0 faq-card-heading">
-                  <span class="faq-black-dot">&#9679; &nbsp;&nbsp;</span> How long does it take for me to own a home?
+                  <span class="faq-black-dot">&#9679; &nbsp;&nbsp;</span> How long does it take for <br> me to own a home?
                   <span class="faq-option-category-icon">&nbsp; + </span>
                 </h5>
               </a>

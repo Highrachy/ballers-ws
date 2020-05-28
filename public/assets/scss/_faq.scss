@@ -7,15 +7,14 @@
     width: 100%;
 
     &-heading {
-        color: $blue;
+        @extend %page-heading-font-stack;
         text-align: center;
         padding-top: 10rem;
         padding-bottom: 2rem;
-        font-size: 3.5rem;
     }
     &-text {
+        @extend %big-text-stack;
         text-align: center;
-        @extend %heading-text-font-stack;
         padding-bottom: 3rem;
     }
     &-form {
@@ -42,8 +41,7 @@
 
     &-text {
         text-align: center;
-        @extend %heading-text-font-stack;
-        color: $gray-750;
+        @extend %big-text-stack;
         padding-bottom: 3rem;
     }
     &-slide {
@@ -83,7 +81,8 @@
         }
     }
     &-slide-text {
-        font-weight: 300;
+        font-style: 1.04rem;
+        font-weight: 600;
         padding-top: 0.5rem;
     }
 }
@@ -93,14 +92,12 @@
     &-heading {
         text-align: center;
         @extend %heading-font-stack;
-        font-weight: 400;
+        font-weight: 600;
         padding-bottom: 1.5rem;
     }
     &-text {
+        @extend %big-text-stack;
         text-align: center;
-        color: $gray-750;
-        font-weight: 400;
-        font-size: 1.5rem;
         padding-right: 10rem;
         padding-left: 10rem;
     }
@@ -111,7 +108,7 @@
             border-bottom: 1px solid  $gray-400;
             &-body {
                 padding-left: 3.5rem;
-                font-size: 1.2rem;
+                @extend %regular-text-stack;
             }
         }
     }
@@ -142,18 +139,17 @@
 }
 .faq-question {
     padding: 3rem 0 5rem;
+    justify-content: center;
 
     &-heading {
         text-align: center;
         @extend %heading-font-stack;
-        font-weight: 400;
+        font-weight: 600;
         padding-bottom: 1.5rem;
     }
     &-text {
+        @extend %big-text-stack;
         text-align: center;
-        color: $gray-750;
-        font-weight: 400;
-        font-size: 1.3rem;
         padding-bottom: 3rem;
     }
     &-contact {
@@ -163,6 +159,7 @@
         border: 3px solid $purple;
         box-shadow: 0px 4px 10px rgba(196, 196, 196, 0.3);
         display: inline-block;
+        margin: 0 1.5rem;
         padding: 1.5rem 0 0.5rem;
         border-radius: 0.25rem;
         text-align: center;
@@ -173,7 +170,13 @@
     }
     &-info {
         padding-top: 1.5rem;
-        font-weight: 400;
+        font-weight: 600;
+        font-size: 1.92rem;
+    }
+    &-info-small {
+        padding-top: 1.5rem;
+        font-weight: normal;
+        font-size: 1rem;
     }
 }
 
@@ -219,6 +222,9 @@
     .faq-question {
         &-info-div {
             padding: 0.8rem 2rem;
+        }
+        &-info {
+            font-size: 1.5rem;
         }
     }
 }
@@ -296,6 +302,7 @@
 
         &-info-div {
             padding: 1.5rem 0 0;
+            margin: 1.5rem 0;
             img {
                 width: 2rem;
             }

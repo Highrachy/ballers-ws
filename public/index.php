@@ -11,28 +11,37 @@
     </section>
 
     <section class="col-lg-8 col-11 holding-form">
-      <form class="form-inline index-form">
-        <label class="sr-only" for="location">Location</label>
-        <div class="input-group col-lg-4 col-sm-12">
+      <form class="form-inline index-form" method="post" action="">
+        <?php require_once('./includes/find-house.php') ?>
+        
+        <label class="sr-only" for="state">State</label>
+        <div class="input-group col-lg-3 col-sm-12">
           <div class="input-group-prepend">
             <div class="input-group-text"><img src="./assets/img/icons/location.png" class="input-icon" alt="location icon"></div>
           </div>
-          <input type="text" class="form-control hold-input" id="location" placeholder="Location">
+          <select class="form-control custom-select hold-input" id="state" name="state">
+            <?php get_states() ?>
+          </select>
         </div>
 
-        <label class="sr-only" for="housetype">House type</label>
-        <div class="input-group col-lg-5 col-sm-12 select-grp">
+        <label class="sr-only" for="area">Area</label>
+        <div class="input-group col-lg-3 col-sm-12">
           <div class="input-group-prepend">
             <div class="input-group-text">
               <img src="./assets/img/icons/house.png" class="input-icon" alt="house icon">
             </div>
           </div>
-          <select class="form-control custom-select hold-input" id="housetype">
-            <option selected>House type</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
-          </select>
+          <select class="form-control custom-select hold-input" id="area" name="area"></select>
+        </div>
+
+        <label class="sr-only" for="size">Size</label>
+        <div class="input-group col-lg-3 col-sm-12">
+          <div class="input-group-prepend">
+            <div class="input-group-text">
+              <img src="./assets/img/icons/house.png" class="input-icon" alt="house icon">
+            </div>
+          </div>
+          <select class="form-control custom-select hold-input" id="size" name="size"></select>
         </div>
 
 

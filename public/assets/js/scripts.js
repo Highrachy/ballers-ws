@@ -119,8 +119,8 @@ $(document).ready(function () {
     $(this).val(number.toLocaleString());
   });
 
-  const rangeSliderDiv = document.querySelectorAll('.custom-range-div');
   //update the input & label value when slider is moved
+  const rangeSliderDiv = document.querySelectorAll('.custom-range-div');
   Array.prototype.forEach.call(rangeSliderDiv, (slider) => {
     slider.querySelector('.custom-range').addEventListener('input', (event) => {
       var inputValue = removeCommasAndMakeNumber(event.target.value)
@@ -144,6 +144,49 @@ $(document).ready(function () {
       input.querySelector('label').innerHTML = 'NGN ' + formatToCurrency(inputValue);
       input.querySelector('.form-control').value = formatToCurrency(inputValue);
     });
+  });
+
+  // use ajax to update select options on index page
+  $('#state').on('change', function () {
+    var stateID = $(this).val();
+    if (stateID) {
+      $.ajax({
+        type: 'POST',
+        url: './includes/find-house.php',
+        data: {
+          state_id: stateID
+        },
+        success: function(html){
+          $('#area').html(html);
+          $('#size').html('<option value="">Select area first</option>');
+        }
+      });
+    } else {
+      $('#area').html('<option value="">Select state first</option>');
+      $('#size').html('<option value="">Select area first</option>');
+    }
+  });
+
+  $('#area').on('change', function () {
+    var areaID = $(this).val();
+    var stateID = $('#state').val();
+    
+    if (areaID) {
+      $.ajax({
+        type: 'POST',
+        url: './includes/find-house.php',
+        data: {
+          area_id: areaID,
+          state_id: stateID
+        },
+        success: function(html){
+          $('#size').html(html);
+        }
+      });
+    } else {
+      $('#area').html('<option value="">Select state first</option>');
+      $('#size').html('<option value="">Select area first</option>');
+    }
   });
 
 });

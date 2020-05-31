@@ -47,7 +47,7 @@ function get_houses_based_on_area_id($state_id, $area_id) {
     if ($noOfResults > 0) {
         echo "<option selected disabled>House Type</option>";
         while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
-            echo "<option value='".$row['price']."'>".$row['size']."</option>";
+            echo "<option value='".$row['house_id']."'>".$row['type']."</option>";
         }
     } else {
         echo "<option selected disabled>No House Available</option>";

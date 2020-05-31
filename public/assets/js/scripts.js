@@ -158,12 +158,12 @@ $(document).ready(function () {
         },
         success: function(html){
           $('#area').html(html);
-          $('#size').html('<option value="">Select area first</option>');
+          $('#type').html('<option value="">Select area first</option>');
         }
       });
     } else {
       $('#area').html('<option value="">Select state first</option>');
-      $('#size').html('<option value="">Select area first</option>');
+      $('#type').html('<option value="">Select area first</option>');
     }
   });
 
@@ -180,12 +180,12 @@ $(document).ready(function () {
           state_id: stateID
         },
         success: function(html){
-          $('#size').html(html);
+          $('#type').html(html);
         }
       });
     } else {
       $('#area').html('<option value="">Select state first</option>');
-      $('#size').html('<option value="">Select area first</option>');
+      $('#type').html('<option value="">Select area first</option>');
     }
   });
 

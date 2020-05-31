@@ -1,17 +1,44 @@
-<?php require_once('includes/header.php'); ?>
+<?php 
+require_once('includes/header.php');
+require_once('includes/db.php');
+
+$mysqli = db_connection();
+$state_id = $mysqli->real_escape_string($_POST['state']);
+$area_id = $mysqli->real_escape_string($_POST['area']);
+$house_id = $mysqli->real_escape_string($_POST['type']);
+
+$sqlQuery = "SELECT * FROM `house-type` WHERE `house_id` = '$house_id' AND `area_id` = '$area_id' AND `state_id` = '$state_id'";
+$result = mysqli_query($mysqli,$sqlQuery);
+$noOfResults = $result->num_rows;
+    
+if ($noOfResults > 0) {
+    $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+    $state = $row['state_name'];
+    $area = $row['area_name'];
+    $type = $row['type'];
+    $price = number_format($row['price']);
+}
+
+if(!$mysqli->query($sqlQuery)){
+    die("An error occured ".$mysqli->error);
+}
+
+?>
+
+
 <section class="search-holding">
     <h5 class="search-holding-title">Average prices in the selected location is being displayed</h5>
 
     <div class="col-lg-12 search-holding-description">
-        <h1 class="search-holding-description-heading">NGN 18,000,000</h1>
+        <h1 class="search-holding-description-heading">NGN <?php echo $price?></h1>
         <h5 class="search-holding-description-text">
             <img src="./assets/img/icons/location-white.svg" alt="location" class="search-holding-description-icon">
-            Ajah, Lagos
+            <?php echo $area.", ".$state?>
         </h5>
         &nbsp;&nbsp;&nbsp;
         <h5 class="search-holding-description-text">
-        <img src="./assets/img/icons/house-white.svg" alt="house" class="search-holding-description-icon">
-            2 Bedroom flat
+            <img src="./assets/img/icons/house-white.svg" alt="house" class="search-holding-description-icon">
+            <?php echo $type?>
         </h5>
     </div>
 
@@ -28,7 +55,7 @@
                             <img src="./assets/img/icons/location.png" class="input-icon" alt="location icon">
                         </div>
                     </div>
-                    <input type="text" class="form-control search-page-form-input" id="location" value="Ajah, Lagos">
+                    <input type="text" class="form-control search-page-form-input" id="location" value="<?php echo $area.", ".$state?>">
                 </div>
             </div>
 
@@ -43,10 +70,8 @@
                         </div>
                     </div>
                     <select class="form-control custom-select search-page-form-input" id="housetype">
-                        <option selected>House type</option>
-                        <option value="1">1 Bedroom flat</option>
-                        <option value="2">2 Bedroom flat</option>
-                        <option value="3" selected>3 Bedroom flat</option>
+                        <option>House type</option>
+                        <option selected value=""><?php echo $type?></option>
                     </select>
                 </div>
             </div>

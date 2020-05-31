@@ -11,7 +11,7 @@
     </section>
 
     <section class="col-lg-8 col-11 holding-form">
-      <form class="form-inline index-form" method="post" action="">
+      <form class="form-inline index-form" method="post" action="search.php">
         <?php require_once('./includes/find-house.php') ?>
         
         <label class="sr-only" for="state">State</label>
@@ -34,14 +34,14 @@
           <select class="form-control custom-select hold-input" id="area" name="area"></select>
         </div>
 
-        <label class="sr-only" for="size">Size</label>
+        <label class="sr-only" for="type">Type</label>
         <div class="input-group col-lg-3 col-sm-12">
           <div class="input-group-prepend">
             <div class="input-group-text">
               <img src="./assets/img/icons/house.png" class="input-icon" alt="house icon">
             </div>
           </div>
-          <select class="form-control custom-select hold-input" id="size" name="size"></select>
+          <select class="form-control custom-select hold-input" id="type" name="type"></select>
         </div>
 
 

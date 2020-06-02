@@ -3,62 +3,48 @@ require_once('db.php');
 
 function get_states() {
     $mysqli = db_connection();
-    $sqlQuery = "SELECT * FROM `states` WHERE 1";
-    $result = mysqli_query($mysqli,$sqlQuery);
-    echo "<option selected disabled>State</option>";
-    while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
-        echo "<option value='".$row['state_id']."'>".$row['state_name']."</option>";
+    $sql_query = "SELECT * FROM `states`";
+    $result = mysqli_query($mysqli,$sql_query);
+    $json_response = array();
+    while ($row = mysqli_fetch_assoc($result)) {
+        $json_response[] = $row;
     }
-
-    if(!$mysqli->query($sqlQuery)){
-        die("An error occured ".$mysqli->error);
-    }
+    echo json_encode($json_response);
+    db_query_error($sql_query);
 }
 
 function get_area_based_on_state_id($state_id) {
     $mysqli = db_connection();
     $state_id = $mysqli->real_escape_string($state_id);
-    $sqlQuery = "SELECT * FROM `area` WHERE `state_id` = '$state_id'";
-    $result = mysqli_query($mysqli,$sqlQuery);
-    $noOfResults = $result->num_rows;
+    $sql_query = "SELECT * FROM `area` WHERE `state_id` = '$state_id'";
+    $result = mysqli_query($mysqli,$sql_query);
+    $json_response = array();
 
-    if ($noOfResults > 0) {
-        echo "<option selected disabled>Area</option>";
-        while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
-            echo "<option value='".$row['area_id']."'>".$row['area_name']."</option>";
-        }
-    } else {
-        echo "<option selected disabled>No Area Available</option>";
+    while ($row = mysqli_fetch_assoc($result)) {
+        $json_response[] = $row;
     }
-    
-    if(!$mysqli->query($sqlQuery)){
-        die("An error occured ".$mysqli->error);
-    }
+    echo json_encode($json_response);
+    db_query_error($sql_query);
 }
 
 function get_houses_based_on_area_id($state_id, $area_id) {
     $mysqli = db_connection();
     $state_id = $mysqli->real_escape_string($state_id);
     $area_id = $mysqli->real_escape_string($area_id);
-    $sqlQuery = "SELECT * FROM `house-type` WHERE `area_id` = '$area_id' AND `state_id` = '$state_id'";
-    $result = mysqli_query($mysqli,$sqlQuery);
-    $noOfResults = $result->num_rows;
-    
-    if ($noOfResults > 0) {
-        echo "<option selected disabled>House Type</option>";
-        while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
-            echo "<option value='".$row['house_id']."'>".$row['type']."</option>";
-        }
-    } else {
-        echo "<option selected disabled>No House Available</option>";
-    }
+    $sql_query = "SELECT * FROM `house-type` WHERE `area_id` = '$area_id' AND `state_id` = '$state_id'";
+    $result = mysqli_query($mysqli,$sql_query);
+    $json_response = array();
 
-    if(!$mysqli->query($sqlQuery)){
-        die("An error occured ".$mysqli->error);
+    while ($row = mysqli_fetch_assoc($result)) {
+        $json_response[] = $row;
     }
+    echo json_encode($json_response);
+    db_query_error($sql_query);
 }
 
-if (!empty($_POST["state_id"]) && empty($_POST["area_id"])) {
+if (!empty($_POST["load_state"])) {
+    get_states();
+} elseif (!empty($_POST["state_id"]) && empty($_POST["area_id"])) {
     get_area_based_on_state_id($_POST["state_id"]);
 } elseif (!empty($_POST["state_id"]) && !empty($_POST["area_id"])) {
     get_houses_based_on_area_id($_POST["state_id"], $_POST["area_id"]);

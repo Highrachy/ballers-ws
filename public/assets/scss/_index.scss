@@ -58,6 +58,10 @@
     &::placeholder {
         color: $input-color;
     }
+    &:focus {
+        outline: none;
+        border: none;
+    }
 }
 .input-icon {
     width: 1.8rem;

@@ -1,3 +1,15 @@
+.search-no-result {
+    justify-content: center;
+    text-align: center;
+    padding: 15rem 5rem;
+
+    &-heading {
+        @extend %heading-font-stack;
+    }
+    &-text {
+        @extend %regular-text-stack;
+    }
+}
 .search-holding {
     justify-content: center;
     text-align: center;
@@ -285,6 +297,12 @@
     }
 }
 @media only screen and (max-width: 575.99px) {
+    .search-no-result {
+        padding: 10rem 1rem;
+        &-image {
+            width: 20rem;
+        }
+    }
     .search-holding {
         padding: 8rem 1rem 3rem;
 

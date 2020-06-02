@@ -147,6 +147,27 @@ $(document).ready(function () {
   });
 
   // use ajax to update select options on index page
+  var state = "#state";
+  $.ajax({
+    type: 'POST',
+    url: './includes/find-house.php',
+    data: {
+      load_state: state
+    },
+    success: function(data){
+      data = JSON.parse(data);
+      var text = "<option selected disabled>Select state</option>";
+
+      for (let i = 0; i < data.length; i++) {
+        text += `<option value="${data[i].state_id}">${data[i].state_name}</option>`;
+      }
+
+      $(state).html(text);
+      $("#area").prop('disabled', true);
+      $("#type").prop('disabled', true);
+    }
+  });
+
   $('#state').on('change', function () {
     var stateID = $(this).val();
     if (stateID) {
@@ -156,14 +177,29 @@ $(document).ready(function () {
         data: {
           state_id: stateID
         },
-        success: function(html){
-          $('#area').html(html);
+        success: function(data){
+          data = JSON.parse(data);
+          var text = "<option selected disabled>Select Area</option>";
+
+          for (let i = 0; i < data.length; i++) {
+            text += `<option value="${data[i].area_id}">${data[i].area_name}</option>`;
+          }
+
+          if (data.length === 0) {
+            text = "<option selected disabled>No Area Available</option>";
+          }
+
+          $('#area').html(text);
           $('#type').html('<option value="">Select area first</option>');
+          $("#area").prop('disabled', false);
+          $("#type").prop('disabled', true);
         }
       });
     } else {
       $('#area').html('<option value="">Select state first</option>');
       $('#type').html('<option value="">Select area first</option>');
+      $("#area").prop('disabled', true);
+      $("#type").prop('disabled', true);
     }
   });
 
@@ -179,13 +215,27 @@ $(document).ready(function () {
           area_id: areaID,
           state_id: stateID
         },
-        success: function(html){
-          $('#type').html(html);
+        success: function(data){
+          data = JSON.parse(data);
+          var text = "<option selected disabled>Select House Type</option>";
+
+          for (let i = 0; i < data.length; i++) {
+            text += `<option value="${data[i].house_id}">${data[i].type}</option>`;
+          }
+
+          if (data.length === 0) {
+            text = "<option selected disabled>No House Available</option>";
+          }
+
+          $('#type').html(text);
+          $("#type").prop('disabled', false);
         }
       });
     } else {
       $('#area').html('<option value="">Select state first</option>');
       $('#type').html('<option value="">Select area first</option>');
+      $("#area").prop('disabled', true);
+      $("#type").prop('disabled', true);
     }
   });
 

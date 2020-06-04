@@ -11,42 +11,7 @@
     </section>
 
     <section class="col-lg-8 col-11 holding-form">
-      <form class="form-inline index-form" method="get" action="search.php" data-toggle="validator">
-        
-        <label class="sr-only" for="state">State</label>
-        <div class="input-group col-lg-3 col-sm-12">
-          <div class="input-group-prepend">
-            <div class="input-group-text"><img src="./assets/img/icons/location.png" class="input-icon" alt="location icon"></div>
-          </div>
-          <select class="form-control custom-select hold-input" id="state" name="state" required></select>
-        </div>
-
-        <label class="sr-only" for="area">Area</label>
-        <div class="input-group col-lg-3 col-sm-12">
-          <div class="input-group-prepend">
-            <div class="input-group-text">
-              <img src="./assets/img/icons/house.png" class="input-icon" alt="house icon">
-            </div>
-          </div>
-          <select class="form-control custom-select hold-input" id="area" name="area" required disabled>
-            <option selected disabled>Select state first</option>
-          </select>
-        </div>
-
-        <label class="sr-only" for="type">Type</label>
-        <div class="input-group col-lg-3 col-sm-12">
-          <div class="input-group-prepend">
-            <div class="input-group-text">
-              <img src="./assets/img/icons/house.png" class="input-icon" alt="house icon">
-            </div>
-          </div>
-          <select class="form-control custom-select hold-input" id="type" name="type" required disabled>
-            <option selected disabled>Select state first</option>
-          </select>
-        </div>
-
-        <button type="submit" class="btn btn-primary btn-large mb-2 col-lg-3 col-sm-12 form-search" name="index-form-search">Search</button>
-      </form>
+      <?php require_once('includes/dynamic-select-form.php'); ?>
     </section>
 
     <h6 class="holding-small">The only realistic burden free process of owning your ideal home.</h6>

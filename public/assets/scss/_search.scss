@@ -1,7 +1,14 @@
+.search-page-form {
+    justify-content: center;
+    padding-top: 9rem;
+    padding-bottom: 2.5rem;
+    border: 1px solid rgba(87, 117, 250, 0.17);
+    box-sizing: border-box;
+}
 .search-no-result {
     justify-content: center;
     text-align: center;
-    padding: 15rem 5rem;
+    padding: 5rem 5rem 15rem;
 
     &-heading {
         @extend %heading-font-stack;
@@ -43,7 +50,7 @@
     }
     
 }
-.search-page-form {
+.search-valid-page-form {
     padding-top: 3rem;
     justify-content: left;
 
@@ -224,7 +231,7 @@
     .investment-initial {
         margin: 0 5rem;
     }
-    .search-page-form {
+    .search-valid-page-form {
     
         &-input {
             font-size: 1.7rem;
@@ -241,6 +248,9 @@
 }
 
 @media only screen and (max-width: 991.99px) {
+    .search-page-form {
+        padding-top: 7rem;
+    }
     .search-holding {
         padding-left: 3rem;
         padding-right: 3rem;
@@ -249,7 +259,7 @@
             font-size: 1.2rem;
         }
     }
-    .search-page-form {
+    .search-valid-page-form {
         padding-bottom: 2rem;
 
         .input-group-text {
@@ -317,7 +327,7 @@
             }
         }
     }
-    .search-page-form {
+    .search-valid-page-form {
         padding-top: 1rem;
 
         .form-inline label{

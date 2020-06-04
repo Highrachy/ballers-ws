@@ -14,11 +14,11 @@
         </h5>
     </div>
 
-    <div class="row search-page-form">
+    <div class="row search-valid-page-form">
         <form class="form-inline">
 
             <div class="col-lg-4 col-sm-6">
-                <div class="col-sm-7 col-6 search-page-form-label">
+                <div class="col-sm-7 col-6 search-valid-page-form-label">
                     <label class="" for="location">Average price in</label>
                 </div>
                 <div class="input-group col-12">
@@ -27,12 +27,12 @@
                             <img src="./assets/img/icons/location.png" class="input-icon" alt="location icon">
                         </div>
                     </div>
-                    <input type="text" class="form-control search-page-form-input" id="location" value="<?php echo $area.", ".$state?>">
+                    <input type="text" class="form-control search-valid-page-form-input" id="location" value="<?php echo $area.", ".$state?>">
                 </div>
             </div>
 
             <div class="col-lg-4 col-sm-6">
-                <div class="col-sm-5 col-4 search-page-form-label">
+                <div class="col-sm-5 col-4 search-valid-page-form-label">
                     <label class="" for="housetype">House type</label>
                 </div>
                 <div class="input-group col-12">
@@ -41,7 +41,7 @@
                             <img src="./assets/img/icons/house.png" class="input-icon" alt="house icon">
                         </div>
                     </div>
-                    <select class="form-control custom-select search-page-form-input" id="housetype">
+                    <select class="form-control custom-select search-valid-page-form-input" id="housetype">
                         <option>House type</option>
                         <option selected value=""><?php echo $type?></option>
                     </select>
@@ -50,7 +50,7 @@
 
             <div class="col-lg-4 col-sm-12">
                 <div class="col-12">
-                    <button type="submit" class="btn btn-large search-page-form-submit">Search</button>
+                    <button type="submit" class="btn btn-large search-valid-page-form-submit">Search</button>
                 </div>
             </div>
         </form>

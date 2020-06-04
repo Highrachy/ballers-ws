@@ -32,6 +32,14 @@ if (isset($_GET["index-form-search"])) {
 
 ?>
 
+<section class="search-page-form row">
+    <div class="col-lg-2 col-12"></div>
+    <div class="col-lg-8 col-12">
+        <?php require_once('includes/dynamic-select-form.php'); ?>
+    </div>
+    <div class="col-lg-2 col-12"></div>
+</section>
+
 <?php require_once($search_view); ?>
 
 <?php require_once('includes/footer.php'); ?>

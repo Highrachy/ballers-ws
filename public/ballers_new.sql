@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jun 02, 2020 at 07:43 PM
+-- Generation Time: Jun 04, 2020 at 09:13 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.2
 
@@ -31,43 +31,43 @@ SET time_zone = "+00:00";
 CREATE TABLE `area` (
   `area_id` int(255) NOT NULL,
   `area_name` text NOT NULL,
-  `state_id` int(255) NOT NULL,
-  `state_name` varchar(255) NOT NULL
+  `state_id` int(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `area`
 --
 
-INSERT INTO `area` (`area_id`, `area_name`, `state_id`, `state_name`) VALUES
-(1, 'Lekki Phase 1', 1, 'Lagos'),
-(2, 'Orchid Hotel Road', 1, 'Lagos'),
-(3, 'Wuse II', 2, 'Abuja');
+INSERT INTO `area` (`area_id`, `area_name`, `state_id`) VALUES
+(1, 'Lekki Phase 1', 1),
+(2, 'Orchid Hotel Road', 1),
+(3, 'Wuse II', 2);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `house-type`
+-- Table structure for table `houses`
 --
 
-CREATE TABLE `house-type` (
+CREATE TABLE `houses` (
   `house_id` int(255) NOT NULL,
   `type` varchar(255) NOT NULL,
   `price` varchar(255) NOT NULL,
   `area_id` int(255) NOT NULL,
-  `area_name` varchar(255) NOT NULL,
   `state_id` int(255) NOT NULL,
-  `state_name` varchar(255) NOT NULL
+  `longitude` varchar(255) NOT NULL,
+  `latitude` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `house-type`
+-- Dumping data for table `houses`
 --
 
-INSERT INTO `house-type` (`house_id`, `type`, `price`, `area_id`, `area_name`, `state_id`, `state_name`) VALUES
-(1, '1 bedroom', '15000000', 1, 'Lekki Phase 1', 1, 'Lagos'),
-(2, '2 bedroom', '35000000', 1, 'Lekki Phase 1', 1, 'Lagos'),
-(3, '1 bedroom', '20000000', 2, 'Orchid Hotel Road', 1, 'Lagos');
+INSERT INTO `houses` (`house_id`, `type`, `price`, `area_id`, `state_id`, `longitude`, `latitude`) VALUES
+(1, '1 bedroom', '15000000', 1, 1, '', ''),
+(2, '2 bedroom', '35000000', 1, 1, '', ''),
+(3, '1 bedroom', '20000000', 2, 1, '', ''),
+(4, '1 bedroom', '16000000', 1, 1, '0', '0');
 
 -- --------------------------------------------------------
 
@@ -86,7 +86,8 @@ CREATE TABLE `states` (
 
 INSERT INTO `states` (`state_id`, `state_name`) VALUES
 (1, 'Lagos'),
-(2, 'Abuja');
+(2, 'Abuja'),
+(3, 'Kano');
 
 -- --------------------------------------------------------
 
@@ -113,9 +114,9 @@ ALTER TABLE `area`
   ADD PRIMARY KEY (`area_id`);
 
 --
--- Indexes for table `house-type`
+-- Indexes for table `houses`
 --
-ALTER TABLE `house-type`
+ALTER TABLE `houses`
   ADD PRIMARY KEY (`house_id`);
 
 --
@@ -141,16 +142,16 @@ ALTER TABLE `area`
   MODIFY `area_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `house-type`
+-- AUTO_INCREMENT for table `houses`
 --
-ALTER TABLE `house-type`
-  MODIFY `house_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+ALTER TABLE `houses`
+  MODIFY `house_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `states`
 --
 ALTER TABLE `states`
-  MODIFY `state_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `state_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `visitors`

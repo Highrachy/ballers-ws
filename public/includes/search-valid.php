@@ -2,7 +2,7 @@
     <h5 class="search-holding-title">Average prices in the selected location is being displayed</h5>
 
     <div class="col-lg-12 search-holding-description">
-        <h1 class="search-holding-description-heading">NGN <?php echo $price?></h1>
+        <h1 class="search-holding-description-heading">NGN <?php echo $avg_price?></h1>
         <h5 class="search-holding-description-text">
             <img src="./assets/img/icons/location-white.svg" alt="location" class="search-holding-description-icon">
             <?php echo $area.", ".$state?>

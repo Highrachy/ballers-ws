@@ -188,7 +188,7 @@ $(document).ready(function () {
             text += `<option value="${data[i].area_id}">${data[i].area_name}</option>`;
           }
 
-          if (data.length === 0) {
+          if (data.message) {
             text = "<option selected disabled>No Area Available</option>";
           }
 
@@ -223,10 +223,10 @@ $(document).ready(function () {
           var text = "<option selected disabled>House Type</option>";
 
           for (let i = 0; i < data.length; i++) {
-            text += `<option value="${data[i].house_id}">${data[i].type}</option>`;
+            text += `<option value="${data[i].type}">${data[i].type}</option>`;
           }
 
-          if (data.length === 0) {
+          if (data.message) {
             text = "<option selected disabled>No House Available</option>";
           }
 

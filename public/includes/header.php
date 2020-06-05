@@ -1,4 +1,5 @@
 <?php
+// error_reporting(0);
 function addActive($currentPage, $page){
   if ($currentPage == $page) {
     echo 'active';

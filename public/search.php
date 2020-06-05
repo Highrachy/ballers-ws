@@ -1,137 +1,50 @@
-<?php require_once('includes/header.php'); ?>
-<section class="search-holding">
-    <h5 class="search-holding-title">Average prices in the selected location is being displayed</h5>
+<?php 
+require_once('includes/header.php');
+require_once('includes/db.php');
 
-    <div class="col-lg-12 search-holding-description">
-        <h1 class="search-holding-description-heading">NGN 18,000,000</h1>
-        <h5 class="search-holding-description-text">
-            <img src="./assets/img/icons/location-white.svg" alt="location" class="search-holding-description-icon">
-            Ajah, Lagos
-        </h5>
-        &nbsp;&nbsp;&nbsp;
-        <h5 class="search-holding-description-text">
-        <img src="./assets/img/icons/house-white.svg" alt="house" class="search-holding-description-icon">
-            2 Bedroom flat
-        </h5>
+$mysqli = db_connection();
+$search_view = 'includes/search-invalid.php';
+?>
+
+<section class="search-page-form row">
+    <div class="col-lg-2 col-12"></div>
+    <div class="col-lg-8 col-12">
+        <?php require_once('includes/dynamic-select-form.php'); ?>
     </div>
-
-    <div class="row search-page-form">
-        <form class="form-inline">
-
-            <div class="col-lg-4 col-sm-6">
-                <div class="col-sm-7 col-6 search-page-form-label">
-                    <label class="" for="location">Average price in</label>
-                </div>
-                <div class="input-group col-12">
-                    <div class="input-group-prepend">
-                        <div class="input-group-text">
-                            <img src="./assets/img/icons/location.png" class="input-icon" alt="location icon">
-                        </div>
-                    </div>
-                    <input type="text" class="form-control search-page-form-input" id="location" value="Ajah, Lagos">
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-sm-6">
-                <div class="col-sm-5 col-4 search-page-form-label">
-                    <label class="" for="housetype">House type</label>
-                </div>
-                <div class="input-group col-12">
-                    <div class="input-group-prepend">
-                        <div class="input-group-text">
-                            <img src="./assets/img/icons/house.png" class="input-icon" alt="house icon">
-                        </div>
-                    </div>
-                    <select class="form-control custom-select search-page-form-input" id="housetype">
-                        <option selected>House type</option>
-                        <option value="1">1 Bedroom flat</option>
-                        <option value="2">2 Bedroom flat</option>
-                        <option value="3" selected>3 Bedroom flat</option>
-                    </select>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-sm-12">
-                <div class="col-12">
-                    <button type="submit" class="btn btn-large search-page-form-submit">Search</button>
-                </div>
-            </div>
-        </form>
-    </div>
-
-    <hr>
+    <div class="col-lg-2 col-12"></div>
 </section>
-<section class="search-ready">
-    <h3 class="search-ready-heading">Know when your home would be ready</h3>
-    <p class="search-ready-text">Fill in the details below to  know when your home would be ready</p>
 
-    <div class="row search-ready-investments">
-        <div class="col-lg-3 search-ready-step investment-frequency">
-            <h5 class="search-ready-step-heading">Investment Frequency</h5>
-            <p class="search-ready-step-text">Select one of the options below</p>
+<?php
+if (isset($_GET["index-form-search"])) {
+    $state_id = $mysqli->real_escape_string($_GET['state']);
+    $area_id = $mysqli->real_escape_string($_GET['area']);
+    $house_type = $mysqli->real_escape_string($_GET['type']);
 
-            <div class="btn-group-toggle investment-options row" data-toggle="buttons">
-                <label class="col-lg-12 col-sm-3 btn btn-secondary option-btn">
-                    <input type="radio" name="investment-frequency" id="option1" autocomplete="off"> Monthly
-                </label>
+    $sql_query = "SELECT houses.type, houses.price, area.area_name, states.state_name, AVG(price) as average_price, MIN(price) as minimum_price, MAX(price) as maximum_price FROM houses INNER JOIN area INNER JOIN states WHERE houses.area_id = '$area_id' AND area.area_id = houses.area_id AND states.state_id = houses.state_id AND houses.type='$house_type'";
+    $result = mysqli_query($mysqli,$sql_query);
+    $no_of_results = $result->num_rows;
+    $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+        
+    if (empty($_GET['state']) || empty($_GET['area']) || empty($_GET['type'])) {
+        $search_view = 'includes/search-invalid.php';
+    } elseif (is_null($row['type']) || is_null($row['area_name']) || is_null($row['state_name'])) {
+        $search_view = 'includes/search-invalid.php';
+    } elseif ($no_of_results > 0) {
+        $state = $row['state_name'];
+        $area = $row['area_name'];
+        $type = $row['type'];
+        $avg_price = number_format($row['average_price']);
+        $min_price = number_format($row['minimum_price']);
+        $max_price = number_format($row['maximum_price']);
+        $search_view = 'includes/search-valid.php';
+    }
 
-                <label class="col-lg-12 col-sm-3 btn btn-secondary option-btn option-btn-quaterly active">
-                    <input type="radio" name="investment-frequency" id="option2" autocomplete="off" checked> Quarterly
-                </label>
-
-                <label class="col-lg-12 col-sm-3 btn btn-secondary option-btn">
-                    <input type="radio" name="investment-frequency" id="option3" autocomplete="off"> Voluntarily
-                </label>
-            </div>
-        </div>
-
-        <div class="col-lg-3 search-ready-step investment-initial">
-            <h5 class="search-ready-step-heading">Initial investment amount</h5>
-            <p class="search-ready-step-text">Use the scroll bar or type in <br> the desired amount</p>
-
-            <div class="row custom-range-div">
-                <div class="form-group col-lg-12 col-sm-6">
-                    <label for="initial-investment">NGN 500,000</label>
-                    <input type="range" class="custom-range" id="initial-investment" name="" min="100000" max="30000000" step="10000" value="500000">
-                </div>
-
-                <div class="input-group col-lg-12 col-sm-6">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text">NGN</span>
-                    </div>
-                    <input type="text" class="form-control investment-value-input" placeholder="500,000" data-max-amount="30,000,000">
-                </div>
-            </div>
-        </div>
-
-        <div class="col-lg-3 search-ready-step investment-periodic">
-            <h5 class="search-ready-step-heading">Periodic investment amount</h5>
-            <p class="search-ready-step-text">Use the scroll bar or type in <br> your desired amount</p>
+    db_query_error($sql_query);
+}
 
 
-            <div class="row custom-range-div">
-                <div class="form-group col-lg-12 col-sm-6">
-                    <label for="periodic-investment">NGN 100,000</label>
-                    <input type="range" class="custom-range" id="periodic-investment" name="" min="50000" max="5000000" step="5000" value="100000">
-                </div>
+?>
 
-                <div class="input-group col-lg-12 col-sm-6">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text">NGN</span>
-                    </div>
-                    <input type="text" class="form-control investment-value-input" placeholder="100,000" data-max-amount="5,000,000">
-                </div>
-            </div>
-        </div>
+<?php require_once($search_view); ?>
 
-    </div>
-
-    <div class="row search-calculate">
-        <div class="col-lg-4 mx-auto">
-            <button class="btn search-calculate-button">Calculate</button>
-            <p class="">Results are based on market research done in 2020</p>
-        </div>
-    </div>
-
-</section>
 <?php require_once('includes/footer.php'); ?>

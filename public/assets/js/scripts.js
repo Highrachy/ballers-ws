@@ -119,8 +119,8 @@ $(document).ready(function () {
     $(this).val(number.toLocaleString());
   });
 
-  const rangeSliderDiv = document.querySelectorAll('.custom-range-div');
   //update the input & label value when slider is moved
+  const rangeSliderDiv = document.querySelectorAll('.custom-range-div');
   Array.prototype.forEach.call(rangeSliderDiv, (slider) => {
     slider.querySelector('.custom-range').addEventListener('input', (event) => {
       var inputValue = removeCommasAndMakeNumber(event.target.value)
@@ -144,6 +144,102 @@ $(document).ready(function () {
       input.querySelector('label').innerHTML = 'NGN ' + formatToCurrency(inputValue);
       input.querySelector('.form-control').value = formatToCurrency(inputValue);
     });
+  });
+
+  // use ajax to update select options on index page
+  const state = $("#state");
+  const area = $("#area");
+  const type = $("#type");
+
+  $.ajax({
+    type: 'POST',
+    url: './includes/find-house.php',
+    data: {
+      load_state: true
+    },
+    success: function(data){
+      data = JSON.parse(data);
+      var text = "<option selected disabled>State</option>";
+
+      for (let i = 0; i < data.length; i++) {
+        text += `<option value="${data[i].state_id}">${data[i].state_name}</option>`;
+      }
+
+      state.html(text);
+      area.prop('disabled', true);
+      type.prop('disabled', true);
+    }
+  });
+
+  state.on('change', function () {
+    var stateID = $(this).val();
+    if (stateID) {
+      $.ajax({
+        type: 'POST',
+        url: './includes/find-house.php',
+        data: {
+          state_id: stateID
+        },
+        success: function(data){
+          data = JSON.parse(data);
+          var text = "<option selected disabled>Area</option>";
+
+          for (let i = 0; i < data.length; i++) {
+            text += `<option value="${data[i].area_id}">${data[i].area_name}</option>`;
+          }
+
+          if (data.message) {
+            text = "<option selected disabled>No Area Available</option>";
+          }
+
+          area.html(text);
+          type.html('<option value="">Select area</option>');
+          area.prop('disabled', false);
+          type.prop('disabled', true);
+        }
+      });
+    } else {
+      area.html('<option value="">Select state</option>');
+      type.html('<option value="">Select area</option>');
+      area.prop('disabled', true);
+      type.prop('disabled', true);
+    }
+  });
+
+  area.on('change', function () {
+    var areaID = $(this).val();
+    var stateID = state.val();
+    
+    if (areaID) {
+      $.ajax({
+        type: 'POST',
+        url: './includes/find-house.php',
+        data: {
+          area_id: areaID,
+          state_id: stateID
+        },
+        success: function(data){
+          data = JSON.parse(data);
+          var text = "<option selected disabled>House Type</option>";
+
+          for (let i = 0; i < data.length; i++) {
+            text += `<option value="${data[i].type}">${data[i].type}</option>`;
+          }
+
+          if (data.message) {
+            text = "<option selected disabled>No House Available</option>";
+          }
+
+          type.html(text);
+          type.prop('disabled', false);
+        }
+      });
+    } else {
+      area.html('<option value="">Select state</option>');
+      type.html('<option value="">Select area</option>');
+      area.prop('disabled', true);
+      type.prop('disabled', true);
+    }
   });
 
 });

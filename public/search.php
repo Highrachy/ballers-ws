@@ -23,9 +23,13 @@ if (isset($_GET["index-form-search"])) {
     $sql_query = "SELECT houses.type, houses.price, area.area_name, states.state_name, AVG(price) as average_price, MIN(price) as minimum_price, MAX(price) as maximum_price FROM houses INNER JOIN area INNER JOIN states WHERE houses.area_id = '$area_id' AND area.area_id = houses.area_id AND states.state_id = houses.state_id AND houses.type='$house_type'";
     $result = mysqli_query($mysqli,$sql_query);
     $no_of_results = $result->num_rows;
+    $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
         
-    if ($no_of_results > 0) {
-        $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+    if (empty($_GET['state']) || empty($_GET['area']) || empty($_GET['type'])) {
+        $search_view = 'includes/search-invalid.php';
+    } elseif (is_null($row['type']) || is_null($row['area_name']) || is_null($row['state_name'])) {
+        $search_view = 'includes/search-invalid.php';
+    } elseif ($no_of_results > 0) {
         $state = $row['state_name'];
         $area = $row['area_name'];
         $type = $row['type'];
@@ -33,8 +37,6 @@ if (isset($_GET["index-form-search"])) {
         $min_price = number_format($row['minimum_price']);
         $max_price = number_format($row['maximum_price']);
         $search_view = 'includes/search-valid.php';
-    } else {
-        $search_view = 'includes/search-invalid.php';
     }
 
     db_query_error($sql_query);

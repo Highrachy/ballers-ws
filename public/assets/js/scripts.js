@@ -165,13 +165,13 @@ $(document).ready(function () {
         text += `<option value="${data[i].state_id}">${data[i].state_name}</option>`;
       }
 
-      $(state).html(text);
+      state.html(text);
       area.prop('disabled', true);
       type.prop('disabled', true);
     }
   });
 
-  $('#state').on('change', function () {
+  state.on('change', function () {
     var stateID = $(this).val();
     if (stateID) {
       $.ajax({
@@ -208,7 +208,7 @@ $(document).ready(function () {
 
   area.on('change', function () {
     var areaID = $(this).val();
-    var stateID = $('#state').val();
+    var stateID = state.val();
     
     if (areaID) {
       $.ajax({

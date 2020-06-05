@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jun 04, 2020 at 09:13 PM
+-- Generation Time: Jun 05, 2020 at 12:15 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.2
 
@@ -31,17 +31,19 @@ SET time_zone = "+00:00";
 CREATE TABLE `area` (
   `area_id` int(255) NOT NULL,
   `area_name` text NOT NULL,
-  `state_id` int(255) NOT NULL
+  `state_id` int(255) NOT NULL,
+  `longitude` varchar(255) NOT NULL,
+  `latitude` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `area`
 --
 
-INSERT INTO `area` (`area_id`, `area_name`, `state_id`) VALUES
-(1, 'Lekki Phase 1', 1),
-(2, 'Orchid Hotel Road', 1),
-(3, 'Wuse II', 2);
+INSERT INTO `area` (`area_id`, `area_name`, `state_id`, `longitude`, `latitude`) VALUES
+(1, 'Lekki Phase 1', 1, '', ''),
+(2, 'Orchid Hotel Road', 1, '', ''),
+(3, 'Wuse II', 2, '', '');
 
 -- --------------------------------------------------------
 
@@ -55,8 +57,8 @@ CREATE TABLE `houses` (
   `price` varchar(255) NOT NULL,
   `area_id` int(255) NOT NULL,
   `state_id` int(255) NOT NULL,
-  `longitude` varchar(255) NOT NULL,
-  `latitude` varchar(255) NOT NULL
+  `longitude` varchar(255) DEFAULT NULL,
+  `latitude` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --

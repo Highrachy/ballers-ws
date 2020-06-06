@@ -20,79 +20,65 @@
 .search-holding {
     justify-content: center;
     text-align: center;
+    background-color: $search-page-bg;
     width: 100%;
-    padding: 10rem 5rem 3rem;
+    padding: 2rem 5rem 3rem;
 
     &-title {
         color: $blue;
+        font-size: 1rem;
+        font-weight: normal;
+    }
+    &-property {
+        padding-bottom: 4rem;
+        border-bottom: 1px solid rgba(87, 117, 250, 0.17);
+    }
+    &-property-heading {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 3.16rem;
+    }
+    &-property-text {
+        @extend %regular-text-stack;
+        color: $gray-650;
         padding-bottom: 2rem;
-        font-size: 1.5rem;
-        font-weight: 500;
-    }
-    &-description {
-        background-color: $purple;
-        padding-top: 2rem;
-        padding-bottom: 1rem;
-        border-radius: $border-radius;
-    }
-    &-description-heading {
-        color: $white;
-        font-size: 3.5rem;
-        font-weight: 600;
-    }
-    &-description-text {
-        color: $white;
         display: inline-block;
-        font-weight: 400;
+        font-weight: normal;
     }
-    hr {
-        color: $gray-400;
+    &-property-range-track {
+        width: 60%;
     }
-    
-}
-.search-valid-page-form {
-    padding-top: 3rem;
-    justify-content: left;
-
-    form {
-        width: 100%;
+    &-property-range-price {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 0.85rem;
+        color: $purple;
+        display: inline;
     }
-    .input-group {
-        border-radius: $border-radius;
-    }
-    .form-inline label{
-        justify-content: start;
-        color: $gray-950;
-        font-weight: 500;
-        padding: 0;
-    }
-    &-input {
-        font-size: 2rem;
-        font-weight: 500;
-        color: $green;
-        background-color: transparent;
-    }
-    &-input:focus {
-        color: $green;
-    }
-    button {
-        @extend %button-stack;
-        padding: 0.8rem 3.5rem;
-        margin: auto;
-        margin-top: 1rem;
+    &-property-range-text {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 0.85rem;
+        color: $purple;
+        display: inline;
+        margin-left: 5rem;
+        margin-right: 5rem;
     }
 }
 .search-ready {
-    padding: 3rem 5rem;
+    padding: 0 5rem 5rem;
     text-align: center;
     justify-content: center;
+    background-color: $search-page-bg;
 
     &-heading {
-        color: $purple;
-        font-size: 2.5rem;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 2rem;
     }
     &-text {
-        color: $gray-700;
+        @extend %regular-text-stack;
+        color: $blue;
     }
     &-investments {
         padding-left: 0;
@@ -100,9 +86,32 @@
         justify-content: center; 
     }
     &-step {
-        padding: 2rem;
+        padding: 1rem 1rem 0.8rem;
         border-radius: $border-radius;
         text-align: left;
+        margin-bottom: 1.5rem;
+    }
+    &-step-heading {
+        font-size: 1.44rem;
+    }
+    &-awesome {
+        background-color: $white;
+        border-radius: $border-radius;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+    &-awesome-eligibility {
+        color: $purple;
+    }
+    &-awesome-create {
+        @extend %button-stack;
+    }
+    &-text-small {
+        color: $blue;
+        font-size: 0.8rem;
+        font-style: normal;
+        font-weight: normal;
+        padding-top: 1rem;
     }
 }
 .investment {
@@ -110,15 +119,18 @@
     &-frequency {
         background-color: $purple-light;
     
-        .btn-group-toggle {
-            margin-bottom: 1rem;
-        }
         .option-btn {
             background: $purple-mid;
             border: 1px solid $purple-mid;
             color: $purple;
             margin-bottom: 1rem;
             width: 100%;
+        }
+        &-options-quaterly {
+            padding-left: 1rem;
+        }
+        .option-btn-quaterly {
+            margin: 0 5rem 1rem;
         }
         .active {
             color: $white !important;
@@ -133,17 +145,18 @@
         }
         .input-group-text {
             padding-left: 1rem;
+            border: 0 !important;
             color: $gray-950;
         }
         .input-group-prepend,
         .investment-value-input {
-            background-color: inherit;
-            border: 1px solid $gray-950 !important;
+            background-color: $white;
+            border: 1px solid rgba(87, 117, 250, 0.17) !important;
             color: $gray-950;
         }
         .input-group-prepend {
-            border-right: 0 !important;
             border-radius: $border-radius 0 0 $border-radius;
+            height: 72%;
         }
         .investment-value-input {
             border-left: 0 !important;
@@ -179,7 +192,6 @@
             &::-ms-thumb { @include yellow-thumb }
         }
         background-color: $yellow-light;
-        margin: 0 5rem;
     }
     &-periodic {
         @mixin green-track() {
@@ -228,15 +240,14 @@
 }
 
 @media only screen and (max-width: 1024px) {
-    .investment-initial {
-        margin: 0 5rem;
-    }
     .search-valid-page-form {
-    
         &-input {
             font-size: 1.7rem;
             font-weight: 500;
         }
+    }
+    .search-holding-property-range-track {
+        width: 85%;
     }
     .search-ready-step {
         padding: 1.5rem;
@@ -244,6 +255,9 @@
         &-text br {
             display: none;
         }
+    }
+    .investment-frequency .option-btn-quaterly {
+        margin: 0 4rem 1rem;
     }
 }
 
@@ -283,9 +297,6 @@
     .input-group {
         padding-top: 0.8rem;
     }
-    .input-group-prepend {
-        height: 86%;
-    }
     .investment {
         &-frequency {
             .btn-group-toggle {
@@ -297,6 +308,11 @@
         }
         &-initial {
             margin: 2rem 0;
+        }
+        &-periodic, &-initial {
+            .input-group-prepend {
+                height: 86%;
+            }
         }
     }
     .option-btn-quaterly {
@@ -314,9 +330,9 @@
         }
     }
     .search-holding {
-        padding: 8rem 1rem 3rem;
+        padding: 3rem 1rem 3rem;
 
-        &-description {
+        &-property {
             padding-bottom: 2rem;
     
             &-heading {
@@ -324,6 +340,9 @@
             }
             &-text {
                 font-size: 1rem;
+            }
+            &-range {
+                display: none;
             }
         }
     }
@@ -354,7 +373,7 @@
         }
     }
     .search-ready {
-        padding: 1rem 2rem 2rem;
+        padding: 1rem 2rem 5rem;
 
         &-heading {
             font-size: 2rem;
@@ -366,12 +385,24 @@
             font-size: 1.4rem;
         }
     }
-    .option-btn,
-    .option-btn-quaterly {
-        margin: 0;
+    .investment {
+        &-frequency {
+            .option-btn-quaterly {
+                margin: 0 0 1rem;
+            }
+        }
+        &-periodic, &-initial {
+            .input-group-prepend {
+                height: 100%;
+            }
+        }
     }
     .input-group-prepend {
         height: 100%;
+    }
+    .search-calculate {
+        padding-top: 0;
+        padding-bottom: 3rem;
     }
     .search-calculate-button {
         width: 100%;

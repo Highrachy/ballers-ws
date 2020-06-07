@@ -6,13 +6,17 @@ $mysqli = db_connection();
 $search_view = 'includes/search-invalid.php';
 ?>
 
-<section class="search-page-form row">
-    <div class="col-lg-2 col-12"></div>
-    <div class="col-lg-8 col-12">
-        <?php require_once('includes/dynamic-select-form.php'); ?>
+<section class="search-page-form">
+    <div class="row">
+        <div class="col-lg-2 col-12"></div>
+        <div class="col-lg-8 col-12">
+            <?php require_once('includes/dynamic-select-form.php'); ?>
+        </div>
+        <div class="col-lg-2 col-12">
+            <a href="#toggle-search-map" class="btn toggle-search-map" id="toggle-search-map"><img src="./assets/img/icons/view-map-pin.svg" alt="view map"> &nbsp; View Map</a>
+        </div>
     </div>
-    <div class="col-lg-2 col-12"></div>
-</section>
+</section>   
 
 <?php
 if (isset($_GET["index-form-search"])) {
@@ -37,14 +41,35 @@ if (isset($_GET["index-form-search"])) {
         $min_price = number_format($row['minimum_price']);
         $max_price = number_format($row['maximum_price']);
         $search_view = 'includes/search-valid.php';
+        echo "<script>
+                function loadSearchMap(longitude, latitude) {
+                    // var point = { lat: longitude, lng: latitude };
+                    // var map = new google.maps.Map(document.getElementById('sidemap-nav'), { zoom: 18, center: point });
+                    console.log('side map loaded');
+                    
+                    // var marker = new google.maps.Marker({
+                    // position: point,
+                    // map: map,
+                    // // icon: ''
+                    // });
+                }
+                loadSearchMap(5.4297021, 0.4297284)
+            </script>";
     }
-
     db_query_error($sql_query);
 }
-
-
 ?>
 
-<?php require_once($search_view); ?>
+<div class="search-page-wrapper" id="wrapper">
+    <!-- sidemap -->
+    <div id="sidemap-wrapper">
+        <div class="sidemap-nav" id="sidemap-nav">
+            <h1>map goes here</h1>
+        </div>
+    </div>
+    <!-- /#sidemap-wrapper -->
 
+<?php require_once($search_view); ?>
 <?php require_once('includes/footer.php'); ?>
+
+</div>

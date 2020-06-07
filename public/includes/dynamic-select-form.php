@@ -7,14 +7,14 @@
     <div class="col-lg-3 col-sm-3 col-12">
         <label class="sr-only" for="area">Area</label>
         <select class="form-control custom-select" id="area" name="area" required disabled>
-            <option selected disabled>Select state</option>
+            <option selected disabled>Select area</option>
         </select>
     </div>
 
     <div class="col-lg-3 col-sm-3 col-12">
         <label class="sr-only" for="type">Type</label>
         <select class="form-control custom-select" id="type" name="type" required disabled>
-            <option selected disabled>Select state</option>
+            <option selected disabled>Selecr house type</option>
         </select>
     </div>
 

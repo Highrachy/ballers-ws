@@ -52,23 +52,7 @@ if (isset($_GET["index-form-search"])) {
         <div class="sidemap-nav" id="sidemap-nav"></div>
     </div>
     <!-- /#sidemap-wrapper -->
-    <?php
-    echo "<script>
-            function searchResultMap() {
-                var point = { lat: ".$latitude.", lng: ".$longitude." };
-                var map = new google.maps.Map(document.getElementById('sidemap-nav'), { zoom: 18, center: point });
-                var marker = new google.maps.Marker({
-                position: point,
-                map: map,
-                // icon: ''
-                });
-            }
-        </script>";
-    echo '<script async defer src="https://maps.googleapis.com/maps/api/js?key='.MAP_API_KEY.'&callback=searchResultMap"></script>';
     
-    ?>
-
     <?php require_once($search_view); ?>
-    <?php require_once('includes/footer.php'); ?>
-
 </div>
+<?php require_once('includes/footer.php'); ?>

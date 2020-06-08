@@ -13,25 +13,19 @@ function removeCommasAndMakeNumber(string) {
   return parseInt(string.replace(/,/g, ''));
 }
 
-// google maps initialization to remove errors on other pages
-var initMap = () => { }
+// google maps initialization
+var initMap = () => {
+  var office = { lat: 6.4297284, lng: 3.4297021 };
+  var map = new google.maps.Map(document.getElementById('contact-address-map'), { zoom: 18, center: office });
+  var marker = new google.maps.Marker({
+    position: office,
+    map: map,
+    // icon: ''
+  });
+}
 
 $(document).ready(function () {
   $('#payment, #profile, #security').hide();
-
-  // code to run if on contact.php
-  var url = window.location.href;
-  if(url.includes("contact.php")){
-    initMap = () => {
-      var office = { lat: 6.4297284, lng: 3.4297021 };
-      var map = new google.maps.Map(document.getElementById('contact-address-map'), { zoom: 18, center: office });
-      var marker = new google.maps.Marker({
-        position: office,
-        map: map,
-        // icon: ''
-      });
-    }
-  }
 
   // slick slider
   $('.benefits-slider').slick({

@@ -3,6 +3,7 @@
     color: $blue;
     padding: 0.5rem 2rem;
     border: 1px solid $purple;
+    margin-right: -37rem;
 
     &:hover {
         background-color: $gray-150;
@@ -17,6 +18,7 @@
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
+    top: 15rem;
 
     .toggled {
         padding-right: 30rem;
@@ -34,6 +36,7 @@
     position: fixed;
     right: 30rem;
     width: 0;
+    top: 15rem;
     height: 100%;
     margin-right: -30rem;
     overflow-y: auto;
@@ -109,7 +112,7 @@
     text-align: center;
     background-color: $search-page-bg;
     width: 100%;
-    padding: 20rem 5rem 3rem;
+    padding: 17rem 5rem 3rem;
 
     &-title {
         color: $blue;

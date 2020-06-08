@@ -7,6 +7,11 @@
             <div class="row">
                 <div class="col-lg-1 col-12"></div>
                 <div class="col-lg-10 col-12 search-holding-property">
+
+                    <a href="#toggle-search-map" class="btn toggle-search-map" id="toggle-search-map">
+                        <img src="./assets/img/icons/view-map-pin.svg" alt="view map"> &nbsp; View Map
+                    </a>
+                    
                     <h5 class="search-holding-title">&#9432; Average property price</h5>
                     <h1 class="search-holding-property-heading">NGN <?php echo $avg_price?></h1>
                     <h5 class="search-holding-property-text">

@@ -12,9 +12,7 @@ $search_view = 'includes/search-invalid.php';
         <div class="col-lg-8 col-12">
             <?php require_once('includes/dynamic-select-form.php'); ?>
         </div>
-        <div class="col-lg-2 col-12">
-            <a href="#toggle-search-map" class="btn toggle-search-map" id="toggle-search-map"><img src="./assets/img/icons/view-map-pin.svg" alt="view map"> &nbsp; View Map</a>
-        </div>
+        <div class="col-lg-2 col-12"></div>
     </div>
 </section>   
 
@@ -24,7 +22,7 @@ if (isset($_GET["index-form-search"])) {
     $area_id = $mysqli->real_escape_string($_GET['area']);
     $house_type = $mysqli->real_escape_string($_GET['type']);
 
-    $sql_query = "SELECT houses.type, houses.price, area.area_name, states.state_name, AVG(price) as average_price, MIN(price) as minimum_price, MAX(price) as maximum_price FROM houses INNER JOIN area INNER JOIN states WHERE houses.area_id = '$area_id' AND area.area_id = houses.area_id AND states.state_id = houses.state_id AND houses.type='$house_type'";
+    $sql_query = "SELECT houses.type, houses.price, area.area_name, area.latitude, area.longitude, states.state_name, AVG(price) as average_price, MIN(price) as minimum_price, MAX(price) as maximum_price FROM houses INNER JOIN area INNER JOIN states WHERE houses.area_id = '$area_id' AND area.area_id = houses.area_id AND states.state_id = houses.state_id AND houses.type='$house_type'";
     $result = mysqli_query($mysqli,$sql_query);
     $no_of_results = $result->num_rows;
     $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
@@ -41,20 +39,8 @@ if (isset($_GET["index-form-search"])) {
         $min_price = number_format($row['minimum_price']);
         $max_price = number_format($row['maximum_price']);
         $search_view = 'includes/search-valid.php';
-        echo "<script>
-                function loadSearchMap(longitude, latitude) {
-                    // var point = { lat: longitude, lng: latitude };
-                    // var map = new google.maps.Map(document.getElementById('sidemap-nav'), { zoom: 18, center: point });
-                    console.log('side map loaded');
-                    
-                    // var marker = new google.maps.Marker({
-                    // position: point,
-                    // map: map,
-                    // // icon: ''
-                    // });
-                }
-                loadSearchMap(5.4297021, 0.4297284)
-            </script>";
+        $latitude = $row['latitude'];
+        $longitude = $row['longitude'];
     }
     db_query_error($sql_query);
 }
@@ -63,13 +49,26 @@ if (isset($_GET["index-form-search"])) {
 <div class="search-page-wrapper" id="wrapper">
     <!-- sidemap -->
     <div id="sidemap-wrapper">
-        <div class="sidemap-nav" id="sidemap-nav">
-            <h1>map goes here</h1>
-        </div>
+        <div class="sidemap-nav" id="sidemap-nav"></div>
     </div>
     <!-- /#sidemap-wrapper -->
+    <?php
+    echo "<script>
+            function searchResultMap() {
+                var point = { lat: ".$latitude.", lng: ".$longitude." };
+                var map = new google.maps.Map(document.getElementById('sidemap-nav'), { zoom: 18, center: point });
+                var marker = new google.maps.Marker({
+                position: point,
+                map: map,
+                // icon: ''
+                });
+            }
+        </script>";
+    echo '<script async defer src="https://maps.googleapis.com/maps/api/js?key='.MAP_API_KEY.'&callback=searchResultMap"></script>';
+    
+    ?>
 
-<?php require_once($search_view); ?>
-<?php require_once('includes/footer.php'); ?>
+    <?php require_once($search_view); ?>
+    <?php require_once('includes/footer.php'); ?>
 
 </div>

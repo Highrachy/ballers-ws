@@ -14,7 +14,7 @@
     <div class="col-lg-3 col-sm-3 col-12">
         <label class="sr-only" for="type">Type</label>
         <select class="form-control custom-select" id="type" name="type" required disabled>
-            <option selected disabled>Selecr house type</option>
+            <option selected disabled>Select house type</option>
         </select>
     </div>
 

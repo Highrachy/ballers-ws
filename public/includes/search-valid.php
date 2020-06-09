@@ -9,7 +9,7 @@
                 <div class="col-lg-10 col-12 search-holding-property">
 
                     <a href="#toggle-search-map" class="btn toggle-search-map" id="toggle-search-map">
-                        <img src="./assets/img/icons/view-map-pin.svg" alt="view map"> &nbsp; View Map
+                        <span><img src="./assets/img/icons/view-map-pin.svg" alt="view map"> &nbsp; View Map</span>
                     </a>
                     
                     <h5 class="search-holding-title">&#9432; Average property price</h5>
@@ -149,7 +149,7 @@
                 var marker = new google.maps.Marker({
                 position: point,
                 map: map,
-                // icon: ''
+                icon: './assets/img/icons/map-marker-icon.png'
                 });
             }
         </script>";

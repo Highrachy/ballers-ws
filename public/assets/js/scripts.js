@@ -240,7 +240,7 @@ $(document).ready(function () {
   $("#toggle-search-map").click(function(e) {
     e.preventDefault();
     $("#wrapper").toggleClass("toggled");
-    $(this).html() == '<img src="./assets/img/icons/close-map-pin.svg" alt="view map"> &nbsp; Close Map' ? $(this).html('<img src="./assets/img/icons/view-map-pin.svg" alt="view map"> &nbsp; View Map') : $(this).html('<img src="./assets/img/icons/close-map-pin.svg" alt="view map"> &nbsp; Close Map');
+    $(this).html() == '<span><img src="./assets/img/icons/close-map-pin.svg" alt="view map"> &nbsp; Close Map</span>' ? $(this).html('<span><img src="./assets/img/icons/view-map-pin.svg" alt="view map"> &nbsp; View Map</span>') : $(this).html('<span><img src="./assets/img/icons/close-map-pin.svg" alt="view map"> &nbsp; Close Map</span>');
   });
 
 });

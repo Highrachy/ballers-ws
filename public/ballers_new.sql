@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jun 05, 2020 at 12:15 PM
+-- Generation Time: Jun 08, 2020 at 07:39 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.2
 
@@ -41,8 +41,8 @@ CREATE TABLE `area` (
 --
 
 INSERT INTO `area` (`area_id`, `area_name`, `state_id`, `longitude`, `latitude`) VALUES
-(1, 'Lekki Phase 1', 1, '', ''),
-(2, 'Orchid Hotel Road', 1, '', ''),
+(1, 'Lekki Phase 1', 1, '3.5852', '6.4698'),
+(2, 'Orchid Hotel Road', 1, '3.5433919', '6.4432707'),
 (3, 'Wuse II', 2, '', '');
 
 -- --------------------------------------------------------

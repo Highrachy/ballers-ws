@@ -66,7 +66,9 @@
 
 <?php 
 require_once('config.php');
-echo '<script async defer src="https://maps.googleapis.com/maps/api/js?key='.MAP_API_KEY.'&callback=initMap"></script>';
+if (strpos($_SERVER['REQUEST_URI'], "contact.php") == true) {
+  echo '<script async defer src="https://maps.googleapis.com/maps/api/js?key='.MAP_API_KEY.'&callback=initMap"></script>';
+}
 ?>
 </body>
 

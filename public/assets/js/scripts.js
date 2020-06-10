@@ -145,15 +145,19 @@ $(document).ready(function () {
   const area = $("#area");
   const type = $("#type");
 
+  const preSelectedState = state.data('current-value');
+  const preSelectedArea = area.data('current-value');
+  const preSelectedType = type.data('current-value');
+
   $.ajax({
     type: 'POST',
     url: './includes/find-house.php',
     data: {
       load_state: true
     },
-    success: function(data){
+    success: function (data) {
       data = JSON.parse(data);
-      var text = "<option selected disabled>State</option>";
+      let text = `<option selected disabled>${preSelectedState || 'State'}</option>`;
 
       for (let i = 0; i < data.length; i++) {
         text += `<option value="${data[i].state_id}">${data[i].state_name}</option>`;
@@ -165,6 +169,11 @@ $(document).ready(function () {
     }
   });
 
+  // set area if it is preselected
+  if (preSelectedArea) {
+    area.html(`<option selected disabled>${preSelectedArea || 'Area'}</option>`)
+  }
+
   state.on('change', function () {
     var stateID = $(this).val();
     if (stateID) {
@@ -174,7 +183,7 @@ $(document).ready(function () {
         data: {
           state_id: stateID
         },
-        success: function(data){
+        success: function (data) {
           data = JSON.parse(data);
           var text = "<option selected disabled>Area</option>";
 
@@ -200,10 +209,17 @@ $(document).ready(function () {
     }
   });
 
+
+
+  // set type if it is preselected
+  if (preSelectedType) {
+    type.html(`<option selected disabled>${preSelectedType || 'House Type'}</option>`)
+  }
+
   area.on('change', function () {
     var areaID = $(this).val();
     var stateID = state.val();
-    
+
     if (areaID) {
       $.ajax({
         type: 'POST',
@@ -212,7 +228,7 @@ $(document).ready(function () {
           area_id: areaID,
           state_id: stateID
         },
-        success: function(data){
+        success: function (data) {
           data = JSON.parse(data);
           var text = "<option selected disabled>House Type</option>";
 
@@ -237,7 +253,7 @@ $(document).ready(function () {
   });
 
   // toggle map on search page
-  $("#toggle-search-map").click(function(e) {
+  $("#toggle-search-map").click(function (e) {
     e.preventDefault();
     $("#wrapper").toggleClass("toggled");
     $(this).html() == '<span><img src="./assets/img/icons/close-map-pin.svg" alt="view map"> &nbsp; Close Map</span>' ? $(this).html('<span><img src="./assets/img/icons/view-map-pin.svg" alt="view map"> &nbsp; View Map</span>') : $(this).html('<span><img src="./assets/img/icons/close-map-pin.svg" alt="view map"> &nbsp; Close Map</span>');

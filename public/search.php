@@ -1,20 +1,10 @@
-<?php 
+<?php
 require_once('includes/header.php');
 require_once('includes/db.php');
 
 $mysqli = db_connection();
 $search_view = 'includes/search-invalid.php';
 ?>
-
-<section class="search-page-form">
-    <div class="row">
-        <div class="col-lg-2 col-12"></div>
-        <div class="col-lg-8 col-12">
-            <?php require_once('includes/dynamic-select-form.php'); ?>
-        </div>
-        <div class="col-lg-2 col-12"></div>
-    </div>
-</section>   
 
 <?php
 if (isset($_GET["index-form-search"])) {
@@ -26,7 +16,7 @@ if (isset($_GET["index-form-search"])) {
     $result = mysqli_query($mysqli,$sql_query);
     $no_of_results = $result->num_rows;
     $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
-        
+
     if (empty($_GET['state']) || empty($_GET['area']) || empty($_GET['type'])) {
         $search_view = 'includes/search-invalid.php';
     } elseif (is_null($row['type']) || is_null($row['area_name']) || is_null($row['state_name'])) {
@@ -46,13 +36,23 @@ if (isset($_GET["index-form-search"])) {
 }
 ?>
 
+<section class="search-page-form">
+    <div class="row">
+        <div class="col-lg-2 col-12"></div>
+        <div class="col-lg-8 col-12">
+            <?php require_once('includes/dynamic-select-form.php'); ?>
+        </div>
+        <div class="col-lg-2 col-12"></div>
+    </div>
+</section>
+
 <div class="search-page-wrapper" id="wrapper">
     <!-- sidemap -->
     <div id="sidemap-wrapper">
         <div class="sidemap-nav" id="sidemap-nav"></div>
     </div>
     <!-- /#sidemap-wrapper -->
-    
+
     <?php require_once($search_view); ?>
 </div>
 <?php require_once('includes/footer.php'); ?>

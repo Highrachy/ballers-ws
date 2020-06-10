@@ -145,7 +145,7 @@
     echo "<script>
             function searchResultMap() {
                 var point = { lat: ".$latitude.", lng: ".$longitude." };
-                var map = new google.maps.Map(document.getElementById('sidemap-nav'), { zoom: 18, center: point });
+                var map = new google.maps.Map(document.getElementById('sidemap-nav'), { zoom: 12, center: point });
                 var marker = new google.maps.Marker({
                 position: point,
                 map: map,

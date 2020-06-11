@@ -27,6 +27,32 @@ var initMap = () => {
 $(document).ready(function () {
   $('#payment, #profile, #security').hide();
 
+  // initialize popovers
+  $(function () {
+    $('[data-toggle="popover"]').popover()
+  });
+
+  // check if browser is mobile to position popover
+  var popOverPlacement;
+  if ($(window).width() < 576) {
+    popOverPlacement = 'top';
+  } else {
+    popOverPlacement = 'right';
+  }
+
+  $('#search-ready-awesome-spread').popover({
+    html: true,
+    trigger: 'focus hover',
+    placement: popOverPlacement,
+    title: "Spread Payment",
+    content: `Based on your initial investment amount, 
+    Investment frequency,and the periodic investment amount you selected, 
+    you will likely be comfortably able to pay 
+    for a home with an extra credit option.
+    <br>
+    <a href="#" class="search-ready-awesome-spread-popover-link">Learn more &#8594;</a>`
+  });
+
   // slick slider
   $('.benefits-slider').slick({
     speed: 1500,

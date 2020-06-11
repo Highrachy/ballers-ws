@@ -60,7 +60,7 @@ function addActive($currentPage, $page){
               <a class="nav-link sign-in" href="#">Sign In</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link register btn" href="#">Register</a>
+              <a class="nav-link register btn" href="#">Register for free</a>
             </li>
           </ul>
         </div>

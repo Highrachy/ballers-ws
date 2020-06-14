@@ -25,6 +25,13 @@
         padding: 0.8rem 0;
         border-radius: 0.5rem;
         box-shadow: 0px 15px 30px rgba(196, 196, 196, 0.3);
+
+        .form-inline {
+            .input-group-text,
+            .form-control {
+                border: 0 !important;
+            }
+        }
     }
     &-search-btn {
         padding: 1.2rem 0;

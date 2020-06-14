@@ -14,10 +14,10 @@ function removeCommasAndMakeNumber(string) {
 }
 
 // google maps initialization
-var initMap = () => {
-  var office = { lat: 6.4297284, lng: 3.4297021 };
-  var map = new google.maps.Map(document.getElementById('contact-address-map'), { zoom: 18, center: office });
-  var marker = new google.maps.Marker({
+function initMap() {
+  let office = { lat: 6.4297284, lng: 3.4297021 };
+  let map = new google.maps.Map(document.getElementById('contact-address-map'), { zoom: 18, center: office });
+  let marker = new google.maps.Marker({
     position: office,
     map: map,
     // icon: ''
@@ -32,9 +32,9 @@ $(document).ready(function () {
     $('[data-toggle="popover"]').popover()
   });
 
-  // check if browser is mobile to position popover
-  var popOverPlacement;
-  if ($(window).width() < 576) {
+  const MOBILE_WIDTH = 576;
+  let popOverPlacement;
+  if ($(window).width() < MOBILE_WIDTH) {
     popOverPlacement = 'top';
   } else {
     popOverPlacement = 'right';
@@ -50,7 +50,7 @@ $(document).ready(function () {
     you will likely be comfortably able to pay 
     for a home with an extra credit option.
     <br>
-    <a href="#" class="search-ready-awesome-spread-popover-link">Learn more &#8594;</a>`
+    <a href="faq.php" target="_blank" class="search-ready-awesome-spread-popover-link">Learn more &#8594;</a>`
   });
 
   // slick slider
@@ -134,7 +134,7 @@ $(document).ready(function () {
 
   //function to format number input values to currency like format
   $(".investment-value-input").on('keyup', function () {
-    var number = parseInt($(this).val().replace(/\D/g, ''), 10);
+    let number = parseInt($(this).val().replace(/\D/g, ''), 10);
     number = (isNaN(number) ? 0 : number);
     $(this).val(number.toLocaleString());
   });
@@ -143,7 +143,7 @@ $(document).ready(function () {
   const rangeSliderDiv = document.querySelectorAll('.custom-range-div');
   Array.prototype.forEach.call(rangeSliderDiv, (slider) => {
     slider.querySelector('.custom-range').addEventListener('input', (event) => {
-      var inputValue = removeCommasAndMakeNumber(event.target.value)
+      let inputValue = removeCommasAndMakeNumber(event.target.value)
       slider.querySelector('label').innerHTML = 'NGN ' + formatToCurrency(inputValue);
       slider.querySelector('.form-control').value = formatToCurrency(inputValue);
     });
@@ -153,7 +153,7 @@ $(document).ready(function () {
   Array.prototype.forEach.call(rangeSliderDiv, (input) => {
     input.querySelector('.form-control').addEventListener('input', (event) => {
       const maxInputValue = removeCommasAndMakeNumber($(event.target).data('max-amount') || 1000000);
-      var inputValue = removeCommasAndMakeNumber(event.target.value);
+      let inputValue = removeCommasAndMakeNumber(event.target.value);
       if (isNaN(inputValue)) {
         inputValue = 0;
       }
@@ -201,7 +201,7 @@ $(document).ready(function () {
   }
 
   state.on('change', function () {
-    var stateID = $(this).val();
+    let stateID = $(this).val();
     if (stateID) {
       $.ajax({
         type: 'POST',
@@ -211,7 +211,7 @@ $(document).ready(function () {
         },
         success: function (data) {
           data = JSON.parse(data);
-          var text = "<option selected disabled>Area</option>";
+          let text = "<option selected disabled>Area</option>";
 
           for (let i = 0; i < data.length; i++) {
             text += `<option value="${data[i].area_id}">${data[i].area_name}</option>`;
@@ -243,8 +243,8 @@ $(document).ready(function () {
   }
 
   area.on('change', function () {
-    var areaID = $(this).val();
-    var stateID = state.val();
+    let areaID = $(this).val();
+    let stateID = state.val();
 
     if (areaID) {
       $.ajax({
@@ -256,7 +256,7 @@ $(document).ready(function () {
         },
         success: function (data) {
           data = JSON.parse(data);
-          var text = "<option selected disabled>House Type</option>";
+          let text = "<option selected disabled>House Type</option>";
 
           for (let i = 0; i < data.length; i++) {
             text += `<option value="${data[i].type}">${data[i].type}</option>`;

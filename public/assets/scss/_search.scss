@@ -89,9 +89,14 @@
       margin-left: 0;
     }
 }
-.popover-header {
-    background-color: $white;
-    font-weight: 500;
+.popover {
+    z-index: 5;
+    padding: 0.5rem;
+    &-header {
+        background-color: $white;
+        border-bottom: 0;
+        font-weight: 500;
+    }
 }
 .search-page-form {
     justify-content: center;

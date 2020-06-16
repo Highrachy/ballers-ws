@@ -52,7 +52,7 @@ function get_houses_based_on_area_id($state_id, $area_id) {
     $mysqli = db_connection();
     $state_id = $mysqli->real_escape_string($state_id);
     $area_id = $mysqli->real_escape_string($area_id);
-    $sql_query = "SELECT DISTINCT(type) FROM `houses_sale` WHERE `area_id` = '$area_id' AND `state_id` = '$state_id'";
+    $sql_query = "SELECT DISTINCT(type) FROM `houses` WHERE `area_id` = '$area_id' AND `state_id` = '$state_id' AND `category` = 'For Sale'";
     $result = mysqli_query($mysqli,$sql_query);
     $json_response = array();
     

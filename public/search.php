@@ -12,7 +12,7 @@ if (isset($_GET["index-form-search"])) {
     $area_id = $mysqli->real_escape_string($_GET['area']);
     $house_type = $mysqli->real_escape_string($_GET['type']);
 
-    $sql_query = "SELECT houses_sale.type, houses_sale.price, area.area_name, area.latitude, area.longitude, states.state_name, AVG(price) as average_price, MIN(price) as minimum_price, MAX(price) as maximum_price FROM houses_sale INNER JOIN area INNER JOIN states WHERE houses_sale.area_id = '$area_id' AND area.area_id = houses_sale.area_id AND states.state_id = houses_sale.state_id AND houses_sale.type='$house_type'";
+    $sql_query = "SELECT houses.type, houses.price, area.area_name, area.latitude, area.longitude, states.state_name, AVG(price) as average_price, MIN(price) as minimum_price, MAX(price) as maximum_price FROM houses INNER JOIN area INNER JOIN states WHERE houses.area_id = '$area_id' AND area.area_id = houses.area_id AND states.state_id = houses.state_id AND houses.type='$house_type' AND houses.category = 'For Sale'";
     $result = mysqli_query($mysqli,$sql_query);
     $no_of_results = $result->num_rows;
     $row = mysqli_fetch_array($result, MYSQLI_ASSOC);

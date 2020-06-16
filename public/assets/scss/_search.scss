@@ -89,6 +89,15 @@
       margin-left: 0;
     }
 }
+.popover {
+    z-index: 5;
+    padding: 0.5rem;
+    &-header {
+        background-color: $white;
+        border-bottom: 0;
+        font-weight: 500;
+    }
+}
 .search-page-form {
     justify-content: center;
     padding-top: 9rem;
@@ -196,10 +205,29 @@
         padding-bottom: 2rem;
     }
     &-awesome-eligibility {
+        color: $blue;
+
+        span {
+            color: $green;
+        }
+    }
+    &-awesome-spread-popover-link {
         color: $purple;
+    }
+    &-awesome-spread-text {
+        font-weight: 500;
+        font-style: normal;
+        padding-bottom: 0.5rem;
     }
     &-awesome-create {
         @extend %button-stack;
+        background-color: $green;
+
+        &:hover {
+            background-color: $white;
+            border-color: $green;
+            color: $green;
+        }
     }
     &-text-small {
         color: $blue;

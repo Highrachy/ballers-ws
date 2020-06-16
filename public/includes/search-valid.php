@@ -127,8 +127,14 @@
                 <div class="col-lg-2"></div>
                 <div class="col-lg-8 search-ready-awesome">
                     <h3 class="search-ready-heading">Awesome!</h3>
-                    <p class="search-ready-text">With no need for any credit option. You’re just one step <br> away from owning your home</p>
-                    <button class="btn search-ready-awesome-eligibility">&#10229; Eligibility status</button>
+                    <p class="search-ready-text">You’re just one plan away from owning your home. <br> Consider one of the plans below.</p>
+
+                    <a tabindex="0" class="btn" id="search-ready-awesome-spread" role="button" data-toggle="popover">
+                        <h5 class="search-ready-awesome-spread-text">Spread Payment <img src="./assets/img/icons/question-mark.svg" alt="spread payment"></h5>
+                    </a>
+                    <br>
+
+                    <button class="btn search-ready-awesome-eligibility"><span>&#8592;</span> Eligibility status</button>
                     <button class="btn search-ready-awesome-create">Create free account</button>
                     <p class="search-ready-text-small">Open a free account and own your dream home</p>
                 </div>

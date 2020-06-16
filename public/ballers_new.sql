@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jun 16, 2020 at 11:51 PM
+-- Generation Time: Jun 17, 2020 at 01:14 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.2
 
@@ -45,8 +45,7 @@ INSERT INTO `area` (`area_id`, `area_name`, `state_id`, `longitude`, `latitude`)
 (2, 'Orchid Road Hotel', 1, '3.5433919', '6.4432707'),
 (3, 'Ikate', 1, '0', '0'),
 (4, 'Ogombo', 1, '0', '0'),
-(5, 'IIsan', 1, '0', '0'),
-(6, 'IIasan', 1, '0', '0');
+(5, 'Ilasan', 1, '0', '0');
 
 -- --------------------------------------------------------
 
@@ -292,11 +291,11 @@ INSERT INTO `houses` (`house_id`, `category`, `area_id`, `state_id`, `type`, `pr
 (220, 'For Sale', 3, 1, '4 terrace duplex', 90000000, ' Private Property Nigeria.com ', 'https://www.privateproperty.com.ng/listings/4-bed-terrace-for-sale-jakande-ikate-elegushi-sdly1235'),
 (221, 'For Sale', 3, 1, '4 terrace duplex', 95000000, ' Private Property Nigeria.com ', 'https://www.privateproperty.com.ng/listings/4-bed-detached-serviced-duplex-for-sale-ikate-ikate-elegushi-jast0078'),
 (222, 'For Sale', 3, 1, '4 terrace duplex', 115000000, ' Private Property Nigeria.com ', 'https://www.privateproperty.com.ng/listings/4-bed-serviced-duplex-for-sale-ikate-ikate-elegushi-fmco88925'),
-(223, 'For Sale', 6, 1, '4 terrace duplex', 55000000, ' Property pro.com ', 'https://www.propertypro.ng/property/4-bedroom-terraced-duplex-house-for-sale-ilasan-lekki-lagos-2CUKX'),
-(224, 'For Sale', 6, 1, '4 terrace duplex', 60000000, ' Property pro.com ', 'https://www.propertypro.ng/property/4-bedroom-terraced-duplex-house-for-sale-romen-garden-ilasan-lekki-lagos-3CPKF'),
-(225, 'For Sale', 6, 1, '4 terrace duplex', 65000000, ' Property pro.com ', 'https://www.propertypro.ng/property/4-bedroom-terraced-duplex-house-for-sale-ilasan-ikate-lekki-lagos-1DGXZ'),
-(226, 'For Sale', 6, 1, '4 terrace duplex', 68000000, ' Property pro.com ', 'https://www.propertypro.ng/property/4-bedroom-terraced-duplex-house-for-sale-ilasan-lekki-lagos-6CWDC'),
-(227, 'For Sale', 6, 1, '4 terrace duplex', 70000000, ' Property pro.com ', 'https://www.propertypro.ng/property/4-bedroom-terraced-duplex-house-for-sale-romay-garden-estate-ilasan-lekki-lagos-2DGKL'),
+(223, 'For Sale', 5, 1, '4 terrace duplex', 55000000, ' Property pro.com ', 'https://www.propertypro.ng/property/4-bedroom-terraced-duplex-house-for-sale-ilasan-lekki-lagos-2CUKX'),
+(224, 'For Sale', 5, 1, '4 terrace duplex', 60000000, ' Property pro.com ', 'https://www.propertypro.ng/property/4-bedroom-terraced-duplex-house-for-sale-romen-garden-ilasan-lekki-lagos-3CPKF'),
+(225, 'For Sale', 5, 1, '4 terrace duplex', 65000000, ' Property pro.com ', 'https://www.propertypro.ng/property/4-bedroom-terraced-duplex-house-for-sale-ilasan-ikate-lekki-lagos-1DGXZ'),
+(226, 'For Sale', 5, 1, '4 terrace duplex', 68000000, ' Property pro.com ', 'https://www.propertypro.ng/property/4-bedroom-terraced-duplex-house-for-sale-ilasan-lekki-lagos-6CWDC'),
+(227, 'For Sale', 5, 1, '4 terrace duplex', 70000000, ' Property pro.com ', 'https://www.propertypro.ng/property/4-bedroom-terraced-duplex-house-for-sale-romay-garden-estate-ilasan-lekki-lagos-2DGKL'),
 (228, 'For Sale', 4, 1, '4 terrace duplex', 46000000, ' Nigerian Property Centre.com ', 'https://nigeriapropertycentre.com/for-sale/houses/terraced-duplexes/lagos/ajah/ogombo/629520-4-bedroom-terrace-duplex'),
 (229, 'For Rent', 1, 1, 'Studio Apartment', 250000, 'Nigerian Property Centre.com', 'https://nigeriapropertycentre.com/for-rent/flats-apartments/self-contained/lagos/lekki/lekki-phase-1/614224-self-con-with-birth-room-toilet-but-you-shear-kitchen-3-people'),
 (230, 'For Rent', 1, 1, 'Studio Apartment', 350000, 'Nigerian Property Centre.com', 'https://nigeriapropertycentre.com/for-rent/flats-apartments/self-contained/lagos/lekki/lekki-phase-1/614224-self-con-with-birth-room-toilet-but-you-shear-kitchen-3-people'),
@@ -530,7 +529,7 @@ ALTER TABLE `visitors`
 -- AUTO_INCREMENT for table `area`
 --
 ALTER TABLE `area`
-  MODIFY `area_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `area_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `states`

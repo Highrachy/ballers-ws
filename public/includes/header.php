@@ -31,9 +31,11 @@ function addActive($currentPage, $page){
   <header>
     <div class="navigation-wrap">
       <nav class="navbar navbar-expand-lg">
-        <a class="navbar-brand" href="index.php"><img class="ballers-logo" src="./assets/img/logo/ballers-logo.png" alt="Ballers logo"></a>
+        <a class="navbar-brand" href="index.php"><img class="ballers-logo" src="./assets/img/logo/ballers-logo.png"
+            alt="Ballers logo"></a>
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -57,10 +59,11 @@ function addActive($currentPage, $page){
           </ul>
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link sign-in" href="#">Sign In</a>
+              <a class="nav-link sign-in" data-fancybox data-src="#login-popup" href="javascript:;">Sign In</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link register btn" href="#">Register for free</a>
+              <a class="nav-link register btn" data-fancybox data-src="#register-popup" href="javascript:;">Register for
+                free</a>
             </li>
           </ul>
         </div>

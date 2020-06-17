@@ -27,6 +27,12 @@ function initMap() {
 $(document).ready(function () {
   $('#payment, #profile, #security').hide();
 
+  // lightbox
+  $('[data-fancybox]').fancybox({
+    parentEl: 'body',
+    margin: [50, 0]
+  });
+
   // initialize popovers
   $(function () {
     $('[data-toggle="popover"]').popover()
@@ -45,9 +51,9 @@ $(document).ready(function () {
     trigger: 'focus hover',
     placement: popOverPlacement,
     title: "Spread Payment",
-    content: `Based on your initial investment amount, 
-    Investment frequency,and the periodic investment amount you selected, 
-    you will likely be comfortably able to pay 
+    content: `Based on your initial investment amount,
+    Investment frequency,and the periodic investment amount you selected,
+    you will likely be comfortably able to pay
     for a home with an extra credit option.
     <br>
     <a href="faq.php" target="_blank" class="search-ready-awesome-spread-popover-link">Learn more &#8594;</a>`

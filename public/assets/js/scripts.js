@@ -285,4 +285,27 @@ $(document).ready(function () {
     $(this).html() == '<span><img src="./assets/img/icons/close-map-pin.svg" alt="view map"> &nbsp; Close Map</span>' ? $(this).html('<span><img src="./assets/img/icons/view-map-pin.svg" alt="view map"> &nbsp; View Map</span>') : $(this).html('<span><img src="./assets/img/icons/close-map-pin.svg" alt="view map"> &nbsp; Close Map</span>');
   });
 
+  $('.search-calculate-button').click(function(){
+    let periodic = $('.periodic-investment').val();
+    let initial = $('.initial-investment').val();
+    let maxValue = removeCommasAndMakeNumber($('.investment-value-input').data('max-amount'));
+    let frequency = $("input[name='investment-frequency']:checked").val();
+  
+    $.ajax({
+      type: 'POST',
+      url: './includes/calculate-recommendation.php',
+      data: {
+        max_value: maxValue,
+        periodic_investment: periodic,
+        initial_investment: initial,
+        frequency: frequency
+      },
+      success: function (data) {
+        // data = JSON.parse(data);
+        console.log(data);
+                
+      }
+    });
+  });
+
 });

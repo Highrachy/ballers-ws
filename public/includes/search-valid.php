@@ -126,14 +126,14 @@
 
             <!-- </form> -->
 
-            <div class="row search-ready-investments">
+            <div class="row search-ready-investments search-ready-awesome-div">
                 <div class="col-lg-2"></div>
                 <div class="col-lg-8 search-ready-awesome">
                     <h3 class="search-ready-heading">Awesome!</h3>
                     <p class="search-ready-text">You’re just one plan away from owning your home. <br> Consider one of the plans below.</p>
 
                     <a tabindex="0" class="btn" id="search-ready-awesome-spread" role="button" data-toggle="popover">
-                        <h5 class="search-ready-awesome-spread-text">Spread Payment <img src="./assets/img/icons/question-mark.svg" alt="spread payment"></h5>
+                        <h5 class="search-ready-awesome-spread-text"></h5>
                     </a>
                     <br>
 

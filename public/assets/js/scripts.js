@@ -26,6 +26,7 @@ function initMap() {
 
 $(document).ready(function () {
   $('#payment, #profile, #security').hide();
+  $(".search-ready-awesome-div").hide();
 
   // initialize popovers
   $(function () {
@@ -44,7 +45,7 @@ $(document).ready(function () {
     html: true,
     trigger: 'focus hover',
     placement: popOverPlacement,
-    title: "Spread Payment",
+    title: 'Payment Method',
     content: `Based on your initial investment amount, 
     Investment frequency,and the periodic investment amount you selected, 
     you will likely be comfortably able to pay 
@@ -286,26 +287,48 @@ $(document).ready(function () {
   });
 
   $('.search-calculate-button').click(function(){
-    let periodic = $('.periodic-investment').val();
-    let initial = $('.initial-investment').val();
-    let maxValue = removeCommasAndMakeNumber($('.investment-value-input').data('max-amount'));
-    let frequency = $("input[name='investment-frequency']:checked").val();
-  
-    $.ajax({
-      type: 'POST',
-      url: './includes/calculate-recommendation.php',
-      data: {
-        max_value: maxValue,
-        periodic_investment: periodic,
-        initial_investment: initial,
-        frequency: frequency
-      },
-      success: function (data) {
-        // data = JSON.parse(data);
-        console.log(data);
-                
-      }
-    });
+    const periodic = $('.periodic-investment').val();
+    const initial = $('.initial-investment').val();
+    const avgPropertyCost = removeCommasAndMakeNumber($('.investment-value-input').data('max-amount'));
+    const frequency = $("input[name='investment-frequency']:checked").val();
+
+    let balance = avgPropertyCost - initial;
+    let output;
+    let paymentType;
+    
+    let outrightPersonal = initial >= (avgPropertyCost * 0.5) && balance / periodic < 6 / frequency;
+    let immediatePrivate = initial >= (avgPropertyCost * 0.25) && (avgPropertyCost <= 45000000);
+    let outrightMortgage = initial >= (avgPropertyCost * 0.25);
+    let directSpread = initial >= (avgPropertyCost * 0.2) && balance / periodic > 6 / frequency && balance / periodic <= 24 / frequency;
+    let immediateFederal = initial >= (avgPropertyCost * 0.1) && (avgPropertyCost <= 15000000) && balance / periodic <= 12 / frequency;
+    let spreadFederal = initial >= (avgPropertyCost * 0.01) && (avgPropertyCost <= 15000000) && balance / periodic <= 24 / frequency;
+    let rentToOwn = initial >= (avgPropertyCost * 0.05) && balance / periodic <= 120 / frequency;
+    let spreadPrivate = initial >= (avgPropertyCost * 0.025) && (avgPropertyCost <= 45000000) && balance / periodic <= 24 / frequency;
+    
+
+    if (outrightPersonal) { // 50%
+      paymentType = 'Personal Outright Payment';
+    } else if (immediatePrivate) { // 25% < 45m
+      paymentType = 'Private Immediate Equity';
+    } else if (outrightMortgage) { // 25%
+      paymentType = 'Mortgage Outright Payment';
+    } else if (directSpread) { // 20%
+      paymentType = 'Direct Spread Payment';
+    } else if (immediateFederal) { // 10% < 15m
+      paymentType = 'Federal Immediate Equity';
+    } else if (spreadFederal) { // 1% < 15m
+      paymentType = 'Federal Spread Equity';
+    } else if (spreadPrivate) { // 2.5% < 45m
+      paymentType = 'Private Spread Equity';
+    } else if (rentToOwn) { // 5%
+      paymentType = 'Rent to own package';
+    } else { // 1%
+      paymentType = 'Hybrid Outright Payment';
+    }
+
+    output = `${paymentType} <img src="./assets/img/icons/question-mark.svg" alt="payment">`
+    $('.search-ready-awesome-spread-text').html(output);
+    $(".search-ready-awesome-div").show(1000);
   });
 
 });

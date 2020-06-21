@@ -22,10 +22,11 @@ if (isset($_GET["index-form-search"])) {
     } elseif (is_null($row['type']) || is_null($row['area_name']) || is_null($row['state_name'])) {
         $search_view = 'includes/search-invalid.php';
     } elseif ($no_of_results > 0) {
+        $one_million = 1000000;
         $state = $row['state_name'];
         $area = $row['area_name'];
         $type = $row['type'];
-        $avg_price = number_format($row['average_price']);
+        $avg_price = number_format(floor($row['average_price']/$one_million) * $one_million);
         $min_price = number_format($row['minimum_price']);
         $max_price = number_format($row['maximum_price']);
         $search_view = 'includes/search-valid.php';
@@ -37,22 +38,22 @@ if (isset($_GET["index-form-search"])) {
 ?>
 
 <section class="search-page-form">
-    <div class="row">
-        <div class="col-lg-2 col-12"></div>
-        <div class="col-lg-8 col-12">
-            <?php require_once('includes/dynamic-select-form.php'); ?>
-        </div>
-        <div class="col-lg-2 col-12"></div>
+  <div class="row">
+    <div class="col-lg-2 col-12"></div>
+    <div class="col-lg-8 col-12">
+      <?php require_once('includes/dynamic-select-form.php'); ?>
     </div>
+    <div class="col-lg-2 col-12"></div>
+  </div>
 </section>
 
 <div class="search-page-wrapper" id="wrapper">
-    <!-- sidemap -->
-    <div id="sidemap-wrapper">
-        <div class="sidemap-nav" id="sidemap-nav"></div>
-    </div>
-    <!-- /#sidemap-wrapper -->
+  <!-- sidemap -->
+  <div id="sidemap-wrapper">
+    <div class="sidemap-nav" id="sidemap-nav"></div>
+  </div>
+  <!-- /#sidemap-wrapper -->
 
-    <?php require_once($search_view); ?>
+  <?php require_once($search_view); ?>
 </div>
 <?php require_once('includes/footer.php'); ?>

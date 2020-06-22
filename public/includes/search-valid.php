@@ -15,12 +15,12 @@
                     <h5 class="search-holding-title">&#9432; Average property price</h5>
                     <h1 class="search-holding-property-heading">NGN <?php echo $avg_price_formatted?></h1>
                     <h5 class="search-holding-property-text">
-                        <img src="./assets/img/icons/location-gray.svg" alt="location" class="search-holding-property-icon">
+                        <img src="./assets/img/icons/house-gray.svg" alt="house" class="search-holding-property-icon">
                         <?php echo $area.", ".$state?>
                     </h5>
                     &nbsp;&nbsp;&nbsp;
                     <h5 class="search-holding-property-text">
-                        <img src="./assets/img/icons/house-gray.svg" alt="house" class="search-holding-property-icon">
+                        <img src="./assets/img/icons/location-gray.svg" alt="location" class="search-holding-property-icon">
                         <?php echo $type?>
                     </h5>
 
@@ -133,7 +133,7 @@
                     <p class="search-ready-text">You’re just one plan away from owning your home. <br> Consider one of the plans below.</p>
 
                     <a tabindex="0" class="btn" id="search-ready-awesome-spread" role="button" data-toggle="popover">
-                        <h5 class="search-ready-awesome-spread-text"></h5>
+                        <div class="search-ready-awesome-spread-text"></div>
                     </a>
                     <br>
 

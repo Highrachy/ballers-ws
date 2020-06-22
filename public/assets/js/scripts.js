@@ -292,9 +292,11 @@ $(document).ready(function () {
     const avgPropertyCost = removeCommasAndMakeNumber($('.investment-value-input').data('max-amount'));
     const frequency = $("input[name='investment-frequency']:checked").val();
 
-    let balance = avgPropertyCost - initial;
-    let output;
-    let paymentType;
+    const balance = avgPropertyCost - initial;
+    let output = [];
+    let recommentation = '<h5>Recommended Packages <img src="./assets/img/icons/question-mark.svg" alt="payment"></h5>';
+    
+    // https://docs.google.com/document/d/1gsomOY9qclUz9RzadN3ztJH4Y0ryGT-fukNBFLhJAIU/edit?pli=1#heading=h.yy9lcow7gkem
     
     let outrightPersonal = initial >= (avgPropertyCost * 0.5) && balance / periodic < 6 / frequency;
     let immediatePrivate = initial >= (avgPropertyCost * 0.25) && (avgPropertyCost <= 45000000);
@@ -304,31 +306,45 @@ $(document).ready(function () {
     let spreadFederal = initial >= (avgPropertyCost * 0.01) && (avgPropertyCost <= 15000000) && balance / periodic <= 24 / frequency;
     let rentToOwn = initial >= (avgPropertyCost * 0.05) && balance / periodic <= 120 / frequency;
     let spreadPrivate = initial >= (avgPropertyCost * 0.025) && (avgPropertyCost <= 45000000) && balance / periodic <= 24 / frequency;
+    let hybrid = initial >= (avgPropertyCost * 0.01) && balance / periodic <= 24 / frequency;
     
 
-    if (outrightPersonal) { // 50%
-      paymentType = 'Personal Outright Payment';
-    } else if (immediatePrivate) { // 25% < 45m
-      paymentType = 'Private Immediate Equity';
-    } else if (outrightMortgage) { // 25%
-      paymentType = 'Mortgage Outright Payment';
-    } else if (directSpread) { // 20%
-      paymentType = 'Direct Spread Payment';
-    } else if (immediateFederal) { // 10% < 15m
-      paymentType = 'Federal Immediate Equity';
-    } else if (spreadFederal) { // 1% < 15m
-      paymentType = 'Federal Spread Equity';
-    } else if (spreadPrivate) { // 2.5% < 45m
-      paymentType = 'Private Spread Equity';
-    } else if (rentToOwn) { // 5%
-      paymentType = 'Rent to own package';
-    } else { // 1%
-      paymentType = 'Hybrid Outright Payment';
+    if (outrightPersonal) {
+      output.push('Personal Outright Payment');
+    } 
+    if (immediatePrivate) {
+      output.push('Private Immediate Equity');
+    } 
+    if (outrightMortgage) {
+      output.push('Mortgage Outright Payment');
+    } 
+    if (directSpread) {
+      output.push('Direct Spread Payment');
+    } 
+    if (immediateFederal) {
+      output.push('Federal Immediate Equity');
+    } 
+    if (spreadFederal) {
+      output.push('Federal Spread Equity');
+    } 
+    if (spreadPrivate) {
+      output.push('Private Spread Equity');
+    } 
+    if (rentToOwn) {
+      output.push('Rent to own package');
+    }
+    if (hybrid) {
+      output.push('Hybrid Outright Payment');
     }
 
-    output = `${paymentType} <img src="./assets/img/icons/question-mark.svg" alt="payment">`
-    $('.search-ready-awesome-spread-text').html(output);
+    for (let i = 0; i < output.length; i++) {
+      recommentation += `${output[i]}<br>`;
+    }
+
+    $('.search-ready-awesome-spread-text').html(recommentation);
     $(".search-ready-awesome-div").show(1000);
+
+    output = [];
   });
 
 });

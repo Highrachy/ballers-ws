@@ -136,13 +136,13 @@
                         <div class="search-ready-awesome-spread-text col-12"></div>
                     </a> -->
                     <div class="row">
-                        <div class="col-1"></div>
-                        <div class="search-ready-awesome-recommendation col-10"></div>
-                        <div class="col-1"></div>
+                        <div class="col-sm-1 col-12"></div>
+                        <div class="search-ready-awesome-recommendation col-sm-10 col-12"></div>
+                        <div class="col-sm-1 col-12"></div>
                     </div>
                     <br>
 
-                    <button class="btn search-ready-awesome-eligibility"><span>&#8592;</span> Eligibility status</button>
+                    <button class="btn search-ready-awesome-eligibility"><span>&#8592;</span> Redefine your eligibility status</button>
                     <button class="btn search-ready-awesome-create">Create free account</button>
                     <p class="search-ready-text-small">Open a free account and own your dream home</p>
                 </div>

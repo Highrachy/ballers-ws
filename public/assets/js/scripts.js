@@ -133,6 +133,14 @@ $(document).ready(function () {
     $(this).find('.faq-icon, .faq-option-category-icon').text((text) => text === '+' ? '-' : '+');
   });
 
+  $('.recommendation-card').on('shown.bs.collapse', function () {
+    console.log('open');
+    $(this).find('.recommendation-card-icon').text((text) => text === '⌃' ? '⌄' : '⌃');
+  }).on('hidden.bs.collapse', function () {
+    console.log('closed');
+    $(this).find('.recommendation-card-icon').text((text) => text === '⌄' ? '⌃' : '⌄');
+  });
+
   //function to format number input values to currency like format
   $(".investment-value-input").on('keyup', function () {
     let number = parseInt($(this).val().replace(/\D/g, ''), 10);
@@ -317,75 +325,95 @@ $(document).ready(function () {
 
     if (outrightPersonal || outrightMortgage) {
       let package = {
-        title: 'Outright',
+        title: `Outright <img src="./assets/img/icons/question-mark.svg" alt="payment">`,
         message: 'Start BALLing with an initial deposit of 50%'
       }
       output.push(package);
     } 
     if (immediatePrivate || immediateFederal || spreadFederal || spreadPrivate) {
       let package = {
-        title: 'Mortgage',
+        title: `Mortgage <img src="./assets/img/icons/question-mark.svg" alt="payment">`,
         message: 'Start BALLing with an initial deposit of 25%'
       }
       output.push(package);
     } 
     if (directSpread) {
       let package = {
-        title: 'Spread',
+        title: `Spread <img src="./assets/img/icons/question-mark.svg" alt="payment">`,
         message: 'Start BALLing with an initial deposit of 20%'
       }
       output.push(package);
     } 
     if (rentToOwn) {
       let package = {
-        title: 'Rent-to-own',
+        title: `Rent-to-own <img src="./assets/img/icons/question-mark.svg" alt="payment">`,
         message: 'Start BALLing with an initial deposit of 5%'
       }
       output.push(package);
     }
     if (hybrid) {
       let package = {
-        title: 'Hybrid',
+        title: `Hybrid <img src="./assets/img/icons/question-mark.svg" alt="payment">`,
         message: 'Start BALLing with an initial deposit of 1%'
       }
       output.push(package);
     }
     
-    for (let i = 0; i < output.length; i++) {
-      if (i == 0) {
-        recommendationNav += `<a class="nav-item nav-link active" id="nav-tab-${i}" data-toggle="tab" href="#nav-${i}" role="tab" aria-controls="nav-${i}" aria-selected="true">
-                                ${output[i].title}
-                                <img src="./assets/img/icons/question-mark.svg" alt="payment">
-                              </a>`;
-      recommendationBody += `<div class="tab-pane fade active show" id="nav-${i}" role="tabpanel" aria-labelledby="nav-tab-${i}">
-                              <p class="heading">Requirements</p>
-                              <p class="body">${output[i].message}</p>
-                            </div>`
-      } else {
-        recommendationNav += `<a class="nav-item nav-link" id="nav-tab-${i}" data-toggle="tab" href="#nav-${i}" role="tab" aria-controls="nav-${i}" aria-selected="true">
-                                ${output[i].title}
-                                <img src="./assets/img/icons/question-mark.svg" alt="payment">
-                              </a>`;
-        recommendationBody += `<div class="tab-pane fade" id="nav-${i}" role="tabpanel" aria-labelledby="nav-tab-${i}">
-                                <p class="heading">Requirements</p>                        
-                                <p class="body">${output[i].message}</p>
-                              </div>` 
+    if ($(window).width() < MOBILE_WIDTH) {
+      for (let i = 0; i < output.length; i++) {    
+        recommendationBody += `<div class="card recommendation-card">
+                                <div class="card-header" id="heading${i}">
+                                  <a data-toggle="collapse" href="#collapse${i}" aria-expanded="false" aria-controls="collapse${i}">
+                                    <h6 class="mb-0">
+                                      ${output[i].title}
+                                      <span class="recommendation-card-icon">&nbsp; ⌄ </span>
+                                    </h6>
+                                  </a>
+                                </div>
+                                <div id="collapse${i}" class="collapse" aria-labelledby="heading${i}" data-parent="#accordion">
+                                  <p class="heading">Requirements</p>
+                                  <div class="card-body">${output[i].message}</div>
+                                  <p class="target">Target:</p>
+                                  <h4 class="price">NGN ${formatToCurrency(avgPropertyCost)}</h4>
+                                </div>
+                              </div>`;
       }
+      recommendation = `<div id="accordion">
+                          ${recommendationBody}
+                        </div>`;
+    } else {
+      for (let i = 0; i < output.length; i++) {
+        if (i == 0) {
+          recommendationNav += `<a class="nav-item nav-link active" id="nav-tab-${i}" data-toggle="tab" href="#nav-${i}" role="tab" aria-controls="nav-${i}" aria-selected="true">
+                                  ${output[i].title}
+                                </a>`;
+        recommendationBody += `<div class="tab-pane fade active show" id="nav-${i}" role="tabpanel" aria-labelledby="nav-tab-${i}">
+                                <p class="heading">Requirements</p>
+                                <p class="body">${output[i].message}</p>
+                              </div>`
+        } else {
+          recommendationNav += `<a class="nav-item nav-link" id="nav-tab-${i}" data-toggle="tab" href="#nav-${i}" role="tab" aria-controls="nav-${i}" aria-selected="true">
+                                  ${output[i].title}
+                                </a>`;
+          recommendationBody += `<div class="tab-pane fade" id="nav-${i}" role="tabpanel" aria-labelledby="nav-tab-${i}">
+                                  <p class="heading">Requirements</p>                        
+                                  <p class="body">${output[i].message}</p>
+                                </div>` 
+        }
+      }
+      recommendation = `<nav>
+                          <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                            ${recommendationNav}
+                          </div>
+                        </nav>
+                        <div class="tab-content" id="nav-tabContent">
+                          ${recommendationBody}
+  
+                          <p class="target">Target:</p>
+                          <h4 class="price">NGN ${formatToCurrency(avgPropertyCost)}</h4>
+                        </div>`;
     }
-    console.log(output);
     
-
-    recommendation = `<nav>
-                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                          ${recommendationNav}
-                        </div>
-                      </nav>
-                      <div class="tab-content" id="nav-tabContent">
-                        ${recommendationBody}
-
-                        <p class="target">Target:</p>
-                        <h4 class="price">NGN ${formatToCurrency(avgPropertyCost)}</h4>
-                      </div>`;
 
     $('.search-ready-awesome-recommendation').html(recommendation);
     $(".search-ready-awesome-div").show(1000);

@@ -231,11 +231,62 @@
         .tab-content {
             padding-top: 1rem;
             padding-bottom: 1.5rem;
-            padding-left: 0;
+            padding-left: 0 !important;
             text-align: left !important;
             .active {
                 color: $blue !important;
+                padding-left: 0 !important;
                 border-bottom: 0;
+            }
+            .heading {
+                font-style: normal;
+                font-weight: bold;
+                font-size: 1rem;
+                text-align: left;
+                margin-bottom: 0;
+            }
+            .body {
+                font-style: normal;
+                font-weight: normal;
+                font-size: 1rem;
+                text-align: left;
+            }
+            .target {
+                font-size: 0.7rem;
+                color: $blue;
+                margin-bottom: 0;
+            }
+            .price {
+                font-style: normal;
+                font-weight: bold;
+                font-size: 1.38rem;
+                color: $purple;
+            }
+        }
+        .recommendation-card {
+            text-align: left !important;
+            padding-top: 1rem;
+            border-bottom: 1px solid rgba(87, 117, 250, 0.17);
+            h6 {
+                font-size: 1.38rem;
+                font-style: normal;
+                font-weight: 500;
+                color: $blue;
+            }
+            .ecommendation-card-icon {
+                color: $blue;
+            }
+            .card-header, .card-body {
+                padding-left: 0;
+            }
+            .recommendation-card-icon {
+                float: right;
+            }
+            .card-body {
+                padding-top: 0;
+            }
+            .collapse {
+                padding-left: 0.5rem;
             }
             .heading {
                 font-style: normal;

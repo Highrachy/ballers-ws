@@ -132,9 +132,14 @@
                     <h3 class="search-ready-heading">Awesome!</h3>
                     <p class="search-ready-text">You’re just one plan away from owning your home. <br> Consider one of the plans below.</p>
 
-                    <a tabindex="0" class="btn" id="search-ready-awesome-spread" role="button" data-toggle="popover">
-                        <div class="search-ready-awesome-spread-text"></div>
-                    </a>
+                    <!-- <a tabindex="0" class="btn" id="search-ready-awesome-spread" role="button" data-toggle="popover">
+                        <div class="search-ready-awesome-spread-text col-12"></div>
+                    </a> -->
+                    <div class="row">
+                        <div class="col-1"></div>
+                        <div class="search-ready-awesome-recommendation col-10"></div>
+                        <div class="col-1"></div>
+                    </div>
                     <br>
 
                     <button class="btn search-ready-awesome-eligibility"><span>&#8592;</span> Eligibility status</button>

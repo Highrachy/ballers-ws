@@ -214,10 +214,54 @@
     &-awesome-spread-popover-link {
         color: $purple;
     }
-    &-awesome-spread-text {
-        font-weight: 500;
-        font-style: normal;
-        padding-bottom: 1rem;
+    &-awesome-recommendation {
+        .nav-tabs {
+            .nav-item:hover, .nav-link:hover {
+                border: 0;
+            }
+            .active {
+                color: $blue !important;
+                border: 0;
+                border-bottom: 2px solid $purple;
+            }
+            .active:hover {
+                border-bottom: 2px solid $purple;
+            }
+        }
+        .tab-content {
+            padding-top: 1rem;
+            padding-bottom: 1.5rem;
+            padding-left: 0;
+            text-align: left !important;
+            .active {
+                color: $blue !important;
+                border-bottom: 0;
+            }
+            .heading {
+                font-style: normal;
+                font-weight: bold;
+                font-size: 1rem;
+                text-align: left;
+                margin-bottom: 0;
+            }
+            .body {
+                font-style: normal;
+                font-weight: normal;
+                font-size: 1rem;
+                text-align: left;
+            }
+            .target {
+                font-size: 0.7rem;
+                color: $blue;
+                margin-bottom: 0;
+            }
+            .price {
+                font-style: normal;
+                font-weight: bold;
+                font-size: 1.38rem;
+                color: $purple;
+            }
+        }
     }
     &-awesome-create {
         @extend %button-stack;

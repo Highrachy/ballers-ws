@@ -294,54 +294,100 @@ $(document).ready(function () {
 
     const balance = avgPropertyCost - initial;
     let output = [];
-    let recommentation = '<h5>Recommended Packages <img src="./assets/img/icons/question-mark.svg" alt="payment"></h5>';
     
-    // https://docs.google.com/document/d/1gsomOY9qclUz9RzadN3ztJH4Y0ryGT-fukNBFLhJAIU/edit?pli=1#heading=h.yy9lcow7gkem
+    let popOverIcon = `<a tabindex="0" class="" id="search-ready-awesome-spread" role="button" data-toggle="popover">
+                        <img src="./assets/img/icons/question-mark.svg" alt="payment">
+                      </a>`;
+    let recommendation = '';
+    let recommendationNav = '';
+    let recommendationBody = '';
     
-    let outrightPersonal = initial >= (avgPropertyCost * 0.5) && balance / periodic < 6 / frequency;
-    let immediatePrivate = initial >= (avgPropertyCost * 0.25) && (avgPropertyCost <= 45000000);
-    let outrightMortgage = initial >= (avgPropertyCost * 0.25);
-    let directSpread = initial >= (avgPropertyCost * 0.2) && balance / periodic > 6 / frequency && balance / periodic <= 24 / frequency;
-    let immediateFederal = initial >= (avgPropertyCost * 0.1) && (avgPropertyCost <= 15000000) && balance / periodic <= 12 / frequency;
-    let spreadFederal = initial >= (avgPropertyCost * 0.01) && (avgPropertyCost <= 15000000) && balance / periodic <= 24 / frequency;
-    let rentToOwn = initial >= (avgPropertyCost * 0.05) && balance / periodic <= 120 / frequency;
-    let spreadPrivate = initial >= (avgPropertyCost * 0.025) && (avgPropertyCost <= 45000000) && balance / periodic <= 24 / frequency;
-    let hybrid = initial >= (avgPropertyCost * 0.01) && balance / periodic <= 24 / frequency;
+    // Recommendations breakdown can be found here - https://docs.google.com/document/d/1gsomOY9qclUz9RzadN3ztJH4Y0ryGT-fukNBFLhJAIU/edit?pli=1#heading=h.yy9lcow7gkem
+    
+    const outrightPersonal = initial >= (avgPropertyCost * 0.5) && balance / periodic < 6 / frequency;
+    const immediatePrivate = initial >= (avgPropertyCost * 0.25) && (avgPropertyCost <= 45000000);
+    const outrightMortgage = initial >= (avgPropertyCost * 0.25);
+    const directSpread = initial >= (avgPropertyCost * 0.2) && balance / periodic > 6 / frequency && balance / periodic <= 24 / frequency;
+    const immediateFederal = initial >= (avgPropertyCost * 0.1) && (avgPropertyCost <= 15000000) && balance / periodic <= 12 / frequency;
+    const spreadFederal = initial >= (avgPropertyCost * 0.01) && (avgPropertyCost <= 15000000) && balance / periodic <= 24 / frequency;
+    const rentToOwn = initial >= (avgPropertyCost * 0.05) && balance / periodic <= 120 / frequency;
+    const spreadPrivate = initial >= (avgPropertyCost * 0.025) && (avgPropertyCost <= 45000000) && balance / periodic <= 24 / frequency;
+    const hybrid = initial >= (avgPropertyCost * 0.01) && balance / periodic <= 24 / frequency;
     
 
-    if (outrightPersonal) {
-      output.push('Personal Outright Payment');
+    if (outrightPersonal || outrightMortgage) {
+      let package = {
+        title: 'Outright',
+        message: 'Start BALLing with an initial deposit of 50%'
+      }
+      output.push(package);
     } 
-    if (immediatePrivate) {
-      output.push('Private Immediate Equity');
-    } 
-    if (outrightMortgage) {
-      output.push('Mortgage Outright Payment');
+    if (immediatePrivate || immediateFederal || spreadFederal || spreadPrivate) {
+      let package = {
+        title: 'Mortgage',
+        message: 'Start BALLing with an initial deposit of 25%'
+      }
+      output.push(package);
     } 
     if (directSpread) {
-      output.push('Direct Spread Payment');
-    } 
-    if (immediateFederal) {
-      output.push('Federal Immediate Equity');
-    } 
-    if (spreadFederal) {
-      output.push('Federal Spread Equity');
-    } 
-    if (spreadPrivate) {
-      output.push('Private Spread Equity');
+      let package = {
+        title: 'Spread',
+        message: 'Start BALLing with an initial deposit of 20%'
+      }
+      output.push(package);
     } 
     if (rentToOwn) {
-      output.push('Rent to own package');
+      let package = {
+        title: 'Rent-to-own',
+        message: 'Start BALLing with an initial deposit of 5%'
+      }
+      output.push(package);
     }
     if (hybrid) {
-      output.push('Hybrid Outright Payment');
+      let package = {
+        title: 'Hybrid',
+        message: 'Start BALLing with an initial deposit of 1%'
+      }
+      output.push(package);
     }
-
+    
     for (let i = 0; i < output.length; i++) {
-      recommentation += `${output[i]}<br>`;
+      if (i == 0) {
+        recommendationNav += `<a class="nav-item nav-link active" id="nav-tab-${i}" data-toggle="tab" href="#nav-${i}" role="tab" aria-controls="nav-${i}" aria-selected="true">
+                                ${output[i].title}
+                                <img src="./assets/img/icons/question-mark.svg" alt="payment">
+                              </a>`;
+      recommendationBody += `<div class="tab-pane fade active show" id="nav-${i}" role="tabpanel" aria-labelledby="nav-tab-${i}">
+                              <p class="heading">Requirements</p>
+                              <p class="body">${output[i].message}</p>
+                            </div>`
+      } else {
+        recommendationNav += `<a class="nav-item nav-link" id="nav-tab-${i}" data-toggle="tab" href="#nav-${i}" role="tab" aria-controls="nav-${i}" aria-selected="true">
+                                ${output[i].title}
+                                <img src="./assets/img/icons/question-mark.svg" alt="payment">
+                              </a>`;
+        recommendationBody += `<div class="tab-pane fade" id="nav-${i}" role="tabpanel" aria-labelledby="nav-tab-${i}">
+                                <p class="heading">Requirements</p>                        
+                                <p class="body">${output[i].message}</p>
+                              </div>` 
+      }
     }
+    console.log(output);
+    
 
-    $('.search-ready-awesome-spread-text').html(recommentation);
+    recommendation = `<nav>
+                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                          ${recommendationNav}
+                        </div>
+                      </nav>
+                      <div class="tab-content" id="nav-tabContent">
+                        ${recommendationBody}
+
+                        <p class="target">Target:</p>
+                        <h4 class="price">NGN ${formatToCurrency(avgPropertyCost)}</h4>
+                      </div>`;
+
+    $('.search-ready-awesome-recommendation').html(recommendation);
     $(".search-ready-awesome-div").show(1000);
 
     output = [];

@@ -130,7 +130,7 @@
       <div class="col-lg-9 col-sm-10 col-12 faq-option-category-accordion">
         <div id="accordion">
 
-          <div class="card">
+          <div class="card faq-card">
             <div class="card-header" id="headingOne">
               <a class="" data-toggle="collapse" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                 <h5 class="mb-0 faq-card-heading">
@@ -146,7 +146,7 @@
             </div>
           </div>
 
-          <div class="card">
+          <div class="card faq-card">
             <div class="card-header" id="headingTwo">
               <a class="" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                 <h5 class="mb-0 faq-card-heading">
@@ -162,7 +162,7 @@
             </div>
           </div>
 
-          <div class="card">
+          <div class="card faq-card">
             <div class="card-header" id="headingThree">
               <a class="" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                 <h5 class="mb-0 faq-card-heading">
@@ -178,7 +178,7 @@
             </div>
           </div>
 
-          <div class="card">
+          <div class="card faq-card">
             <div class="card-header" id="headingFour">
               <a class="" data-toggle="collapse" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                 <h5 class="mb-0 faq-card-heading">
@@ -194,7 +194,7 @@
             </div>
           </div>
 
-          <div class="card">
+          <div class="card faq-card">
             <div class="card-header" id="headingFive">
               <a class="" data-toggle="collapse" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
                 <h5 class="mb-0 faq-card-heading">

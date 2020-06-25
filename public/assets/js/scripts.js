@@ -27,11 +27,21 @@ function initMap() {
 $(document).ready(function () {
   $('#payment, #profile, #security').hide();
   $(".search-ready-awesome-div").hide();
+  $('.search-calculate-button').prop('disabled', true);
 
   // initialize popovers
   $(function () {
     $('[data-toggle="popover"]').popover()
   });
+
+  let periodicChanged = false;
+  let initialChanged = false;
+    
+  function enableSeachCalculateBtn(periodicChanged, initialChanged) {
+    if (periodicChanged && initialChanged === true) {
+      $('.search-calculate-button').prop('disabled', false);
+    }
+  }
 
   const MOBILE_WIDTH = 576;
   let popOverPlacement;
@@ -127,18 +137,10 @@ $(document).ready(function () {
   });
 
   //faq icon toggle
-  $('.card').on('shown.bs.collapse', function () {
-    $(this).find('.faq-icon, .faq-option-category-icon').text((text) => text === '-' ? '+' : '-');
+  $('.faq-card').on('shown.bs.collapse', function () {
+    $(this).find('.faq-option-category-icon').text((text) => text === '-' ? '+' : '-');
   }).on('hidden.bs.collapse', function () {
-    $(this).find('.faq-icon, .faq-option-category-icon').text((text) => text === '+' ? '-' : '+');
-  });
-
-  $('.recommendation-card').on('shown.bs.collapse', function () {
-    console.log('open');
-    $(this).find('.recommendation-card-icon').text((text) => text === '⌃' ? '⌄' : '⌃');
-  }).on('hidden.bs.collapse', function () {
-    console.log('closed');
-    $(this).find('.recommendation-card-icon').text((text) => text === '⌄' ? '⌃' : '⌄');
+    $(this).find('.faq-option-category-icon').text((text) => text === '+' ? '-' : '+');
   });
 
   //function to format number input values to currency like format
@@ -244,8 +246,6 @@ $(document).ready(function () {
     }
   });
 
-
-
   // set type if it is preselected
   if (preSelectedType) {
     type.html(`<option selected disabled>${preSelectedType || 'House Type'}</option>`)
@@ -294,6 +294,17 @@ $(document).ready(function () {
     $(this).html() == '<span><img src="./assets/img/icons/close-map-pin.svg" alt="view map"> &nbsp; Close Map</span>' ? $(this).html('<span><img src="./assets/img/icons/view-map-pin.svg" alt="view map"> &nbsp; View Map</span>') : $(this).html('<span><img src="./assets/img/icons/close-map-pin.svg" alt="view map"> &nbsp; Close Map</span>');
   });
 
+
+  // disable calculate button 
+  $('.periodic-investment').change(function() { 
+    periodicChanged = true;
+    enableSeachCalculateBtn(periodicChanged, initialChanged);
+  });
+  $('.initial-investment').change(function() { 
+    initialChanged = true;
+    enableSeachCalculateBtn(periodicChanged, initialChanged);
+  });
+
   $('.search-calculate-button').click(function(){
     const periodic = $('.periodic-investment').val();
     const initial = $('.initial-investment').val();
@@ -302,13 +313,13 @@ $(document).ready(function () {
 
     const balance = avgPropertyCost - initial;
     let output = [];
+    let recommendation = '';
+    let recommendationNav = '';
+    let recommendationBody = '';
     
     let popOverIcon = `<a tabindex="0" class="" id="search-ready-awesome-spread" role="button" data-toggle="popover">
                         <img src="./assets/img/icons/question-mark.svg" alt="payment">
                       </a>`;
-    let recommendation = '';
-    let recommendationNav = '';
-    let recommendationBody = '';
     
     // Recommendations breakdown can be found here - https://docs.google.com/document/d/1gsomOY9qclUz9RzadN3ztJH4Y0ryGT-fukNBFLhJAIU/edit?pli=1#heading=h.yy9lcow7gkem
     
@@ -322,101 +333,117 @@ $(document).ready(function () {
     const spreadPrivate = initial >= (avgPropertyCost * 0.025) && (avgPropertyCost <= 45000000) && balance / periodic <= 24 / frequency;
     const hybrid = initial >= (avgPropertyCost * 0.01) && balance / periodic <= 24 / frequency;
     
-
-    if (outrightPersonal || outrightMortgage) {
-      let package = {
-        title: `Outright <img src="./assets/img/icons/question-mark.svg" alt="payment">`,
+    const categories = {
+      outrightPersonal: {
+        title: `Outright`,
         message: 'Start BALLing with an initial deposit of 50%'
-      }
-      output.push(package);
-    } 
-    if (immediatePrivate || immediateFederal || spreadFederal || spreadPrivate) {
-      let package = {
-        title: `Mortgage <img src="./assets/img/icons/question-mark.svg" alt="payment">`,
+      },
+      outrightMortgage: {
+        title: `Outright Mortgage`,
         message: 'Start BALLing with an initial deposit of 25%'
-      }
-      output.push(package);
-    } 
-    if (directSpread) {
-      let package = {
-        title: `Spread <img src="./assets/img/icons/question-mark.svg" alt="payment">`,
+      },
+      mortgage: {
+        title: `Mortgage`,
+        message: 'Start BALLing with an initial deposit of 10-25%'
+      },
+      spread: {
+        title: `Spread`,
         message: 'Start BALLing with an initial deposit of 20%'
-      }
-      output.push(package);
-    } 
-    if (rentToOwn) {
-      let package = {
-        title: `Rent-to-own <img src="./assets/img/icons/question-mark.svg" alt="payment">`,
+      },
+      rentToOwn: {
+        title: `Rent-to-own`,
         message: 'Start BALLing with an initial deposit of 5%'
-      }
-      output.push(package);
-    }
-    if (hybrid) {
-      let package = {
-        title: `Hybrid <img src="./assets/img/icons/question-mark.svg" alt="payment">`,
+      },
+      hybrid: {
+        title: `Hybrid`,
         message: 'Start BALLing with an initial deposit of 1%'
       }
-      output.push(package);
     }
-    
-    if ($(window).width() < MOBILE_WIDTH) {
-      for (let i = 0; i < output.length; i++) {    
+
+    if (outrightPersonal) {
+      output.push(categories.outrightPersonal);
+    }
+    if (outrightMortgage) {
+      output.push(categories.outrightMortgage);
+    }
+    if (immediatePrivate || immediateFederal || spreadFederal || spreadPrivate) {
+      output.push(categories.mortgage);
+    }
+    if (directSpread) {
+      output.push(categories.spread);
+    }
+    if (rentToOwn) {
+      output.push(categories.rentToOwn);
+    }
+    if (hybrid) {
+      output.push(categories.hybrid);
+    }
+
+    for (let i = 0; i < output.length; i++) {
+      if ($(window).width() < MOBILE_WIDTH) {
         recommendationBody += `<div class="card recommendation-card">
-                                <div class="card-header" id="heading${i}">
-                                  <a data-toggle="collapse" href="#collapse${i}" aria-expanded="false" aria-controls="collapse${i}">
-                                    <h6 class="mb-0">
-                                      ${output[i].title}
-                                      <span class="recommendation-card-icon">&nbsp; ⌄ </span>
-                                    </h6>
-                                  </a>
-                                </div>
-                                <div id="collapse${i}" class="collapse" aria-labelledby="heading${i}" data-parent="#accordion">
-                                  <p class="heading">Requirements</p>
-                                  <div class="card-body">${output[i].message}</div>
-                                  <p class="target">Target:</p>
-                                  <h4 class="price">NGN ${formatToCurrency(avgPropertyCost)}</h4>
-                                </div>
-                              </div>`;
-      }
-      recommendation = `<div id="accordion">
-                          ${recommendationBody}
-                        </div>`;
-    } else {
-      for (let i = 0; i < output.length; i++) {
+                                  <div class="card-header recommendation-card-header" id="heading${i}">
+                                    <a data-toggle="collapse" href="#collapse${i}" aria-expanded="false" aria-controls="collapse${i}">
+                                      <h6 class="mb-0">
+                                        ${output[i].title}
+                                        <img src="./assets/img/icons/question-mark.svg" alt="payment">
+                                        <span class="recommendation-card-icon">&nbsp; ⌄</span>
+                                      </h6>
+                                    </a>
+                                  </div>
+                                  <div id="collapse${i}" class="collapse" aria-labelledby="heading${i}" data-parent="#accordion">
+                                    <p class="heading">Requirements</p>
+                                    <div class="card-body">${output[i].message}</div>
+                                    <p class="target">Target:</p>
+                                    <h4 class="price">NGN ${formatToCurrency(avgPropertyCost)}</h4>
+                                  </div>
+                                </div>`;
+
+        recommendation = `<div id="accordion">
+                            ${recommendationBody}
+                          </div>`;
+      } else {
         if (i == 0) {
           recommendationNav += `<a class="nav-item nav-link active" id="nav-tab-${i}" data-toggle="tab" href="#nav-${i}" role="tab" aria-controls="nav-${i}" aria-selected="true">
                                   ${output[i].title}
+                                  <img src="./assets/img/icons/question-mark.svg" alt="payment">
                                 </a>`;
-        recommendationBody += `<div class="tab-pane fade active show" id="nav-${i}" role="tabpanel" aria-labelledby="nav-tab-${i}">
-                                <p class="heading">Requirements</p>
-                                <p class="body">${output[i].message}</p>
-                              </div>`
+          recommendationBody += `<div class="tab-pane fade active show" id="nav-${i}" role="tabpanel" aria-labelledby="nav-tab-${i}">
+                                  <p class="heading">Requirements</p>
+                                  <p class="body">${output[i].message}</p>
+                                </div>`
         } else {
           recommendationNav += `<a class="nav-item nav-link" id="nav-tab-${i}" data-toggle="tab" href="#nav-${i}" role="tab" aria-controls="nav-${i}" aria-selected="true">
                                   ${output[i].title}
+                                  <img src="./assets/img/icons/question-mark.svg" alt="payment">
                                 </a>`;
           recommendationBody += `<div class="tab-pane fade" id="nav-${i}" role="tabpanel" aria-labelledby="nav-tab-${i}">
                                   <p class="heading">Requirements</p>                        
                                   <p class="body">${output[i].message}</p>
                                 </div>` 
-        }
+        }    
+        recommendation = `<nav>
+                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                              ${recommendationNav}
+                            </div>
+                          </nav>
+                          <div class="tab-content" id="nav-tabContent">
+                            ${recommendationBody}
+                            <p class="target">Target:</p>
+                            <h4 class="price">NGN ${formatToCurrency(avgPropertyCost)}</h4>
+                          </div>`;
       }
-      recommendation = `<nav>
-                          <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                            ${recommendationNav}
-                          </div>
-                        </nav>
-                        <div class="tab-content" id="nav-tabContent">
-                          ${recommendationBody}
-  
-                          <p class="target">Target:</p>
-                          <h4 class="price">NGN ${formatToCurrency(avgPropertyCost)}</h4>
-                        </div>`;
     }
-    
+
+    $('.recommendation-card, .recommendation-card-header').on('shown.bs.collapse', function () {
+      $(this).find('.recommendation-card-icon').text((text) => text === '⌃' ? '⌄' : '⌃');
+    }).on('hidden.bs.collapse', function () {
+      $(this).find('.recommendation-card-icon').text((text) => text === '⌄' ? '⌃' : '⌄');
+    });
+  
 
     $('.search-ready-awesome-recommendation').html(recommendation);
-    $(".search-ready-awesome-div").show(1000);
+    $(".search-ready-awesome-div").slideDown(1000);
 
     output = [];
   });

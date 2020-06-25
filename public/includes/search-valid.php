@@ -61,7 +61,7 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text" id="initial-investment">NGN</span>
                                 </div>
-                                <input type="text" class="form-control investment-value-input" name="initial-investment"  placeholder="500,000" data-max-amount="<?php echo $avg_price_formatted ?>"  aria-label="Username" aria-describedby="initial-investment">
+                                <input type="text" class="form-control investment-value-input initial-investment-input" name="initial-investment"  placeholder="500,000" data-max-amount="<?php echo $avg_price_formatted ?>">
                             </div>
                         </div>
                     </div>
@@ -110,7 +110,7 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text">NGN</span>
                                 </div>
-                                <input type="text" class="form-control investment-value-input" name="periodic-investment" placeholder="100,000" data-max-amount="<?php echo $avg_price_formatted ?>">
+                                <input type="text" class="form-control investment-value-input periodic-investment-input" name="periodic-investment" placeholder="100,000" data-max-amount="<?php echo $avg_price_formatted ?>">
                             </div>
                         </div>
                     </div>

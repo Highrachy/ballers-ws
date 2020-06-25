@@ -238,29 +238,31 @@
                 padding-left: 0 !important;
                 border-bottom: 0;
             }
-            .heading {
-                font-style: normal;
-                font-weight: bold;
-                font-size: 1rem;
-                text-align: left;
-                margin-bottom: 0;
-            }
-            .body {
-                font-style: normal;
-                font-weight: normal;
-                font-size: 1rem;
-                text-align: left;
-            }
-            .target {
-                font-size: 0.7rem;
-                color: $blue;
-                margin-bottom: 0;
-            }
-            .price {
-                font-style: normal;
-                font-weight: bold;
-                font-size: 1.38rem;
-                color: $purple;
+            .recommendation-accordion {
+                &-heading {
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 1rem;
+                    text-align: left;
+                    margin-bottom: 0;
+                }
+                &-body {
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 1rem;
+                    text-align: left;
+                }
+                &-target {
+                    font-size: 0.7rem;
+                    color: $blue;
+                    margin-bottom: 0;
+                }
+                &-price {
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 1.38rem;
+                    color: $purple;
+                }
             }
         }
         .recommendation-card {
@@ -286,25 +288,19 @@
             .collapse {
                 padding-left: 0.5rem;
             }
-            .heading {
+            &-heading {
                 font-style: normal;
                 font-weight: bold;
                 font-size: 1rem;
                 text-align: left;
                 margin-bottom: 0;
             }
-            .body {
-                font-style: normal;
-                font-weight: normal;
-                font-size: 1rem;
-                text-align: left;
-            }
-            .target {
+            &-target {
                 font-size: 0.7rem;
                 color: $blue;
                 margin-bottom: 0;
             }
-            .price {
+            &-price {
                 font-style: normal;
                 font-weight: bold;
                 font-size: 1.38rem;
@@ -465,6 +461,11 @@
         box-shadow: 0px 4px 10px rgba(87, 117, 250, 0.25);
         width: 75%;
         margin-bottom: 1rem;
+        
+        &:disabled, &[disabled] {
+            background-color: $purple;
+            color: $white;
+        }
     }
     p {
         color: $blue;

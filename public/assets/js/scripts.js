@@ -38,7 +38,7 @@ $(document).ready(function () {
   let initialChanged = false;
     
   function enableSeachCalculateBtn(periodicChanged, initialChanged) {
-    if (periodicChanged && initialChanged === true) {
+    if (periodicChanged && initialChanged) {
       $('.search-calculate-button').prop('disabled', false);
     }
   }
@@ -295,12 +295,20 @@ $(document).ready(function () {
   });
 
 
-  // disable calculate button 
+  // enable calculate button once form value changes 
   $('.periodic-investment').change(function() { 
     periodicChanged = true;
     enableSeachCalculateBtn(periodicChanged, initialChanged);
   });
   $('.initial-investment').change(function() { 
+    initialChanged = true;
+    enableSeachCalculateBtn(periodicChanged, initialChanged);
+  });
+  $('.periodic-investment-input').on("input", function() { 
+    periodicChanged = true;
+    enableSeachCalculateBtn(periodicChanged, initialChanged);
+  });
+  $('.initial-investment-input').on("input", function() { 
     initialChanged = true;
     enableSeachCalculateBtn(periodicChanged, initialChanged);
   });
@@ -336,27 +344,27 @@ $(document).ready(function () {
     const categories = {
       outrightPersonal: {
         title: `Outright`,
-        message: 'Start BALLing with an initial deposit of 50%'
+        value: '50%'
       },
       outrightMortgage: {
         title: `Outright Mortgage`,
-        message: 'Start BALLing with an initial deposit of 25%'
+        value: '25%'
       },
       mortgage: {
         title: `Mortgage`,
-        message: 'Start BALLing with an initial deposit of 10-25%'
+        value: '10-25%'
       },
       spread: {
         title: `Spread`,
-        message: 'Start BALLing with an initial deposit of 20%'
+        value: '20%'
       },
       rentToOwn: {
         title: `Rent-to-own`,
-        message: 'Start BALLing with an initial deposit of 5%'
+        value: '5%'
       },
       hybrid: {
         title: `Hybrid`,
-        message: 'Start BALLing with an initial deposit of 1%'
+        value: '1%'
       }
     }
 
@@ -392,10 +400,10 @@ $(document).ready(function () {
                                     </a>
                                   </div>
                                   <div id="collapse${i}" class="collapse" aria-labelledby="heading${i}" data-parent="#accordion">
-                                    <p class="heading">Requirements</p>
-                                    <div class="card-body">${output[i].message}</div>
-                                    <p class="target">Target:</p>
-                                    <h4 class="price">NGN ${formatToCurrency(avgPropertyCost)}</h4>
+                                    <p class="recommendation-card-heading">Requirements</p>
+                                    <div class="card-body">Start BALLing with an initial deposit of ${output[i].value}</div>
+                                    <p class="recommendation-card-target">Target:</p>
+                                    <h4 class="recommendation-card-price">NGN ${formatToCurrency(avgPropertyCost)}</h4>
                                   </div>
                                 </div>`;
 
@@ -403,25 +411,14 @@ $(document).ready(function () {
                             ${recommendationBody}
                           </div>`;
       } else {
-        if (i == 0) {
-          recommendationNav += `<a class="nav-item nav-link active" id="nav-tab-${i}" data-toggle="tab" href="#nav-${i}" role="tab" aria-controls="nav-${i}" aria-selected="true">
-                                  ${output[i].title}
-                                  <img src="./assets/img/icons/question-mark.svg" alt="payment">
-                                </a>`;
-          recommendationBody += `<div class="tab-pane fade active show" id="nav-${i}" role="tabpanel" aria-labelledby="nav-tab-${i}">
-                                  <p class="heading">Requirements</p>
-                                  <p class="body">${output[i].message}</p>
-                                </div>`
-        } else {
-          recommendationNav += `<a class="nav-item nav-link" id="nav-tab-${i}" data-toggle="tab" href="#nav-${i}" role="tab" aria-controls="nav-${i}" aria-selected="true">
-                                  ${output[i].title}
-                                  <img src="./assets/img/icons/question-mark.svg" alt="payment">
-                                </a>`;
-          recommendationBody += `<div class="tab-pane fade" id="nav-${i}" role="tabpanel" aria-labelledby="nav-tab-${i}">
-                                  <p class="heading">Requirements</p>                        
-                                  <p class="body">${output[i].message}</p>
-                                </div>` 
-        }    
+        recommendationNav += `<a class="nav-item nav-link ${i === 0 ? 'active' : ''}" id="nav-tab-${i}" data-toggle="tab" href="#nav-${i}" role="tab" aria-controls="nav-${i}" aria-selected="true">
+                                ${output[i].title}
+                                <img src="./assets/img/icons/question-mark.svg" alt="payment">
+                              </a>`;
+        recommendationBody += `<div class="tab-pane fade ${i === 0 ? 'active show' : ''}" id="nav-${i}" role="tabpanel" aria-labelledby="nav-tab-${i}">
+                                <p class="recommendation-accordion-heading">Requirements</p>                        
+                                <p class="recommendation-accordion-body">Start BALLing with an initial deposit of ${output[i].value}</p>
+                              </div>` 
         recommendation = `<nav>
                             <div class="nav nav-tabs" id="nav-tab" role="tablist">
                               ${recommendationNav}
@@ -429,18 +426,11 @@ $(document).ready(function () {
                           </nav>
                           <div class="tab-content" id="nav-tabContent">
                             ${recommendationBody}
-                            <p class="target">Target:</p>
-                            <h4 class="price">NGN ${formatToCurrency(avgPropertyCost)}</h4>
+                            <p class="recommendation-accordion-target">Target:</p>
+                            <h4 class="recommendation-accordion-price">NGN ${formatToCurrency(avgPropertyCost)}</h4>
                           </div>`;
       }
-    }
-
-    $('.recommendation-card, .recommendation-card-header').on('shown.bs.collapse', function () {
-      $(this).find('.recommendation-card-icon').text((text) => text === '⌃' ? '⌄' : '⌃');
-    }).on('hidden.bs.collapse', function () {
-      $(this).find('.recommendation-card-icon').text((text) => text === '⌄' ? '⌃' : '⌄');
-    });
-  
+    }  
 
     $('.search-ready-awesome-recommendation').html(recommendation);
     $(".search-ready-awesome-div").slideDown(1000);

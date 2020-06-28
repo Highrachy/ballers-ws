@@ -59,9 +59,9 @@ $(document).ready(function () {
     trigger: 'focus hover',
     placement: popOverPlacement,
     title: 'Payment Method',
-    content: `Based on your initial investment amount, 
-    Investment frequency,and the periodic investment amount you selected, 
-    you will likely be comfortably able to pay 
+    content: `Based on your initial investment amount,
+    Investment frequency,and the periodic investment amount you selected,
+    you will likely be comfortably able to pay
     for a home with an extra credit option.
     <br>
     <a href="faq.php" target="_blank" class="search-ready-awesome-spread-popover-link">Learn more &#8594;</a>`,
@@ -478,12 +478,16 @@ $(document).ready(function () {
     for (let i = 0; i < output.length; i++) {
       if ($(window).width() < MOBILE_WIDTH) {
         recommendationBody += `<div class="card recommendation-card">
-                                  <div class="card-header recommendation-card-header" id="heading${i}">
-                                    <a data-toggle="collapse" href="#collapse${i}" aria-expanded="false" aria-controls="collapse${i}">
+                                  <div class="card-header recommendation-card-header" id="recommendation-card-heading${i}">
+                                    <a data-toggle="collapse" class="testing" href="#collapse${i}" aria-expanded="false" aria-controls="collapse${i}">
                                       <h6 class="mb-0">
                                         ${output[i].title}
                                         <img src="./assets/img/icons/question-mark.svg" alt="payment">
-                                        <span class="recommendation-card-icon">&nbsp; ⌄</span>
+                                        <span class="recommendation-card-icon">
+                                          <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M5.00024 0.499995C5.25624 0.499995 5.51224 0.597994 5.70724 0.792994L9.70724 4.79299C10.0982 5.18399 10.0982 5.81599 9.70724 6.20699C9.31624 6.59799 8.68424 6.59799 8.29324 6.20699L4.98824 2.90199L1.69524 6.08199C1.29624 6.46499 0.665238 6.45399 0.281239 6.05699C-0.102761 5.66 -0.0917617 5.026 0.305239 4.643L4.30524 0.780994C4.50024 0.592994 4.75024 0.499995 5.00024 0.499995Z" fill="#161D3F"/>
+                                          </svg>
+                                        </span>
                                       </h6>
                                     </a>
                                   </div>
@@ -512,7 +516,7 @@ $(document).ready(function () {
         recommendationBody += `<div class="tab-pane fade ${
           i === 0 ? 'active show' : ''
         }" id="nav-${i}" role="tabpanel" aria-labelledby="nav-tab-${i}">
-                                <p class="recommendation-accordion-heading">Recommendation</p>                        
+                                <p class="recommendation-accordion-heading">Recommendation</p>
                                 <p class="recommendation-accordion-body">${
                                   output[i].advice
                                 }</p>

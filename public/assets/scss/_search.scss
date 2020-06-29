@@ -308,6 +308,10 @@
         color: $purple;
       }
     }
+    .recommendation-bold {
+      color: $purple;
+      font-weight: bold;
+    }
   }
   &-awesome-create {
     @extend %button-stack;

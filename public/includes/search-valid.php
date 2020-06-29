@@ -3,7 +3,7 @@
 <div class="" id="page-content-wrapper">
     <div class="container-fluid">
 
-        <section class="search-holding">
+        <section class="search-holding" id="search-holding">
             <div class="row">
                 <div class="col-lg-1 col-12"></div>
                 <div class="col-lg-10 col-12 search-holding-property">
@@ -86,7 +86,7 @@
                             <label class="col-sm-1 col-12"></label>
 
                             <label class="col-sm-3 col-12 btn btn-secondary option-btn">
-                                <input type="radio" class="investment-frequency" name="investment-frequency" value="0.5" id="option3" autocomplete="off"> Voluntarily
+                                <input type="radio" class="investment-frequency" name="investment-frequency" value="0.5" id="option3" autocomplete="off"> Bi-Weekly
                             </label>
 
                             <label class="col-sm-1 col-12"></label>
@@ -139,7 +139,7 @@
                     </div>
                     <br>
 
-                    <button class="btn search-ready-awesome-eligibility"><span>&#8592;</span> Redefine your eligibility status</button>
+                    <a href="#search-holding" class="btn search-ready-awesome-eligibility"><span>&#8592;</span> Redefine your eligibility status</a>
                     <button class="btn search-ready-awesome-create">Create free account</button>
                     <p class="search-ready-text-small">Open a free account and own your dream home</p>
                 </div>

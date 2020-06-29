@@ -65,6 +65,9 @@
 
 <?php 
 require_once('config.php');
+if (strpos($_SERVER['REQUEST_URI'], "search.php") == true) {
+  echo '<script src="./assets/js/search-calculate.js"></script>';
+}
 if (strpos($_SERVER['REQUEST_URI'], "contact.php") == true) {
   echo '<script async defer src="https://maps.googleapis.com/maps/api/js?key='.MAP_API_KEY.'&callback=initMap"></script>';
 }

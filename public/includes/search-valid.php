@@ -15,12 +15,12 @@
                     <h5 class="search-holding-title">&#9432; Average property price</h5>
                     <h1 class="search-holding-property-heading">NGN <?php echo $avg_price_formatted?></h1>
                     <h5 class="search-holding-property-text">
-                        <img src="./assets/img/icons/house-gray.svg" alt="house" class="search-holding-property-icon">
+                        <img src="./assets/img/icons/location-gray.svg" alt="location" class="search-holding-property-icon">
                         <?php echo $area.", ".$state?>
                     </h5>
                     &nbsp;&nbsp;&nbsp;
                     <h5 class="search-holding-property-text">
-                        <img src="./assets/img/icons/location-gray.svg" alt="location" class="search-holding-property-icon">
+                        <img src="./assets/img/icons/house-gray.svg" alt="house" class="search-holding-property-icon">
                         <?php echo $type?>
                     </h5>
 
@@ -80,7 +80,7 @@
                             <label class="col-sm-1 col-12"></label>
 
                             <label class="col-sm-3 col-12 btn btn-secondary option-btn option-btn-quaterly active">
-                                <input type="radio" class="investment-frequency" name="investment-frequency" value="4" id="option2" autocomplete="off" checked> Quarterly
+                                <input type="radio" class="investment-frequency" name="investment-frequency" value="3" id="option2" autocomplete="off" checked> Quarterly
                             </label>
 
                             <label class="col-sm-1 col-12"></label>
@@ -160,7 +160,7 @@
                 var marker = new google.maps.Marker({
                 position: point,
                 map: map,
-                icon: './assets/img/icons/map-marker-icon.png'
+                icon: './assets/img/icons/location-gray.svg'
                 });
             }
         </script>";

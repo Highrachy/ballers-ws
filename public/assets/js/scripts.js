@@ -370,6 +370,7 @@ $(document).ready(function () {
       balance / periodic <= 24 / frequency;
     const outrightMortgagePMI =
       initial >= avgPropertyCost * 0.25 &&
+      balance / periodic > 24 / frequency &&
       avgPropertyCost + 2500000 - initial <= 45000000;
     const outrightMortgageNHF =
       initial >= avgPropertyCost * 0.1 &&
@@ -386,10 +387,13 @@ $(document).ready(function () {
       periodic >= avgPropertyCost * 0.01 &&
       balance / periodic <= 120 / frequency;
     const assistedRentToOwn =
+      initial <= avgPropertyCost * 0.05 &&
       periodic >= avgPropertyCost * 0.01 &&
       balance / periodic <= 120 / frequency;
     const hybrid =
-      initial >= avgPropertyCost * 0.01 && balance / periodic <= 24 / frequency;
+      initial <= avgPropertyCost * 0.05 &&
+      periodic >= avgPropertyCost * 0.01 &&
+      balance / periodic <= 24 / frequency;
 
     const packages = {
       outrightPayment: {
@@ -443,19 +447,19 @@ $(document).ready(function () {
     if (outrightMortgagePMI) {
       output.push(packages.outrightPmiMortgage);
     }
-    if (assistedMortgagePMI) {
+    if (!outrightMortgagePMI && assistedMortgagePMI) {
       output.push(packages.assistedPmiMortgage);
     }
     if (outrightMortgageNHF) {
       output.push(packages.outrightNhfMortgage);
     }
-    if (assistedMortgageNHF) {
+    if (!outrightMortgageNHF && assistedMortgageNHF) {
       output.push(packages.assistedNhfMortgage);
     }
     if (rentToOwn) {
       output.push(packages.rentToOwn);
     }
-    if (assistedRentToOwn) {
+    if (!rentToOwn && assistedRentToOwn) {
       output.push(packages.assistedRentToOwn);
     }
     if (hybrid) {

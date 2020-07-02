@@ -25,9 +25,15 @@ if (isset($_GET["index-form-search"])) {
         $state = $row['state_name'];
         $area = $row['area_name'];
         $type = $row['type'];
-        $avg_price = number_format($row['average_price']);
-        $min_price = number_format($row['minimum_price']);
-        $max_price = number_format($row['maximum_price']);
+
+        $avg_price = $row['average_price'];
+        $min_price = $row['minimum_price'];
+        $max_price = $row['maximum_price'];
+        
+        $avg_price_formatted = number_format($avg_price);
+        $min_price_formatted = number_format($min_price);
+        $max_price_formatted = number_format($max_price);
+        
         $search_view = 'includes/search-valid.php';
         $latitude = $row['latitude'];
         $longitude = $row['longitude'];

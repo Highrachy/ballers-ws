@@ -1,555 +1,683 @@
 .toggle-search-map {
-    background: url(../img/backgrounds/view-map-btn-bg.png) no-repeat;
+  background: url(../img/backgrounds/view-map-btn-bg.png) no-repeat;
+  background-color: $gray-150;
+  color: $blue;
+  padding: 0.8rem 2.8rem;
+  border: 1px solid $purple;
+  margin-right: -37rem;
+
+  &:hover {
     background-color: $gray-150;
     color: $blue;
-    padding: 0.8rem 2.8rem;
-    border: 1px solid $purple;
-    margin-right: -37rem;
-
-    &:hover {
-        background-color: $gray-150;
-        color: $blue;
-        border: 2px solid $purple;
-        box-shadow: 0px 15px 30px rgba(22, 29, 63, 0.16);
-    }
-    span {
-        background-color: $gray-150;
-        padding: 0.5rem;
-    }
+    border: 2px solid $purple;
+    box-shadow: 0px 15px 30px rgba(22, 29, 63, 0.16);
+  }
+  span {
+    background-color: $gray-150;
+    padding: 0.5rem;
+  }
 }
 #wrapper {
-    padding-right: 0;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-    top: 15rem;
+  padding-right: 0;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  top: 15rem;
 
-    .toggled {
-        padding-right: 30rem;
-    }
-    .toggled #page-content-wrapper {
-        position: absolute;
-        margin-left: -30rem;
-    }
-    .toggled #sidemap-wrapper {
-        width: 30rem;
-    }
+  .toggled {
+    padding-right: 30rem;
+  }
+  .toggled #page-content-wrapper {
+    position: absolute;
+    margin-left: -30rem;
+  }
+  .toggled #sidemap-wrapper {
+    width: 30rem;
+  }
 }
 #sidemap-wrapper {
-    z-index: 5;
-    position: fixed;
-    right: 30rem;
-    width: 0;
-    top: 15rem;
-    height: 100%;
-    margin-right: -30rem;
-    overflow-y: auto;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
+  z-index: 5;
+  position: fixed;
+  right: 30rem;
+  width: 0;
+  top: 15rem;
+  height: 100%;
+  margin-right: -30rem;
+  overflow-y: auto;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 #page-content-wrapper {
-    width: 100%;
-    position: absolute;
+  width: 100%;
+  position: absolute;
 
-    .container-fluid {
-        padding: 0;
-    }
-} 
+  .container-fluid {
+    padding: 0;
+  }
+}
 .sidemap-nav {
-    position: absolute;
-    top: 0;
+  position: absolute;
+  top: 0;
+  width: 30rem;
+  height: 100%;
+  background-color: $gray-250;
+  padding-top: 20rem;
+  margin: 0;
+}
+@media (min-width: 320px) {
+  #wrapper {
+    padding-right: 0;
+  }
+  #wrapper.toggled {
+    padding-right: 30rem;
+  }
+  #sidemap-wrapper {
+    width: 0;
+  }
+  #wrapper.toggled #sidemap-wrapper {
     width: 30rem;
-    height: 100%;
-    background-color: $gray-250;
-    padding-top: 20rem;
-    margin: 0;
-    
-}  
-@media(min-width:320px) {
-    #wrapper {
-      padding-right: 0;
-    }
-    #wrapper.toggled {
-      padding-right: 30rem;
-    }
-    #sidemap-wrapper {
-      width: 0;
-    }
-    #wrapper.toggled #sidemap-wrapper {
-      width: 30rem;
-    }
-    #page-content-wrapper {
-      position: relative;
-    }
-    #wrapper.toggled #page-content-wrapper {
-      position: relative;
-      margin-left: 0;
-    }
+  }
+  #page-content-wrapper {
+    position: relative;
+  }
+  #wrapper.toggled #page-content-wrapper {
+    position: relative;
+    margin-left: 0;
+  }
 }
 .popover {
-    z-index: 5;
-    padding: 0.5rem;
-    &-header {
-        background-color: $white;
-        border-bottom: 0;
-        font-weight: 500;
-    }
+  z-index: 5;
+  padding: 0.5rem;
+  &-header {
+    background-color: $white;
+    border-bottom: 0;
+    font-weight: 500;
+  }
 }
 .search-page-form {
-    justify-content: center;
-    padding-top: 9rem;
-    padding-bottom: 2.5rem;
-    border: 1px solid rgba(87, 117, 250, 0.17);
-    box-sizing: border-box;
-    z-index: 10;
-    position: fixed;
-    width: 100%;
-    background-color: $white;
+  justify-content: center;
+  padding-top: 9rem;
+  padding-bottom: 2.5rem;
+  border: 1px solid rgba(87, 117, 250, 0.17);
+  box-sizing: border-box;
+  z-index: 10;
+  position: fixed;
+  width: 100%;
+  background-color: $white;
 }
 .search-no-result {
-    justify-content: center;
-    text-align: center;
-    padding: 20rem 5rem 10rem;
+  justify-content: center;
+  text-align: center;
+  padding: 20rem 5rem 10rem;
 
-    &-heading {
-        @extend %heading-font-stack;
-    }
-    &-text {
-        @extend %regular-text-stack;
-    }
+  &-heading {
+    @extend %heading-font-stack;
+  }
+  &-text {
+    @extend %regular-text-stack;
+  }
 }
 .search-holding {
-    justify-content: center;
-    text-align: center;
-    background-color: $search-page-bg;
-    width: 100%;
-    padding: 17rem 5rem 3rem;
+  justify-content: center;
+  text-align: center;
+  background-color: $search-page-bg;
+  width: 100%;
+  padding: 17rem 5rem 3rem;
 
-    &-title {
-        color: $blue;
-        font-size: 1rem;
-        font-weight: normal;
-    }
-    &-property {
-        padding-bottom: 4rem;
-        border-bottom: 1px solid rgba(87, 117, 250, 0.17);
-    }
-    &-property-heading {
-        font-style: normal;
-        font-weight: bold;
-        font-size: 3.16rem;
-    }
-    &-property-text {
-        @extend %regular-text-stack;
-        color: $gray-650;
-        padding-bottom: 2rem;
-        display: inline-block;
-        font-weight: normal;
-    }
-    &-property-range-track {
-        width: 60%;
-    }
-    &-property-range-price {
-        font-style: normal;
-        font-weight: normal;
-        font-size: 0.85rem;
-        color: $purple;
-        display: inline;
-    }
-    &-property-range-text {
-        font-style: normal;
-        font-weight: normal;
-        font-size: 0.85rem;
-        color: $purple;
-        display: inline;
-        margin-left: 5rem;
-        margin-right: 5rem;
-    }
+  &-title {
+    color: $blue;
+    font-size: 1rem;
+    font-weight: normal;
+  }
+  &-property {
+    padding-bottom: 4rem;
+    border-bottom: 1px solid rgba(87, 117, 250, 0.17);
+  }
+  &-property-heading {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 3.16rem;
+  }
+  &-property-text {
+    @extend %regular-text-stack;
+    color: $gray-650;
+    padding-bottom: 2rem;
+    display: inline-block;
+    font-weight: normal;
+  }
+  &-property-range-track {
+    width: 60%;
+  }
+  &-property-range-price {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.85rem;
+    color: $purple;
+    display: inline;
+  }
+  &-property-range-text {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.85rem;
+    color: $purple;
+    display: inline;
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
 }
 .search-ready {
-    padding: 0 5rem 5rem;
-    text-align: center;
-    justify-content: center;
-    background-color: $search-page-bg;
+  padding: 0 5rem 5rem;
+  text-align: center;
+  justify-content: center;
+  background-color: $search-page-bg;
 
-    &-heading {
+  &-heading {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2rem;
+  }
+  &-text {
+    @extend %regular-text-stack;
+    color: $blue;
+  }
+  &-investments {
+    padding-left: 0;
+    padding-top: 2rem;
+    justify-content: center;
+  }
+  &-step {
+    padding: 1rem 1rem 0.8rem;
+    border-radius: $border-radius;
+    text-align: left;
+    margin-bottom: 1.5rem;
+  }
+  &-step-heading {
+    font-size: 1.44rem;
+  }
+  &-awesome {
+    background-color: $white;
+    border-radius: $border-radius;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  &-awesome-eligibility {
+    color: $blue;
+
+    span {
+      color: $green;
+    }
+  }
+  &-awesome-spread-popover-link {
+    color: $purple;
+  }
+  &-awesome-recommendation {
+    .nav-tabs {
+      .nav-item:hover,
+      .nav-link:hover {
+        border: 0;
+      }
+      .active {
+        color: $blue !important;
+        border: 0;
+        border-bottom: 2px solid $purple;
+      }
+      .active:hover {
+        border-bottom: 2px solid $purple;
+      }
+    }
+    .tab-content {
+      padding-top: 1rem;
+      padding-bottom: 1.5rem;
+      padding-left: 0 !important;
+      text-align: left !important;
+      .active {
+        color: $blue !important;
+        padding-left: 0 !important;
+        border-bottom: 0;
+      }
+      .recommendation-accordion {
+        &-heading {
+          font-style: normal;
+          font-weight: bold;
+          font-size: 1rem;
+          text-align: left;
+          margin-bottom: 0;
+        }
+        &-body {
+          font-style: normal;
+          font-weight: normal;
+          font-size: 1rem;
+          text-align: left;
+        }
+        &-target {
+          font-size: 0.7rem;
+          color: $blue;
+          margin-bottom: 0;
+        }
+        &-price {
+          font-style: normal;
+          font-weight: bold;
+          font-size: 1.38rem;
+          color: $purple;
+        }
+      }
+    }
+    .recommendation-card {
+      text-align: left !important;
+      padding-top: 1rem;
+      border-bottom: 1px solid rgba(87, 117, 250, 0.17);
+      h6 {
+        font-size: 1.38rem;
+        font-style: normal;
+        font-weight: 500;
+        color: $blue;
+      }
+      .card-header,
+      .card-body {
+        padding-left: 0;
+      }
+      .recommendation-card-icon {
+        float: right;
+        color: $blue;
+      }
+      .card-body {
+        padding-top: 0;
+      }
+      .collapse-content {
+        padding-left: 0.5rem;
+      }
+      &-heading {
         font-style: normal;
         font-weight: bold;
-        font-size: 2rem;
-    }
-    &-text {
-        @extend %regular-text-stack;
-        color: $blue;
-    }
-    &-investments {
-        padding-left: 0;
-        padding-top: 2rem;
-        justify-content: center; 
-    }
-    &-step {
-        padding: 1rem 1rem 0.8rem;
-        border-radius: $border-radius;
+        font-size: 1rem;
         text-align: left;
-        margin-bottom: 1.5rem;
-    }
-    &-step-heading {
-        font-size: 1.44rem;
-    }
-    &-awesome {
-        background-color: $white;
-        border-radius: $border-radius;
-        padding-top: 2rem;
-        padding-bottom: 2rem;
-    }
-    &-awesome-eligibility {
+        margin-bottom: 0;
+      }
+      &-target {
+        font-size: 0.7rem;
         color: $blue;
-
-        span {
-            color: $green;
-        }
-    }
-    &-awesome-spread-popover-link {
+        margin-bottom: 0;
+      }
+      &-price {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 1.38rem;
         color: $purple;
+      }
     }
-    &-awesome-spread-text {
-        font-weight: 500;
-        font-style: normal;
-        padding-bottom: 0.5rem;
+    .recommendation-bold {
+      color: $purple;
+      font-weight: bold;
     }
-    &-awesome-create {
-        @extend %button-stack;
-        background-color: $green;
+  }
+  &-awesome-create {
+    @extend %button-stack;
+    background-color: $green;
 
-        &:hover {
-            background-color: $white;
-            border-color: $green;
-            color: $green;
-        }
+    &:hover {
+      background-color: $white;
+      border-color: $green;
+      color: $green;
     }
-    &-text-small {
-        color: $blue;
-        font-size: 0.8rem;
-        font-style: normal;
-        font-weight: normal;
-        padding-top: 1rem;
-    }
+  }
+  &-text-small {
+    color: $blue;
+    font-size: 0.8rem;
+    font-style: normal;
+    font-weight: normal;
+    padding-top: 1rem;
+  }
 }
 .investment {
+  &-frequency {
+    background-color: $purple-light;
 
-    &-frequency {
-        background-color: $purple-light;
-    
-        .option-btn {
-            background: $purple-mid;
-            border: 1px solid $purple-mid;
-            color: $purple;
-            margin-bottom: 0;
-            width: 100%;
-        }
-        &-options-quaterly {
-            padding-left: 1rem;
-        }
-        .active {
-            color: $white !important;
-            background-color: $purple !important;
-            border-color: $purple !important;
-        }
+    .option-btn {
+      background: $purple-mid;
+      border: 1px solid $purple-mid;
+      color: $purple;
+      margin-bottom: 0;
+      width: 100%;
     }
-    &-initial,
-    &-periodic {
-        .input-group {
-            width: 100%;
-        }
-        .input-group-text {
-            padding-left: 1rem;
-            border: 0 !important;
-            color: $gray-950;
-        }
-        .input-group-prepend,
-        .investment-value-input {
-            background-color: $white;
-            border: 1px solid rgba(87, 117, 250, 0.17) !important;
-            color: $gray-950;
-        }
-        .input-group-prepend {
-            border-radius: $border-radius 0 0 $border-radius;
-            height: 85%;
-        }
-        .investment-value-input {
-            border-left: 0 !important;
-            border-radius: 0 $border-radius $border-radius 0;
-        }
-        .custom-range-div {
-            .input-group {
-                span {
-                    @extend %big-text-stack; 
-                }
-                .form-control {
-                    @extend %big-text-stack; 
-                    color: $blue;
-                    font-weight: 600;
-                    padding-left: 0;
-                }
-            }
-        }
+    &-options-quaterly {
+      padding-left: 1rem;
     }
-    &-initial {
-        @mixin yellow-track() {
-            background: $yellow;
-        }
-        @mixin yellow-thumb {
-            background: $yellow-mid;
-            border: 1px solid $yellow;
-            cursor: pointer;
-            height: 1.5rem;
-            width: 1.5rem;
-            border-radius: 50%;
-            box-shadow: 1px 1px 1px $yellow, 0px 0px 1px $yellow;
-        }
-        input[type=range] {
-            -webkit-appearance: none;
-
-            &::-webkit-slider-runnable-track { @include yellow-track }
-            &::-moz-range-track { @include yellow-track }
-            &::-ms-track { @include yellow-track }
-
-            &::-webkit-slider-thumb {
-                -webkit-appearance: none;
-                @include yellow-thumb;
-                margin-top: -9px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
-            }
-            &::-moz-range-thumb { @include yellow-thumb }
-            &::-ms-thumb { @include yellow-thumb }
-        }
-        background-color: $yellow-light;
-        .custom-range-div label {
-            color: $yellow;
-        }
+    .active {
+      color: $white !important;
+      background-color: $purple !important;
+      border-color: $purple !important;
     }
-    &-periodic {
-        @mixin green-track() {
-            background: $green;
-        }
-        @mixin green-thumb {
-            background: $green-mid;
-            border: 1px solid $green;
-            cursor: pointer;
-            height: 1.5rem;
-            width: 1.5rem;
-            border-radius: 50%;
-            box-shadow: 1px 1px 1px $green, 0px 0px 1px $green;
-        }
-        input[type=range] {
-            -webkit-appearance: none;
-
-            &::-webkit-slider-runnable-track { @include green-track }
-            &::-moz-range-track { @include green-track }
-            &::-ms-track { @include green-track }
-
-            &::-webkit-slider-thumb {
-                -webkit-appearance: none;
-                @include green-thumb;
-                margin-top: -9px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
-            }
-            &::-moz-range-thumb { @include green-thumb }
-            &::-ms-thumb { @include green-thumb }
-        }
-        background-color: $green-light;
-        .custom-range-div label {
-            color: $green;
-        }
+  }
+  &-initial,
+  &-periodic {
+    .input-group {
+      width: 100%;
     }
+    .input-group-text {
+      padding-left: 1rem;
+      border: 0 !important;
+      color: $gray-950;
+    }
+    .input-group-prepend,
+    .investment-value-input {
+      background-color: $white;
+      border: 1px solid rgba(87, 117, 250, 0.17) !important;
+      color: $gray-950;
+    }
+    .input-group-prepend {
+      border-radius: $border-radius 0 0 $border-radius;
+      height: 85%;
+    }
+    .investment-value-input {
+      border-left: 0 !important;
+      border-radius: 0 $border-radius $border-radius 0;
+    }
+    .custom-range-div {
+      .input-group {
+        span {
+          @extend %big-text-stack;
+        }
+        .form-control {
+          @extend %big-text-stack;
+          color: $blue;
+          font-weight: 600;
+          padding-left: 0;
+        }
+      }
+    }
+  }
+  &-initial {
+    @mixin yellow-track() {
+      background: $yellow;
+    }
+    @mixin yellow-thumb {
+      background: $yellow-mid;
+      border: 1px solid $yellow;
+      cursor: pointer;
+      height: 1.5rem;
+      width: 1.5rem;
+      border-radius: 50%;
+      box-shadow: 1px 1px 1px $yellow, 0px 0px 1px $yellow;
+    }
+    input[type='range'] {
+      -webkit-appearance: none;
+
+      &::-webkit-slider-runnable-track {
+        @include yellow-track;
+      }
+      &::-moz-range-track {
+        @include yellow-track;
+      }
+      &::-ms-track {
+        @include yellow-track;
+      }
+
+      &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        @include yellow-thumb;
+        margin-top: -9px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+      }
+      &::-moz-range-thumb {
+        @include yellow-thumb;
+      }
+      &::-ms-thumb {
+        @include yellow-thumb;
+      }
+    }
+    background-color: $yellow-light;
+    .custom-range-div label {
+      color: $yellow;
+    }
+  }
+  &-periodic {
+    @mixin green-track() {
+      background: $green;
+    }
+    @mixin green-thumb {
+      background: $green-mid;
+      border: 1px solid $green;
+      cursor: pointer;
+      height: 1.5rem;
+      width: 1.5rem;
+      border-radius: 50%;
+      box-shadow: 1px 1px 1px $green, 0px 0px 1px $green;
+    }
+    input[type='range'] {
+      -webkit-appearance: none;
+
+      &::-webkit-slider-runnable-track {
+        @include green-track;
+      }
+      &::-moz-range-track {
+        @include green-track;
+      }
+      &::-ms-track {
+        @include green-track;
+      }
+
+      &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        @include green-thumb;
+        margin-top: -9px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+      }
+      &::-moz-range-thumb {
+        @include green-thumb;
+      }
+      &::-ms-thumb {
+        @include green-thumb;
+      }
+    }
+    background-color: $green-light;
+    .custom-range-div label {
+      color: $green;
+    }
+  }
 }
 .search-calculate {
-    padding-top: 3rem;
-    padding-left: 0;
+  padding-top: 3rem;
+  padding-left: 0;
 
-    &-button {
-        @extend %button-stack;
-        box-shadow: 0px 4px 10px rgba(87, 117, 250, 0.25);
-        width: 75%;
-        margin-bottom: 1rem;
+  &-button {
+    @extend %button-stack;
+    box-shadow: 0px 4px 10px rgba(87, 117, 250, 0.25);
+    width: 75%;
+    margin-bottom: 1rem;
+
+    &:disabled,
+    &[disabled] {
+      background-color: $purple;
+      color: $white;
     }
-    p {
-        color: $blue;
-    }
+  }
+  p {
+    color: $blue;
+  }
 }
 
 @media only screen and (max-width: 1024px) {
-    .search-valid-page-form {
-        &-input {
-            font-size: 1.7rem;
-            font-weight: 500;
-        }
+  .search-valid-page-form {
+    &-input {
+      font-size: 1.7rem;
+      font-weight: 500;
     }
-    .search-holding-property-range-track {
-        width: 85%;
-    }
-    .search-ready-step {
-        padding: 1.5rem;
+  }
+  .search-holding-property-range-track {
+    width: 85%;
+  }
+  .search-ready-step {
+    padding: 1.5rem;
 
-        &-text br {
-            display: none;
-        }
+    &-text br {
+      display: none;
     }
-    .toggle-search-map {
-        display: none;
-    }
+  }
+  .toggle-search-map {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 991.99px) {
-    .search-page-form {
-        padding-top: 7rem;
-    }
-    .search-holding {
-        padding-left: 3rem;
-        padding-right: 3rem;
+  .search-page-form {
+    padding-top: 7rem;
+  }
+  .search-holding {
+    padding-left: 3rem;
+    padding-right: 3rem;
 
-        &-title {
-            font-size: 1.2rem;
-        }
-        &-property-range-track {
-            width: 100%;
-        }
-        &-property-range-text {
-            margin-left: 6rem;
-            margin-right: 6rem;
-        }
-        
+    &-title {
+      font-size: 1.2rem;
     }
-    .search-valid-page-form {
-        padding-bottom: 2rem;
+    &-property-range-track {
+      width: 100%;
+    }
+    &-property-range-text {
+      margin-left: 6rem;
+      margin-right: 6rem;
+    }
+  }
+  .search-valid-page-form {
+    padding-bottom: 2rem;
 
-        .input-group-text {
-            padding-top: 1.5rem;
-        }
-        &-submit {
-            width: 50%;
-        }
+    .input-group-text {
+      padding-top: 1.5rem;
     }
-    .search-ready {
-        padding-top: 0;
-        padding-left: 4rem;
-        padding-right: 4rem;
+    &-submit {
+      width: 50%;
     }
-    .input-group {
-        padding-top: 0.8rem;
+  }
+  .search-ready {
+    padding-top: 0;
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+  .input-group {
+    padding-top: 0.8rem;
+  }
+  .investment {
+    &-frequency {
+      .btn-group-toggle {
+        margin-bottom: 0;
+      }
     }
-    .investment {
-        &-frequency {
-            .btn-group-toggle {
-                margin-bottom: 0;
-            }
-        }
-        &-options {
-            justify-content: center;
-        }
-        &-periodic, &-initial {
-            .input-group-prepend {
-                height: 100%;
-            }
-        }
+    &-options {
+      justify-content: center;
     }
-    .option-btn-quaterly {
-        margin: 0 0.5rem;
+    &-periodic,
+    &-initial {
+      .input-group-prepend {
+        height: 100%;
+      }
     }
-    .search-calculate-button {
-        width: 50%;
-    }
+  }
+  .option-btn-quaterly {
+    margin: 0 0.5rem;
+  }
+  .search-calculate-button {
+    width: 50%;
+  }
 }
 @media only screen and (max-width: 575.99px) {
-    .search-no-result {
-        padding: 10rem 1rem;
-        &-image {
-            width: 20rem;
-        }
+  .search-no-result {
+    padding: 10rem 1rem;
+    &-image {
+      width: 20rem;
     }
-    .search-page-form {
-        position: static;
-    }
-    .search-holding {
-        padding: 3rem 1rem 3rem;
+  }
+  .search-page-form {
+    position: static;
+  }
+  .search-holding {
+    padding: 3rem 1rem 3rem;
 
-        &-property {
-            padding-bottom: 2rem;
-    
-            &-heading {
-                font-size: 3.2rem;
-            }
-            &-text {
-                font-size: 1rem;
-            }
-            &-range {
-                display: none;
-            }
-        }
-    }
-    .search-valid-page-form {
-        padding-top: 1rem;
+    &-property {
+      padding-bottom: 2rem;
 
-        .form-inline label{
-            justify-content: start !important;
-            padding: 0;
-            text-align: left;
-        }
-        &-input {
-            font-size: 1.4rem;   
-        }
-        &-label {
-            padding-left: 0;
-        }
-        .input-group {
-            padding-top: 0;
-            height: 4rem;
-            background-color: $gray-250;
-        }
-        &-submit {
-            width: 80%;
-        }
-        button {
-            padding: 0.5rem 3.5rem;
-        }
+      &-heading {
+        font-size: 3.2rem;
+      }
+      &-text {
+        font-size: 1rem;
+      }
+      &-range {
+        display: none;
+      }
     }
-    .search-ready {
-        padding: 1rem 2rem 5rem;
+  }
+  .search-valid-page-form {
+    padding-top: 1rem;
 
-        &-heading {
-            font-size: 2rem;
-        }
-        &-step {
-            text-align: center;
-        }
-        &-step-heading {
-            font-size: 1.4rem;
-        }
+    .form-inline label {
+      justify-content: start !important;
+      padding: 0;
+      text-align: left;
     }
-    .investment {
-        &-frequency {
-            .option-btn-quaterly {
-                margin: 0;
-            }
-            .option-btn {
-                padding: 0.6rem;
-            }
-        }
-        &-periodic, &-initial {
-            .input-group-prepend {
-                height: 100%;
-            }
-        }
+    &-input {
+      font-size: 1.4rem;
     }
-    .input-group-prepend {
+    &-label {
+      padding-left: 0;
+    }
+    .input-group {
+      padding-top: 0;
+      height: 4rem;
+      background-color: $gray-250;
+    }
+    &-submit {
+      width: 80%;
+    }
+    button {
+      padding: 0.5rem 3.5rem;
+    }
+  }
+  .search-ready {
+    padding: 1rem 2rem 5rem;
+
+    &-heading {
+      font-size: 2rem;
+    }
+    &-step {
+      text-align: center;
+    }
+    &-step-heading {
+      font-size: 1.4rem;
+    }
+  }
+  .investment {
+    &-frequency {
+      .option-btn-quaterly {
+        margin: 0;
+      }
+      .option-btn {
+        padding: 0.6rem;
+      }
+    }
+    &-periodic,
+    &-initial {
+      .input-group-prepend {
         height: 100%;
+      }
     }
-    .search-calculate {
-        padding-top: 0;
-        padding-bottom: 3rem;
-    }
-    .search-calculate-button {
-        width: 100%;
-    }
+  }
+  .input-group-prepend {
+    height: 100%;
+  }
+  .search-calculate {
+    padding-top: 0;
+    padding-bottom: 3rem;
+  }
+  .search-calculate-button {
+    width: 100%;
+  }
 }
 
+.recommendation-card-header [aria-expanded='false'] svg,
+.recommendation-card-header [aria-expanded='true'] svg {
+  transition: 0.5s all ease-out;
+}
+
+.recommendation-card-header [aria-expanded='false'] svg {
+  transform: rotate(-180deg);
+}

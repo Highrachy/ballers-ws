@@ -55,7 +55,7 @@
     <div class="col-lg-9 col-12 faq-option-category-accordion">
       <div id="accordion">
 
-        <div class="card">
+        <div class="card faq-card">
           <div class="card-header" id="headingOne">
             <a class="" data-toggle="collapse" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
               <h5 class="mb-0 faq-card-heading">
@@ -71,7 +71,7 @@
           </div>
         </div>
 
-        <div class="card">
+        <div class="card faq-card">
           <div class="card-header" id="headingTwo">
             <a class="" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
               <h5 class="mb-0 faq-card-heading">
@@ -87,7 +87,7 @@
           </div>
         </div>
 
-        <div class="card">
+        <div class="card faq-card">
           <div class="card-header" id="headingThree">
             <a class="" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
               <h5 class="mb-0 faq-card-heading">
@@ -103,7 +103,7 @@
           </div>
         </div>
 
-        <div class="card">
+        <div class="card faq-card">
           <div class="card-header" id="headingFour">
             <a class="" data-toggle="collapse" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
               <h5 class="mb-0 faq-card-heading">
@@ -119,7 +119,7 @@
           </div>
         </div>
 
-        <div class="card">
+        <div class="card faq-card">
           <div class="card-header" id="headingFive">
             <a class="" data-toggle="collapse" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
               <h5 class="mb-0 faq-card-heading">
@@ -135,7 +135,7 @@
           </div>
         </div>
 
-        <div class="card">
+        <div class="card faq-card">
           <div class="card-header" id="headingMillionaire">
             <a class="" data-toggle="collapse" href="#collapseMillionaire" aria-expanded="false" aria-controls="collapseMillionaire">
               <h5 class="mb-0 faq-card-heading">
@@ -164,7 +164,7 @@
     <div class="col-lg-9 col-12 faq-option-category-accordion">
       <div id="accordion">
 
-        <div class="card">
+        <div class="card faq-card">
           <div class="card-header" id="headingSix">
             <a class="" data-toggle="collapse" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
               <h5 class="mb-0 faq-card-heading">
@@ -180,7 +180,7 @@
           </div>
         </div>
 
-        <div class="card">
+        <div class="card faq-card">
           <div class="card-header" id="headingSeven">
             <a class="" data-toggle="collapse" href="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
               <h5 class="mb-0 faq-card-heading">
@@ -209,7 +209,7 @@
     <div class="col-lg-9 col-12 faq-option-category-accordion">
       <div id="accordion">
 
-        <div class="card">
+        <div class="card faq-card">
           <div class="card-header" id="headingEight">
             <a class="" data-toggle="collapse" href="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
               <h5 class="mb-0 faq-card-heading">
@@ -225,7 +225,7 @@
           </div>
         </div>
 
-        <div class="card">
+        <div class="card faq-card">
           <div class="card-header" id="headingNine">
             <a class="" data-toggle="collapse" href="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
               <h5 class="mb-0 faq-card-heading">
@@ -241,7 +241,7 @@
           </div>
         </div>
 
-        <div class="card">
+        <div class="card faq-card">
           <div class="card-header" id="headingRequirements">
             <a class="" data-toggle="collapse" href="#collapseRequirement" aria-expanded="false" aria-controls="collapseRequirement">
               <h5 class="mb-0 faq-card-heading">
@@ -270,32 +270,16 @@
     <div class="col-lg-9 col-12 faq-option-category-accordion">
       <div id="accordion">
 
-        <!-- <div class="card">
+        <div class="card faq-card">
           <div class="card-header" id="headingTen">
             <a class="" data-toggle="collapse" href="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
               <h5 class="mb-0 faq-card-heading">
-                <span class="faq-black-dot">&#9679; &nbsp;&nbsp;</span> How Secure Is <br> My Money?
-                <span class="faq-option-category-icon first">&nbsp; - </span>
+              <span class="faq-black-dot">&#9679; &nbsp;&nbsp;</span> What Happens If I <br> Lose My Password
+                <span class="faq-option-category-icon">&nbsp; - </span>
               </h5>
             </a>
           </div>
           <div id="collapseTen" class="collapse show" aria-labelledby="headingTen" data-parent="#accordion">
-            <div class="card-body">
-              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
-            </div>
-          </div>
-        </div> -->
-
-        <div class="card">
-          <div class="card-header" id="headingEleven">
-            <a class="" data-toggle="collapse" href="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
-              <h5 class="mb-0 faq-card-heading">
-                <span class="faq-black-dot">&#9679; &nbsp;&nbsp;</span> What Happens If I <br> Lose My Password
-                <span class="faq-option-category-icon">&nbsp; + </span>
-              </h5>
-            </a>
-          </div>
-          <div id="collapseEleven" class="collapse" aria-labelledby="headingEleven" data-parent="#accordion">
             <div class="card-body">
              You can reset your password by clicking on the reset password link. A link will be sent to your registered mail where you can change your password.
             </div>

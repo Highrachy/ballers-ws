@@ -30,6 +30,11 @@ function initMap() {
 $(document).ready(function () {
   $('#payment, #profile, #security').hide();
 
+  // initialize popovers
+  $(function () {
+    $('[data-toggle="popover"]').popover();
+  });
+
   // slick slider
   $('.benefits-slider').slick({
     speed: 1500,
@@ -116,39 +121,6 @@ $(document).ready(function () {
         .find('.faq-option-category-icon')
         .text((text) => (text === '+' ? '-' : '+'));
     });
-
-  //update the input & label value when slider is moved
-  const rangeSliderDiv = document.querySelectorAll('.custom-range-div');
-  Array.prototype.forEach.call(rangeSliderDiv, (slider) => {
-    slider.querySelector('.custom-range').addEventListener('input', (event) => {
-      let inputValue = removeCommasAndMakeNumber(event.target.value);
-      slider.querySelector('label').innerHTML =
-        'NGN ' + formatToCurrency(inputValue);
-      slider.querySelector('.form-control').value = formatToCurrency(
-        inputValue
-      );
-    });
-  });
-
-  // update the slider thumb location & label when input value changes
-  Array.prototype.forEach.call(rangeSliderDiv, (input) => {
-    input.querySelector('.form-control').addEventListener('input', (event) => {
-      const maxInputValue = removeCommasAndMakeNumber(
-        $(event.target).data('max-amount') || 1000000
-      );
-      let inputValue = removeCommasAndMakeNumber(event.target.value);
-      if (isNaN(inputValue)) {
-        inputValue = 0;
-      }
-      if (inputValue > maxInputValue) {
-        inputValue = maxInputValue;
-      }
-      input.querySelector('.custom-range').value = inputValue;
-      input.querySelector('label').innerHTML =
-        'NGN ' + formatToCurrency(inputValue);
-      input.querySelector('.form-control').value = formatToCurrency(inputValue);
-    });
-  });
 
   // use ajax to update select options on index page
   const state = $('#state');

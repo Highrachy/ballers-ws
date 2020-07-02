@@ -53,7 +53,7 @@
 
                         <div class="row custom-range-div">
                             <div class="form-group col-sm-6 col-12">
-                                <label for="initial-investment">NGN 500,000</label>
+                                <label for="initial-investment" class="initial-investment-label">NGN 500,000</label>
                                 <input type="range" class="custom-range initial-investment" id="initial-investment" min="100000" max="<?php echo $avg_price ?>" step="10000" value="500000">
                             </div>
 
@@ -102,7 +102,7 @@
 
                         <div class="row custom-range-div">
                             <div class="form-group col-sm-6 col-12">
-                                <label for="periodic-investment">NGN 100,000</label>
+                                <label for="periodic-investment" class="periodic-investment-label">NGN 100,000</label>
                                 <input type="range" class="custom-range periodic-investment" id="periodic-investment" min="50000" max="<?php echo $avg_price ?>" step="5000" value="100000">
                             </div>
 

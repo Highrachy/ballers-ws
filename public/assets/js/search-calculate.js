@@ -5,20 +5,21 @@ $(document).ready(function () {
   let periodicChanged = false;
   let initialChanged = false;
 
+  const MOBILE_WIDTH = 576;
+
   $('.search-ready-awesome-eligibility').click(function () {
     $('.search-ready-awesome-div').slideUp(500);
     $('.search-calculate-button').prop('disabled', true);
-    $('.periodic-investment').val('500000');
-    $('.periodic-investment-input').val('500,000');
-    $('.initial-investment').val('100000');
-    $('.initial-investment-input').val('100,000');
+
+    $('.periodic-investment').val('100000');
+    $('.periodic-investment-input').val('');
+    $('.periodic-investment-label').html('NGN 100,000');
+
+    $('.initial-investment').val('500000');
+    $('.initial-investment-input').val('');
+    $('.initial-investment-label').html('NGN 500,000');
     periodicChanged = false;
     initialChanged = false;
-  });
-
-  // initialize popovers
-  $(function () {
-    $('[data-toggle="popover"]').popover();
   });
 
   function enableSeachCalculateBtn(periodicChanged, initialChanged) {
@@ -27,32 +28,44 @@ $(document).ready(function () {
     }
   }
 
+  //update the input & label value when slider is moved
+  const rangeSliderDiv = document.querySelectorAll('.custom-range-div');
+  Array.prototype.forEach.call(rangeSliderDiv, (slider) => {
+    slider.querySelector('.custom-range').addEventListener('input', (event) => {
+      let inputValue = removeCommasAndMakeNumber(event.target.value);
+      slider.querySelector('label').innerHTML =
+        'NGN ' + formatToCurrency(inputValue);
+      slider.querySelector('.form-control').value = formatToCurrency(
+        inputValue
+      );
+    });
+  });
+
+  // update the slider thumb location & label when input value changes
+  Array.prototype.forEach.call(rangeSliderDiv, (input) => {
+    input.querySelector('.form-control').addEventListener('input', (event) => {
+      const maxInputValue = removeCommasAndMakeNumber(
+        $(event.target).data('max-amount') || 1000000
+      );
+      let inputValue = removeCommasAndMakeNumber(event.target.value);
+      if (isNaN(inputValue)) {
+        inputValue = 0;
+      }
+      if (inputValue > maxInputValue) {
+        inputValue = maxInputValue;
+      }
+      input.querySelector('.custom-range').value = inputValue;
+      input.querySelector('label').innerHTML =
+        'NGN ' + formatToCurrency(inputValue);
+      input.querySelector('.form-control').value = formatToCurrency(inputValue);
+    });
+  });
+
   //function to format number input values to currency like format
   $('.investment-value-input').on('keyup', function () {
     let number = parseInt($(this).val().replace(/\D/g, ''), 10);
     number = isNaN(number) ? 0 : number;
     $(this).val(number.toLocaleString());
-  });
-
-  const MOBILE_WIDTH = 576;
-  let popOverPlacement;
-  if ($(window).width() < MOBILE_WIDTH) {
-    popOverPlacement = 'top';
-  } else {
-    popOverPlacement = 'right';
-  }
-
-  $('#search-ready-awesome-spread').popover({
-    html: true,
-    trigger: 'focus hover',
-    placement: popOverPlacement,
-    title: 'Payment Method',
-    content: `Based on your initial investment amount,
-      Investment frequency,and the periodic investment amount you selected,
-      you will likely be comfortably able to pay
-      for a home with an extra credit option.
-      <br>
-      <a href="faq.php" target="_blank" class="search-ready-awesome-spread-popover-link">Learn more &#8594;</a>`,
   });
 
   // toggle map on search page
@@ -109,10 +122,6 @@ $(document).ready(function () {
     let recommendation = '';
     let recommendationNav = '';
     let recommendationBody = '';
-
-    let popOverIcon = `<a tabindex="0" class="" id="search-ready-awesome-spread" role="button" data-toggle="popover">
-                          <img src="./assets/img/icons/question-mark.svg" alt="payment">
-                        </a>`;
 
     // Recommendations breakdown can be found here - https://docs.google.com/document/d/1gsomOY9qclUz9RzadN3ztJH4Y0ryGT-fukNBFLhJAIU/edit?pli=1#heading=h.yy9lcow7gkem
 
@@ -240,7 +249,6 @@ $(document).ready(function () {
                                       <a data-toggle="collapse" class="testing" href="#collapse${i}" aria-expanded="false" aria-controls="collapse${i}">
                                         <h6 class="mb-0">
                                           ${output[i].title}
-                                          <img src="./assets/img/icons/question-mark.svg" alt="payment">
                                           <span class="recommendation-card-icon">
                                             <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                                               <path fill-rule="evenodd" clip-rule="evenodd" d="M5.00024 0.499995C5.25624 0.499995 5.51224 0.597994 5.70724 0.792994L9.70724 4.79299C10.0982 5.18399 10.0982 5.81599 9.70724 6.20699C9.31624 6.59799 8.68424 6.59799 8.29324 6.20699L4.98824 2.90199L1.69524 6.08199C1.29624 6.46499 0.665238 6.45399 0.281239 6.05699C-0.102761 5.66 -0.0917617 5.026 0.305239 4.643L4.30524 0.780994C4.50024 0.592994 4.75024 0.499995 5.00024 0.499995Z" fill="#161D3F"/>
@@ -269,7 +277,6 @@ $(document).ready(function () {
           i === 0 ? 'active' : ''
         }" id="nav-tab-${i}" data-toggle="tab" href="#nav-${i}" role="tab" aria-controls="nav-${i}" aria-selected="true">
                                   ${output[i].title}
-                                  <img src="./assets/img/icons/question-mark.svg" alt="payment">
                                 </a>`;
         recommendationBody += `<div class="tab-pane fade ${
           i === 0 ? 'active show' : ''
